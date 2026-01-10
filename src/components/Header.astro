@@ -1,0 +1,56 @@
+---
+// Header.astro
+---
+
+<header class="bg-white border-b border-gray-200">
+  <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+    <!-- Logo -->
+    <div class="flex items-center">
+      <a href="/" class="flex items-center">
+        <img src="../assets/logoAdadet.svg" alt="FEVEDA Logo" class="h-16 w-auto" />
+      </a>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav class="hidden md:flex items-center space-x-8">
+      <!-- ADADET Dropdown -->
+      <div class="relative group">
+        <button class="flex items-center space-x-1 text-gray-900 hover:text-blue-600 font-medium text-lg transition-colors">
+          <span>ADADET</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <!-- Dropdown menu would go here -->
+      </div>
+
+      <!-- Ranking -->
+      <a href="/ranking" class="text-gray-900 hover:text-blue-600 font-medium text-lg transition-colors">
+        Ranking
+      </a>
+
+      <!-- Resultados Dropdown -->
+      <div class="relative group">
+        <button class="flex items-center space-x-1 text-gray-900 hover:text-blue-600 font-medium text-lg transition-colors">
+          <span>Resultados</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <!-- Dropdown menu would go here -->
+      </div>
+
+      <!-- Contacto y Denuncia -->
+      <a href="/contacto" class="text-gray-900 hover:text-blue-600 font-medium text-lg transition-colors">
+        Contacto y Denuncia
+      </a>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button class="md:hidden text-gray-900">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+</header>
