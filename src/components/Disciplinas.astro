@@ -1,11 +1,6 @@
 ---
 export const prerender = false;
-import type { Disciplina } from "../types";
-
-const url = new URL("/api/disciplinas", Astro.request.url);
-const res = await fetch(url);
-const disciplinas = (await res.json()) as Disciplina[];
-
+import { BASE_DISCIPLINAS as disciplinas } from "src/data/disciplinas";
 ---
 <section class="px-4 py-8 max-w-7xl mx-auto bg-white">
   <header class="mb-6">
@@ -23,7 +18,7 @@ const disciplinas = (await res.json()) as Disciplina[];
             <div class="w-full bg-slate-100 overflow-hidden">
               {deporte.imagenUrl && (
                 <img
-                  src={`http://127.0.0.1:1337${deporte.imagenUrl}`}
+                  src={deporte.imagenUrl}
                   alt={deporte.titulo}
                   class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"

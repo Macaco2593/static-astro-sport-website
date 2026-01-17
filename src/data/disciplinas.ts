@@ -2,37 +2,44 @@ export interface DisciplinaBase {
   slug: string;
   titulo: string;
   descripcion: string;
+  imagenUrl: string;
 }
 
 export const BASE_DISCIPLINAS: DisciplinaBase[] = [
   {
-    slug: "natacio",
+    slug: "natacion",
     titulo: "Natación",
     descripcion: "La natación es el corazón de los deportes acuáticos. Más allá de ser una práctica recreativa, representa un compromiso de disciplina y técnica que ha llevado el tricolor nacional a los podios más exigentes del ciclo olímpico. Táchira ha sido históricamente una cantera determinante para la selección nacional",
+    imagenUrl: '/Imagen1.jpg'
   },
   {
     slug: "aguas-abiertas",
     titulo: "Aguas Abiertas",
     descripcion: "Pruebas de natación en aguas abiertas (ríos, lagos, mar).",
+    imagenUrl: '/Imagen1.jpg'
   },
   {
     slug: "natacion-artistica",
     titulo: "Natación Artística",
     descripcion: "Coreografías acuáticas sincronizadas.",
+    imagenUrl: '/Imagen1.jpg'
   },
   {
     slug: "polo-acuatico",
     titulo: "Polo Acuático",
     descripcion: "Juego de equipo en el agua.",
+    imagenUrl: '/Imagen1.jpg'
   },
   {
     slug: "clavado",
     titulo: "Clavado",
     descripcion: "Saltos ornamentales desde trampolín o plataforma.",
+    imagenUrl: '/Imagen1.jpg'
   },
   {
     slug: "master",
     titulo: "Máster",
     descripcion: "Natación para categorías máster.",
+    imagenUrl: '/Imagen1.jpg'
   },
 ];
