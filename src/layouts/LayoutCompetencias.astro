@@ -1,0 +1,18 @@
+---
+import { ListaCompetencias } from '../lista/ListaCompetencias'
+
+export async function getStaticPaths() {
+  return ListaCompetencias.map((competencia) => {
+    const slug = competencia.linkDeLaCompetencia.replace('competencia/', '').replace('.html', '');
+    return {
+      params: { slug },
+      props: { competencia }
+    };
+  });
+}
+
+---
+
+<object data="myfile.pdf" type="application/pdf" width="100%" height="100%">
+  <p>Alternative text - include a link <a href="myfile.pdf">to the PDF!</a></p>
+</object>
