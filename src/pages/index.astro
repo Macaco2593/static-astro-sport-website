@@ -1,24 +1,29 @@
 ---
 import '../styles/global.css';
 import Header from '../components/Header.astro';
+import HeroCarousel from '../components/HeroCarousel.astro';
 import Layout from '../layouts/Layout.astro';
+import Disciplinas from '../components/Disciplinas.astro';
 ---
 
 
 <Layout>
-	<Header>
+	<Header />
 
-	</Header>
 	<html lang="en">
 		<head>
 			<meta charset="utf-8" />
 			<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 			<meta name="viewport" content="width=device-width" />
 			<meta name="generator" content={Astro.generator} />
-			<title>Astro</title>
+			<title>ADADET - Asociación de Deportes Acuáticos Del Estado Táchira</title>
 		</head>
 		<body>
-			<h1>Astro XD</h1>
+			<HeroCarousel />
+			<main>
+				<section id="disciplinas" class="disciplinas-section">
+					<Disciplinas />
+				</section>
 		</body>
 		</html>
 </Layout>

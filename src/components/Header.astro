@@ -1,18 +1,19 @@
 ---
-// Header.astro
+import logoAdadet from '../assets/logoAdadet.svg';
 ---
 
 <header class="bg-white border-b border-gray-200">
-  <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+  <div class="container mx-auto px-4 py-4 flex items-center">
     <!-- Logo -->
     <div class="flex items-center">
       <a href="/" class="flex items-center">
-        <img src="../assets/logoAdadet.svg" alt="FEVEDA Logo" class="h-16 w-auto" />
+        <img src={logoAdadet.src} alt="FEVEDA Logo" class="h-16 w-16 rounded-full object-cover" />
       </a>
     </div>
 
     <!-- Navigation Menu -->
-    <nav class="hidden md:flex items-center space-x-8">
+
+    <nav class="hidden md:flex items-center space-x-8 flex-1 justify-center">
       <!-- ADADET Dropdown -->
       <div class="relative group">
         <button class="flex items-center space-x-1 text-gray-900 hover:text-blue-600 font-medium text-lg transition-colors">
