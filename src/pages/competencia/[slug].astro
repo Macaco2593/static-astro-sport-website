@@ -13,7 +13,7 @@ export async function getStaticPaths() {
 }
 
 const { competencia } = Astro.props;
-
+const { slug } = Astro.params
 if (!competencia) {
   return Astro.redirect('/');
 }
@@ -57,8 +57,9 @@ if (!competencia) {
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         {competencia.resultados.map((resultado) => (
           <a 
-            href={resultado.nombreArchivo}
+            href={`/contenido/competencias_pdf/${slug}/${resultado.nombreArchivo}`}
             class="group relative bg-gradient-to-br from-cyan-50 to-blue-50 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-cyan-100 hover:border-cyan-300 hover:-translate-y-1"
+            target="_blank"
           >
             <div class="flex items-start gap-4">
               <div class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
