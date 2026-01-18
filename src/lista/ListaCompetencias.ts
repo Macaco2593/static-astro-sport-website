@@ -5,12 +5,11 @@ export interface ICompetencia {
     fechaDeSubida: string
     fechaInicio: string
     fechaFinalizacion: string
-    archivosAdjuntos: {
-        condicionesGeneral: string
-        resultadosIndividuales: string
-        resultadosPorEquipo: string
-        mejoresAtletas: string
-    }
+    resultados: Resultado[]
+}
+interface Resultado {
+    titulo: string,
+    nombreArchivo: string
 }
 export const ListaCompetencias: ICompetencia[] = [
     {
@@ -20,11 +19,23 @@ export const ListaCompetencias: ICompetencia[] = [
         fechaDeSubida: '17-01-2026',
         fechaInicio: '01/01/2026',
         fechaFinalizacion: '10/01/2026',
-        archivosAdjuntos: {
-            condicionesGeneral: 'condicion_general.pdf',
-            resultadosIndividuales: 'resultados_individuales.pdf',
-            resultadosPorEquipo: 'resultados_por_equipo.pdf',
-            mejoresAtletas: 'mejores_atletas.pdf'
-        }
+        resultados: [
+            {
+                titulo: 'Condiciones Generales',
+                nombreArchivo: 'condicion_general.pdf'
+            },
+            {
+                titulo: 'Resultados Individuales Completos',
+                nombreArchivo: 'resultados_individuales.pdf'
+            },
+            {
+                titulo: 'Resultados por Equipos',
+                nombreArchivo: 'resultados_por_equipo.pdf'
+            },
+            {
+                titulo: 'Mejores Atletas por Categorías',
+                nombreArchivo: 'mejores_atletas.pdf'
+            }
+        ]
     }
 ]
