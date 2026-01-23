@@ -4,9 +4,9 @@ import Header from '../components/Header.astro';
 import HeroCarousel from '../components/HeroCarousel.astro';
 import Layout from '../layouts/Layout.astro';
 import Disciplinas from '../components/Disciplinas.astro';
-import Competencias from 'src/components/Competencias.astro';
 import CentroRecursos from '../components/CentroRecursos.astro';
 import GaleriaPreview from '../components/GaleriaPreview.astro';
+import Footer from 'src/components/Footer.astro';
 ---
 
 
@@ -25,17 +25,21 @@ import GaleriaPreview from '../components/GaleriaPreview.astro';
 			<HeroCarousel />
 			<main>
 				<section id="disciplinas" class="disciplinas-section">
-					<Disciplinas />
+					<Disciplinas/>
 				</section>
 
 				<!-- Centro de Recursos -->
 				<section id="centro-recursos">
-					<CentroRecursos />
+					<CentroRecursos/>
 				</section>
 
 				<!-- Galería pequeña -->
 				<section id="galeria" class="galeria-preview-section">
-					<GaleriaPreview />
+					<GaleriaPreview/>
+				</section>
+
+				<section id="footer" class="footer-section">
+					<Footer/>
 				</section>
 
 		</body>

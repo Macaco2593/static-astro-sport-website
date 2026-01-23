@@ -1,26 +1,5 @@
 ---
 import logoAdadet from "../assets/logoAdadet.svg";
-import iconFacebook from "../assets/icons/facebook.png";
-import iconInstagram from "../assets/icons/Instagram.png";
-
-const socialLinks = [
-  {
-    name: "Facebook",
-    href: "https://www.facebook.com/natacion.tachira?locale=es_LA",
-    icon: iconFacebook,
-  },
-  {
-    name: "Instagram",
-    href: "https://www.instagram.com/nataciontachira/",
-    icon: iconInstagram,
-  },
-  // Puedes ir añadiendo más redes aquí:
-  // {
-  //   name: "YouTube",
-  //   href: "https://youtube.com/@adadet",
-  //   icon: iconYoutube,
-  // },
-];
 
 const documentos = [
   {
@@ -50,7 +29,7 @@ const documentos = [
 ];
 ---
 
-<section class="relative px-4 py-16 md:py-24 bg-[#f2f2f5] overflow-hidden">
+<section class="relative px-4 py-16 md:py-7 bg-[#f2f2f5] overflow-hidden">
   <!-- Elementos decorativos de fondo -->
   <div class="pointer-events-none absolute inset-0 overflow-hidden">
     <div class="absolute -left-24 top-10 h-64 w-64 rounded-full bg-cyan-300/15 blur-3xl"></div>
@@ -88,30 +67,6 @@ const documentos = [
         </p>
       </header>
 
-      <!-- Redes sociales -->
-      <section aria-label="Redes sociales ADADET" class="mb-10">
-        <p class="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-500">
-          Síguenos en redes sociales
-        </p>
-        <div class="flex flex-wrap items-center gap-3">
-          {socialLinks.map((social) => (
-            <a
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex h-10 w-11 items-center justify-center rounded-full bg-white text-slate-900 shadow-md ring-1 ring-slate-200 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:ring-cyan-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-              aria-label={social.name}
-            >
-              <img
-                src={social.icon.src}
-                alt={social.name}
-                class="h-full w-full object-contain"
-                loading="lazy"
-              />
-            </a>
-          ))}
-        </div>
-      </section>
 
       <!-- Grid de documentos -->
       <section aria-label="Documentos descargables de ADADET">

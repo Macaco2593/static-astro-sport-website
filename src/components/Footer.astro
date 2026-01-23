@@ -1,0 +1,143 @@
+---
+import logoAdadet from "../assets/logoAdadet.svg";
+import iconFacebook from "../assets/icons/facebook.png";
+import iconInstagram from "../assets/icons/Instagram.png";
+
+const socialLinks = [
+  {
+    name: "Facebook",
+    href: "https://www.facebook.com/natacion.tachira?locale=es_LA",
+    icon: iconFacebook,
+  },
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/nataciontachira/",
+    icon: iconInstagram,
+  },
+];
+
+const quickLinks = [
+  { label: "Inicio", href: "/" },
+  { label: "Calendario de eventos", href: "/competencias" },
+  { label: "Galería", href: "/galeria" },
+  { label: "Resultados", href: "/resultados" },
+  { label: "Ranking", href: "/ranking" },
+  { label: "Contacto y denuncia", href: "/contacto" },
+];
+---
+
+<footer class="mt-12 border-t border-slate-200 bg-white/90 text-slate-800">
+  <div class="mx-auto max-w-7xl px-4 py-10 md:py-10">
+    <div class="grid gap-8 md:grid-cols-[minmax(0,2fr)_minmax(0,1.5fr)_minmax(0,1.5fr)]">
+      <!-- Columna 1: logo + misión -->
+      <div class="space-y-4">
+        <a href="/" class="inline-flex items-center gap-3">
+          <div class="h-14 w-14 overflow-hidden rounded-full bg-slate-100 ring-1 ring-slate-200">
+            <img
+              src={logoAdadet.src}
+              alt="Logo ADADET"
+              class="h-full w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-700">
+              Asociación de Deportes Acuáticos del Estado Táchira
+            </p>
+            <p class="text-sm font-semibold text-slate-900">ADADET</p>
+          </div>
+        </a>
+
+        <p class="max-w-md text-sm leading-relaxed text-slate-600">
+          Nuestra misión es promover, desarrollar y masificar los deportes acuáticos en el estado
+          Táchira, formando atletas íntegros y fomentando valores de disciplina, respeto y trabajo en
+          equipo en cada una de nuestras disciplinas.
+        </p>
+
+        <!-- Redes sociales -->
+        <div class="space-y-2">
+          <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">
+            Síguenos en redes sociales
+          </p>
+          <div class="flex flex-wrap items-center gap-3">
+            {socialLinks.map((social) => (
+              <a
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white text-slate-900 shadow-sm ring-1 ring-slate-200 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:ring-cyan-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+                aria-label={social.name}
+              >
+                <img
+                  src={social.icon.src}
+                  alt={social.name}
+                  class="h-full w-full object-contain"
+                  loading="lazy"
+                />
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna 2: navegación rápida -->
+      <div class="space-y-4">
+        <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">
+          Navegación rápida
+        </h3>
+        <nav>
+          <ul class="space-y-2 text-sm">
+            {quickLinks.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  class="inline-flex items-center gap-2 text-slate-600 transition-colors hover:text-cyan-700"
+                >
+                  <span class="h-1 w-1 rounded-full bg-cyan-500"></span>
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Columna 3: contacto -->
+      <div class="space-y-4">
+        <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-500">
+          Información de contacto
+        </h3>
+        <div class="space-y-3 text-sm text-slate-600">
+          <p>
+            <span class="font-semibold text-slate-800">Dirección:</span><br />
+            San Cristóbal, Estado Táchira, Venezuela.
+          </p>
+          <p>
+            <span class="font-semibold text-slate-800">Correo electrónico:</span><br />
+            <a href="mailto:info@adadet.org" class="text-cyan-700 hover:underline">
+              info@adadet.org
+            </a>
+          </p>
+          <p>
+            <span class="font-semibold text-slate-800">Teléfono:</span><br />
+            <a href="tel:+584120000000" class="text-cyan-700 hover:underline">
+              +58 (412) 000 00 00
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Franja legal -->
+  <div class="border-t border-slate-200 bg-slate-50/80">
+    <div class="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-4 text-center text-xs text-slate-500 md:flex-row md:items-center md:justify-between">
+      <p>
+        © 2026 Asociación de Deportes Acuáticos del Estado Táchira. Todos los derechos reservados.
+      </p>
+      <p>
+        Desarrollado por <span class="font-medium text-slate-700">Ing. Santiago Paredes</span>
+      </p>
+    </div>
+  </div>
+</footer>
