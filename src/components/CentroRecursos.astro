@@ -1,0 +1,160 @@
+---
+import logoAdadet from "../assets/logoAdadet.svg";
+import iconFacebook from "../assets/icons/facebook.png";
+import iconInstagram from "../assets/icons/Instagram.png";
+
+const socialLinks = [
+  {
+    name: "Facebook",
+    href: "https://www.facebook.com/natacion.tachira?locale=es_LA",
+    icon: iconFacebook,
+  },
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/nataciontachira/",
+    icon: iconInstagram,
+  },
+  // Puedes ir añadiendo más redes aquí:
+  // {
+  //   name: "YouTube",
+  //   href: "https://youtube.com/@adadet",
+  //   icon: iconYoutube,
+  // },
+];
+
+const documentos = [
+  {
+    titulo: "Acta de Asamblea General",
+    href: "#", // TODO: enlazar al PDF real
+  },
+  {
+    titulo: "Acta de Asamblea Extraordinaria",
+    href: "#",
+  },
+  {
+    titulo: "Providencia Administrativa",
+    href: "#",
+  },
+  {
+    titulo: "Estatutos de ADADET",
+    href: "#",
+  },
+  {
+    titulo: "Declaración SENIAT 2024",
+    href: "#",
+  },
+  {
+    titulo: "Declaración ISLR 2024",
+    href: "#",
+  },
+];
+---
+
+<section class="relative px-4 py-16 md:py-24 bg-gradient-to-br from-slate-50 via-white to-cyan-50 overflow-hidden">
+  <!-- Elementos decorativos de fondo -->
+  <div class="pointer-events-none absolute inset-0 overflow-hidden">
+    <div class="absolute -left-24 top-10 h-64 w-64 rounded-full bg-cyan-300/15 blur-3xl"></div>
+    <div class="absolute -right-24 top-1/2 h-80 w-80 -translate-y-1/2 rounded-full bg-blue-400/15 blur-3xl"></div>
+  </div>
+
+  <div class="relative z-10 mx-auto flex max-w-7xl flex-col gap-12 lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)] lg:items-start">
+    <!-- Columna izquierda: logo -->
+    <div class="flex justify-center lg:justify-start">
+      <div class="rounded-3xl bg-white/80 p-6 shadow-lg ring-1 ring-slate-200/60">
+        <img
+          src={logoAdadet.src}
+          alt="Logo ADADET"
+          class="h-auto w-64 max-w-full object-contain"
+          loading="lazy"
+        />
+      </div>
+    </div>
+
+    <!-- Columna derecha: contenido -->
+    <div>
+      <header class="mb-8 space-y-4">
+        <div class="inline-flex items-center gap-2 rounded-full bg-cyan-100 px-4 py-1.5 text-sm font-semibold text-cyan-800">
+          <span class="inline-flex h-2 w-2 rounded-full bg-cyan-500"></span>
+          Centro de recursos institucionales
+        </div>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900">
+          Centro de <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-700">recursos ADADET</span>
+        </h2>
+        <p class="max-w-2xl text-base md:text-lg leading-relaxed text-slate-600">
+          En este espacio podrás consultar de forma rápida y organizada la documentación clave de la
+          Asociación de Deportes Acuáticos del Estado Táchira: actas de asamblea, providencias,
+          estatutos, declaraciones y otros documentos oficiales que respaldan nuestra gestión y
+          transparencia institucional.
+        </p>
+      </header>
+
+      <!-- Redes sociales -->
+      <section aria-label="Redes sociales ADADET" class="mb-10">
+        <p class="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-500">
+          Síguenos en redes sociales
+        </p>
+        <div class="flex flex-wrap items-center gap-3">
+          {socialLinks.map((social) => (
+            <a
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex h-10 w-11 items-center justify-center rounded-full bg-white text-slate-900 shadow-md ring-1 ring-slate-200 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:ring-cyan-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+              aria-label={social.name}
+            >
+              <img
+                src={social.icon.src}
+                alt={social.name}
+                class="h-full w-full object-contain"
+                loading="lazy"
+              />
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <!-- Grid de documentos -->
+      <section aria-label="Documentos descargables de ADADET">
+        <p class="mb-4 text-sm font-semibold uppercase tracking-wide text-slate-500">
+          Documentos destacados
+        </p>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {documentos.map((doc) => (
+            <a
+              href={doc.href}
+              target={doc.href === "#" ? "_self" : "_blank"}
+              rel={doc.href === "#" ? undefined : "noopener noreferrer"}
+              class="group flex items-center gap-3 rounded-2xl bg-white/90 px-4 py-3 text-left shadow-sm ring-1 ring-slate-200 transition-all duration-200 hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-cyan-50 hover:to-blue-50 hover:shadow-md hover:ring-cyan-300"
+            >
+              <!-- Icono PDF -->
+              <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-red-50 text-red-600 ring-1 ring-red-100">
+                <svg
+                  class="h-5 w-5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M6 2h7l5 5v15H6z" />
+                  <path d="M13 2v6h6" />
+                  <path d="M9 17h1.5" />
+                  <path d="M9 15v4" />
+                  <path d="M12.5 19v-4H14a1.5 1.5 0 010 3h-1.5" />
+                  <path d="M17 15h1.2a1.3 1.3 0 010 2.6H17v-4" />
+                </svg>
+              </div>
+
+              <!-- Texto / botón -->
+              <span class="flex-1 text-sm font-semibold leading-snug text-slate-800 group-hover:text-cyan-700">
+                {doc.titulo}
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
