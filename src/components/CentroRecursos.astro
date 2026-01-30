@@ -1,32 +1,19 @@
 ---
 import logoAdadet from "../assets/logoAdadet.svg";
+import { DOCUMENTOS } from "../data/documentos";
 
-const documentos = [
-  {
-    titulo: "Acta de Asamblea General",
-    href: "#", // TODO: enlazar al PDF real
-  },
-  {
-    titulo: "Acta de Asamblea Extraordinaria",
-    href: "#",
-  },
-  {
-    titulo: "Providencia Administrativa",
-    href: "#",
-  },
-  {
-    titulo: "Estatutos de ADADET",
-    href: "#",
-  },
-  {
-    titulo: "Declaración SENIAT 2024",
-    href: "#",
-  },
-  {
-    titulo: "Declaración ISLR 2024",
-    href: "#",
-  },
+// Slugs de los 6 documentos que quieres mostrar en el Centro de recursos.
+const SLUGS_CENTRO_RECURSOS = [
+  "acta-asamblea-general",
+  "acta-asamblea-extraordinaria",
+  "providencia-administrativa",
+  "estatutos-adadet",
+  "declaracion-seniat-2024",
+  "declaracion-islr-2024",
 ];
+
+// Solo se muestran estos 6, aunque existan más documentos en DOCUMENTOS.
+const documentos = DOCUMENTOS.filter((doc) => SLUGS_CENTRO_RECURSOS.includes(doc.slug));
 ---
 
 <section class="relative px-4 py-16 md:py-7 bg-[#f2f2f5] overflow-hidden">
@@ -76,9 +63,7 @@ const documentos = [
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {documentos.map((doc) => (
             <a
-              href={doc.href}
-              target={doc.href === "#" ? "_self" : "_blank"}
-              rel={doc.href === "#" ? undefined : "noopener noreferrer"}
+              href={`/documentos/${doc.slug}`}
               class="group flex items-center gap-3 rounded-2xl bg-white/90 px-4 py-3 text-left shadow-sm ring-1 ring-slate-200 transition-all duration-200 hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-cyan-50 hover:to-blue-50 hover:shadow-md hover:ring-cyan-300"
             >
               <!-- Icono PDF -->

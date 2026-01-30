@@ -16,13 +16,47 @@ import logoAdadet from '../assets/logoAdadet.svg';
     <nav class="hidden md:flex items-center space-x-8 flex-1 justify-center">
       <!-- ADADET Dropdown -->
       <div class="relative group">
-        <button class="flex items-center space-x-1 text-gray-900 hover:text-blue-600 font-medium text-lg transition-colors">
-          <span>ADADET</span>
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <button
+          class="inline-flex items-center gap-2 py-2 text-lg font-semibold text-gray-900  transition-all duration-200 hover:bg-white hover:text-blue-600  hover:ring-blue-200"
+        >
+          <span> <a href="/">ADADET</a></span>
+          <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
-        <!-- Dropdown menu would go here -->
+        <!-- Dropdown menu -->
+        <div
+          class="invisible absolute left-1/2 z-50 mt-3 w-64 -translate-x-1/2 translate-y-1 opacity-0 rounded-2xl bg-white/95 p-2 shadow-xl ring-1 ring-slate-200/80 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100"
+        >
+          <div class="px-3 py-2">
+            <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">
+              Sobre ADADET
+            </p>
+          </div>
+          <div class="space-y-1 text-sm">
+            <a
+              href="/documentos/normativa-fichaje-2026"
+              class="flex items-start gap-3 rounded-xl px-3 py-2 text-slate-700 transition-colors hover:bg-blue-50 hover:text-blue-700"
+            >
+              <span class="mt-1 h-2 w-2 rounded-full bg-blue-500"></span>
+              <span>Normativa del fichaje 2026</span>
+            </a>
+            <a
+              href="/documentos/organigrama-asociacion"
+              class="flex items-start gap-3 rounded-xl px-3 py-2 text-slate-700 transition-colors hover:bg-blue-50 hover:text-blue-700"
+            >
+              <span class="mt-1 h-2 w-2 rounded-full bg-cyan-500"></span>
+              <span>Organigrama de la asociación</span>
+            </a>
+            <a
+              href="/documentos/reconocimiento-idt"
+              class="flex items-start gap-3 rounded-xl px-3 py-2 text-slate-700 transition-colors hover:bg-blue-50 hover:text-blue-700"
+            >
+              <span class="mt-1 h-2 w-2 rounded-full bg-emerald-500"></span>
+              <span>Reconocimiento del IDT</span>
+            </a>
+          </div>
+        </div>
       </div>
 
       <!-- Ranking -->
