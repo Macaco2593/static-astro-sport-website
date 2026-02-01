@@ -33,7 +33,7 @@ const competitions = [
   <section class="min-h-screen bg-[#f2f2f5]">
     <div class="mx-auto max-w-6xl px-4 py-10 md:py-16 space-y-10">
       <!-- Encabezado -->
-      <header class="text-center space-y-4">
+      <header class="text-center space-y-4 animate-fade-in-down">
         <div class="inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-1.5 text-xs font-semibold tracking-wide text-blue-700">
           <span class="inline-flex h-2 w-2 rounded-full bg-cyan-500"></span>
           Calendario oficial de competencias
@@ -50,12 +50,12 @@ const competitions = [
       </header>
 
       <!-- Calendario -->
-      <div class="rounded-3xl bg-white p-4 shadow-md ring-1 ring-slate-200 md:p-6">
+      <div class="rounded-3xl bg-white p-4 shadow-md ring-1 ring-slate-200 md:p-6 animate-fade-in-up" style="animation-delay: 150ms">
         <Calendar events={competitions} />
       </div>
 
       <!-- Leyenda -->
-      <div class="mx-auto flex flex-wrap items-center gap-4 text-xs md:text-sm text-slate-600">
+      <div class="mx-auto flex flex-wrap items-center gap-4 text-xs md:text-sm text-slate-600 animate-fade-in-up" style="animation-delay: 300ms">
         <div class="flex items-center gap-2">
           <div class="h-3 w-3 rounded bg-cyan-100 border border-cyan-500"></div>
           <span>Día con competencia</span>
@@ -72,3 +72,36 @@ const competitions = [
     </div>
   </section>
 </LayoutCompetencias>
+
+<style>
+  @keyframes fade-in-down {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-down {
+    animation: fade-in-down 0.6s ease-out;
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out;
+    animation-fill-mode: both;
+  }
+</style>

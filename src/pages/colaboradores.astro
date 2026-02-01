@@ -1,0 +1,130 @@
+---
+import LayoutCompetencias from "../layouts/LayoutCompetencias.astro";
+import { COLABORADORES as colaborador } from "src/data/colaboradores.ts";
+
+---
+
+<LayoutCompetencias titulo="Colaboradores y aliados ADADET">
+  <section class="min-h-screen bg-[#f2f2f5]">
+    <div class="mx-auto max-w-6xl px-4 py-10 md:py-16 space-y-10">
+      <!-- Encabezado -->
+      <header class="text-center space-y-4 animate-fade-in-down">
+        <div class="inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-1.5 text-xs font-semibold tracking-wide text-blue-700">
+          <span class="inline-flex h-2 w-2 rounded-full bg-cyan-500"></span>
+          Red de aliados y patrocinadores
+        </div>
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900">
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-700">
+            Colaboradores ADADET
+          </span>
+        </h1>
+        <p class="mx-auto max-w-2xl text-sm md:text-base text-slate-600">
+          Este espacio reconoce a las instituciones, empresas y organizaciones que, con su apoyo
+          constante, hacen posible el crecimiento y la proyección de los deportes acuáticos en el
+          estado Táchira.
+        </p>
+      </header>
+
+      <!-- Grid de colaboradores -->
+      <section aria-label="Directorio de aliados y patrocinadores" class="space-y-4">
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {colaborador.map((colab, index) => (
+            <article
+              class="group relative flex flex-col overflow-hidden rounded-2xl bg-white shadow-md ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:ring-cyan-400 animate-fade-in-up"
+              style={`animation-delay: ${index * 80}ms`}
+            >
+              <div class="flex items-center justify-center bg-slate-50 px-4 py-6">
+                <div class="flex h-32 w-full items-center justify-center overflow-hidden rounded-t-xl bg-white ring-1 ring-slate-100">
+                  {colab.logo ? (
+                    <img
+                      src={colab.logo}
+                      alt={colab.nombre}
+                      loading="lazy"
+                      class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  ) : (
+                    <span class="text-sm font-semibold text-slate-500">{colab.nombre}</span>
+                  )}
+                </div>
+              </div>
+
+              <div class="flex flex-1 flex-col px-4 pb-4 pt-3 md:px-5 md:pb-5">
+                <h2 class="text-sm md:text-base font-semibold text-slate-900 mb-1 line-clamp-2">
+                  {colab.nombre}
+                </h2>
+                <p class="text-[0.7rem] md:text-xs font-semibold uppercase tracking-wide text-cyan-700 mb-2">
+                  {colab.rol}
+                </p>
+                <p class="flex-1 text-xs md:text-sm leading-relaxed text-slate-600 mb-3 line-clamp-3">
+                  {colab.descripcion}
+                </p>
+
+                {colab.url && colab.url !== "#" && (
+                  <div class="mt-auto pt-2">
+                    <a
+                      href={colab.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-cyan-600 to-blue-700 px-3 py-1.5 text-xs font-semibold text-white shadow-sm transition-all duration-200 hover:from-cyan-700 hover:to-blue-800 hover:-translate-y-0.5 hover:shadow-md"
+                    >
+                      Visitar sitio
+                      <svg
+                        class="h-3 w-3"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path d="M9 5l7 0 0 7" />
+                        <path d="M5 19l11-11" />
+                      </svg>
+                    </a>
+                  </div>
+                )}
+              </div>
+
+              <!-- Borde decorativo inferior -->
+              <div class="pointer-events-none absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </article>
+          ))}
+        </div>
+      </section>
+    </div>
+  </section>
+</LayoutCompetencias>
+
+<style>
+  @keyframes fade-in-down {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-down {
+    animation: fade-in-down 0.6s ease-out;
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out;
+    animation-fill-mode: both;
+  }
+</style>
