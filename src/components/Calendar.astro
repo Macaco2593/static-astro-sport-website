@@ -1,0 +1,185 @@
+---
+// src/components/Calendar.astro
+interface Props {
+  events?: { 
+    date: string; 
+    title: string; 
+    type: string; 
+    description?: string; // Added description
+    time?: string;        // Added time
+  }[];
+}
+
+const { events = [] } = Astro.props;
+---
+
+<div class="calendar-component w-full max-w-4xl mx-auto bg-white shadow-xl rounded-xl overflow-hidden border border-slate-200">
+  
+  <div class="bg-cyan-600 p-6 flex justify-between items-center text-white">
+    <button id="prevMonth" class="p-2 hover:bg-cyan-700 rounded-full transition-colors">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+    </button>
+    
+    <h2 id="currentMonthYear" class="text-3xl font-bold tracking-tight text-center w-64">
+      </h2>
+
+    <button id="nextMonth" class="p-2 hover:bg-cyan-700 rounded-full transition-colors">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+    </button>
+  </div>
+
+  <div class="grid grid-cols-7 bg-slate-50 border-b border-slate-200">
+    {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map((day) => (
+      <div class="py-3 text-center text-sm font-semibold text-slate-500 uppercase tracking-wide">
+        {day}
+      </div>
+    ))}
+  </div>
+
+  <div id="calendarGrid" class="grid grid-cols-7 auto-rows-fr bg-slate-200 gap-px border-b border-slate-200">
+    </div>
+</div>
+
+<div id="eventModal" class="fixed inset-0 z-50 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+  <div class="fixed inset-0 bg-gray-900 bg-opacity-50 transition-opacity" id="modalBackdrop"></div>
+
+  <div class="fixed inset-0 z-10 overflow-y-auto">
+    <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
+      <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+        
+        <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+          <div class="sm:flex sm:items-start">
+            <div class="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-cyan-100 sm:mx-0 sm:h-10 sm:w-10">
+              <svg class="h-6 w-6 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0h18M5.25 12h13.5h-13.5z" />
+              </svg>
+            </div>
+            <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left w-full">
+              <h3 class="text-xl font-semibold leading-6 text-gray-900" id="modalDate"></h3>
+              <div class="mt-4 space-y-3" id="modalEventsList">
+                </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+          <button type="button" id="closeModalBtn" class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline define:vars={{ events }}>
+  // Variables
+  let currDate = new Date();
+  let currYear = currDate.getFullYear();
+  let currMonth = currDate.getMonth();
+  
+  const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  const grid = document.getElementById('calendarGrid');
+  const monthTitle = document.getElementById('currentMonthYear');
+  const modal = document.getElementById('eventModal');
+  const modalDate = document.getElementById('modalDate');
+  const modalList = document.getElementById('modalEventsList');
+
+  // --- RENDER FUNCTION ---
+  function renderCalendar() {
+    // Clear previous days
+    grid.innerHTML = "";
+    
+    // Update Header
+    monthTitle.innerText = `${monthNames[currMonth]} ${currYear}`;
+
+    // Calculate days
+    const firstDay = new Date(currYear, currMonth, 1).getDay();
+    const lastDate = new Date(currYear, currMonth + 1, 0).getDate();
+    const today = new Date();
+
+    // 1. Empty slots for previous month
+    for (let i = 0; i < firstDay; i++) {
+      const emptyDiv = document.createElement('div');
+      emptyDiv.className = "h-32 bg-slate-50";
+      grid.appendChild(emptyDiv);
+    }
+
+    // 2. Actual Days
+    for (let i = 1; i <= lastDate; i++) {
+      const dateStr = `${currYear}-${String(currMonth + 1).padStart(2, '0')}-${String(i).padStart(2, '0')}`;
+      const dayEvents = events.filter(e => e.date === dateStr);
+      
+      // Check if it's today
+      const isToday = i === today.getDate() && currMonth === today.getMonth() && currYear === today.getFullYear();
+
+      // Create Day Wrapper
+      const dayDiv = document.createElement('div');
+      dayDiv.className = `h-32 bg-white p-2 relative group hover:bg-slate-50 cursor-pointer transition-colors ${isToday ? 'bg-blue-50' : ''}`;
+      
+      // Add click listener for Modal
+      dayDiv.onclick = () => openModal(dateStr, dayEvents);
+
+      // Day Number
+      dayDiv.innerHTML = `
+        <span class="text-sm font-medium w-7 h-7 flex items-center justify-center rounded-full ${isToday ? 'bg-cyan-600 text-white' : 'text-slate-700'}">
+          ${i}
+        </span>
+        <div class="mt-2 space-y-1 overflow-y-auto max-h-[4.5rem]">
+          ${dayEvents.map(e => `
+            <div class="text-xs p-1 rounded bg-cyan-100 text-cyan-800 border-l-2 border-cyan-500 truncate">
+              ${e.title}
+            </div>
+          `).join('')}
+        </div>
+      `;
+
+      grid.appendChild(dayDiv);
+    }
+  }
+
+  // --- MODAL FUNCTIONS ---
+  function openModal(dateStr, dayEvents) {
+    // Format date for title
+    const dateObj = new Date(dateStr + "T00:00:00"); // Fix timezone offset
+    modalDate.innerText = dateObj.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+    
+    // Build Events List
+    if (dayEvents.length === 0) {
+      modalList.innerHTML = `<p class="text-slate-500 italic">No competitions scheduled for this day.</p>`;
+    } else {
+      modalList.innerHTML = dayEvents.map(e => `
+        <div class="bg-slate-50 p-3 rounded-lg border border-slate-200">
+          <h4 class="font-bold text-cyan-900">${e.title}</h4>
+          ${e.time ? `<p class="text-xs text-slate-500 mt-1">⏰ ${e.time}</p>` : ''}
+          ${e.description ? `<p class="text-sm text-slate-700 mt-2">${e.description}</p>` : ''}
+        </div>
+      `).join('');
+    }
+
+    modal.classList.remove('hidden');
+  }
+
+  function closeModal() {
+    modal.classList.add('hidden');
+  }
+
+  // --- EVENT LISTENERS ---
+  document.getElementById('prevMonth').addEventListener('click', () => {
+    currMonth--;
+    if (currMonth < 0) { currMonth = 11; currYear--; }
+    renderCalendar();
+  });
+
+  document.getElementById('nextMonth').addEventListener('click', () => {
+    currMonth++;
+    if (currMonth > 11) { currMonth = 0; currYear++; }
+    renderCalendar();
+  });
+
+  document.getElementById('closeModalBtn').addEventListener('click', closeModal);
+  document.getElementById('modalBackdrop').addEventListener('click', closeModal);
+
+  // Initial Render
+  renderCalendar();
+</script>
