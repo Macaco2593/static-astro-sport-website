@@ -65,14 +65,14 @@ export const DOCUMENTOS: Documento[] = [
     fechaPublicacion: "2025-12-01",
     archivo: "/documentos/normativa-fichaje-2026.pdf",
   },
-  {
-    slug: "organigrama-asociacion",
-    titulo: "Organigrama de la Asociación",
-    descripcion:
-      "Organigrama oficial de la Asociación de Deportes Acuáticos del Estado Táchira.",
-    fechaPublicacion: "2024-01-10",
-    archivo: "/documentos/organigrama-asociacion.pdf",
-  },
+  // {
+  //   slug: "organigrama-asociacion",
+  //   titulo: "Organigrama de la Asociación",
+  //   descripcion:
+  //     "Organigrama oficial de la Asociación de Deportes Acuáticos del Estado Táchira.",
+  //   fechaPublicacion: "2024-01-10",
+  //   archivo: "/documentos/organigrama-asociacion.pdf",
+  // },
   {
     slug: "reconocimiento-idt",
     titulo: "Reconocimiento del IDT",
@@ -80,6 +80,14 @@ export const DOCUMENTOS: Documento[] = [
       "Documento de reconocimiento emitido por el Instituto del Deporte Tachirense (IDT).",
     fechaPublicacion: "2023-11-20",
     archivo: "/documentos/reconocimiento-idt.pdf",
+  },
+  {
+    slug: "organigrama-de-la-asociacion",
+    titulo: "Organigrama de la Asociación",
+    descripcion:
+      "Documento que desglosa la estructura organizativa de la ADADET.",
+    fechaPublicacion: "2026-02-05",
+    archivo: "/contenido/documentos/Organigrama-de-la-asociacion.pdf",
   },
 
   // ----- Documentos asociados a disciplinas (slugs usados en src/data/disciplinas.ts) -----
