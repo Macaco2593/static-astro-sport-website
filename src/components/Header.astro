@@ -1,5 +1,7 @@
 ---
 import logoAdadet from '../assets/logoAdadet.svg';
+import { ROUTES } from '../data/routes';
+import { DOCUMENTOS_SLUG } from 'src/data/documentos';
 ---
 
 <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
@@ -19,7 +21,7 @@ import logoAdadet from '../assets/logoAdadet.svg';
         <button
           class="inline-flex items-center gap-2 py-2 text-lg font-semibold text-gray-900  transition-all duration-200 hover:bg-white hover:text-blue-600  hover:ring-blue-200"
         >
-          <span> <a href="/">ADADET</a></span>
+          <span> <a href={ROUTES.HOME}>ADADET</a></span>
           <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
@@ -35,28 +37,28 @@ import logoAdadet from '../assets/logoAdadet.svg';
           </div>
           <div class="space-y-1 text-sm">
             <a
-              href="/documentos/normativa-fichaje-2026"
+              href={ROUTES.documento(DOCUMENTOS_SLUG.NORMATIVA_FICHAJE_2026)}
               class="flex items-start gap-3 rounded-xl px-3 py-2 text-slate-700 transition-colors hover:bg-blue-50 hover:text-blue-700"
             >
               <span class="mt-1 h-2 w-2 rounded-full bg-blue-500"></span>
               <span>Normativa del fichaje 2026</span>
             </a>
-            <a
+            <!-- <a
               href="/documentos/organigrama-asociacion"
               class="flex items-start gap-3 rounded-xl px-3 py-2 text-slate-700 transition-colors hover:bg-blue-50 hover:text-blue-700"
             >
               <span class="mt-1 h-2 w-2 rounded-full bg-cyan-500"></span>
               <span>Organigrama de la asociación</span>
-            </a>
+            </a> -->
             <a
-              href="/documentos/reconocimiento-idt"
+              href={ROUTES.documento(DOCUMENTOS_SLUG.RECONOCIMIENTO_IDT)}
               class="flex items-start gap-3 rounded-xl px-3 py-2 text-slate-700 transition-colors hover:bg-blue-50 hover:text-blue-700"
             >
               <span class="mt-1 h-2 w-2 rounded-full bg-emerald-500"></span>
               <span>Reconocimiento del IDT</span>
             </a>
             <a
-              href="/quienes-somos"
+              href={ROUTES.QUIENES_SOMOS}
               class="flex items-start gap-3 rounded-xl px-3 py-2 text-slate-700 transition-colors hover:bg-blue-50 hover:text-blue-700"
             >
               <span class="mt-1 h-2 w-2 rounded-full bg-amber-500"></span>
@@ -67,27 +69,27 @@ import logoAdadet from '../assets/logoAdadet.svg';
       </div>
 
       <!-- Ranking -->
-      <a href="/ranking" class="text-gray-900 hover:text-blue-600 font-medium text-lg transition-colors">
+      <a href={ROUTES.RANKING} class="text-gray-900 hover:text-blue-600 font-medium text-lg transition-colors">
         Ranking
       </a>
 
       <!-- Resultados -->
-      <a href="/resultados" class="text-gray-900 hover:text-blue-600 font-medium text-lg transition-colors">
+      <a href={ROUTES.RESULTADOS} class="text-gray-900 hover:text-blue-600 font-medium text-lg transition-colors">
         Resultados
       </a>
 
       <!-- Calendario -->
-      <a href="/calendario" class="text-gray-900 hover:text-blue-600 font-medium text-lg transition-colors">
+      <a href={ROUTES.CALENDARIO} class="text-gray-900 hover:text-blue-600 font-medium text-lg transition-colors">
         Calendario
       </a>
       
       <!-- Colaboradores -->
-      <a href="/colaboradores" class="text-gray-900 hover:text-blue-600 font-medium text-lg transition-colors">
+      <a href={ROUTES.COLABORADORES} class="text-gray-900 hover:text-blue-600 font-medium text-lg transition-colors">
         Colaboradores
       </a>
 
       <!-- Contacto y Denuncia -->
-      <a href="/contacto" class="text-gray-900 hover:text-blue-600 font-medium text-lg transition-colors">
+      <a href={ROUTES.CONTACTO} class="text-gray-900 hover:text-blue-600 font-medium text-lg transition-colors">
         Contacto y Denuncia
       </a>
     </nav>
@@ -110,7 +112,7 @@ import logoAdadet from '../assets/logoAdadet.svg';
   <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200 bg-white shadow-sm">
     <nav class="px-4 pt-3 pb-4 space-y-2 text-sm">
       <a
-        href="/"
+        href={ROUTES.HOME}
         class="block rounded-lg px-3 py-2 font-medium text-gray-900 hover:bg-gray-100 hover:text-blue-700"
       >
         Inicio
@@ -121,32 +123,32 @@ import logoAdadet from '../assets/logoAdadet.svg';
           ADADET
         </p>
         <a
-          href="/"
+          href={ROUTES.HOME}
           class="block rounded-lg px-3 py-2 font-medium text-gray-900 hover:bg-gray-100 hover:text-blue-700"
         >
           Página principal ADADET
         </a>
         <div class="space-y-1 pl-4">
           <a
-            href="/documentos/normativa-fichaje-2026"
+            href={ROUTES.documento(DOCUMENTOS_SLUG.NORMATIVA_FICHAJE_2026)}
             class="block rounded-lg px-3 py-2 text-slate-700 hover:bg-blue-50 hover:text-blue-700"
           >
             Normativa del fichaje 2026
           </a>
           <a
-            href="/documentos/organigrama-asociacion"
+            href={ROUTES.documento(DOCUMENTOS_SLUG.ORGANIGRAMA_ASOCIACION)}
             class="block rounded-lg px-3 py-2 text-slate-700 hover:bg-blue-50 hover:text-blue-700"
           >
             Organigrama de la asociación
           </a>
           <a
-            href="/documentos/reconocimiento-idt"
+            href={ROUTES.documento(DOCUMENTOS_SLUG.RECONOCIMIENTO_IDT)}
             class="block rounded-lg px-3 py-2 text-slate-700 hover:bg-blue-50 hover:text-blue-700"
           >
             Reconocimiento del IDT
           </a>
           <a
-            href="/quienes-somos"
+            href={ROUTES.QUIENES_SOMOS}
             class="block rounded-lg px-3 py-2 text-slate-700 hover:bg-blue-50 hover:text-blue-700"
           >
             ¿Quiénes somos?
@@ -155,25 +157,25 @@ import logoAdadet from '../assets/logoAdadet.svg';
       </div>
 
       <a
-        href="/ranking"
+        href={ROUTES.RANKING}
         class="block rounded-lg px-3 py-2 font-medium text-gray-900 hover:bg-gray-100 hover:text-blue-700"
       >
         Ranking
       </a>
       <a
-        href="/resultados"
+        href={ROUTES.RESULTADOS}
         class="block rounded-lg px-3 py-2 font-medium text-gray-900 hover:bg-gray-100 hover:text-blue-700"
       >
         Resultados
       </a>
       <a
-        href="/contacto"
+        href={ROUTES.CALENDARIO}
         class="block rounded-lg px-3 py-2 font-medium text-gray-900 hover:bg-gray-100 hover:text-blue-700"
       >
         Contacto y denuncia
       </a>
       <a
-        href="/colaboradores"
+        href={ROUTES.COLABORADORES}
         class="block rounded-lg px-3 py-2 font-medium text-gray-900 hover:bg-gray-100 hover:text-blue-700"
       >
         Colaboradores

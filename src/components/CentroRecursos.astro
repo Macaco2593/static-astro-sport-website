@@ -1,15 +1,15 @@
 ---
 import logoAdadet from "../assets/logoAdadet.svg";
-import { DOCUMENTOS } from "../data/documentos";
+import { DOCUMENTOS, DOCUMENTOS_SLUG } from "../data/documentos";
 
-// Slugs de los 6 documentos que quieres mostrar en el Centro de recursos.
+
 const SLUGS_CENTRO_RECURSOS = [
-  "acta-asamblea-general",
-  "acta-asamblea-extraordinaria",
-  "providencia-administrativa",
-  "estatutos-adadet",
-  "declaracion-seniat-2024",
-  "declaracion-islr-2024",
+  DOCUMENTOS_SLUG.ACTA_ASAMBLEA_GENERAL,
+  DOCUMENTOS_SLUG.ACTA_ASAMBLEA_EXTRAORDINARIA,
+  DOCUMENTOS_SLUG.PROVIDENCIA_ADMINISTRATIVA,
+  DOCUMENTOS_SLUG.ESTATUTOS_ADADET,
+  DOCUMENTOS_SLUG.SENIAT,
+  DOCUMENTOS_SLUG.ISLR,
 ];
 
 // Solo se muestran estos 6, aunque existan más documentos en DOCUMENTOS.

@@ -1,6 +1,7 @@
 ---
 export const prerender = false;
 import { BASE_DISCIPLINAS as disciplinas } from "src/data/disciplinas";
+import { ROUTES } from "src/data/routes";
 ---
 
 <section class="relative px-4 py-16 md:py-24 bg-[#f2f2f5] overflow-hidden">
@@ -81,7 +82,7 @@ import { BASE_DISCIPLINAS as disciplinas } from "src/data/disciplinas";
 
                 <!-- CTA Button -->
                 <a 
-                  href={`/disciplinas/${deporte.slug}`}
+                  href={ROUTES.disciplina(deporte.slug)}
                   class="mt-auto block"
                 >
                   <button class="relative w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-600 to-cyan-600 text-white font-semibold rounded-xl overflow-hidden group/btn transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">

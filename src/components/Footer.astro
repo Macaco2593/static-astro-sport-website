@@ -2,6 +2,7 @@
 import logoAdadet from "../assets/logoAdadet.svg";
 import iconFacebook from "../assets/icons/facebook.png";
 import iconInstagram from "../assets/icons/Instagram.png";
+import { ROUTES } from "../data/routes";
 
 const socialLinks = [
   {
@@ -17,14 +18,13 @@ const socialLinks = [
 ];
 
 const quickLinks = [
-  { label: "Inicio", href: "/" },
-  { label: "Calendario de eventos", href: "/competencias" },
-  { label: "Galería", href: "/galeria" },
-  { label: "Resultados", href: "/resultados" },
-  { label: "Ranking", href: "/ranking" },
-  { label: "Contacto y denuncia", href: "/contacto" },
-  { label: "Calendario", href: "/calendario" },
-  { label: "Colaboradores", href: "/colaboradores" }
+  { label: "Inicio", href: ROUTES.HOME },
+  { label: "Calendario de eventos", href: ROUTES.CALENDARIO },
+  { label: "Galería", href: ROUTES.GALERIA },
+  { label: "Resultados", href: ROUTES.RESULTADOS },
+  { label: "Ranking", href: ROUTES.RANKING },
+  { label: "Contacto y denuncia", href: ROUTES.CONTACTO },
+  { label: "Colaboradores", href: ROUTES.COLABORADORES },
 ];
 ---
 
@@ -33,7 +33,7 @@ const quickLinks = [
     <div class="grid gap-8 md:grid-cols-[minmax(0,2fr)_minmax(0,1.5fr)_minmax(0,1.5fr)]">
       <!-- Columna 1: logo + misión -->
       <div class="space-y-4">
-        <a href="/" class="inline-flex items-center gap-3">
+        <a href={ROUTES.HOME} class="inline-flex items-center gap-3">
           <div class="h-14 w-14 overflow-hidden rounded-full bg-slate-100 ring-1 ring-slate-200">
             <img
               src={logoAdadet.src}

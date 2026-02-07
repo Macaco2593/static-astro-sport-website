@@ -1,5 +1,7 @@
 ---
 // Hero Carousel Component
+import { ROUTES } from '../data/routes.ts';
+import { DOCUMENTOS_SLUG } from '../data/documentos.ts';
 ---
 
 <section class="hero-carousel relative w-full h-[600px] overflow-hidden">
@@ -25,7 +27,7 @@
         <h1 class="text-6xl md:text-7xl font-bold mb-4 drop-shadow-lg">ADADET 2026</h1>
         <p class="text-2xl md:text-3xl font-medium mb-8 drop-shadow-md">100% Pasión Acuática</p>
         <a 
-          href="#fichaje" 
+          href={ROUTES.documento(DOCUMENTOS_SLUG.NORMATIVA_FICHAJE_2026)} 
           class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-4 px-8 rounded-md text-lg transition-colors duration-300 shadow-lg hover:shadow-xl"
         >
           NORMATIVA DE FICHAJE 2026
@@ -46,7 +48,7 @@
         <h2 class="text-6xl md:text-7xl font-bold mb-4 drop-shadow-lg">Competencias 2026</h2>
         <p class="text-2xl md:text-3xl font-medium mb-8 drop-shadow-md">Calendario completo de eventos</p>
         <a 
-          href="/calendario" 
+          href={ROUTES.CALENDARIO} 
           class="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-4 px-8 rounded-md text-lg transition-colors duration-300 shadow-lg hover:shadow-xl"
         >
           VER CALENDARIO
@@ -67,7 +69,7 @@
         <h2 class="text-6xl md:text-7xl font-bold mb-4 drop-shadow-lg">Rankings Estadales</h2>
         <p class="text-2xl md:text-3xl font-medium mb-8 drop-shadow-md">Consulta las mejores marcas</p>
         <a 
-          href="/ranking" 
+          href={ROUTES.RANKING} 
           class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-md text-lg transition-colors duration-300 shadow-lg hover:shadow-xl"
         >
           VER RANKINGS
