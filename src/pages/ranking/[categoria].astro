@@ -1,0 +1,110 @@
+---
+// src/pages/ranking/[categoria].astro
+import LayoutCompetencias from "src/layouts/LayoutCompetencias.astro";
+import RANKING_DATA from "../../data/generated-ranking.json"; 
+
+export function getStaticPaths() {
+  return RANKING_DATA.map((cat) => ({
+    params: { categoria: cat.id }, 
+    props: { categoriaData: cat },
+  }));
+}
+
+const { categoriaData } = Astro.props;
+---
+
+<LayoutCompetencias titulo={`Ranking ${categoriaData.titulo}`}>
+  <div class="bg-slate-50 min-h-screen py-10 px-4">
+    <div class="max-w-6xl mx-auto space-y-12">
+      
+      <header class="text-center mb-10">
+        <h1 class="text-4xl font-black text-slate-900">{categoriaData.titulo}</h1>
+        <p class="text-slate-500">Mejores Marcas Registradas - Temporada 2026</p>
+      </header>
+
+      {/* RECORREMOS CADA PRUEBA (Ej: 50m Libre, 100m Espalda) */}
+      {categoriaData.pruebas.map((prueba) => (
+        <article class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+          
+          {/* Título de la Prueba */}
+          <div class="bg-slate-100 px-6 py-3 border-b border-slate-200">
+            <h2 class="text-xl font-extrabold text-slate-800 text-center uppercase tracking-wide">
+              {prueba.nombre}
+            </h2>
+          </div>
+
+          <div class="grid lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-slate-100">
+            
+            {/* --- RAMA FEMENINA --- */}
+            <div>
+               <div class="bg-pink-50 px-4 py-2 text-pink-700 font-bold text-center text-sm">Femenino</div>
+               <table class="w-full text-sm text-left">
+                 <thead class="bg-white text-slate-500 border-b border-slate-100">
+                   <tr>
+                     <th class="px-4 py-2 w-10">#</th>
+                     <th class="px-4 py-2">Atleta</th>
+                     <th class="px-4 py-2">Tiempo</th>
+                     <th class="px-4 py-2 text-xs">Detalles</th>
+                   </tr>
+                 </thead>
+                 <tbody class="divide-y divide-slate-50">
+                   {prueba.femenino.map((atleta, idx) => (
+                     <tr class="hover:bg-slate-50">
+                       <td class="px-4 py-3 font-bold text-slate-400">{idx + 1}</td>
+                       <td class="px-4 py-3">
+                         <div class="font-bold text-slate-800">{atleta.nombre}</div>
+                         <div class="text-xs text-slate-500">{atleta.club}</div>
+                       </td>
+                       <td class="px-4 py-3 font-mono font-bold text-cyan-700 text-base">
+                         {atleta.marca.tiempoTexto}
+                       </td>
+                       <td class="px-4 py-3 text-xs text-slate-400 leading-tight">
+                         <div>{atleta.marca.competencia}</div>
+                         <div>{atleta.marca.fecha}</div>
+                       </td>
+                     </tr>
+                   ))}
+                 </tbody>
+               </table>
+            </div>
+
+            {/* --- RAMA MASCULINA --- */}
+            <div>
+               <div class="bg-blue-50 px-4 py-2 text-blue-700 font-bold text-center text-sm">Masculino</div>
+               <table class="w-full text-sm text-left">
+                 <thead class="bg-white text-slate-500 border-b border-slate-100">
+                   <tr>
+                     <th class="px-4 py-2 w-10">#</th>
+                     <th class="px-4 py-2">Atleta</th>
+                     <th class="px-4 py-2">Tiempo</th>
+                     <th class="px-4 py-2 text-xs">Detalles</th>
+                   </tr>
+                 </thead>
+                 <tbody class="divide-y divide-slate-50">
+                   {prueba.masculino.map((atleta, idx) => (
+                     <tr class="hover:bg-slate-50">
+                       <td class="px-4 py-3 font-bold text-slate-400">{idx + 1}</td>
+                       <td class="px-4 py-3">
+                         <div class="font-bold text-slate-800">{atleta.nombre}</div>
+                         <div class="text-xs text-slate-500">{atleta.club}</div>
+                       </td>
+                       <td class="px-4 py-3 font-mono font-bold text-cyan-700 text-base">
+                         {atleta.marca.tiempoTexto}
+                       </td>
+                       <td class="px-4 py-3 text-xs text-slate-400 leading-tight">
+                         <div>{atleta.marca.competencia}</div>
+                         <div>{atleta.marca.fecha}</div>
+                       </td>
+                     </tr>
+                   ))}
+                 </tbody>
+               </table>
+            </div>
+
+          </div>
+        </article>
+      ))}
+
+    </div>
+  </div>
+</LayoutCompetencias>

@@ -1,6 +1,6 @@
 ---
 import LayoutCompetencias from 'src/layouts/LayoutCompetencias.astro';
-import { ListaCompetencias } from '../../lista/ListaCompetencias'
+import { ListaCompetencias } from '../../data/listaCompetencias'
 
 export async function getStaticPaths() {
   return ListaCompetencias.map((competencia) => {
