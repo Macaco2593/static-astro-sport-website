@@ -2,7 +2,7 @@
 import logoAdadet from "../assets/logoAdadet.svg";
 import { DOCUMENTOS, DOCUMENTOS_SLUG } from "../data/documentos";
 
-
+// Selección de documentos clave
 const SLUGS_CENTRO_RECURSOS = [
   DOCUMENTOS_SLUG.ACTA_ASAMBLEA_GENERAL,
   DOCUMENTOS_SLUG.ACTA_ASAMBLEA_EXTRAORDINARIA,
@@ -12,89 +12,107 @@ const SLUGS_CENTRO_RECURSOS = [
   DOCUMENTOS_SLUG.ISLR,
 ];
 
-// Solo se muestran estos 6, aunque existan más documentos en DOCUMENTOS.
 const documentos = DOCUMENTOS.filter((doc) => SLUGS_CENTRO_RECURSOS.includes(doc.slug));
 ---
 
-<section class="relative px-4 py-16 md:py-7 bg-[#f2f2f5] overflow-hidden">
-  <!-- Elementos decorativos de fondo -->
+<section class="relative px-4 py-16 md:py-20 bg-slate-50 overflow-hidden">
+  
   <div class="pointer-events-none absolute inset-0 overflow-hidden">
-    <div class="absolute -left-24 top-10 h-64 w-64 rounded-full bg-cyan-300/15 blur-3xl"></div>
-    <div class="absolute -right-24 top-1/2 h-80 w-80 -translate-y-1/2 rounded-full bg-blue-400/15 blur-3xl"></div>
+    <div class="absolute -left-24 top-10 h-96 w-96 rounded-full bg-adadet-main/5 blur-3xl"></div>
+    <div class="absolute -right-24 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-cyan-400/10 blur-3xl"></div>
   </div>
 
-  <div class="relative z-10 mx-auto flex max-w-7xl flex-col gap-12 lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)] lg:items-start">
-    <!-- Columna izquierda: logo -->
-    <div class="flex justify-center lg:justify-start">
-      <div class="rounded-3xl bg-white/80 p-6 shadow-lg ring-1 ring-slate-200/60">
-        <img
-          src={logoAdadet.src}
-          alt="Logo ADADET"
-          class="h-auto w-64 max-w-full object-contain"
-          loading="lazy"
-        />
-      </div>
+  <div class="relative z-10 mx-auto max-w-7xl">
+    
+    <div class="w-full flex justify-center items-center gap-4 mb-12">
+        <span class="relative flex h-2.5 w-2.5">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-adadet-main opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-adadet-main"></span>
+        </span>
+        <span class="inline-flex items-center gap-2 bg-cyan-50 text-adadet-main border border-cyan-100 px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wider shadow-sm">
+          Transparencia Institucional
+        </span>
     </div>
 
-    <!-- Columna derecha: contenido -->
-    <div>
-      <header class="mb-8 space-y-4">
-        <div class="inline-flex items-center gap-2 rounded-full bg-cyan-100 px-4 py-1.5 text-sm font-semibold text-cyan-800">
-          <span class="inline-flex h-2 w-2 rounded-full bg-cyan-500"></span>
-          Centro de recursos institucionales
+    <div class="flex flex-col lg:grid lg:grid-cols-12 gap-12 lg:items-start">
+      
+      <div class="lg:col-span-4 flex justify-center lg:justify-start">
+        <div class="relative group">
+          <div class="absolute inset-0 bg-gradient-to-tr from-adadet-main to-cyan-400 rounded-full blur-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
+          
+          <div class="relative rounded-3xl bg-white/80 backdrop-blur-xl p-8 shadow-xl ring-1 ring-white/50 border border-slate-100 transition-transform duration-500 hover:scale-[1.02]">
+            <img
+              src={logoAdadet.src}
+              alt="Escudo Oficial ADADET"
+              class="h-auto w-64 max-w-full object-contain drop-shadow-sm"
+              loading="lazy"
+            />
+          </div>
         </div>
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900">
-          Centro de <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-700">recursos ADADET</span>
-        </h2>
-        <p class="max-w-2xl text-base md:text-lg leading-relaxed text-slate-600">
-          En este espacio podrás consultar de forma rápida y organizada la documentación clave de la
-          Asociación de Deportes Acuáticos del Estado Táchira: actas de asamblea, providencias,
-          estatutos, declaraciones y otros documentos oficiales que respaldan nuestra gestión y
-          transparencia institucional.
-        </p>
-      </header>
+      </div>
 
+      <div class="lg:col-span-8 space-y-8">
+        
+        <header class="space-y-6 text-center lg:text-left">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-black font-display text-slate-900 drop-shadow-sm leading-tight">
+            Centro de 
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-adadet-main to-cyan-500 pb-2">
+              Recursos ADADET
+            </span>
+          </h2>
+          
+          <p class="max-w-2xl mx-auto lg:mx-0 text-base md:text-lg leading-relaxed text-slate-600">
+            En este espacio podrás consultar de forma rápida y organizada la documentación clave de la Asociación de Deportes Acuáticos del Estado Táchira: actas de asamblea, providencias, estatutos, declaraciones y otros documentos oficiales que respaldan nuestra gestión y transparencia institucional: 
+            <strong class="text-adadet-dark">actas, estatutos y providencias</strong> al alcance de todos los afiliados.
+          </p>
+        </header>
 
-      <!-- Grid de documentos -->
-      <section aria-label="Documentos descargables de ADADET">
-        <p class="mb-4 text-sm font-semibold uppercase tracking-wide text-slate-500">
-          Documentos destacados
-        </p>
-        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {documentos.map((doc) => (
-            <a
-              href={`/documentos/${doc.slug}`}
-              class="group flex items-center gap-3 rounded-2xl bg-white/90 px-4 py-3 text-left shadow-sm ring-1 ring-slate-200 transition-all duration-200 hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-cyan-50 hover:to-blue-50 hover:shadow-md hover:ring-cyan-300"
-            >
-              <!-- Icono PDF -->
-              <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-red-50 text-red-600 ring-1 ring-red-100">
-                <svg
-                  class="h-5 w-5"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
+        <div class="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-slate-100 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-slate-50 rounded-bl-full -z-0"></div>
+
+            <p class="relative z-10 mb-6 text-xs font-bold uppercase tracking-widest text-slate-400">
+              Documentación Disponible
+            </p>
+            
+            <div class="relative z-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {documentos.map((doc) => (
+                <a
+                  href={`/documentos/${doc.slug}`}
+                  class="group flex items-center gap-4 rounded-xl bg-slate-50 px-4 py-3.5 border border-slate-200/60 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:border-adadet-main/30 hover:shadow-lg hover:shadow-adadet-main/10"
                 >
-                  <path d="M6 2h7l5 5v15H6z" />
-                  <path d="M13 2v6h6" />
-                  <path d="M9 17h1.5" />
-                  <path d="M9 15v4" />
-                  <path d="M12.5 19v-4H14a1.5 1.5 0 010 3h-1.5" />
-                  <path d="M17 15h1.2a1.3 1.3 0 010 2.6H17v-4" />
-                </svg>
-              </div>
+                  <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-white text-red-500 ring-1 ring-slate-100 shadow-sm group-hover:bg-red-50 group-hover:text-red-600 transition-colors">
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+                      <polyline points="14 2 14 8 20 8"/>
+                      <path d="M9 15l3 3 3-3"/> <line x1="12" y1="12" x2="12" y2="18"/>
+                    </svg>
+                  </div>
 
-              <!-- Texto / botón -->
-              <span class="flex-1 text-sm font-semibold leading-snug text-slate-800 group-hover:text-cyan-700">
-                {doc.titulo}
-              </span>
-            </a>
-          ))}
+                  <div class="flex-1 min-w-0">
+                    <p class="text-sm font-bold text-slate-700 truncate group-hover:text-adadet-main transition-colors">
+                      {doc.titulo}
+                    </p>
+                    <p class="text-[10px] uppercase font-bold text-slate-400 mt-0.5 group-hover:text-adadet-main/60">
+                      PDF • Oficial
+                    </p>
+                  </div>
+                </a>
+              ))}
+            </div>
         </div>
-      </section>
+
+      </div>
     </div>
   </div>
 </section>
+
+<style>
+  /* Animación para el gradiente del texto */
+  .bg-300% { background-size: 300% auto; }
+  @keyframes gradient { 
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  .animate-gradient { animation: gradient 6s ease infinite; }
+</style>

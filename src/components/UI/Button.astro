@@ -1,0 +1,23 @@
+---
+interface Props {
+  href?: string; // Es opcional (?) porque a veces será botón, a veces enlace
+  type?: "button" | "submit" | "reset"; // Para cuando sea un botón real
+  variant?: "primary" | "secondary" | "dark"; // Limitamos las opciones
+  class?: string;
+  [key: string]: any; // Para aceptar otros atributos como ID, onClick, etc.
+}
+
+const { href, variant = "primary", class: className } = Astro.props;
+
+const baseStyles = "inline-flex items-center justify-center px-6 py-3 rounded-xl font-bold transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-offset-2";
+
+const variants = {
+  primary: "bg-adadet-main text-white shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 hover:bg-cyan-500",
+  secondary: "bg-white text-slate-700 border border-slate-200 hover:border-adadet-main hover:text-adadet-main shadow-sm",
+  dark: "bg-slate-800 text-white hover:bg-slate-700 shadow-lg"
+};
+
+
+---
+<a href={href} class={`${baseStyles} ${variants[variant]} ${className}`}>
+  <slot /> </a>

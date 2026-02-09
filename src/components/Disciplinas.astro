@@ -2,44 +2,47 @@
 export const prerender = false;
 import { BASE_DISCIPLINAS as disciplinas } from "src/data/disciplinas";
 import { ROUTES } from "src/data/routes";
+
+// Definimos los colores base para el gradiente si no carga la imagen
+const fallbackGradient = "bg-gradient-to-br from-slate-100 to-slate-200";
 ---
 
-<section class="relative px-4 py-16 md:py-24 bg-[#f2f2f5] overflow-hidden">
-  <!-- Background decorative elements -->
+<section class="relative px-4 py-16 md:py-24 bg-slate-50 overflow-hidden">
+  
   <div class="absolute inset-0 overflow-hidden pointer-events-none">
-    <div class="absolute top-10 -left-20 w-72 h-72 bg-blue-300/20 rounded-full blur-3xl animate-blob"></div>
-    <div class="absolute top-1/3 -right-20 w-96 h-96 bg-cyan-300/20 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
-    <div class="absolute bottom-10 left-1/4 w-80 h-80 bg-indigo-400/20 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+    <div class="absolute top-10 -left-20 w-72 h-72 bg-adadet-main/10 rounded-full blur-3xl animate-blob"></div>
+    <div class="absolute top-1/3 -right-20 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
+    <div class="absolute bottom-10 left-1/4 w-80 h-80 bg-adadet-dark/10 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
   </div>
 
   <div class="max-w-7xl mx-auto relative z-10">
-    <!-- Section Header -->
+    
     <header class="text-center mb-12 md:mb-16 animate-fade-in-down">
-      <div class="inline-flex items-center gap-2 bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+      <div class="inline-flex items-center gap-2 bg-cyan-50 text-adadet-main border border-cyan-100 px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wider mb-4 shadow-sm">
         <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
           <path d="M2 17s1.5-2 3.5-2 3.5 2 5.5 2 3.5-2 5.5-2 3.5 2 3.5 2m-17 2s1.5-2 3.5-2 3.5 2 5.5 2 3.5-2 5.5-2 3.5 2 3.5 2"/>
         </svg>
         Deportes Acuáticos
       </div>
-      <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
-        Nuestras <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-cyan-600">Disciplinas</span>
+      
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-black font-display text-slate-900 mb-4">
+        Nuestras <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-adadet-main to-cyan-500 pb-2">Disciplinas</span>
       </h2>
-      <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-        Deportes acuáticos de la ADADET
+      <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto">
+        Explora las diferentes modalidades deportivas que promueve ADADET en el estado Táchira.
       </p>
     </header>
 
-    <!-- Disciplinas Grid -->
     {disciplinas && disciplinas.length > 0 ? (
-      <ul class="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <ul class="grid gap-8 md:gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {disciplinas.map((deporte, index) => (
           <li 
-            class="animate-fade-in-up"
+            class="animate-fade-in-up h-full"
             style={`animation-delay: ${index * 150}ms`}
           >
-            <article class="group relative h-full flex flex-col bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-indigo-300">
-              <!-- Image Container -->
-              <div class="relative w-full h-56 bg-gradient-to-br from-indigo-100 to-cyan-100 overflow-hidden">
+            <article class="group relative h-full flex flex-col bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-adadet-main/10 transition-all duration-500 border border-slate-100 hover:border-adadet-main/30">
+              
+              <div class={`relative w-full h-64 overflow-hidden ${fallbackGradient}`}>
                 {deporte.imagenUrl ? (
                   <img
                     src={deporte.imagenUrl}
@@ -48,152 +51,87 @@ import { ROUTES } from "src/data/routes";
                     loading="lazy"
                   />
                 ) : (
-                  <!-- Fallback icon si no hay imagen -->
-                  <div class="absolute inset-0 flex items-center justify-center">
-                    <svg class="w-24 h-24 text-indigo-300" fill="currentColor" viewBox="0 0 24 24">
+                  <div class="absolute inset-0 flex items-center justify-center bg-slate-50">
+                    <svg class="w-20 h-20 text-slate-300" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M2 17s1.5-2 3.5-2 3.5 2 5.5 2 3.5-2 5.5-2 3.5 2 3.5 2m-17 2s1.5-2 3.5-2 3.5 2 5.5 2 3.5-2 5.5-2 3.5 2 3.5 2M7 7a2 2 0 100-4 2 2 0 000 4zm13 3l-4-1 1-3-2.5.5L13 9l-1.5-2L9 7.5 10 10l-4 1 1 3h12l1-4z"/>
                     </svg>
                   </div>
                 )}
                 
-                <!-- Overlay gradient -->
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-adadet-dark/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
                 
-                <!-- Floating badge -->
                 <div class="absolute top-4 right-4 transform translate-x-20 group-hover:translate-x-0 transition-transform duration-500">
-                  <div class="bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full flex items-center gap-2">
-                    <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                    <span class="text-xs font-semibold text-gray-700">Disponible</span>
+                  <div class="bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-2 shadow-sm border border-white/50">
+                    <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+                    <span class="text-xs font-bold text-slate-700 uppercase tracking-wide">Activo</span>
                   </div>
                 </div>
               </div>
 
-              <!-- Content Container -->
-              <div class="flex-1 flex flex-col p-6">
-                <!-- Title -->
-                <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-indigo-600 transition-colors duration-300">
+              <div class="flex-1 flex flex-col p-8">
+                <h3 class="text-2xl font-bold font-display text-slate-900 mb-3 group-hover:text-adadet-main transition-colors duration-300">
                   {deporte.titulo}
                 </h3>
 
-                <!-- Description -->
-                <div class="flex-1 text-sm text-gray-600 leading-relaxed mb-4 line-clamp-3">
+                <p class="flex-1 text-slate-600 leading-relaxed mb-6 line-clamp-3">
                   {deporte.descripcion}
-                </div>
+                </p>
 
-                <!-- CTA Button -->
                 <a 
                   href={ROUTES.disciplina(deporte.slug)}
                   class="mt-auto block"
                 >
-                  <button class="relative w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-600 to-cyan-600 text-white font-semibold rounded-xl overflow-hidden group/btn transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
-                    <!-- Animated background -->
-                    <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-cyan-600 to-indigo-600 transform translate-x-full group-hover/btn:translate-x-0 transition-transform duration-500 ease-out"></span>
+                  <button class="cursor-pointer relative w-full inline-flex items-center justify-center gap-2 px-6 py-4 bg-slate-900 text-white font-bold rounded-xl overflow-hidden group/btn transition-all duration-300 hover:shadow-lg hover:bg-adadet-main">
                     
-                    <!-- Button content -->
+                    <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-adadet-main to-cyan-500 transform translate-x-full group-hover/btn:translate-x-0 transition-transform duration-500 ease-out"></span>
+                    
                     <span class="relative flex items-center gap-2">
-                      Ver detalles
+                      Ver Detalles
                       <svg class="w-5 h-5 transform group-hover/btn:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                       </svg>
                     </span>
-
-                    <!-- Shine effect -->
-                    <span class="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover/btn:translate-x-[200%] transition-transform duration-1000"></span>
                   </button>
                 </a>
               </div>
 
-              <!-- Hover corner accent -->
-              <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-indigo-500/20 to-transparent rounded-bl-full transform scale-0 group-hover:scale-100 transition-transform duration-500 origin-top-right"></div>
             </article>
           </li>
         ))}
       </ul>
     ) : (
-      <!-- Empty state -->
-      <div class="text-center py-16 animate-fade-in-up">
-        <div class="inline-flex items-center justify-center w-20 h-20 bg-gray-100 rounded-full mb-4">
-          <svg class="w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div class="text-center py-20 animate-fade-in-up bg-white rounded-3xl border border-slate-100 shadow-sm max-w-2xl mx-auto">
+        <div class="inline-flex items-center justify-center w-24 h-24 bg-slate-50 rounded-full mb-6">
+          <svg class="w-10 h-10 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
           </svg>
         </div>
-        <p class="text-lg text-gray-500 font-medium">No hay disciplinas para mostrar</p>
-        <p class="text-sm text-gray-400 mt-2">Las disciplinas aparecerán aquí cuando estén disponibles</p>
+        <p class="text-xl text-slate-600 font-bold">No hay disciplinas disponibles</p>
+        <p class="text-slate-400 mt-2">Estamos actualizando nuestro catálogo deportivo.</p>
       </div>
     )}
   </div>
 </section>
 
 <style>
+  /* Mantenemos las animaciones personalizadas que te gustan */
   @keyframes fade-in-down {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
   }
-
   @keyframes fade-in-up {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
   }
-
   @keyframes blob {
-    0%, 100% {
-      transform: translate(0, 0) scale(1);
-    }
-    25% {
-      transform: translate(20px, -20px) scale(1.1);
-    }
-    50% {
-      transform: translate(-20px, 20px) scale(0.9);
-    }
-    75% {
-      transform: translate(20px, 20px) scale(1.05);
-    }
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    25% { transform: translate(20px, -20px) scale(1.1); }
+    50% { transform: translate(-20px, 20px) scale(0.9); }
+    75% { transform: translate(20px, 20px) scale(1.05); }
   }
-
-  .animate-fade-in-down {
-    animation: fade-in-down 0.6s ease-out;
-  }
-
-  .animate-fade-in-up {
-    animation: fade-in-up 0.6s ease-out;
-    animation-fill-mode: both;
-  }
-
-  .animate-blob {
-    animation: blob 7s infinite;
-  }
-
-  .animation-delay-2000 {
-    animation-delay: 2s;
-  }
-
-  .animation-delay-4000 {
-    animation-delay: 4s;
-  }
-
-  .line-clamp-2 {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  .line-clamp-3 {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
+  .animate-fade-in-down { animation: fade-in-down 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+  .animate-fade-in-up { animation: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1); animation-fill-mode: both; }
+  .animate-blob { animation: blob 10s infinite alternate; }
+  .animation-delay-2000 { animation-delay: 2s; }
+  .animation-delay-4000 { animation-delay: 4s; }
 </style>
