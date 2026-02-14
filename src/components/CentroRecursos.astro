@@ -1,8 +1,8 @@
 ---
-import logoAdadet from "../assets/logoAdadet.svg";
+import logoAdadet from "../assets/adadet-logo.jpg";
 import { DOCUMENTOS, DOCUMENTOS_SLUG } from "../data/documentos";
+import { Image } from "astro:assets";
 
-// Selección de documentos clave
 const SLUGS_CENTRO_RECURSOS = [
   DOCUMENTOS_SLUG.ACTA_ASAMBLEA_GENERAL,
   DOCUMENTOS_SLUG.ACTA_ASAMBLEA_EXTRAORDINARIA,
@@ -15,86 +15,93 @@ const SLUGS_CENTRO_RECURSOS = [
 const documentos = DOCUMENTOS.filter((doc) => SLUGS_CENTRO_RECURSOS.includes(doc.slug));
 ---
 
-<section class="relative px-4 py-16 md:py-20 bg-slate-50 overflow-hidden">
+<section class="relative px-4 py-16 md:py-24 bg-slate-50 overflow-hidden">
   
   <div class="pointer-events-none absolute inset-0 overflow-hidden">
-    <div class="absolute -left-24 top-10 h-96 w-96 rounded-full bg-adadet-main/5 blur-3xl"></div>
-    <div class="absolute -right-24 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-cyan-400/10 blur-3xl"></div>
+    <div class="absolute left-0 top-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-adadet-main/5 blur-[100px]"></div>
   </div>
 
   <div class="relative z-10 mx-auto max-w-7xl">
     
-    <div class="w-full flex justify-center items-center gap-4 mb-12">
+    <div class="w-full flex justify-center items-center gap-4 mb-16 animate-fade-in-up">
         <span class="relative flex h-2.5 w-2.5">
           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-adadet-main opacity-75"></span>
           <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-adadet-main"></span>
         </span>
-        <span class="inline-flex items-center gap-2 bg-cyan-50 text-adadet-main border border-cyan-100 px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wider shadow-sm">
+        <span class="inline-flex items-center gap-2 bg-white border border-slate-200 text-adadet-main px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-sm">
           Transparencia Institucional
         </span>
     </div>
 
-    <div class="flex flex-col lg:grid lg:grid-cols-12 gap-12 lg:items-start">
+    <div class="flex flex-col lg:grid lg:grid-cols-12 gap-8 lg:items-center">
       
-      <div class="lg:col-span-4 flex justify-center lg:justify-start">
+      <div class="lg:col-span-4 flex justify-center lg:justify-start animate-fade-in-up">
         <div class="relative group">
-          <div class="absolute inset-0 bg-gradient-to-tr from-adadet-main to-cyan-400 rounded-full blur-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
           
-          <div class="relative rounded-3xl bg-white/80 backdrop-blur-xl p-8 shadow-xl ring-1 ring-white/50 border border-slate-100 transition-transform duration-500 hover:scale-[1.02]">
-            <img
-              src={logoAdadet.src}
+          <div class="absolute -inset-4 bg-gradient-to-tr from-adadet-main to-cyan-400 rounded-[3rem] blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
+          
+          <div class="relative h-64 w-64 md:h-72 md:w-72 overflow-hidden rounded-[2.5rem] bg-white p-3 ring-4 ring-white/50 shadow-2xl transition-transform duration-500 group-hover:scale-105 group-hover:ring-adadet-main">
+            <Image
+              src={logoAdadet}
               alt="Escudo Oficial ADADET"
-              class="h-auto w-64 max-w-full object-contain drop-shadow-sm"
-              loading="lazy"
+              class="h-full w-full object-cover rounded-[2rem]" 
             />
+            <div class="absolute inset-0 rounded-[2.5rem] ring-1 ring-inset ring-black/5 pointer-events-none"></div>
           </div>
+
         </div>
       </div>
 
-      <div class="lg:col-span-8 space-y-8">
+      <div class="lg:col-span-8 space-y-10 animate-fade-in-up" style="animation-delay: 200ms;">
         
         <header class="space-y-6 text-center lg:text-left">
-          <h2 class="text-3xl md:text-4xl lg:text-5xl font-black font-display text-slate-900 drop-shadow-sm leading-tight">
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-black font-display text-slate-900 leading-tight">
             Centro de 
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-adadet-main to-cyan-500 pb-2">
-              Recursos ADADET
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-adadet-main to-cyan-500">
+              Recursos
             </span>
           </h2>
           
-          <p class="max-w-2xl mx-auto lg:mx-0 text-base md:text-lg leading-relaxed text-slate-600">
-            En este espacio podrás consultar de forma rápida y organizada la documentación clave de la Asociación de Deportes Acuáticos del Estado Táchira: actas de asamblea, providencias, estatutos, declaraciones y otros documentos oficiales que respaldan nuestra gestión y transparencia institucional: 
-            <strong class="text-adadet-dark">actas, estatutos y providencias</strong> al alcance de todos los afiliados.
+          <p class="text-lg leading-relaxed text-slate-600 border-l-4 border-adadet-main/30 pl-6 mx-auto lg:mx-0 text-left">
+            En este espacio podrás consultar de forma rápida y organizada la documentación clave de la Asociación: 
+            <strong class="text-slate-900">actas, estatutos y providencias</strong> al alcance de todos los afiliados para garantizar nuestra transparencia.
           </p>
         </header>
 
-        <div class="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-slate-100 relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-32 h-32 bg-slate-50 rounded-bl-full -z-0"></div>
-
-            <p class="relative z-10 mb-6 text-xs font-bold uppercase tracking-widest text-slate-400">
-              Documentación Disponible
-            </p>
+        <div class="bg-white rounded-3xl p-6 md:p-8 shadow-xl shadow-slate-200/50 border border-slate-100 relative overflow-hidden">
             
-            <div class="relative z-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="flex items-center gap-3 mb-6 border-b border-slate-100 pb-4">
+                <div class="p-2 bg-slate-50 rounded-lg text-adadet-main">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 011.414.586l4 4a1 1 0 01.586 1.414V19a2 2 0 01-2 2z" /></svg>
+                </div>
+                <h3 class="text-sm font-bold uppercase tracking-widest text-slate-500">
+                   Documentación Pública
+                </h3>
+            </div>
+            
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {documentos.map((doc) => (
                 <a
                   href={`/documentos/${doc.slug}`}
-                  class="group flex items-center gap-4 rounded-xl bg-slate-50 px-4 py-3.5 border border-slate-200/60 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:border-adadet-main/30 hover:shadow-lg hover:shadow-adadet-main/10"
+                  class="group flex items-start gap-4 rounded-xl bg-slate-50 p-4 border border-slate-200 transition-all duration-300 hover:bg-white hover:border-adadet-main/30 hover:shadow-lg hover:shadow-adadet-main/10 hover:-translate-y-1"
                 >
-                  <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-white text-red-500 ring-1 ring-slate-100 shadow-sm group-hover:bg-red-50 group-hover:text-red-600 transition-colors">
+                  <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-white text-red-500 shadow-sm border border-slate-100 group-hover:bg-red-50 group-hover:border-red-100 transition-colors">
                     <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                       <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
-                      <polyline points="14 2 14 8 20 8"/>
-                      <path d="M9 15l3 3 3-3"/> <line x1="12" y1="12" x2="12" y2="18"/>
+                      <path d="M14 2v6h6"/>
                     </svg>
                   </div>
 
                   <div class="flex-1 min-w-0">
-                    <p class="text-sm font-bold text-slate-700 truncate group-hover:text-adadet-main transition-colors">
+                    <p class="text-sm font-bold text-slate-700 leading-tight group-hover:text-adadet-main transition-colors mb-1">
                       {doc.titulo}
                     </p>
-                    <p class="text-[10px] uppercase font-bold text-slate-400 mt-0.5 group-hover:text-adadet-main/60">
-                      PDF • Oficial
-                    </p>
+                    <div class="flex items-center gap-2">
+                        <span class="text-[10px] uppercase font-bold text-slate-400 group-hover:text-adadet-main/60">PDF Oficial</span>
+                        <span class="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-adadet-main">
+                            <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                        </span>
+                    </div>
                   </div>
                 </a>
               ))}
@@ -107,12 +114,11 @@ const documentos = DOCUMENTOS.filter((doc) => SLUGS_CENTRO_RECURSOS.includes(doc
 </section>
 
 <style>
-  /* Animación para el gradiente del texto */
-  .bg-300% { background-size: 300% auto; }
-  @keyframes gradient { 
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+  @keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
   }
-  .animate-gradient { animation: gradient 6s ease infinite; }
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+  }
 </style>

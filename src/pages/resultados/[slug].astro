@@ -1,9 +1,12 @@
 ---
 import LayoutCompetencias from 'src/layouts/LayoutCompetencias.astro';
 import { ListaCompetencias } from '../../data/listaCompetencias'
+import { Image } from 'astro:assets';
+import competencia3 from 'src/assets/competencia3.png';
 
 export async function getStaticPaths() {
   return ListaCompetencias.map((competencia) => {
+    // Aseguramos que el slug coincida con tu lógica
     const slug = competencia.linkDeLaCompetencia.replace('/competencias_pdf/', '').replace('.html', '');
     return {
       params: { slug },
@@ -13,85 +16,173 @@ export async function getStaticPaths() {
 }
 
 const { competencia } = Astro.props;
-const { slug } = Astro.params
+const { slug } = Astro.params;
+
 if (!competencia) {
   return Astro.redirect('/');
 }
 
+// Función auxiliar para obtener día y mes
+const getDateParts = (fecha: string) => {
+    const [day, month, year] = fecha.split('/');
+    const monthNames = ['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN', 'JUL', 'AGO', 'SEP', 'OCT', 'NOV', 'DIC'];
+    return { day, month: monthNames[parseInt(month) - 1], year };
+};
 
+const fechaInicio = getDateParts(competencia.fechaInicio);
+const fechaFin = getDateParts(competencia.fechaFinalizacion);
 ---
-<LayoutCompetencias titulo={competencia.titulo}>
-<div class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50">
-  <!-- Hero Section -->
-  <div class="relative overflow-hidden bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-700">
-    <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
-    <div class="container mx-auto px-4 py-16 md:py-24 relative">
-      <div class="text-center text-white space-y-6">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-          {competencia.titulo}
-        </h1>
-        
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-6 text-lg md:text-xl mt-8">
-          <div class="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20">
-            <span class="font-semibold">Inicio:</span> {competencia.fechaInicio}
-          </div>
-          <div class="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20">
-            <span class="font-semibold">Finaliza:</span> {competencia.fechaFinalizacion}
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white/20 to-transparent"></div>
-  </div>
 
-  <!-- Main Content -->
-  <div class="container mx-auto px-4 py-12 md:py-20">
-    <!-- Documentos Section -->
-    <!-- Resultados Section -->
-    <section>
-      <div class="flex items-center gap-3 mb-8">
-        <div class="h-1 w-12 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full"></div>
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Resultados</h2>
-      </div>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-        {competencia.resultados.map((resultado) => (
-          <a 
-            href={`/contenido/competencias_pdf/${slug}/${resultado.nombreArchivo}`}
-            class="group relative bg-gradient-to-br from-cyan-50 to-blue-50 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-cyan-100 hover:border-cyan-300 hover:-translate-y-1"
-            target="_blank"
-          >
-            <div class="flex items-start gap-4">
-              <div class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-              </div>
-              <div class="flex-1">
-                <h3 class="text-lg font-semibold text-gray-800 group-hover:text-cyan-700 transition-colors mb-2">
-                  {resultado.titulo}
-                </h3>
-                <div class="flex items-center gap-2 text-cyan-600 font-medium text-sm">
-                  Ver resultados
-                  <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
-              </div>
+<LayoutCompetencias titulo={`${competencia.titulo} | Resultados Oficiales`}>
+  
+  <div class="min-h-screen bg-slate-50">
+    
+    <div class="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-slate-900">
+        
+        <div class="absolute inset-0 z-0">
+             <Image 
+                src={competencia3} 
+                alt="Fondo Competencia" 
+                class="w-full h-full object-cover opacity-40 blur-sm scale-105"
+             />
+             <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-slate-900/30"></div>
+        </div>
+
+        <div class="relative z-10 container mx-auto px-4 py-20 text-center max-w-5xl">
+            
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 backdrop-blur-md mb-6 animate-fade-in-down">
+                <span class="w-2 h-2 rounded-full bg-adadet-main animate-pulse"></span>
+                <span class="text-xs font-bold text-cyan-200 uppercase tracking-widest">
+                    Evento Oficial
+                </span>
             </div>
-          </a>
-        ))}
-      </div>
-    </section>
+
+            <h1 class="text-4xl md:text-5xl lg:text-7xl font-black font-display text-white mb-8 leading-tight drop-shadow-2xl animate-fade-in-up">
+                {competencia.titulo}
+            </h1>
+            
+            <div class="inline-flex flex-wrap justify-center gap-4 md:gap-8 animate-fade-in-up" style="animation-delay: 200ms;">
+                
+                {/* Fecha Inicio */}
+                <div class="flex items-center gap-3 bg-white/5 border border-white/10 backdrop-blur-md px-5 py-3 rounded-2xl">
+                    <div class="flex flex-col items-center justify-center w-12 h-12 bg-green-500/20 text-green-400 rounded-xl border border-green-500/30">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-xs text-slate-400 font-bold uppercase tracking-wider">Inicia</p>
+                        <p class="text-xl font-bold text-white leading-none">
+                            {fechaInicio.day} <span class="text-base font-normal text-slate-300">{fechaInicio.month}</span>
+                        </p>
+                    </div>
+                </div>
+
+                {/* Separador Visual (Flecha) */}
+                <div class="hidden md:flex items-center text-slate-600">
+                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                </div>
+
+                {/* Fecha Fin */}
+                <div class="flex items-center gap-3 bg-white/5 border border-white/10 backdrop-blur-md px-5 py-3 rounded-2xl">
+                    <div class="flex flex-col items-center justify-center w-12 h-12 bg-red-500/20 text-red-400 rounded-xl border border-red-500/30">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-xs text-slate-400 font-bold uppercase tracking-wider">Finaliza</p>
+                        <p class="text-xl font-bold text-white leading-none">
+                            {fechaFin.day} <span class="text-base font-normal text-slate-300">{fechaFin.month}</span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto px-4 py-16 -mt-10 relative z-20 max-w-6xl">
+        
+        <div class="bg-white rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 overflow-hidden">
+            
+            {/* Header de Documentos */}
+            <div class="bg-slate-50/80 border-b border-slate-100 px-6 py-8 md:px-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+                <div>
+                    <h2 class="text-2xl md:text-3xl font-black font-display text-slate-900 flex items-center gap-3">
+                        <span class="w-2 h-8 bg-adadet-main rounded-full"></span>
+                        Documentación Oficial
+                    </h2>
+                    <p class="text-slate-500 mt-2 ml-5">
+                        Descarga los resultados y planillas oficiales de este evento.
+                    </p>
+                </div>
+                
+                <div class="px-4 py-2 bg-blue-50 text-adadet-main font-bold rounded-lg text-sm border border-blue-100">
+                    {competencia.resultados.length} Archivos Disponibles
+                </div>
+            </div>
+
+            {/* Grid de Archivos */}
+            <div class="p-6 md:p-10 bg-white">
+                
+                {competencia.resultados.length > 0 ? (
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {competencia.resultados.map((resultado) => (
+                        <a 
+                            href={`/contenido/competencias_pdf/${slug}/${resultado.nombreArchivo}`}
+                            class="group relative flex items-start gap-4 p-5 rounded-2xl border border-slate-100 bg-slate-50/50 hover:bg-white hover:border-adadet-main/30 hover:shadow-lg hover:shadow-adadet-main/5 transition-all duration-300"
+                            target="_blank"
+                        >
+                            {/* Icono PDF */}
+                            <div class="w-12 h-12 flex-shrink-0 bg-white rounded-xl border border-slate-100 flex items-center justify-center text-red-500 shadow-sm group-hover:scale-110 group-hover:border-red-100 group-hover:bg-red-50 transition-all duration-300">
+                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 2H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+                            </div>
+
+                            <div class="flex-1 min-w-0">
+                                <h3 class="font-bold text-slate-800 text-sm leading-snug group-hover:text-adadet-main transition-colors mb-1 line-clamp-2">
+                                    {resultado.titulo}
+                                </h3>
+                                <p class="text-xs text-slate-400 font-medium uppercase tracking-wide">
+                                    PDF • Descarga Directa
+                                </p>
+                            </div>
+
+                            {/* Flecha Hover */}
+                            <div class="absolute top-5 right-5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                                <svg class="w-5 h-5 text-adadet-main" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                            </div>
+                        </a>
+                        ))}
+                    </div>
+                ) : (
+                    <div class="text-center py-20">
+                        <div class="inline-block p-4 rounded-full bg-slate-50 mb-4">
+                            <svg class="w-8 h-8 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 011.414.586l4 4a1 1 0 01.586 1.414V19a2 2 0 01-2 2z" /></svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-600">Aún no hay resultados cargados</h3>
+                        <p class="text-slate-400">Vuelve a consultar más tarde.</p>
+                    </div>
+                )}
+                
+            </div>
+            
+            {/* Footer de la tarjeta */}
+            <div class="bg-slate-50 px-6 py-4 border-t border-slate-100 text-center">
+                <a href="/resultados" class="text-sm font-bold text-slate-500 hover:text-adadet-main transition-colors inline-flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+                    Volver al Calendario de Competencias
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
   </div>
-</div>
+</LayoutCompetencias>
 
 <style>
-  .bg-grid-pattern {
-    background-image: 
-      linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-    background-size: 40px 40px;
-  }
+  /* Animaciones de entrada */
+  @keyframes fade-in-down { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fade-in-up { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  
+  .animate-fade-in-down { animation: fade-in-down 0.8s ease-out; }
+  .animate-fade-in-up { animation: fade-in-up 0.8s ease-out both; }
 </style>
-</LayoutCompetencias>

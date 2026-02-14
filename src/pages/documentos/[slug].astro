@@ -1,7 +1,8 @@
 ---
 import LayoutCompetencias from "src/layouts/LayoutCompetencias.astro";
-import logoAdadet from "../../assets/logoAdadet.svg";
+import logoAdadet from "../../assets/adadet-logo.jpg";
 import { DOCUMENTOS, type Documento } from "../../data/documentos";
+import { Image } from "astro:assets";
 
 export function getStaticPaths() {
   return DOCUMENTOS.map((doc) => ({
@@ -26,10 +27,7 @@ const fechaFormateada = fecha.toLocaleDateString("es-VE", {
 
 <LayoutCompetencias titulo={`${doc.titulo} | Documentación ADADET`}>
   <section class="min-h-screen bg-slate-50">
-    
-    <div class="pointer-events-none absolute inset-0 overflow-hidden h-96">
-        <div class="absolute -top-24 right-0 h-96 w-96 rounded-full bg-adadet-main/5 blur-3xl"></div>
-    </div>
+  
 
     <div class="relative z-10 mx-auto max-w-7xl px-4 py-10 md:py-16 space-y-10">
       
@@ -45,9 +43,9 @@ const fechaFormateada = fecha.toLocaleDateString("es-VE", {
           </div>
           
           <div class="space-y-2">
-            <div class="inline-flex items-center">
+            <div class="inline-flex items-center gap-2">
                 <span class="h-1.5 w-1.5 rounded-full bg-adadet-main"></span>
-                <p class="text-xs font-bold uppercase tracking-widest text-adadet-light">
+                <p class="text-xs font-bold uppercase tracking-widest text-adadet-main">
                 Documento Oficial
                 </p>
             </div>

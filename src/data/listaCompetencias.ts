@@ -44,11 +44,12 @@ export const ListaCompetencias: ICompetencia[] = [
             }
         ]
     },
+    
     {
         id: 2,
         titulo: 'Competencia Regional Número 1',
         tipo: 'regional',
-        linkDeLaCompetencia: '/competencias_pdf/competencia-estadal-numero-1',
+        linkDeLaCompetencia: '/competencias_pdf/competencia-regional-numero-2',
         fechaDeSubida: '17-01-2026',
         fechaInicio: '01/01/2026',
         fechaFinalizacion: '10/01/2026',
@@ -75,7 +76,7 @@ export const ListaCompetencias: ICompetencia[] = [
         id: 3,
         titulo: 'Competencia Nacional Número 1',
         tipo: 'nacional',
-        linkDeLaCompetencia: '/competencias_pdf/competencia-estadal-numero-1',
+        linkDeLaCompetencia: '/competencias_pdf/competencia-nacional-numero-1',
         fechaDeSubida: '17-01-2026',
         fechaInicio: '01/01/2026',
         fechaFinalizacion: '10/01/2026',

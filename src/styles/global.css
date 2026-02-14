@@ -1,4 +1,29 @@
 @import "tailwindcss";
+@theme {
+  /* Definimos tus colores ADADET */
+  --color-adadet-main: #0ea5e9;
+  --color-adadet-dark: #0f172a;
+  --color-adadet-light: #f0f9ff;
+  --color-adadet-accent: #f59e0b;
+
+  /* Definimos tus fuentes */
+  --font-display: "Montserrat", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  
+  /* Definimos tus animaciones personalizadas */
+  --animate-gradient-x: gradient-x 3s ease infinite;
+  
+  @keyframes gradient-x {
+    0%, 100% {
+      background-size: 200% 200%;
+      background-position: left center;
+    }
+    50% {
+      background-size: 200% 200%;
+      background-position: right center;
+    }
+  }
+}
 
 html {
     scroll-behavior: smooth;
