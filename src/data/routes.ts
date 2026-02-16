@@ -9,6 +9,7 @@ export const ROUTES = {
     COLABORADORES: "/colaboradores",
     RESULTADOS: "/resultados",
 
+    galeria_album: (id: string) => `/galeria/${id}`,
     RESULTADOS_SLUG: (slug: string) => `/resultados/${slug}`,
     documento: (slug: string) => `/documentos/${slug}`,
     disciplina: (slug: string) => `/disciplinas/${slug}`,

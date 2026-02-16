@@ -53,7 +53,7 @@ export const BASE_DISCIPLINAS: DisciplinaBase[] = [
   {
     slug: BASE_DISCIPLINAS_SLUG.aguasAbiertas,
     titulo: "Aguas Abiertas",
-    descripcion: "Pruebas de natación en aguas abiertas (ríos, lagos, mar).",
+    descripcion: "La prueba definitiva de resistencia y estrategia en contacto directo con la naturaleza. Esta disciplina exige una fortaleza mental inquebrantable para desafiar corrientes y largas distancias, forjando nadadores con un carácter de acero que representan la garra andina en cada brazada, fuera de la piscina",
     imagenUrl: aguasAbiertas,
     documentos: [
       {
@@ -69,7 +69,7 @@ export const BASE_DISCIPLINAS: DisciplinaBase[] = [
   {
     slug: BASE_DISCIPLINAS_SLUG.natacionArtistica,
     titulo: "Natación Artística",
-    descripcion: "Coreografías acuáticas sincronizadas.",
+    descripcion: "La fusión perfecta entre la elegancia del arte y la potencia atlética extrema. Donde la fuerza se disfraza de gracia y la precisión es absoluta. Nuestras atletas transforman el agua en un escenario, demostrando que la sincronización y la belleza estética son el resultado de un rigor técnico de clase mundial",
     imagenUrl: natacionArtistica,
     documentos: [
       {
@@ -81,7 +81,7 @@ export const BASE_DISCIPLINAS: DisciplinaBase[] = [
   {
     slug: BASE_DISCIPLINAS_SLUG.poloAcuatico,
     titulo: "Polo Acuático",
-    descripcion: "Juego de equipo en el agua.",
+    descripcion: "El deporte de conjunto por excelencia, donde la intensidad del contacto físico se une a la inteligencia táctica. El Polo Acuático es sinónimo de hermandad y estrategia colectiva. Una disciplina vibrante que cultiva líderes, resistencia y un espíritu de equipo indomable necesario para dominar el juego",
     imagenUrl: poloAcuatico,
     documentos: [
       {
@@ -93,7 +93,7 @@ export const BASE_DISCIPLINAS: DisciplinaBase[] = [
   {
     slug: BASE_DISCIPLINAS_SLUG.clavado,
     titulo: "Clavado",
-    descripcion: "Saltos ornamentales desde trampolín o plataforma.",
+    descripcion: "El arte de desafiar la gravedad con valentía y precisión milimétrica. En cuestión de segundos, nuestros clavadistas combinan acrobacia aérea y control absoluto, convirtiendo el riesgo en perfección. Una disciplina espectacular que requiere nervios de acero y una técnica depurada desde las alturas.",
     imagenUrl: clavado,
     documentos: [
       {
@@ -105,7 +105,7 @@ export const BASE_DISCIPLINAS: DisciplinaBase[] = [
   {
     slug: BASE_DISCIPLINAS_SLUG.master,
     titulo: "Máster",
-    descripcion: "Natación para categorías máster.",
+    descripcion: "La prueba viviente de que la pasión por el agua no tiene fecha de caducidad. La categoría Máster reúne a ex-atletas de alto rendimiento y entusiastas que mantienen viva la llama de la competencia, sirviendo como pilar de experiencia y ejemplo de longevidad deportiva para las nuevas generaciones del estado",
     imagenUrl: master,
     documentos: [
       {

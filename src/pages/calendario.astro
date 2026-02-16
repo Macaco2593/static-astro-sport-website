@@ -1,107 +1,63 @@
 ---
 import LayoutCompetencias from "src/layouts/LayoutCompetencias.astro";
 import Calendar from "src/components/Calendar.astro";
-
+import WaveDivider from "src/components/UI/WaveDivider.astro";
+import PageHero from "src/components/UI/PageHero.astro"; // 1. Importamos el componente
 
 const competitions = [
   { 
-    date: '2026-02-14', 
-    title: '🏊 Regional Táchira Cup', 
-    type: 'swimming' 
-  },
-  { 
-    date: '2026-02-22', 
-    title: '🤽 Water Polo Finals', 
-    type: 'polo' 
-  },
-  { 
-    date: '2026-02-28', 
-    title: '🏅 State Qualifiers', 
-    type: 'mixed' 
-  },
-  { 
-    date: '2026-02-14', 
-    title: '🏊 Regional Cup', 
-    type: 'swimming',
-    time: '09:00 AM',
-    description: 'The main regional cup held at the central complex. Categories: 100m free, 200m medley.'
+    date: '2026-03-05', 
+    title: 'I Estadal de Natación 2026', 
+    type: 'Natación',
+    time: '03:00 PM',
+    description: 'Competencia estadal de apertura de temporada. Colegio de Contadores, San Cristóbal.',
   }
 ];
 ---
 
-<LayoutCompetencias titulo="Calendario de Competencias">
-  <section class="min-h-screen bg-[#f2f2f5]">
-    <div class="mx-auto max-w-6xl px-4 py-10 md:py-16 space-y-10">
-      <!-- Encabezado -->
-      <header class="text-center space-y-4 animate-fade-in-down">
-        <div class="inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-1.5 text-xs font-semibold tracking-wide text-blue-700">
-          <span class="inline-flex h-2 w-2 rounded-full bg-cyan-500"></span>
-          Calendario oficial de competencias
-        </div>
-        <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900">
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-700">
-            Calendario ADADET 2026
-          </span>
-        </h1>
-        <p class="mx-auto max-w-2xl text-sm md:text-base text-slate-600">
-          Consulta de forma rápida y organizada las fechas clave de nuestras competencias, eventos
-          clasificatorios y actividades oficiales de la Asociación de Deportes Acuáticos del Estado Táchira.
-        </p>
-      </header>
+<LayoutCompetencias titulo="Calendario Oficial | ADADET" footerDecoration={false}>
+  
+  <div class="relative min-h-screen bg-slate-50">
 
-      <!-- Calendario -->
-      <div class="rounded-3xl bg-white p-4 shadow-md ring-1 ring-slate-200 md:p-6 animate-fade-in-up" style="animation-delay: 150ms">
-        <Calendar events={competitions} />
-      </div>
+    <PageHero 
+        title="Calendario de"
+        gradientText="Competencias"
+        subtitle="Planifica tu temporada. Consulta las fechas oficiales de torneos, clasificatorios y eventos de la Asociación."
+        badge="Agenda 2026"
+    />
 
-      <!-- Leyenda -->
-      <div class="mx-auto flex flex-wrap items-center gap-4 text-xs md:text-sm text-slate-600 animate-fade-in-up" style="animation-delay: 300ms">
-        <div class="flex items-center gap-2">
-          <div class="h-3 w-3 rounded bg-cyan-100 border border-cyan-500"></div>
-          <span>Día con competencia</span>
+    <div class="relative z-20 mx-auto max-w-7xl px-4 -mt-20 pb-20"> 
+        
+        <div class="animate-fade-in-up" style="animation-delay: 200ms;">
+             <Calendar events={competitions} />
         </div>
-        <div class="flex items-center gap-2">
-          <div class="h-3 w-3 rounded bg-blue-50 border border-slate-200"></div>
-          <span>Hoy</span>
+
+        <div class="mt-8 flex flex-wrap justify-center gap-6 md:gap-8 animate-fade-in-up" style="animation-delay: 300ms;">
+            <div class="flex items-center gap-2 text-sm text-slate-600 font-medium">
+               <span class="w-3 h-3 rounded-full bg-adadet-main shadow-sm shadow-adadet-main/40"></span>
+               Día con Evento
+            </div>
+            <div class="flex items-center gap-2 text-sm text-slate-600 font-medium">
+               <span class="w-3 h-3 rounded-full bg-blue-50 border border-blue-200"></span>
+               Hoy
+            </div>
         </div>
-        <div class="flex items-center gap-2">
-          <div class="h-3 w-3 rounded bg-slate-100 border border-slate-300"></div>
-          <span>Sin eventos programados</span>
-        </div>
-      </div>
+
     </div>
-  </section>
+
+    <div class="relative pt-10">
+         <WaveDivider fillColor="#0f172a" />
+    </div>
+
+  </div>
 </LayoutCompetencias>
 
 <style>
-  @keyframes fade-in-down {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
   @keyframes fade-in-up {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
   }
-
-  .animate-fade-in-down {
-    animation: fade-in-down 0.6s ease-out;
-  }
-
-  .animate-fade-in-up {
-    animation: fade-in-up 0.6s ease-out;
-    animation-fill-mode: both;
+  .animate-fade-in-up { 
+    animation: fade-in-up 0.8s ease-out forwards; 
   }
 </style>

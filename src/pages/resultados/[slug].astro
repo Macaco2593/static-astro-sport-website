@@ -1,12 +1,11 @@
 ---
 import LayoutCompetencias from 'src/layouts/LayoutCompetencias.astro';
-import { ListaCompetencias } from '../../data/listaCompetencias'
+import { ListaCompetencias } from '../../data/listaCompetencias';
 import { Image } from 'astro:assets';
-import competencia3 from 'src/assets/competencia3.png';
 
+// Tu lógica de rutas original (INTACTA)
 export async function getStaticPaths() {
   return ListaCompetencias.map((competencia) => {
-    // Aseguramos que el slug coincida con tu lógica
     const slug = competencia.linkDeLaCompetencia.replace('/competencias_pdf/', '').replace('.html', '');
     return {
       params: { slug },
@@ -16,13 +15,12 @@ export async function getStaticPaths() {
 }
 
 const { competencia } = Astro.props;
-const { slug } = Astro.params;
 
 if (!competencia) {
   return Astro.redirect('/');
 }
 
-// Función auxiliar para obtener día y mes
+// Tu función auxiliar de fechas (INTACTA)
 const getDateParts = (fecha: string) => {
     const [day, month, year] = fecha.split('/');
     const monthNames = ['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN', 'JUL', 'AGO', 'SEP', 'OCT', 'NOV', 'DIC'];
@@ -31,25 +29,26 @@ const getDateParts = (fecha: string) => {
 
 const fechaInicio = getDateParts(competencia.fechaInicio);
 const fechaFin = getDateParts(competencia.fechaFinalizacion);
+const { slug } = Astro.params;
 ---
 
-<LayoutCompetencias titulo={`${competencia.titulo} | Resultados Oficiales`}>
+<LayoutCompetencias titulo={`${competencia.titulo} | Resultados Oficiales`} footerDecoration={false}>
   
-  <div class="min-h-screen bg-slate-50">
-    
-    <div class="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-slate-900">
+  <div class="relative pt-32 pb-48 overflow-hidden bg-slate-900">
         
         <div class="absolute inset-0 z-0">
              <Image 
-                src={competencia3} 
-                alt="Fondo Competencia" 
-                class="w-full h-full object-cover opacity-40 blur-sm scale-105"
+                src={competencia.img} 
+                alt="Fondo Ambiental" 
+                class="w-full h-full object-cover opacity-100 blur-xl scale-110"
              />
-             <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-slate-900/30"></div>
+             
+             <div class="absolute inset-0 bg-gradient-to-b from-slate-900/90 via-slate-900/60 to-slate-900"></div>
+             
+             <div class="absolute inset-0 bg-blue-900/20 mix-blend-overlay"></div>
         </div>
 
-        <div class="relative z-10 container mx-auto px-4 py-20 text-center max-w-5xl">
-            
+        <div class="relative z-10 container mx-auto px-4 text-center max-w-5xl">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 backdrop-blur-md mb-6 animate-fade-in-down">
                 <span class="w-2 h-2 rounded-full bg-adadet-main animate-pulse"></span>
                 <span class="text-xs font-bold text-cyan-200 uppercase tracking-widest">
@@ -61,33 +60,33 @@ const fechaFin = getDateParts(competencia.fechaFinalizacion);
                 {competencia.titulo}
             </h1>
             
-            <div class="inline-flex flex-wrap justify-center gap-4 md:gap-8 animate-fade-in-up" style="animation-delay: 200ms;">
+             <div class="inline-flex flex-wrap justify-center gap-4 md:gap-8 animate-fade-in-up" style="animation-delay: 200ms;">
                 
                 {/* Fecha Inicio */}
-                <div class="flex items-center gap-3 bg-white/5 border border-white/10 backdrop-blur-md px-5 py-3 rounded-2xl">
+                <div class="flex items-center gap-3 bg-white/10 border border-white/10 backdrop-blur-md px-5 py-3 rounded-2xl shadow-lg">
                     <div class="flex flex-col items-center justify-center w-12 h-12 bg-green-500/20 text-green-400 rounded-xl border border-green-500/30">
                         <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
                     </div>
                     <div class="text-left">
-                        <p class="text-xs text-slate-400 font-bold uppercase tracking-wider">Inicia</p>
+                        <p class="text-xs text-slate-300 font-bold uppercase tracking-wider">Inicia</p>
                         <p class="text-xl font-bold text-white leading-none">
                             {fechaInicio.day} <span class="text-base font-normal text-slate-300">{fechaInicio.month}</span>
                         </p>
                     </div>
                 </div>
 
-                {/* Separador Visual (Flecha) */}
-                <div class="hidden md:flex items-center text-slate-600">
+                {/* Flecha */}
+                <div class="hidden md:flex items-center text-white/50">
                     <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                 </div>
 
                 {/* Fecha Fin */}
-                <div class="flex items-center gap-3 bg-white/5 border border-white/10 backdrop-blur-md px-5 py-3 rounded-2xl">
+                <div class="flex items-center gap-3 bg-white/10 border border-white/10 backdrop-blur-md px-5 py-3 rounded-2xl shadow-lg">
                     <div class="flex flex-col items-center justify-center w-12 h-12 bg-red-500/20 text-red-400 rounded-xl border border-red-500/30">
                         <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     </div>
                     <div class="text-left">
-                        <p class="text-xs text-slate-400 font-bold uppercase tracking-wider">Finaliza</p>
+                        <p class="text-xs text-slate-300 font-bold uppercase tracking-wider">Finaliza</p>
                         <p class="text-xl font-bold text-white leading-none">
                             {fechaFin.day} <span class="text-base font-normal text-slate-300">{fechaFin.month}</span>
                         </p>
@@ -98,88 +97,157 @@ const fechaFin = getDateParts(competencia.fechaFinalizacion);
         </div>
     </div>
 
-    <div class="container mx-auto px-4 py-16 -mt-10 relative z-20 max-w-6xl">
+    <div class="container mx-auto px-4 -mt-24 relative z-20 max-w-7xl pb-24">
         
-        <div class="bg-white rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 overflow-hidden">
+        <div class="grid lg:grid-cols-[350px_1fr] gap-8 items-start">
             
-            {/* Header de Documentos */}
-            <div class="bg-slate-50/80 border-b border-slate-100 px-6 py-8 md:px-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
-                <div>
-                    <h2 class="text-2xl md:text-3xl font-black font-display text-slate-900 flex items-center gap-3">
-                        <span class="w-2 h-8 bg-adadet-main rounded-full"></span>
-                        Documentación Oficial
-                    </h2>
-                    <p class="text-slate-500 mt-2 ml-5">
-                        Descarga los resultados y planillas oficiales de este evento.
-                    </p>
-                </div>
+            <div class="relative group animate-fade-in-up">
+                <div class="absolute -inset-1 bg-gradient-to-tr from-cyan-500 to-blue-600 rounded-2xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
                 
-                <div class="px-4 py-2 bg-blue-50 text-adadet-main font-bold rounded-lg text-sm border border-blue-100">
-                    {competencia.resultados.length} Archivos Disponibles
+                <div class="relative bg-white rounded-xl overflow-hidden shadow-2xl shadow-black/50 cursor-zoom-in border-4 border-white" onclick="openLightbox()">
+                    <Image 
+                        src={competencia.img} 
+                        alt={`Poster ${competencia.titulo}`}
+                        class="w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-105"
+                    />
+                    
+                    <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="bg-white/20 backdrop-blur-md border border-white/30 text-white px-4 py-2 rounded-full text-sm font-bold flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" /></svg>
+                            Ver Poster Completo
+                        </span>
+                    </div>
                 </div>
             </div>
 
-            {/* Grid de Archivos */}
-            <div class="p-6 md:p-10 bg-white">
+            <div class="bg-white rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 overflow-hidden animate-fade-in-up" style="animation-delay: 200ms;">
                 
-                {competencia.resultados.length > 0 ? (
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {competencia.resultados.map((resultado) => (
-                        <a 
-                            href={`/contenido/competencias_pdf/${slug}/${resultado.nombreArchivo}`}
-                            class="group relative flex items-start gap-4 p-5 rounded-2xl border border-slate-100 bg-slate-50/50 hover:bg-white hover:border-adadet-main/30 hover:shadow-lg hover:shadow-adadet-main/5 transition-all duration-300"
-                            target="_blank"
-                        >
-                            {/* Icono PDF */}
-                            <div class="w-12 h-12 flex-shrink-0 bg-white rounded-xl border border-slate-100 flex items-center justify-center text-red-500 shadow-sm group-hover:scale-110 group-hover:border-red-100 group-hover:bg-red-50 transition-all duration-300">
-                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 2H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
-                            </div>
-
-                            <div class="flex-1 min-w-0">
-                                <h3 class="font-bold text-slate-800 text-sm leading-snug group-hover:text-adadet-main transition-colors mb-1 line-clamp-2">
-                                    {resultado.titulo}
-                                </h3>
-                                <p class="text-xs text-slate-400 font-medium uppercase tracking-wide">
-                                    PDF • Descarga Directa
-                                </p>
-                            </div>
-
-                            {/* Flecha Hover */}
-                            <div class="absolute top-5 right-5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-                                <svg class="w-5 h-5 text-adadet-main" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
-                            </div>
-                        </a>
-                        ))}
+                {/* Header de Documentos */}
+                <div class="bg-slate-50/80 border-b border-slate-100 px-6 py-8 md:px-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+                    <div>
+                        <h2 class="text-2xl md:text-3xl font-black font-display text-slate-900 flex items-center gap-3">
+                            <span class="w-2 h-8 bg-adadet-main rounded-full"></span>
+                            Documentación Oficial
+                        </h2>
+                        <p class="text-slate-500 mt-2 ml-5">
+                            Descarga los resultados y planillas oficiales de este evento.
+                        </p>
                     </div>
-                ) : (
-                    <div class="text-center py-20">
-                        <div class="inline-block p-4 rounded-full bg-slate-50 mb-4">
-                            <svg class="w-8 h-8 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 011.414.586l4 4a1 1 0 01.586 1.414V19a2 2 0 01-2 2z" /></svg>
+                    
+                    <div class="px-4 py-2 bg-blue-50 text-adadet-main font-bold rounded-lg text-sm border border-blue-100">
+                        {competencia.resultados.length} Archivos Disponibles
+                    </div>
+                </div>
+
+                {/* Grid de Archivos */}
+                <div class="p-6 md:p-10 bg-white">
+                    
+                    {competencia.resultados.length > 0 ? (
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {competencia.resultados.map((resultado) => (
+                            <a 
+                                href={`/contenido/competencias_pdf/${slug}/${resultado.nombreArchivo}`}
+                                class="group relative flex items-start gap-4 p-5 rounded-2xl border border-slate-100 bg-slate-50/50 hover:bg-white hover:border-adadet-main/30 hover:shadow-lg hover:shadow-adadet-main/5 transition-all duration-300"
+                                target="_blank"
+                            >
+                                {/* Icono PDF */}
+                                <div class="w-12 h-12 flex-shrink-0 bg-white rounded-xl border border-slate-100 flex items-center justify-center text-red-500 shadow-sm group-hover:scale-110 group-hover:border-red-100 group-hover:bg-red-50 transition-all duration-300">
+                                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 2H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+                                </div>
+
+                                <div class="flex-1 min-w-0">
+                                    <h3 class="font-bold text-slate-800 text-sm leading-snug group-hover:text-adadet-main transition-colors mb-1 line-clamp-2">
+                                        {resultado.titulo}
+                                    </h3>
+                                    <p class="text-xs text-slate-400 font-medium uppercase tracking-wide">
+                                        PDF • Descarga Directa
+                                    </p>
+                                </div>
+
+                                {/* Flecha Hover */}
+                                <div class="absolute top-5 right-5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                                    <svg class="w-5 h-5 text-adadet-main" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                                </div>
+                            </a>
+                            ))}
                         </div>
-                        <h3 class="text-lg font-bold text-slate-600">Aún no hay resultados cargados</h3>
-                        <p class="text-slate-400">Vuelve a consultar más tarde.</p>
-                    </div>
-                )}
+                    ) : (
+                        <div class="text-center py-20">
+                            <div class="inline-block p-4 rounded-full bg-slate-50 mb-4">
+                                <svg class="w-8 h-8 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 011.414.586l4 4a1 1 0 01.586 1.414V19a2 2 0 01-2 2z" /></svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-600">Aún no hay resultados cargados</h3>
+                            <p class="text-slate-400">Vuelve a consultar más tarde.</p>
+                        </div>
+                    )}
+                    
+                </div>
                 
-            </div>
-            
-            {/* Footer de la tarjeta */}
-            <div class="bg-slate-50 px-6 py-4 border-t border-slate-100 text-center">
-                <a href="/resultados" class="text-sm font-bold text-slate-500 hover:text-adadet-main transition-colors inline-flex items-center gap-2">
-                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
-                    Volver al Calendario de Competencias
-                </a>
+                {/* Footer de la tarjeta */}
+                <div class="bg-slate-50 px-6 py-4 border-t border-slate-100 text-center">
+                    <a href="/resultados" class="text-sm font-bold text-slate-500 hover:text-adadet-main transition-colors inline-flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+                        Volver al Calendario de Competencias
+                    </a>
+                </div>
+
             </div>
 
         </div>
+    </div>
+    
+    <div id="poster-lightbox" class="fixed inset-0 z-[100] hidden opacity-0 transition-opacity duration-300">
+        <div class="absolute inset-0 bg-black/95 backdrop-blur-sm cursor-pointer" onclick="closeLightbox()"></div>
+        
+        <div class="relative z-10 inset-0 fixed flex items-center justify-center p-4 pointer-events-none">
+            
+            <Image 
+                src={competencia.img} 
+                alt="Poster Full"
+                class="w-auto h-auto max-h-[95vh] max-w-[95vw] object-contain rounded-lg shadow-2xl pointer-events-auto transform scale-95 transition-transform duration-300"
+                id="lightbox-img"
+            />
 
+            <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white pointer-events-auto p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors z-20">
+                <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+        </div>
     </div>
 
   </div>
 </LayoutCompetencias>
 
+<script is:inline>
+    const lightbox = document.getElementById('poster-lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    window.openLightbox = () => {
+        lightbox.classList.remove('hidden');
+        // Pequeño delay para la animación
+        setTimeout(() => {
+            lightbox.classList.remove('opacity-0');
+            lightboxImg.classList.remove('scale-95');
+            lightboxImg.classList.add('scale-100');
+        }, 10);
+        document.body.style.overflow = 'hidden';
+    }
+
+    window.closeLightbox = () => {
+        lightbox.classList.add('opacity-0');
+        lightboxImg.classList.remove('scale-100');
+        lightboxImg.classList.add('scale-95');
+        setTimeout(() => {
+            lightbox.classList.add('hidden');
+        }, 300);
+        document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeLightbox();
+    });
+</script>
+
 <style>
-  /* Animaciones de entrada */
   @keyframes fade-in-down { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
   @keyframes fade-in-up { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
   

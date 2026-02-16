@@ -6,7 +6,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "ranking": "tsx scripts/procesarRanking.ts"
   },
   "dependencies": {
     "@astrojs/node": "^9.5.2",
@@ -23,6 +24,7 @@
     "@vitest/ui": "^4.0.16",
     "happy-dom": "^20.1.0",
     "jsdom": "^27.4.0",
+    "tsx": "^4.21.0",
     "vitest": "^4.0.16"
   }
 }

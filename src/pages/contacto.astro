@@ -1,6 +1,7 @@
 ---
 import LayoutCompetencias from "src/layouts/LayoutCompetencias.astro";
 import Button from "src/components/UI/Button.astro";
+import { ADADET_INFO } from "src/data/adadet.ts";
 
 // Título de la página
 const pageTitle = "Contacto y Denuncias | ADADET";
@@ -65,7 +66,7 @@ const pageTitle = "Contacto y Denuncias | ADADET";
               </div>
               <div>
                 <p class="font-bold text-slate-900">Correo Electrónico</p>
-                <a href="mailto:contacto@adadet.com" class="text-cyan-700 hover:underline">contacto@adadet.com</a>
+                <a href="mailto:contacto@adadet.com" class="text-cyan-700 hover:underline">{ADADET_INFO.correo}</a>
                 <p class="text-xs text-slate-400 mt-1">Tiempo de respuesta: 24-48 horas hábiles.</p>
               </div>
             </li>
@@ -78,10 +79,36 @@ const pageTitle = "Contacto y Denuncias | ADADET";
               </div>
               <div>
                 <p class="font-bold text-slate-900">Atención Telefónica</p>
-                <p class="text-slate-600">+58 (424) 123-4567</p>
+                <p class="text-slate-600">{ADADET_INFO.numero}</p>
                 <p class="text-xs text-slate-400 mt-1">Lunes a Viernes: 8:00 AM - 5:00 PM</p>
               </div>
             </li>
+
+            <li class="flex items-start gap-4 pt-2 border-t border-slate-100">
+                <div class="bg-indigo-50 p-3 rounded-lg text-indigo-600 shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                    </svg>
+                </div>
+                <div>
+                  <p class="font-bold text-slate-900 mb-2">Síguenos en Redes</p>
+                  
+                  <div class="flex items-center gap-4">
+                    <a href={ADADET_INFO.facebook || "#"} target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-[#1877F2] transition-transform hover:scale-110 duration-300" title="Facebook">
+                        <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+
+                    <a href={ADADET_INFO.instagram || "#"} target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-[#E4405F] transition-transform hover:scale-110 duration-300" title="Instagram">
+                        <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.272 2.695.072 7.053.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.947.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.947-.072 4.358-.2 6.78-2.618 6.98-6.98.058-1.28.072-1.689.072-4.947 0-3.259-.014-3.668-.072-4.947-.2-4.358-2.618-6.78-6.98-6.98C15.668.014 15.259 0 12 0zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                  </div>
+                </div>
+            </li>
+
           </ul>
 
           <div class="mt-8 rounded-xl overflow-hidden shadow-inner border border-slate-200 h-48 bg-slate-100 relative group">
@@ -103,7 +130,7 @@ const pageTitle = "Contacto y Denuncias | ADADET";
       <div class="bg-white rounded-2xl shadow-xl border border-slate-100 p-8 lg:p-10 relative">
         
         <div class="absolute top-0 right-0 bg-orange-100 text-orange-700 text-xs font-bold px-3 py-1 rounded-bl-xl rounded-tr-xl border-l border-b border-orange-200">
-           CONFIDENCIAL
+            CONFIDENCIAL
         </div>
 
         <h2 class="text-2xl font-bold text-slate-800 mb-2">Envíanos un Mensaje</h2>
@@ -187,15 +214,18 @@ const pageTitle = "Contacto y Denuncias | ADADET";
                Certifico que la información suministrada es veraz y acepto ser contactado por la asociación para el seguimiento del caso.
              </label>
           </div>
-          <Button 
+          
+          <div id="formStatus" class="mb-4"></div>
+
+          <button 
             type="submit"
-            class="bg-slate-900 w-full py-4 gap-2"
+            class="group w-full py-4 flex items-center justify-center gap-2 bg-slate-900 text-white font-bold rounded-xl hover:bg-slate-800 transition-all duration-300 hover:shadow-lg disabled:opacity-70 disabled:cursor-not-allowed"
             >
             <span>Enviar Solicitud</span>
-            <svg class="w-5 h-5 transform group-hover/btn:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-          </Button>
+            <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </button>
           
 
         </form>
@@ -222,7 +252,6 @@ const pageTitle = "Contacto y Denuncias | ADADET";
 
 <script>
   const form = document.getElementById("contactForm") as HTMLFormElement;
-  // Asegúrate de agregar este ID a tu div de mensajes: <div id="formStatus"></div>
   const statusDiv = document.getElementById("formStatus"); 
 
   if (form) {
@@ -251,15 +280,15 @@ const pageTitle = "Contacto y Denuncias | ADADET";
 
         if (response.ok) {
           form.reset();
-          alert("¡Mensaje enviado con éxito! Gracias por contactarnos.");
-          if(statusDiv) statusDiv.innerHTML = `<p class="text-green-600 font-bold bg-green-100 p-3 rounded">✅ Enviado correctamente</p>`;
+          if(statusDiv) statusDiv.innerHTML = `<p class="text-green-600 font-bold bg-green-100 p-3 rounded mb-4 border border-green-200">✅ ¡Mensaje enviado con éxito! Gracias por contactarnos.</p>`;
+          // Remover alerta invasiva del navegador si prefieres solo el mensaje en el div
+          // alert("¡Mensaje enviado con éxito! Gracias por contactarnos."); 
         } else {
-          alert("Error: " + data.message);
-          if(statusDiv) statusDiv.innerHTML = `<p class="text-red-600 font-bold bg-red-100 p-3 rounded">❌ Error: ${data.message}</p>`;
+          if(statusDiv) statusDiv.innerHTML = `<p class="text-red-600 font-bold bg-red-100 p-3 rounded mb-4 border border-red-200">❌ Error: ${data.message}</p>`;
         }
       } catch (error) {
         console.error(error);
-        alert("Hubo un error de conexión.");
+        if(statusDiv) statusDiv.innerHTML = `<p class="text-red-600 font-bold bg-red-100 p-3 rounded mb-4 border border-red-200">❌ Hubo un error de conexión.</p>`;
       } finally {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalText;

@@ -2,6 +2,8 @@
 // CompetenciasSection.astro
 import { ListaCompetencias } from '../data/listaCompetencias';
 import { ROUTES } from '../data/routes';
+import PageHero from './UI/PageHero.astro';
+import { Image } from 'astro:assets';
 
 // Función para extraer el slug
 const getSlug = (linkCompleto: string) => {
@@ -22,32 +24,25 @@ const competenciasNacionales = ListaCompetencias.filter((c) => c.tipo === 'nacio
 ---
 
 <section class="relative py-112 md:py-18 bg-slate-50 overflow-hidden" id="competencias">
-  
+  <div class="mb-10">
+    <PageHero
+            title="Resultados y" 
+            gradientText="Competencias"
+            subtitle="Consulta las convocatorias..."
+            badge="Competencias"
+        />
+    
+  </div>
   <div class="absolute inset-0 overflow-hidden pointer-events-none">
     <div class="absolute top-20 -left-20 w-96 h-96 bg-adadet-main/5 rounded-full blur-3xl animate-blob"></div>
     <div class="absolute top-1/3 -right-20 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
     <div class="absolute bottom-0 left-1/2 w-full h-96 bg-gradient-to-t from-slate-100 to-transparent"></div>
   </div>
 
+  
   <div class="container mx-auto px-4 relative z-10 max-w-7xl">
     
-    <div class="text-center mb-16 md:mb-20 animate-fade-in-down">
-      <div class="inline-flex items-center gap-2 bg-white border border-slate-200 px-4 py-1.5 rounded-full shadow-sm mb-6 transition-transform hover:scale-105">
-        <span class="flex h-2 w-2 relative">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-adadet-main opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2 w-2 bg-adadet-main"></span>
-        </span>
-        <span class="text-xs font-bold uppercase tracking-widest text-slate-600">Competencias</span>
-      </div>
-      
-      <h2 class="text-4xl md:text-5xl lg:text-6xl font-black font-display text-slate-900 mb-6 drop-shadow-sm">
-        Nuestras <span class="text-transparent bg-clip-text bg-gradient-to-r from-adadet-main to-cyan-400">Competencias</span>
-      </h2>
-      
-      <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
-        Consulta las convocatorias, resultados oficiales y documentación técnica de todos los eventos de la temporada.
-      </p>
-    </div>
+    
 
     <div class="space-y-20">
       
@@ -73,8 +68,8 @@ const competenciasNacionales = ListaCompetencias.filter((c) => c.tipo === 'nacio
               >
                 {/* Header Imagen/Folleto */}
                 <div class="relative h-48 bg-slate-200 overflow-hidden">
-                    <img 
-                        src="/images/placeholder-competencia.jpg" 
+                    <Image 
+                        src={competencia.img} 
                         alt={competencia.titulo}
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-0"
                         loading="lazy"
@@ -162,8 +157,8 @@ const competenciasNacionales = ListaCompetencias.filter((c) => c.tipo === 'nacio
                     Lo pondré completo para que no tengas dudas al copiar.
                 */}
                  <div class="relative h-48 bg-slate-200 overflow-hidden">
-                    <img 
-                        src="/images/placeholder-competencia.jpg" 
+                    <Image 
+                        src={competencia.img} 
                         alt={competencia.titulo}
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-0"
                         loading="lazy"
@@ -242,8 +237,8 @@ const competenciasNacionales = ListaCompetencias.filter((c) => c.tipo === 'nacio
                 style={`animation-delay: ${index * 100}ms`}
               >
                  <div class="relative h-48 bg-slate-200 overflow-hidden">
-                    <img 
-                        src="/images/placeholder-competencia.jpg" 
+                    <Image 
+                        src={competencia.img} 
                         alt={competencia.titulo}
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-0"
                         loading="lazy"

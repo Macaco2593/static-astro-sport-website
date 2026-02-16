@@ -1,3 +1,5 @@
+import primerEstadal2026 from "../assets/1er-estadal-adadet-2026.jpeg";
+
 export interface ICompetencia {
     id: number
     titulo: string
@@ -11,6 +13,7 @@ export interface ICompetencia {
     fechaInicio: string
     fechaFinalizacion: string
     resultados: Resultado[]
+    img: ImageMetadata
 }
 interface Resultado {
     titulo: string,
@@ -19,12 +22,13 @@ interface Resultado {
 export const ListaCompetencias: ICompetencia[] = [
     {
         id: 1,
-        titulo: 'Competencia Estadal Número 1',
+        titulo: 'I Competencia Estadal 2026',
         tipo: 'estadal',
-        linkDeLaCompetencia: '/competencias_pdf/competencia-estadal-numero-1',
-        fechaDeSubida: '17-01-2026',
-        fechaInicio: '01/01/2026',
-        fechaFinalizacion: '10/01/2026',
+        linkDeLaCompetencia: '/competencias_pdf/I-competencia-estadal-2026',
+        fechaDeSubida: '15-02-2026',
+        fechaInicio: '05/03/2026',
+        fechaFinalizacion: '08/03/2026',
+        img: primerEstadal2026,
         resultados: [
             {
                 titulo: 'Condiciones Generales',
@@ -53,6 +57,7 @@ export const ListaCompetencias: ICompetencia[] = [
         fechaDeSubida: '17-01-2026',
         fechaInicio: '01/01/2026',
         fechaFinalizacion: '10/01/2026',
+        img: primerEstadal2026,
         resultados: [
             {
                 titulo: 'Condiciones Generales',
@@ -80,6 +85,7 @@ export const ListaCompetencias: ICompetencia[] = [
         fechaDeSubida: '17-01-2026',
         fechaInicio: '01/01/2026',
         fechaFinalizacion: '10/01/2026',
+        img: primerEstadal2026,
         resultados: [
             {
                 titulo: 'Condiciones Generales',
