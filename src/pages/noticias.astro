@@ -1,0 +1,150 @@
+---
+import LayoutCompetencias from "src/layouts/LayoutCompetencias.astro";
+import { NOTICIAS } from "src/data/noticias";
+import { Image } from 'astro:assets';
+
+// 1. Ordenar noticias de la más reciente a la más antigua
+const noticiasOrdenadas = NOTICIAS.sort((a, b) => 
+    new Date(b.fecha).getTime() - new Date(a.fecha).getTime()
+);
+
+// Título de la página (SEO)
+const pageTitle = "Sala de Prensa y Noticias | ADADET";
+---
+
+<LayoutCompetencias titulo={pageTitle}>
+  
+  <div class="bg-slate-50 min-h-screen relative">
+
+    <header class="relative bg-slate-900 pt-24 pb-32 px-4 text-center overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <svg class="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M0 100 C 20 0 50 0 100 100 Z" fill="url(#gradiente)" />
+                <defs>
+                    <linearGradient id="gradiente" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#22d3ee;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto space-y-4">
+            <span class="text-cyan-400 font-bold tracking-widest uppercase text-sm animate-fade-in">
+                Comunicación Oficial
+            </span>
+            <h1 class="text-4xl md:text-6xl font-black text-white tracking-tight animate-fade-in delay-100">
+                Sala de <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Prensa</span>
+            </h1>
+            <p class="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto animate-fade-in delay-200">
+                Entérate de los últimos resultados, comunicados oficiales, convocatorias y eventos de la natación tachirense.
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 -mt-20 pb-24 relative z-20">
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {noticiasOrdenadas.map((news, index) => (
+                <article 
+                    class="group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-xl shadow-slate-900/10 hover:shadow-2xl hover:shadow-cyan-900/20 transition-all duration-500 hover:-translate-y-2 flex flex-col h-full animate-fade-in-up"
+                    style={`animation-delay: ${index * 100}ms`}
+                >
+                    
+                    <div class="h-56 overflow-hidden relative">
+                        {news.imagen ? (
+                            <Image 
+                                src={news.imagen} 
+                                alt={news.titulo} 
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                                loading="lazy"
+                            />
+                        ) : (
+                            // Placeholder si no hay imagen
+                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200 group-hover:from-cyan-50 group-hover:to-blue-50 transition-colors duration-500">
+                                <svg class="w-12 h-12 text-slate-300 group-hover:text-cyan-300 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                                </svg>
+                            </div>
+                        )}
+                        
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                        <div class="absolute top-4 left-4">
+                             <span class="bg-white/90 backdrop-blur-md text-[10px] font-black px-3 py-1.5 rounded-lg text-slate-800 uppercase tracking-wide shadow-sm border border-white/50">
+                                {news.categoria}
+                             </span>
+                        </div>
+                    </div>
+
+                    <div class="p-8 flex-1 flex flex-col relative">
+                        
+                        <div class="flex items-center gap-2 text-xs font-bold text-cyan-600 mb-3 uppercase tracking-wider">
+                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            {new Date(news.fecha).toLocaleDateString("es-VE", { 
+                                day: "numeric", 
+                                month: "short", 
+                                year: "numeric", 
+                                timeZone: "UTC" 
+                            })}
+                        </div>
+
+                        <h3 class="text-xl font-bold text-slate-900 mb-3 leading-tight group-hover:text-cyan-600 transition-colors line-clamp-2">
+                            <a href={`/noticias/${news.slug}`}>
+                                <span class="absolute inset-0"></span>
+                                {news.titulo}
+                            </a>
+                        </h3>
+
+                        <p class="text-slate-500 text-sm leading-relaxed line-clamp-3 mb-6 flex-1">
+                            {news.resumen}
+                        </p>
+
+                        <div class="mt-auto flex items-center text-sm font-bold text-slate-900 group-hover:text-cyan-600 transition-colors">
+                            Leer artículo completo
+                            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </div>
+                    </div>
+                </article>
+            ))}
+        </div>
+
+        {noticiasOrdenadas.length === 0 && (
+            <div class="text-center py-20 bg-white rounded-3xl shadow-sm border border-slate-100">
+                <p class="text-slate-500 text-lg">No hay noticias publicadas en este momento.</p>
+            </div>
+        )}
+
+    </main>
+
+  </div>
+</LayoutCompetencias>
+
+<style>
+  /* Animaciones Simples */
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out forwards;
+    opacity: 0; /* Empieza invisible */
+  }
+  
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+    opacity: 0; /* Empieza invisible */
+  }
+
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+</style>
