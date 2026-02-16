@@ -1,4 +1,5 @@
 import primerEstadal2026 from "../assets/1er-estadal-adadet-2026.jpeg";
+import primerRegional2026 from "../assets/1er-regional-adaefalcon-2026.jpeg"
 
 export interface ICompetencia {
     id: number
@@ -51,13 +52,13 @@ export const ListaCompetencias: ICompetencia[] = [
     
     {
         id: 2,
-        titulo: 'Competencia Regional Número 1',
+        titulo: 'I Competencia Regional ADAEFALCON 2026',
         tipo: 'regional',
-        linkDeLaCompetencia: '/competencias_pdf/competencia-regional-numero-2',
-        fechaDeSubida: '17-01-2026',
-        fechaInicio: '01/01/2026',
-        fechaFinalizacion: '10/01/2026',
-        img: primerEstadal2026,
+        linkDeLaCompetencia: '/competencias_pdf/I-competencia-regional-adaefalcon-2026',
+        fechaDeSubida: '16-02-2026',
+        fechaInicio: '14/04/2026',
+        fechaFinalizacion: '18/04/2026',
+        img: primerRegional2026,
         resultados: [
             {
                 titulo: 'Condiciones Generales',
@@ -77,32 +78,4 @@ export const ListaCompetencias: ICompetencia[] = [
             }
         ]
     },
-    {
-        id: 3,
-        titulo: 'Competencia Nacional Número 1',
-        tipo: 'nacional',
-        linkDeLaCompetencia: '/competencias_pdf/competencia-nacional-numero-1',
-        fechaDeSubida: '17-01-2026',
-        fechaInicio: '01/01/2026',
-        fechaFinalizacion: '10/01/2026',
-        img: primerEstadal2026,
-        resultados: [
-            {
-                titulo: 'Condiciones Generales',
-                nombreArchivo: 'condicion_general.pdf'
-            },
-            {
-                titulo: 'Resultados Individuales Completos',
-                nombreArchivo: 'resultados_individuales.pdf'
-            },
-            {
-                titulo: 'Resultados por Equipos',
-                nombreArchivo: 'resultados_por_equipo.pdf'
-            },
-            {
-                titulo: 'Mejores Atletas por Categorías',
-                nombreArchivo: 'mejores_atletas.pdf'
-            }
-        ]
-    }
 ]

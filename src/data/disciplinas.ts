@@ -41,8 +41,8 @@ export const BASE_DISCIPLINAS: DisciplinaBase[] = [
         etiqueta: "Marcas mínimas",
       },
       {
-        slugDocumento: DOCUMENTOS_SLUG.NATACION_CONDICIONES_TECNICAS_2026,
-        etiqueta: "Condiciones técnicas",
+        slugDocumento: DOCUMENTOS_SLUG.NATACION_CONDICIONES_GENERALES_2026,
+        etiqueta: "Condiciones Generales",
       },
       {
         slugDocumento: DOCUMENTOS_SLUG.NATACION_RANKING_2026,
@@ -56,10 +56,6 @@ export const BASE_DISCIPLINAS: DisciplinaBase[] = [
     descripcion: "La prueba definitiva de resistencia y estrategia en contacto directo con la naturaleza. Esta disciplina exige una fortaleza mental inquebrantable para desafiar corrientes y largas distancias, forjando nadadores con un carácter de acero que representan la garra andina en cada brazada, fuera de la piscina",
     imagenUrl: aguasAbiertas,
     documentos: [
-      {
-        slugDocumento: DOCUMENTOS_SLUG.AGUAS_ABIERTAS_MARCAS_MINIMAS_2026,
-        etiqueta: "Marcas mínimas",
-      },
       {
         slugDocumento: DOCUMENTOS_SLUG.AGUAS_ABIERTAS_CONDICIONES_TECNICAS_2026,
         etiqueta: "Condiciones técnicas",
@@ -92,7 +88,7 @@ export const BASE_DISCIPLINAS: DisciplinaBase[] = [
   },
   {
     slug: BASE_DISCIPLINAS_SLUG.clavado,
-    titulo: "Clavado",
+    titulo: "Salto Ornamental",
     descripcion: "El arte de desafiar la gravedad con valentía y precisión milimétrica. En cuestión de segundos, nuestros clavadistas combinan acrobacia aérea y control absoluto, convirtiendo el riesgo en perfección. Una disciplina espectacular que requiere nervios de acero y una técnica depurada desde las alturas.",
     imagenUrl: clavado,
     documentos: [
@@ -109,8 +105,8 @@ export const BASE_DISCIPLINAS: DisciplinaBase[] = [
     imagenUrl: master,
     documentos: [
       {
-        slugDocumento: DOCUMENTOS_SLUG.MASTER_MARCAS_MINIMAS_2026,
-        etiqueta: "Marcas mínimas",
+        slugDocumento: DOCUMENTOS_SLUG.MASTER_CONDICIONES_TECNICAS_2026,
+        etiqueta: "Condiciones técnicas",
       },
     ],
   },
