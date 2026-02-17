@@ -2,6 +2,7 @@
 import logoAdadet from "../assets/adadet-logo.jpg";
 import { DOCUMENTOS, DOCUMENTOS_SLUG } from "../data/documentos";
 import { Image } from "astro:assets";
+import SectionTag from "./UI/SectionTag.astro";
 
 const SLUGS_CENTRO_RECURSOS = [
   DOCUMENTOS_SLUG.ACTA_ASAMBLEA_GENERAL,
@@ -23,14 +24,13 @@ const documentos = DOCUMENTOS.filter((doc) => SLUGS_CENTRO_RECURSOS.includes(doc
 
   <div class="relative z-10 mx-auto max-w-7xl">
     
-    <div class="w-full flex justify-center items-center gap-4 mb-16 animate-fade-in-up">
-        <span class="relative flex h-2.5 w-2.5">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-adadet-main opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-adadet-main"></span>
+    <div class="w-full flex justify-center items-center mb-16 animate-fade-in-up">
+    <SectionTag text="Transparencia Institucional">
+        <span slot="icon" class="relative flex h-2.5 w-2.5">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-600 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyan-600"></span>
         </span>
-        <span class="inline-flex items-center gap-2 bg-white border border-slate-200 text-adadet-main px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-sm">
-          Transparencia Institucional
-        </span>
+    </SectionTag>
     </div>
 
     <div class="flex flex-col lg:grid lg:grid-cols-12 gap-8 lg:items-center">

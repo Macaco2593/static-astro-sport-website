@@ -3,6 +3,7 @@ export const prerender = false;
 import { BASE_DISCIPLINAS as disciplinas } from "src/data/disciplinas";
 import { ROUTES } from "src/data/routes";
 import { Image } from 'astro:assets';
+import SectionTag from "./UI/SectionTag.astro";
 
 // Definimos los colores base para el gradiente si no carga la imagen
 const fallbackGradient = "bg-gradient-to-br from-slate-100 to-slate-200";
@@ -14,11 +15,11 @@ const fallbackGradient = "bg-gradient-to-br from-slate-100 to-slate-200";
   <div class="max-w-7xl mx-auto relative z-10">
     
     <header class="text-center mb-12 md:mb-16 animate-fade-in-down">
-      <div class="inline-flex items-center gap-2 bg-cyan-50 text-adadet-main border border-cyan-100 px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wider mb-4 shadow-sm">
-        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M2 17s1.5-2 3.5-2 3.5 2 5.5 2 3.5-2 5.5-2 3.5 2 3.5 2m-17 2s1.5-2 3.5-2 3.5 2 5.5 2 3.5-2 5.5-2 3.5 2 3.5 2"/>
+      <div class="text-center mb-4"> <SectionTag text="Deportes Acuáticos">
+        <svg slot="icon" class="w-4 h-4 text-cyan-600" fill="currentColor" viewBox="0 0 20 20">
+             <path d="M2 17s1.5-2 3.5-2 3.5 2 5.5 2 3.5-2 5.5-2 3.5 2 3.5 2m-17 2s1.5-2 3.5-2 3.5 2 5.5 2 3.5-2 5.5-2 3.5 2 3.5 2"/>
         </svg>
-        Deportes Acuáticos
+    </SectionTag>
       </div>
       
       <h2 class="text-4xl md:text-5xl lg:text-6xl font-black font-display text-slate-900 mb-4">

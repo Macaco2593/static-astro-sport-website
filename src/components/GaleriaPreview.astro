@@ -1,5 +1,6 @@
 ---
 import { ROUTES } from "../data/routes";
+import SectionTag from "./UI/SectionTag.astro";
 
 const previewImages = [
   {
@@ -26,13 +27,14 @@ const previewImages = [
     
     <header class="mb-12 md:mb-16 text-center max-w-4xl mx-auto flex flex-col items-center">
       
-      <div class="inline-flex items-center gap-2 bg-cyan-50 text-adadet-main border border-cyan-100 px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wider mb-6 shadow-sm transform hover:scale-105 transition-transform duration-300">
-        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+      <div class="text-center mb-6">
+    <SectionTag text="Momentos Destacados">
+        <svg slot="icon" class="w-4 h-4 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
         </svg>
-        Momentos Destacados
-      </div>
+    </SectionTag>
+</div>
 
       <h2 class="text-3xl md:text-4xl lg:text-5xl font-black font-display text-slate-900 drop-shadow-sm leading-tight mb-4">
         Galería Fotográfica 

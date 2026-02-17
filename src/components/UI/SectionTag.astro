@@ -1,0 +1,20 @@
+---
+interface Props {
+  text: string;
+  class?: string;
+}
+
+const { text, class: className } = Astro.props;
+---
+
+<div class:list={[
+    "inline-flex items-center gap-2 px-4 py-1.5 rounded-full border",
+    "bg-cyan-50 border-cyan-100 text-cyan-800", // Colores base unificados
+    "text-xs font-bold uppercase tracking-widest", // Tipografía unificada
+    "shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 select-none", // Animación sutil
+    className
+]}>
+    <slot name="icon" />
+    
+    <span>{text}</span>
+</div>
