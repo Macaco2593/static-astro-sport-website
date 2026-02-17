@@ -12,11 +12,134 @@ Inside of your Astro project, you'll see the following folders and files:
 
 ```text
 /
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
++---public
+|   |   adadet-logo.jpg
+|   |   favicon.svg
+|   |
+|   \---contenido
+|       +---competencias_pdf
+|       |   +---I-competencia-estadal-2026
+|       |   |       condicion_general.pdf
+|       |   |       mejores_atletas.pdf
+|       |   |       resultados_individuales.pdf
+|       |   |       resultados_por_equipo.pdf
+|       |   |
+|       |   \---I-competencia-regional-adaefalcon-2026
+|       |           condicion_general.pdf
+|       |
+|       \---documentos
+|               condiciones_generales_de_natacion_2026.pdf
+|               condiciones_tecnicas_generales_de_aguas_abiertas_2026.pdf
+|               condiciones_tecnicas_generales_de_clavados_2026.pdf
+|               condiciones_tecnicas_generales_de_natacion_artistica.pdf
+|               condiciones_tecnicas_generales_de_natacion_master_2026.pdf
+|               condiciones_tecnicas_generales_de_polo_acuatico_2026.pdf
+|               marcas-minimas-natacion-2026.pdf
+|               normativa_de_fichaje_feveda_2026.pdf
+|               Organigrama-de-la-asociacion.pdf
+|
++---raw-data
+|       resultados csv.csv
+|
++---scripts
+|       procesarRanking.ts
+|
+\---src
+    +---assets
+    |   |   1er-estadal-adadet-2026.jpeg
+    |   |   1er-regional-adaefalcon-2026.jpeg
+    |   |   adadet-logo.jpg
+    |   |   aguas-abiertas.jpeg
+    |   |   clavado.jpg
+    |   |   competencia3.png
+    |   |   idt-logo.png
+    |   |   logoAdadet.svg
+    |   |   master.jpg
+    |   |   natacion-artistica.jpg
+    |   |   natacion.jpg
+    |   |   podio.jpg
+    |   |   polo-acuatico.jpg
+    |   |   pool-competition.jpg
+    |   |   pool.jpg
+    |   |
+    |   +---albums
+    |   |   \---1er-estadal-2025
+    |   |           1.jpg
+    |   |
+    |   +---icons
+    |   |       facebook.svg
+    |   |       instagram.svg
+    |   |
+    |   \---noticias
+    |           evaluacion_tecnica_natacion_artistica.jpeg
+    |
+    +---components
+    |   |   Calendar.astro
+    |   |   CentroRecursos.astro
+    |   |   Competencias.astro
+    |   |   Disciplinas.astro
+    |   |   Footer.astro
+    |   |   GaleriaPreview.astro
+    |   |   Header.astro
+    |   |   HeroCarousel.astro
+    |   |   NoticiasPreview.astro
+    |   |
+    |   \---UI
+    |           Button.astro
+    |           PageHero.astro
+    |           SectionTag.astro
+    |           WaveDivider.astro
+    |
+    +---data
+    |       adadet.ts
+    |       albums.ts
+    |       colaboradores.ts
+    |       disciplinas.ts
+    |       documentos.ts
+    |       generated-ranking.json
+    |       listaCompetencias.ts
+    |       noticias.ts
+    |       organigrama.ts
+    |       routes.ts
+    |
+    +---layouts
+    |       Layout.astro
+    |       LayoutCompetencias.astro
+    |
+    +---pages
+    |   |   calendario.astro
+    |   |   colaboradores.astro
+    |   |   contacto.astro
+    |   |   galeria.astro
+    |   |   index.astro
+    |   |   noticias.astro
+    |   |   quienes-somos.astro
+    |   |   ranking.astro
+    |   |   resultados.astro
+    |   |
+    |   +---api
+    |   |       sendEmails.ts
+    |   |
+    |   +---disciplinas
+    |   |       [slug].astro
+    |   |
+    |   +---documentos
+    |   |       [slug].astro
+    |   |
+    |   +---galeria
+    |   |       [id].astro
+    |   |
+    |   +---noticias
+    |   |       [slug].astro
+    |   |
+    |   +---ranking
+    |   |       [categoria].astro
+    |   |
+    |   \---resultados
+    |           [slug].astro
+    |
+    \---styles
+            global.css
 ```
 
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
