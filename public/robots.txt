@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://adadet.vercel.app/sitemap-index.xml
