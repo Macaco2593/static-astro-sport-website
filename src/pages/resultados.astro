@@ -1,9 +1,12 @@
 ---
 import Competencias from "src/components/Competencias.astro";
 import LayoutCompetencias from "../layouts/LayoutCompetencias.astro";
+
+const pageTitle = "Resultados | ADADET";
+const pageDescription = "Accede a los resultados oficiales de todas las competencias de natación en Táchira. Consulta los tiempos, marcas y puntajes de los últimos torneos."
 ---
 
-<LayoutCompetencias titulo="Resultados">
+<LayoutCompetencias titulo={pageTitle} descripcion={pageDescription}>
   <div class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50">
     
       <Competencias/>

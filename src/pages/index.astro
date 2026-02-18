@@ -1,15 +1,18 @@
 ---
 import '../styles/global.css';
 import HeroCarousel from '../components/HeroCarousel.astro';
-import Layout from '../layouts/Layout.astro';
 import Disciplinas from '../components/Disciplinas.astro';
 import CentroRecursos from '../components/CentroRecursos.astro';
 import GaleriaPreview from '../components/GaleriaPreview.astro';
 import NoticiasPreview from 'src/components/NoticiasPreview.astro';
+import LayoutCompetencias from 'src/layouts/LayoutCompetencias.astro';
+
+const pageTitle = "Adadet | Asociación de Deportes Acuáticos del estado Táchira";
+const pageDescription = 'Sitio oficial de la Asociación de Deportes Acuáticos del Estado Táchira. Noticias, rankings, resultados y calendario de eventos de natación en la región.';
 ---
 
 
-<Layout>
+<LayoutCompetencias titulo={pageTitle} descripcion={pageDescription}>
 	<HeroCarousel />
 		<main>
 			

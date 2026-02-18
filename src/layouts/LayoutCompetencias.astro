@@ -5,16 +5,30 @@ import "../styles/global.css";
 
 interface Props {
   titulo: string;
+  descripcion?: string;
   footerDecoration?: boolean; 
+  image?: string
+  noIndex?: boolean;
 }
-const { titulo, footerDecoration = true } = Astro.props;
-
+const { titulo, descripcion, image, noIndex = false, footerDecoration = true } = Astro.props;
+const socialImage = new URL(image || "/adadet-logo.jpg", Astro.site)
 ---
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content={noIndex ? "noIndex, follow" : "index, follow"} />
+    <meta name="description" content={descripcion} />
+	<meta name="generator" content={Astro.generator} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={titulo} />
+    <meta property="og:description" content={descripcion} />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Imagen representativa de ADADET" />
     <title>{titulo}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">

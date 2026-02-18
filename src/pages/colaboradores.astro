@@ -5,9 +5,12 @@ import { COLABORADORES as listaColaboradores } from "src/data/colaboradores";
 import PageHero from "../components/UI/PageHero.astro";
 import WaveDivider from "../components/UI/WaveDivider.astro";
 import { Image } from "astro:assets";
+
+const pageTitle = "Colaboradores y Aliados | ADADET";
+const pageDescription = "Conoce a las empresas e instituciones que apoyan el deporte acuático en Táchira. Gracias a nuestros patrocinadores por impulsar el talento regional."
 ---
 
-<LayoutCompetencias titulo="Colaboradores y Aliados | ADADET" footerDecoration={false}>
+<LayoutCompetencias titulo={pageTitle} descripcion={pageDescription} footerDecoration={false}>
   
   <div class="bg-slate-50 min-h-screen relative">
 

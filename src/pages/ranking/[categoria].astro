@@ -10,6 +10,7 @@ export function getStaticPaths() {
 }
 
 const { categoriaData } = Astro.props;
+const pageDescription = `Consulta el ranking oficial de la categoría ${categoriaData.titulo} para la temporada 2026. Descubre a los mejores atletas y clubes en cada prueba de los deportes acuáticos en Táchira.`;
 
 // Función para renderizar medallas
 const getRankIcon = (index: number) => {
@@ -20,7 +21,7 @@ const getRankIcon = (index: number) => {
 };
 ---
 
-<LayoutCompetencias titulo={`Ranking ${categoriaData.titulo} | ADADET`}>
+<LayoutCompetencias titulo={`Ranking ${categoriaData.titulo} | ADADET`} descripcion={pageDescription}>
   
   <div class="bg-slate-50 min-h-screen">
     

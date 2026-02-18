@@ -4,10 +4,11 @@ import Button from "src/components/UI/Button.astro";
 import { ADADET_INFO } from "src/data/adadet.ts";
 
 // Título de la página
-const pageTitle = "Contacto y Denuncias | ADADET";
+const pageTitle = "Contacto y Denuncias | ADADET"
+const pageDescription = "¿Tienes dudas o quieres inscribirte? Contáctanos. Aquí encontrarás nuestra dirección, correos electrónicos y teléfonos de la asociación.";
 ---
 
-<LayoutCompetencias titulo={pageTitle}>
+<LayoutCompetencias titulo={pageTitle} descripcion={pageDescription}>
   
   <header class="relative bg-slate-900 py-20 px-4 text-center overflow-hidden">
     <div class="absolute inset-0 opacity-20">

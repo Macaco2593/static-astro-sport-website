@@ -7,13 +7,17 @@ import node from '@astrojs/node';
 
 import vercel from '@astrojs/vercel';
 
+import sitemap from '@astrojs/sitemap';
+
 // https://astro.build/config
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
 
-  integrations: [preact({ include: ['**/*.tsx'] })],
+  integrations: [preact({ include: ['**/*.tsx'] }), sitemap()],
 
   adapter: vercel(),
+
+  site: "https://https://adadet.vercel.app/"
 });

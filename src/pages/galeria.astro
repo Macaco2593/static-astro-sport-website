@@ -5,9 +5,13 @@ import WaveDivider from "../components/UI/WaveDivider.astro";
 import { ALBUMES } from "src/data/albums.ts";
 import { ROUTES } from "src/data/routes.ts";
 import { ADADET_INFO } from "src/data/adadet";
+import { Image } from "astro:assets";
+
+const pageTitle = "Galería Multimedia | ADADET";
+const pageDescription = "Revive los mejores momentos de nuestras competencias. Fotos y videos de los eventos de natación, clavados y polo acuático en el estado Táchira."
 ---
 
-<LayoutCompetencias titulo="Galería Multimedia | ADADET" footerDecoration={false}>
+<LayoutCompetencias titulo={pageTitle} descripcion={pageDescription} footerDecoration={false}>
   
   <div class="bg-slate-50 min-h-screen relative">
 
@@ -29,7 +33,7 @@ import { ADADET_INFO } from "src/data/adadet";
                     <div class="relative h-64 overflow-hidden">
                         <div class="absolute inset-0 bg-slate-900/20 group-hover:bg-slate-900/10 transition-colors z-10"></div>
                         
-                        <img 
+                        <Image 
                             src={album.cover} 
                             alt={album.titulo}
                             class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"

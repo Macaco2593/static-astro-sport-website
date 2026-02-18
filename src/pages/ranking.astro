@@ -18,9 +18,12 @@ const fechaActualizacion = new Date().toLocaleDateString("es-VE", {
   month: 'long',
   day: 'numeric'
 });
+
+const pageTitle = "Ranking Estadal Oficial | ADADET";
+const pageDescription = "Descubre quiénes son los mejores nadadores del estado. Ranking actualizado por categorías y disciplinas de la Asociación de Deportes Acuáticos de Táchira."
 ---
 
-<LayoutCompetencias titulo="Ranking Estadal Oficial | ADADET" footerDecoration={false}>
+<LayoutCompetencias titulo={pageTitle} descripcion={pageDescription} footerDecoration={false}>
   
   <div class="bg-slate-50 min-h-screen relative">
     

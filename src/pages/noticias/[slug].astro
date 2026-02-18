@@ -19,7 +19,7 @@ const fecha = new Date(noticia.fecha).toLocaleDateString("es-VE", {
 const currentUrl = Astro.url.href;
 ---
 
-<LayoutCompetencias titulo={`${noticia.titulo} | Noticias ADADET`}>
+<LayoutCompetencias titulo={`${noticia.titulo} | Noticias ADADET`} descripcion={noticia.resumen}>
     
     <div class="bg-slate-50 min-h-screen pb-20 relative overflow-hidden">
         
