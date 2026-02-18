@@ -19,5 +19,5 @@ export default defineConfig({
 
   adapter: vercel(),
 
-  site: "https://https://adadet.vercel.app/"
+  site: "https://adadet.vercel.app/"
 });
