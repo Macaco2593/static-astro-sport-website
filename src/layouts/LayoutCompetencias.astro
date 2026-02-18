@@ -9,8 +9,15 @@ interface Props {
   footerDecoration?: boolean; 
   image?: string
   noIndex?: boolean;
+  showFooter?: boolean;
 }
-const { titulo, descripcion, image, noIndex = false, footerDecoration = true } = Astro.props;
+const { 
+    titulo,
+    descripcion, 
+    image, 
+    noIndex = false, 
+    footerDecoration = true,
+    showFooter = true } = Astro.props;
 const socialImage = new URL(image || "/adadet-logo.jpg", Astro.site)
 ---
 <!DOCTYPE html>
@@ -43,6 +50,8 @@ const socialImage = new URL(image || "/adadet-logo.jpg", Astro.site)
             </div>
         </article>
     </main>
-    <Footer withDecoration={footerDecoration}/>
+    {showFooter && (
+        <Footer withDecoration={footerDecoration}/>
+    )}
 </body>
 </html>

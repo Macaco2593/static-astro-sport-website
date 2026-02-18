@@ -16,7 +16,7 @@ export const DOCUMENTOS_SLUG = {
   // ISLR: "declaracion-islr-2024",
   NORMATIVA_FICHAJE_2026: "normativa-fichaje-2026",
   RECONOCIMIENTO_IDT: "reconocimiento-idt",
-  ORGANIGRAMA_ASOCIACION: "organigrama-de-la-asociacion",
+  ORGANIGRAMA_ASOCIACION: "Organigrama-de-la-asociacion",
   NATACION_MARCAS_MINIMAS_2026: "natacion-marcas-minimas-2026",
   NATACION_CONDICIONES_GENERALES_2026: "condiciones_generales_de_natacion_2026",
   NATACION_RANKING_2026: "natacion-ranking-2026",
