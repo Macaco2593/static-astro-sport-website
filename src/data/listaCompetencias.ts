@@ -15,6 +15,7 @@ export interface ICompetencia {
     fechaFinalizacion: string
     resultados: Resultado[]
     img: ImageMetadata
+    linkEnVivo?: string
 }
 interface Resultado {
     titulo: string,
@@ -45,9 +46,10 @@ export const ListaCompetencias: ICompetencia[] = [
             },
             {
                 titulo: 'Mejores Atletas por Categorías',
-                nombreArchivo: 'mejores_atletas.pdf'
-            }
-        ]
+                nombreArchivo: 'mejores_atletas.pdf',
+            },
+        ],
+        linkEnVivo: 'https://resultados.adadet.org',
     },
     
     {

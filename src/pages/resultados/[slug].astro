@@ -150,6 +150,7 @@ const { slug } = Astro.params;
                                 class="group relative flex items-start gap-4 p-5 rounded-2xl border border-slate-100 bg-slate-50/50 hover:bg-white hover:border-adadet-main/30 hover:shadow-lg hover:shadow-adadet-main/5 transition-all duration-300"
                                 target="_blank"
                             >
+                                
                                 {/* Icono PDF */}
                                 <div class="w-12 h-12 flex-shrink-0 bg-white rounded-xl border border-slate-100 flex items-center justify-center text-red-500 shadow-sm group-hover:scale-110 group-hover:border-red-100 group-hover:bg-red-50 transition-all duration-300">
                                     <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 2H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
@@ -170,6 +171,35 @@ const { slug } = Astro.params;
                                 </div>
                             </a>
                             ))}
+                            {competencia.linkEnVivo && (
+                                    <a 
+                                        href={competencia.linkEnVivo}
+                                        class="group relative flex items-center justify-center sm:justify-start gap-3 p-4 sm:p-5 w-full rounded-2xl border border-emerald-500/30 bg-emerald-50 hover:bg-emerald-100 hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-500/20 transition-all duration-300"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        {/* Punto animado de "En Vivo" (Reemplaza al emoji estático) */}
+                                        <div class="relative flex h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0">
+                                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                            <span class="relative inline-flex rounded-full h-full w-full bg-red-500"></span>
+                                        </div>
+
+                                        {/* Texto del botón adaptativo */}
+                                        <span class="font-semibold text-emerald-800 text-sm sm:text-base">
+                                            Resultados en Tiempo Real
+                                        </span>
+
+                                        {/* Ícono sutil de enlace externo que se mueve al pasar el mouse (Aparece a la derecha en PC) */}
+                                        <svg 
+                                            class="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 sm:ml-auto opacity-70 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300 hidden sm:block" 
+                                            fill="none" 
+                                            viewBox="0 0 24 24" 
+                                            stroke="currentColor"
+                                        >
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                        </svg>
+                                    </a>
+                                )}
                         </div>
                     ) : (
                         <div class="text-center py-20">
