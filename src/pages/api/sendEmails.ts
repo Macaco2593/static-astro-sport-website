@@ -36,12 +36,11 @@ export const POST: APIRoute = async ({ request }) => {
   try {
     // Enviar el correo usando Resend
     const send = await resend.emails.send({
-      // IMPORTANTE: Si no tienes dominio propio verificado, usa: 'onboarding@resend.dev'
-      // Si ya verificaste tu dominio (ej: adadet.com), usa: 'contacto@adadet.com'
-      from: 'ADADET Web <onboarding@resend.dev>',
+      // Email de la asociacion (puede ser cual sea incluso si no existe)
+      from: 'Sitio Web ADADET <contacto@adadet.org',
 
       // A quién le llega el correo (A TI, el administrador)
-      to: ['santiagopjq13@gmail.com'],
+      to: ['nataciontachira@gmail.com'],
 
       // Para que cuando le des "Responder", le respondas al usuario y no al sistema
       replyTo: email.toString(),
