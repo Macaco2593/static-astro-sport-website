@@ -37,7 +37,7 @@ export const POST: APIRoute = async ({ request }) => {
     // Enviar el correo usando Resend
     const send = await resend.emails.send({
       // Email de la asociacion (puede ser cual sea incluso si no existe)
-      from: 'Sitio Web ADADET <contacto@adadet.org',
+      from: 'Sitio Web ADADET <contacto@adadet.org>',
 
       // A quién le llega el correo (A TI, el administrador)
       to: ['nataciontachira@gmail.com'],
