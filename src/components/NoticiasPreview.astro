@@ -2,6 +2,7 @@
 import { NOTICIAS } from "src/data/noticias";
 import { Image } from 'astro:assets';
 import SectionTag from "./UI/SectionTag.astro";
+import { ROUTES } from "src/data/routes";
 
 // Obtener las 3 más recientes y ordenarlas por fecha (de la más nueva a la más vieja)
 const ultimasNoticias = NOTICIAS
@@ -82,7 +83,7 @@ const ultimasNoticias = NOTICIAS
 
                         <h3 class="text-xl font-bold text-slate-900 mb-3 leading-tight group-hover:text-cyan-600 transition-colors line-clamp-2">
                             <a 
-                                href={news.linkExterno ? news.linkExterno : `/noticias/${news.slug}`}
+                                href={news.linkExterno ? news.linkExterno : ROUTES.noticia(news.slug!)}
                                 target={news.linkExterno ? "_blank" : "_self"}
                                 rel={news.linkExterno ? "noopener noreferrer" : ""}
                             >

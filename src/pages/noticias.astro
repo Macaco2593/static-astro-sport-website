@@ -2,6 +2,7 @@
 import LayoutCompetencias from "src/layouts/LayoutCompetencias.astro";
 import { NOTICIAS } from "src/data/noticias";
 import { Image } from 'astro:assets';
+import { ROUTES } from "src/data/routes";
 
 // 1. Ordenar noticias de la más reciente a la más antigua
 const noticiasOrdenadas = NOTICIAS.sort((a, b) => 
@@ -94,7 +95,7 @@ const pageDescription = "Mantente al día con las últimas novedades de la natac
 
                         <h3 class="text-xl font-bold text-slate-900 mb-3 leading-tight group-hover:text-cyan-600 transition-colors line-clamp-2">
                             <a 
-                                href={news.linkExterno ? news.linkExterno : `/noticias/${news.slug}`}
+                                href={news.linkExterno ? news.linkExterno : ROUTES.noticia(news.slug!)}
                                 target={news.linkExterno ? "_blank" : "_self"}
                                 rel={news.linkExterno ? "noopener noreferrer" : ""}
                             >
