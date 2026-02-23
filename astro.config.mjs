@@ -19,5 +19,10 @@ export default defineConfig({
 
   adapter: vercel(),
 
+  prefetch: {
+    prefetchAll: false, // APAGADO: No descarga los links solo por aparecer en pantalla
+    defaultStrategy: 'hover' // ENCENDIDO: Solo descarga cuando el usuario pone el mouse encima
+  },
+
   site: "https://adadet.org/"
 });
