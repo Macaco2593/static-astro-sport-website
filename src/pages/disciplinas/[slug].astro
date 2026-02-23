@@ -13,13 +13,14 @@ export function getStaticPaths() {
 
 interface Props {
   disciplina: DisciplinaBase;
+  image?: ImageMetadata;
 }
 
 const { disciplina } = Astro.props;
 const documentos = disciplina.documentos ?? [];
 ---
 
-<LayoutCompetencias titulo={`${disciplina.titulo} | ADADET`} footerDecoration={false}>
+<LayoutCompetencias titulo={`${disciplina.titulo} | ADADET`} footerDecoration={false} image={disciplina.imagenUrl.src}>
   
   <div class="relative min-h-screen bg-slate-50 flex flex-col">
     
