@@ -4,7 +4,8 @@ import LayoutCompetencias from "../../layouts/LayoutCompetencias.astro";
 import { NOTICIAS } from "src/data/noticias";
 
 export function getStaticPaths() {
-  return NOTICIAS.map((noticia) => ({
+  const noticiasLocales = NOTICIAS.filter((noticia) => !noticia.linkExterno)
+  return noticiasLocales.map((noticia) => ({
     params: { slug: noticia.slug },
     props: { noticia },
   }));

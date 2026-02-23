@@ -1,12 +1,14 @@
 import evaluacionTecnicaNacionalNatacionArtistica from "src/assets/noticias/evaluacion_tecnica_natacion_artistica.jpeg";
+import primerEstadal2025 from "src/assets/noticias/primerEstadal2026.png";
 
 export interface Noticia {
-  slug: string;       // Para la URL: /noticias/ganadores-estatales-2026
+  slug?: string;       // Para la URL: /noticias/ganadores-estatales-2026
   titulo: string;
   resumen: string;    // Texto corto para la tarjeta
-  contenido: string;  // Texto largo (HTML o párrafos)
+  contenido?: string;  // Texto largo (HTML o párrafos)
   fecha: string;      // Formato YYYY-MM-DD
   imagen?: ImageMetadata;    // Ruta de la imagen (ej: /img/noticias/foto1.jpg)
+  linkExterno?: string;
   categoria: "Natación" | "Aguas Abiertas" | "Institucional" | "Torneos" | "Natación Artística" | "Polo Acuático" | "Clavado" | "Máster"; // Para filtrar por categoría
 }
 
@@ -19,6 +21,15 @@ export const NOTICIAS: Noticia[] = [
     fecha: "2026-02-16",
     imagen: evaluacionTecnicaNacionalNatacionArtistica, 
     categoria: "Natación Artística"
+  },
+  {
+    slug: "primera-competencia-estadal-adadet-2026",
+    titulo: "Primera Competencia Estadal ADADET 2026",
+    resumen: "¡El momento de la verdad se acerca! ⚡️ Oficialmente comienza la cuenta regresiva para nuestro primer Estadal ADADET 2026. 🏊‍♂️💨",
+    fecha: "2026-02-23",
+    linkExterno: "https://www.instagram.com/p/DVGyRNhDTA1/",
+    imagen: primerEstadal2025,
+    categoria: "Natación"
   },
 
 ];

@@ -93,7 +93,11 @@ const pageDescription = "Mantente al día con las últimas novedades de la natac
                         </div>
 
                         <h3 class="text-xl font-bold text-slate-900 mb-3 leading-tight group-hover:text-cyan-600 transition-colors line-clamp-2">
-                            <a href={`/noticias/${news.slug}`}>
+                            <a 
+                                href={news.linkExterno ? news.linkExterno : `/noticias/${news.slug}`}
+                                target={news.linkExterno ? "_blank" : "_self"}
+                                rel={news.linkExterno ? "noopener noreferrer" : ""}
+                            >
                                 <span class="absolute inset-0"></span>
                                 {news.titulo}
                             </a>
@@ -104,7 +108,8 @@ const pageDescription = "Mantente al día con las últimas novedades de la natac
                         </p>
 
                         <div class="mt-auto flex items-center text-sm font-bold text-slate-900 group-hover:text-cyan-600 transition-colors">
-                            Leer artículo completo
+                            {news.linkExterno ? 'Ver publicación original' : 'Leer artículo completo'}
+                            
                             <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                             </svg>
