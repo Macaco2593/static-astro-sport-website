@@ -2,24 +2,28 @@
 import LayoutCompetencias from "src/layouts/LayoutCompetencias.astro";
 import Calendar from "src/components/Calendar.astro";
 import WaveDivider from "src/components/UI/WaveDivider.astro";
-import PageHero from "src/components/UI/PageHero.astro"; // 1. Importamos el componente
+import PageHero from "src/components/UI/PageHero.astro";
 
-const competitions = [
-  { 
-    date: '2026-03-05', 
-    title: 'I Estadal de Natación 2026', 
-    type: 'Natación',
-    time: '03:00 PM',
-    description: 'Competencia estadal de apertura de temporada. Colegio de Contadores, San Cristóbal.',
-  },
-  { 
-    date: '2026-04-14', 
-    title: 'I Regional de natacion ADAEFALCON 2026', 
-    type: 'Natación',
-    time: '03:00 PM',
-    description: 'Campeonato Regional Occidental de Natacion Falcón 2026. Complejo de piscinas libertador. Ciudad Deportiva Universitaria. Coro Estado Falcón.',
-  }
-];
+// 1. Importamos tu base de datos centralizada
+import { ListaCompetencias } from "src/data/listaCompetencias";
+
+// 2. Transformamos los datos automáticamente al formato del Calendario
+const competitions = ListaCompetencias.map((competencia) => {
+  // Convertimos la fecha de "DD/MM/YYYY" a "YYYY-MM-DD"
+  const [dia, mes, anio] = competencia.fechaInicio.split('/');
+  const fechaFormateada = `${anio}-${mes}-${dia}`;
+
+  // Ponemos la primera letra del tipo en mayúscula (ej: "estadal" -> "Estadal")
+  const tipoCapitalizado = competencia.tipo.charAt(0).toUpperCase() + competencia.tipo.slice(1);
+
+  return { 
+    date: fechaFormateada, 
+    title: competencia.titulo, 
+    type: tipoCapitalizado,
+    time: '08:00 AM', 
+    description: `Evento oficial de la asociación. Haz clic en la sección de Resultados para ver la convocatoria y planillas de esta competencia.`,
+  };
+});
 
 const pageTitle = "Calendario Oficial | ADADET";
 const pageDescription = "Consulta el calendario oficial de eventos y competencias de natación en Táchira. Fechas, sedes y horarios de la temporada actual. ¡No te lo pierdas!"
@@ -39,6 +43,7 @@ const pageDescription = "Consulta el calendario oficial de eventos y competencia
     <div class="relative z-20 mx-auto max-w-7xl px-4 -mt-20 pb-20"> 
         
         <div class="animate-fade-in-up" style="animation-delay: 200ms;">
+             {/* Le pasamos nuestro arreglo dinámico al calendario */}
              <Calendar events={competitions} />
         </div>
 

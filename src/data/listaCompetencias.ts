@@ -75,15 +75,18 @@ export const ListaCompetencias: ICompetencia[] = [
             },
             {
                 titulo: 'Resultados Individuales Completos',
-                nombreArchivo: 'resultados_individuales.pdf'
+                nombreArchivo: 'resultados_individuales.pdf',
+                pendiente: true
             },
             {
                 titulo: 'Resultados por Equipos',
-                nombreArchivo: 'resultados_por_equipo.pdf'
+                nombreArchivo: 'resultados_por_equipo.pdf',
+                pendiente: true
             },
             {
                 titulo: 'Mejores Atletas por Categorías',
-                nombreArchivo: 'mejores_atletas.pdf'
+                nombreArchivo: 'mejores_atletas.pdf',
+                pendiente: true
             }
         ]
     },
