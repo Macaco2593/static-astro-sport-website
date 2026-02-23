@@ -16,6 +16,9 @@ interface Props {
 
 const { doc } = Astro.props;
 
+const urlCompleta = `https://adadet.org${doc.archivo}`; 
+const urlVisorGoogle = `https://docs.google.com/viewer?url=${encodeURIComponent(urlCompleta)}&embedded=true`;
+
 const fecha = new Date(doc.fechaPublicacion);
 const fechaFormateada = fecha.toLocaleDateString("es-VE", {
   year: "numeric",
@@ -92,13 +95,36 @@ const fechaFormateada = fecha.toLocaleDateString("es-VE", {
                 </div>
             </div>
             
-            <div class="bg-slate-300 h-[70vh] min-h-[600px]">
+            {/* --- VISTA PARA COMPUTADORAS (Iframe Nativo) --- */}
+            {/* En celulares (hidden), en PC se muestra (md:block) */}
+            <div class="hidden md:block bg-slate-300 h-[70vh] min-h-[600px]">
                 <iframe
                   src={`${doc.archivo}#toolbar=1&navpanes=0&scrollbar=1`}
                   title={doc.titulo}
-                  class="w-full h-full"
+                  class="w-full h-full border-none"
                 >
                 </iframe>
+            </div>
+
+            {/* --- VISTA PARA CELULARES (Panel de Acción) --- */}
+            {/* En celulares se muestra (flex), en PC se oculta (md:hidden) */}
+            <div class="flex flex-col items-center justify-center p-10 bg-slate-50 md:hidden text-center h-64">
+                <div class="w-16 h-16 bg-red-100 text-red-500 rounded-full flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    </svg>
+                </div>
+                <h3 class="text-slate-800 font-bold mb-2">Documento PDF</h3>
+                <p class="text-slate-500 text-sm mb-6">Abre el archivo para una lectura optimizada en tu pantalla.</p>
+                
+                <a 
+                    href={doc.archivo} 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="px-6 py-3 bg-slate-900 text-white text-sm font-bold rounded-xl shadow-lg active:scale-95 transition-transform"
+                >
+                    Abrir en el navegador
+                </a>
             </div>
         </div>
 
