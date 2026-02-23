@@ -7,8 +7,8 @@ export const ADADET_INFO = {
   vision:
     "Ser una asociación referente a nivel regional y nacional por su gestión moderna, inclusiva y eficiente; capaz de proyectar el talento tachirense, elevar los estándares competitivos y consolidar una cultura deportiva sostenible en torno a los deportes acuáticos.",
   organigramaPdfUrl: organigrama?.archivo || "",
-  correo: "adadet@adadet.org",
-  numero: "+58 123-456-7890",
+  correo: "nataciontachira@gmail.com",
+  numero: "+58 4147282003",
   facebook: "https://www.facebook.com/natacion.tachira?locale=es_LA",
   instagram: "https://www.instagram.com/nataciontachira/"
 } as const;
