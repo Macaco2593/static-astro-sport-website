@@ -7,4 +7,30 @@ import LayoutCompetencias from 'src/layouts/LayoutCompetencias.astro';
         <p>Lo sentimos, esta ruta no existe.</p>
         <a href="/" class="btn-primary">Volver al Inicio</a>
     </div>
+
+    <script>
+    // JS detecta si esta página se está abriendo dentro de un iframe/object
+    if (window.top !== window.self) {
+        // Le añade una clase especial al HTML entero
+        document.documentElement.classList.add('modo-iframe-error');
+    }
+</script>
+
+<style is:global>
+    /* Si el 404 está dentro del PDF, ocultamos el Nav y el Footer */
+    html.modo-iframe-error header,
+    html.modo-iframe-error nav,
+    html.modo-iframe-error footer {
+        display: none !important;
+    }
+
+    /* Opcional: Centramos el texto para que el cuadro del PDF se vea limpio */
+    html.modo-iframe-error body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: transparent;
+    }
+</style>
 </LayoutCompetencias>

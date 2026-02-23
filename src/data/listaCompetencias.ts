@@ -16,10 +16,12 @@ export interface ICompetencia {
     resultados: Resultado[]
     img: ImageMetadata
     linkEnVivo?: string
+
 }
 interface Resultado {
     titulo: string,
     nombreArchivo: string
+    pendiente?: boolean
 }
 export const ListaCompetencias: ICompetencia[] = [
     {
@@ -38,18 +40,21 @@ export const ListaCompetencias: ICompetencia[] = [
             },
             {
                 titulo: 'Resultados Individuales Completos',
-                nombreArchivo: 'resultados_individuales.pdf'
+                nombreArchivo: 'resultados_individuales.pdf',
+                pendiente: true
             },
             {
                 titulo: 'Resultados por Equipos',
-                nombreArchivo: 'resultados_por_equipo.pdf'
+                nombreArchivo: 'resultados_por_equipo.pdf',
+                pendiente: true
             },
             {
                 titulo: 'Mejores Atletas por Categorías',
                 nombreArchivo: 'mejores_atletas.pdf',
+                pendiente: true
             },
         ],
-        linkEnVivo: 'https://resultados.adadet.org',
+        linkEnVivo: 'https://resultados.adadet.org/1er-estadal-2026',
     },
     
     {

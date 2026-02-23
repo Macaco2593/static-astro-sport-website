@@ -44,10 +44,10 @@ export const BASE_DISCIPLINAS: DisciplinaBase[] = [
         slugDocumento: DOCUMENTOS_SLUG.NATACION_CONDICIONES_GENERALES_2026,
         etiqueta: "Condiciones Generales",
       },
-      {
-        slugDocumento: DOCUMENTOS_SLUG.NATACION_RANKING_2026,
-        etiqueta: "Ranking",
-      },
+      // {
+      //   slugDocumento: DOCUMENTOS_SLUG.NATACION_RANKING_2026,
+      //   etiqueta: "Ranking",
+      // },
     ],
   },
   {

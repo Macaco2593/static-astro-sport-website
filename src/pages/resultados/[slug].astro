@@ -3,7 +3,6 @@ import LayoutCompetencias from 'src/layouts/LayoutCompetencias.astro';
 import { ListaCompetencias } from '../../data/listaCompetencias';
 import { Image } from 'astro:assets';
 
-// Tu lógica de rutas original (INTACTA)
 export async function getStaticPaths() {
   return ListaCompetencias.map((competencia) => {
     const slug = competencia.linkDeLaCompetencia.replace('/competencias_pdf/', '').replace('.html', '');
@@ -20,7 +19,6 @@ if (!competencia) {
   return Astro.redirect('/');
 }
 
-// Tu función auxiliar de fechas (INTACTA)
 const getDateParts = (fecha: string) => {
     const [day, month, year] = fecha.split('/');
     const monthNames = ['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN', 'JUL', 'AGO', 'SEP', 'OCT', 'NOV', 'DIC'];
@@ -30,6 +28,7 @@ const getDateParts = (fecha: string) => {
 const fechaInicio = getDateParts(competencia.fechaInicio);
 const fechaFin = getDateParts(competencia.fechaFinalizacion);
 const { slug } = Astro.params;
+console.log("Resultados de esta competencia:", competencia.resultados);
 ---
 
 <LayoutCompetencias titulo={`${competencia.titulo} | Resultados Oficiales`} footerDecoration={false}>
@@ -42,9 +41,7 @@ const { slug } = Astro.params;
                 alt="Fondo Ambiental" 
                 class="w-full h-full object-cover opacity-100 blur-xl scale-110"
              />
-             
              <div class="absolute inset-0 bg-gradient-to-b from-slate-900/90 via-slate-900/60 to-slate-900"></div>
-             
              <div class="absolute inset-0 bg-blue-900/20 mix-blend-overlay"></div>
         </div>
 
@@ -95,16 +92,17 @@ const { slug } = Astro.params;
 
             </div>
         </div>
-    </div>
+  </div>
 
-    <div class="container mx-auto px-4 -mt-24 relative z-20 max-w-7xl pb-24">
+  <div class="container mx-auto px-4 -mt-24 relative z-20 max-w-7xl pb-24">
         
         <div class="grid lg:grid-cols-[350px_1fr] gap-8 items-start">
             
             <div class="relative group animate-fade-in-up">
                 <div class="absolute -inset-1 bg-gradient-to-tr from-cyan-500 to-blue-600 rounded-2xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
                 
-                <div class="relative bg-white rounded-xl overflow-hidden shadow-2xl shadow-black/50 cursor-zoom-in border-4 border-white" onclick="openLightbox()">
+                {/* ID AGREGADO AQUÍ PARA EL SCRIPT */}
+                <div id="btn-abrir-poster" class="relative bg-white rounded-xl overflow-hidden shadow-2xl shadow-black/50 cursor-zoom-in border-4 border-white">
                     <Image 
                         src={competencia.img} 
                         alt={`Poster ${competencia.titulo}`}
@@ -144,62 +142,75 @@ const { slug } = Astro.params;
                     
                     {competencia.resultados.length > 0 ? (
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            {competencia.resultados.map((resultado) => (
-                            <a 
-                                href={`/contenido/competencias_pdf/${slug}/${resultado.nombreArchivo}`}
-                                class="group relative flex items-start gap-4 p-5 rounded-2xl border border-slate-100 bg-slate-50/50 hover:bg-white hover:border-adadet-main/30 hover:shadow-lg hover:shadow-adadet-main/5 transition-all duration-300"
-                                target="_blank"
-                            >
-                                
-                                {/* Icono PDF */}
-                                <div class="w-12 h-12 flex-shrink-0 bg-white rounded-xl border border-slate-100 flex items-center justify-center text-red-500 shadow-sm group-hover:scale-110 group-hover:border-red-100 group-hover:bg-red-50 transition-all duration-300">
-                                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 2H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
-                                </div>
-
-                                <div class="flex-1 min-w-0">
-                                    <h3 class="font-bold text-slate-800 text-sm leading-snug group-hover:text-adadet-main transition-colors mb-1 line-clamp-2">
-                                        {resultado.titulo}
-                                    </h3>
-                                    <p class="text-xs text-slate-400 font-medium uppercase tracking-wide">
-                                        PDF • Descarga Directa
-                                    </p>
-                                </div>
-
-                                {/* Flecha Hover */}
-                                <div class="absolute top-5 right-5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-                                    <svg class="w-5 h-5 text-adadet-main" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
-                                </div>
-                            </a>
-                            ))}
-                            {competencia.linkEnVivo && (
-                                    <a 
-                                        href={competencia.linkEnVivo}
-                                        class="group relative flex items-center justify-center sm:justify-start gap-3 p-4 sm:p-5 w-full rounded-2xl border border-emerald-500/30 bg-emerald-50 hover:bg-emerald-100 hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-500/20 transition-all duration-300"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        {/* Punto animado de "En Vivo" (Reemplaza al emoji estático) */}
-                                        <div class="relative flex h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0">
-                                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                                            <span class="relative inline-flex rounded-full h-full w-full bg-red-500"></span>
+                            
+                            {/* MAPA CORREGIDO: Usando if/return para evitar errores de compilación */}
+                            {competencia.resultados.map((resultado) => {
+                                if (resultado.pendiente) {
+                                    return (
+                                        <div class="group relative flex items-start gap-4 p-5 rounded-2xl border border-slate-200 bg-slate-100 opacity-70 cursor-not-allowed">
+                                            <div class="w-12 h-12 flex-shrink-0 bg-slate-200/50 rounded-xl border border-slate-200 flex items-center justify-center text-slate-400 shadow-inner">
+                                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                            </div>
+                                            <div class="flex-1 min-w-0">
+                                                <h3 class="font-bold text-slate-500 text-sm leading-snug mb-1 line-clamp-2">
+                                                    {resultado.titulo}
+                                                </h3>
+                                                <p class="text-xs text-orange-500 font-bold uppercase tracking-wide flex items-center gap-1.5">
+                                                    <span class="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse"></span>
+                                                    Próximamente
+                                                </p>
+                                            </div>
                                         </div>
-
-                                        {/* Texto del botón adaptativo */}
-                                        <span class="font-semibold text-emerald-800 text-sm sm:text-base">
-                                            Resultados en Tiempo Real
-                                        </span>
-
-                                        {/* Ícono sutil de enlace externo que se mueve al pasar el mouse (Aparece a la derecha en PC) */}
-                                        <svg 
-                                            class="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 sm:ml-auto opacity-70 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300 hidden sm:block" 
-                                            fill="none" 
-                                            viewBox="0 0 24 24" 
-                                            stroke="currentColor"
-                                        >
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                        </svg>
+                                    );
+                                }
+                                
+                                return (
+                                    <a 
+                                        href={`/contenido/competencias_pdf/${slug}/${resultado.nombreArchivo}`}
+                                        class="group relative flex items-start gap-4 p-5 rounded-2xl border border-slate-100 bg-slate-50/50 hover:bg-white hover:border-adadet-main/30 hover:shadow-lg hover:shadow-adadet-main/5 transition-all duration-300"
+                                        target="_blank"
+                                    >
+                                        <div class="w-12 h-12 flex-shrink-0 bg-white rounded-xl border border-slate-100 flex items-center justify-center text-red-500 shadow-sm group-hover:scale-110 group-hover:border-red-100 group-hover:bg-red-50 transition-all duration-300">
+                                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 2H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+                                        </div>
+                                        <div class="flex-1 min-w-0">
+                                            <h3 class="font-bold text-slate-800 text-sm leading-snug group-hover:text-adadet-main transition-colors mb-1 line-clamp-2">
+                                                {resultado.titulo}
+                                            </h3>
+                                            <p class="text-xs text-slate-400 font-medium uppercase tracking-wide">
+                                                PDF • Descarga Directa
+                                            </p>
+                                        </div>
+                                        <div class="absolute top-5 right-5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                                            <svg class="w-5 h-5 text-adadet-main" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                                        </div>
                                     </a>
-                                )}
+                                );
+                            })}
+                            
+                            {/* Botón de Resultados en Vivo */}
+                            {competencia.linkEnVivo && (
+                                <a 
+                                    href={competencia.linkEnVivo}
+                                    class="group relative flex items-center justify-center sm:justify-start gap-3 p-4 sm:p-5 w-full rounded-2xl border border-emerald-500/30 bg-emerald-50 hover:bg-emerald-100 hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-500/20 transition-all duration-300"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <div class="relative flex h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0">
+                                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                        <span class="relative inline-flex rounded-full h-full w-full bg-red-500"></span>
+                                    </div>
+                                    <span class="font-semibold text-emerald-800 text-sm sm:text-base">
+                                        Resultados en Tiempo Real
+                                    </span>
+                                    <svg 
+                                        class="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 sm:ml-auto opacity-70 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300 hidden sm:block" 
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    >
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg>
+                                </a>
+                            )}
                         </div>
                     ) : (
                         <div class="text-center py-20">
@@ -224,13 +235,12 @@ const { slug } = Astro.params;
             </div>
 
         </div>
-    </div>
+  </div>
     
-    <div id="poster-lightbox" class="fixed inset-0 z-[100] hidden opacity-0 transition-opacity duration-300">
-        <div class="absolute inset-0 bg-black/95 backdrop-blur-sm cursor-pointer" onclick="closeLightbox()"></div>
+  <div id="poster-lightbox" class="fixed inset-0 z-[9999] hidden opacity-0 transition-opacity duration-300">
+        <div id="fondo-lightbox" class="absolute inset-0 bg-black/95 backdrop-blur-sm cursor-pointer"></div>
         
         <div class="relative z-10 inset-0 fixed flex items-center justify-center p-4 pointer-events-none">
-            
             <Image 
                 src={competencia.img} 
                 alt="Poster Full"
@@ -238,31 +248,33 @@ const { slug } = Astro.params;
                 id="lightbox-img"
             />
 
-            <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white pointer-events-auto p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors z-20">
+            <button id="btn-cerrar-poster" class="absolute top-6 right-6 text-white pointer-events-auto p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors z-[10000]">
                 <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
         </div>
-    </div>
-
   </div>
 </LayoutCompetencias>
 
-<script is:inline>
+<script>
     const lightbox = document.getElementById('poster-lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
+    const btnAbrir = document.getElementById('btn-abrir-poster');
+    const btnCerrar = document.getElementById('btn-cerrar-poster');
+    const fondoLightbox = document.getElementById('fondo-lightbox');
 
-    window.openLightbox = () => {
+    const openLightbox = () => {
+        if (!lightbox || !lightboxImg) return;
         lightbox.classList.remove('hidden');
-        // Pequeño delay para la animación
         setTimeout(() => {
             lightbox.classList.remove('opacity-0');
             lightboxImg.classList.remove('scale-95');
             lightboxImg.classList.add('scale-100');
         }, 10);
         document.body.style.overflow = 'hidden';
-    }
+    };
 
-    window.closeLightbox = () => {
+    const closeLightbox = () => {
+        if (!lightbox || !lightboxImg) return;
         lightbox.classList.add('opacity-0');
         lightboxImg.classList.remove('scale-100');
         lightboxImg.classList.add('scale-95');
@@ -270,7 +282,12 @@ const { slug } = Astro.params;
             lightbox.classList.add('hidden');
         }, 300);
         document.body.style.overflow = '';
-    }
+    };
+
+    // Event Listeners
+    if (btnAbrir) btnAbrir.addEventListener('click', openLightbox);
+    if (btnCerrar) btnCerrar.addEventListener('click', closeLightbox);
+    if (fondoLightbox) fondoLightbox.addEventListener('click', closeLightbox);
 
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closeLightbox();
