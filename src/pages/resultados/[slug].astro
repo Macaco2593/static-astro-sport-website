@@ -188,29 +188,43 @@ console.log("Resultados de esta competencia:", competencia.resultados);
                                 );
                             })}
                             
-                            {/* Botón de Resultados en Vivo */}
-                            {competencia.linkEnVivo && (
-                                <a 
-                                    href={competencia.linkEnVivo}
-                                    class="group relative flex items-center justify-center sm:justify-start gap-3 p-4 sm:p-5 w-full rounded-2xl border border-emerald-500/30 bg-emerald-50 hover:bg-emerald-100 hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-500/20 transition-all duration-300"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <div class="relative flex h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0">
-                                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                                        <span class="relative inline-flex rounded-full h-full w-full bg-red-500"></span>
-                                    </div>
-                                    <span class="font-semibold text-emerald-800 text-sm sm:text-base">
-                                        Resultados en Tiempo Real
-                                    </span>
-                                    <svg 
-                                        class="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 sm:ml-auto opacity-70 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300 hidden sm:block" 
-                                        fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                    >
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                    </svg>
-                                </a>
-                            )}
+{/* Botón de Resultados en Vivo */}
+{/* 
+  Estado pendiente: Apagado y sin enlace
+  Estado activo: Botón original intacto
+*/}
+{competencia.linkEnVivo && (
+    competencia.enVivoPendiente === true ? (
+        // Estado pendiente (Apagado y sin enlace)
+        <div class="group relative flex items-center justify-center sm:justify-start gap-3 p-4 sm:p-5 w-full rounded-2xl border border-slate-200 bg-slate-100 opacity-70 cursor-not-allowed">
+            <div class="relative flex h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0">
+                <span class="relative inline-flex rounded-full h-full w-full bg-slate-400"></span>
+            </div>
+            <span class="font-semibold text-slate-500 text-sm sm:text-base">
+                Transmisión Próximamente
+            </span>
+        </div>
+    ) : (
+        // Estado activo (Botón original intacto)
+        <a 
+            href={competencia.linkEnVivo}
+            class="group relative flex items-center justify-center sm:justify-start gap-3 p-4 sm:p-5 w-full rounded-2xl border border-emerald-500/30 bg-emerald-50 hover:bg-emerald-100 hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-500/20 transition-all duration-300"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <div class="relative flex h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-full w-full bg-red-500"></span>
+            </div>
+            <span class="font-semibold text-emerald-800 text-sm sm:text-base">
+                Resultados en Tiempo Real
+            </span>
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 sm:ml-auto opacity-70 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300 hidden sm:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+        </a>
+    )
+)}
                         </div>
                     ) : (
                         <div class="text-center py-20">

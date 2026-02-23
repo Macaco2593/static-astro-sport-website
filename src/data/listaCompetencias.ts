@@ -16,6 +16,7 @@ export interface ICompetencia {
     resultados: Resultado[]
     img: ImageMetadata
     linkEnVivo?: string
+    enVivoPendiente?: boolean
 
 }
 interface Resultado {
@@ -55,6 +56,7 @@ export const ListaCompetencias: ICompetencia[] = [
             },
         ],
         linkEnVivo: 'https://resultados.adadet.org/1er-estadal-2026',
+        enVivoPendiente: true,
     },
     
     {
