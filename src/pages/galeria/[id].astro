@@ -2,7 +2,7 @@
 import LayoutCompetencias from "src/layouts/LayoutCompetencias.astro";
 import { ALBUMES } from "src/data/albums";
 import WaveDivider from "src/components/UI/WaveDivider.astro";
-import { Image } from "astro:assets";
+import { Image, getImage } from "astro:assets";
 
 export function getStaticPaths() {
   return ALBUMES.map((album) => ({
@@ -12,6 +12,21 @@ export function getStaticPaths() {
 }
 
 const { album } = Astro.props;
+
+// Generamos los links de descarga en alta calidad (JPG al 100%) para cada foto
+const fotosOptimizadas = await Promise.all(
+    album.fotos.map(async (foto) => {
+        const altaCalidad = await getImage({
+            src: foto.src,
+            format: "jpg",
+            quality: 100
+        });
+        return {
+            ...foto,
+            descargaUrl: altaCalidad.src
+        };
+    })
+);
 ---
 
 <LayoutCompetencias titulo={`${album.titulo} | Galería`} footerDecoration={false} image={album.cover.src}>
@@ -62,30 +77,45 @@ const { album } = Astro.props;
         
         <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
             
-            {album.fotos.map((foto, index) => (
+            {fotosOptimizadas.map((foto, index) => (
                 <div 
-                    class="break-inside-avoid relative group rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-zoom-in animate-fade-in-up"
+                    class="break-inside-avoid relative group rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-white hover:shadow-xl transition-all duration-300 animate-fade-in-up flex flex-col"
                     style={`animation-delay: ${index * 50}ms`}
-                    onclick={`openLightbox('${foto.src.src}', '${foto.alt || ''}')`}
                 >
-                    <Image 
-                        src={foto.src} 
-                        alt={foto.alt || album.titulo}
-                        class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
-                        loading="lazy"
-                    />
-                    
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                        <p class="text-white text-sm font-medium translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                            {foto.alt || "Ver foto"}
+                    <div 
+                        class="relative cursor-zoom-in overflow-hidden"
+                        onclick={`openLightbox('${foto.src.src}', '${foto.alt || ''}')`}
+                    >
+                        <Image 
+                            src={foto.src} 
+                            alt={foto.alt || album.titulo}
+                            class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
+                            loading="lazy"
+                        />
+                        <div class="absolute inset-0 bg-slate-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+
+                    <div class="p-4 flex items-center justify-between bg-white relative z-10 border-t border-slate-50">
+                        <p class="text-slate-500 text-sm font-medium truncate pr-4">
+                            {foto.alt || "Foto de la galería"}
                         </p>
+                        
+                        <a 
+                            href={foto.descargaUrl} 
+                            // Generamos un nombre bonito para el archivo descargado 
+                            download={`ADADET-${album.titulo.replace(/\s+/g, '-')}-${index + 1}.jpg`}
+                            class="shrink-0 flex items-center gap-1.5 px-4 py-2 bg-slate-100 hover:bg-cyan-50 text-slate-700 hover:text-cyan-700 text-xs font-bold uppercase tracking-wide rounded-lg transition-colors border border-slate-200 hover:border-cyan-200"
+                            title="Descargar en formato JPG"
+                        >
+                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                            Descargar
+                        </a>
                     </div>
                 </div>
             ))}
 
         </div>
 
-        {/* Mensaje si hay link externo */}
         {album.linkExterno && (
             <div class="mt-16 text-center">
                 <a href={album.linkExterno} target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-200 hover:bg-slate-300 text-slate-800 rounded-full font-bold transition-colors">
@@ -97,26 +127,27 @@ const { album } = Astro.props;
 
     </div>
 
-    <div id="lightbox" class="fixed inset-0 z-[100] hidden">
+    {/* 🌟 Ajustamos el z-index a 9999 para que pase por encima del Navbar */}
+    <div id="lightbox" class="fixed inset-0 z-[9999] hidden">
     
-    <div class="absolute inset-0 bg-black/90 backdrop-blur-sm cursor-pointer" onclick="closeLightbox()"></div>
+        <div class="absolute inset-0 bg-black/90 backdrop-blur-sm cursor-pointer" onclick="closeLightbox()"></div>
 
-    <div class="relative z-[110] flex flex-col items-center justify-center w-full h-full p-4 pointer-events-none">
-        
-        <button onclick="closeLightbox()" class="absolute top-4 right-4 text-white/70 hover:text-white p-2 pointer-events-auto transition-colors">
-            <svg class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
-        </button>
+        <div class="relative z-[10000] flex flex-col items-center justify-center w-full h-full p-4 pointer-events-none">
+            
+            <button onclick="closeLightbox()" class="absolute top-4 right-4 text-white/70 hover:text-white p-2 pointer-events-auto transition-colors">
+                <svg class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
 
-        <img 
-            id="lightbox-img" 
-            src="" 
-            alt="" 
-            class="max-h-[85vh] max-w-[95vw] rounded-lg shadow-2xl object-contain pointer-events-auto transition-transform duration-300 scale-95 opacity-0" 
-        />
-        
-        <p id="lightbox-caption" class="mt-4 text-center text-white/90 text-sm font-medium tracking-wide pointer-events-auto"></p>
+            <img 
+                id="lightbox-img" 
+                src="" 
+                alt="" 
+                class="max-h-[85vh] max-w-[95vw] rounded-lg shadow-2xl object-contain pointer-events-auto transition-transform duration-300 scale-95 opacity-0" 
+            />
+            
+            <p id="lightbox-caption" class="mt-4 text-center text-white/90 text-sm font-medium tracking-wide pointer-events-auto"></p>
+        </div>
     </div>
-</div>
 
     <div class="relative pt-10">
          <WaveDivider fillColor="#0f172a" />
@@ -131,15 +162,12 @@ const { album } = Astro.props;
     const lightboxCaption = document.getElementById('lightbox-caption');
 
     window.openLightbox = (src, alt) => {
-        // 1. Asignar valores
         lightboxImg.src = src;
         lightboxCaption.innerText = alt;
         
-        // 2. Mostrar contenedor
         lightbox.classList.remove('hidden');
-        document.body.style.overflow = 'hidden'; // Bloquear scroll de la web
+        document.body.style.overflow = 'hidden';
 
-        // 3. Animación de entrada (Pequeño delay para que CSS detecte el cambio)
         setTimeout(() => {
             lightboxImg.classList.remove('scale-95', 'opacity-0');
             lightboxImg.classList.add('scale-100', 'opacity-100');
@@ -147,19 +175,16 @@ const { album } = Astro.props;
     };
 
     window.closeLightbox = () => {
-        // 1. Animación de salida
         lightboxImg.classList.remove('scale-100', 'opacity-100');
         lightboxImg.classList.add('scale-95', 'opacity-0');
         
-        // 2. Ocultar contenedor después de la animación (300ms)
         setTimeout(() => {
             lightbox.classList.add('hidden');
-            lightboxImg.src = ''; // Limpiar src para evitar parpadeos la próxima vez
-            document.body.style.overflow = ''; // Restaurar scroll
+            lightboxImg.src = ''; 
+            document.body.style.overflow = ''; 
         }, 300);
     };
 
-    // Cerrar con tecla Escape
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closeLightbox();
     });
