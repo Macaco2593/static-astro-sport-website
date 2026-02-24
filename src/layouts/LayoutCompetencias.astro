@@ -1,6 +1,8 @@
 ---
 import Header from "src/components/Header.astro";
 import Footer from "src/components/Footer.astro";
+import Analytics from '@vercel/analytics/astro'
+import  SpeedInsights  from "@vercel/speed-insights/astro"
 import "../styles/global.css";
 
 interface Props {
@@ -54,5 +56,7 @@ const socialImage = new URL(image || "/adadet-logo.jpg", Astro.site)
     {showFooter && (
         <Footer withDecoration={footerDecoration}/>
     )}
+    <Analytics />
+    <SpeedInsights />
 </body>
 </html>
