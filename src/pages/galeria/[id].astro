@@ -13,23 +13,9 @@ export function getStaticPaths() {
 
 const { album } = Astro.props;
 
-// Generamos los links de descarga en alta calidad (JPG al 100%) para cada foto
-const fotosOptimizadas = await Promise.all(
-    album.fotos.map(async (foto) => {
-        const altaCalidad = await getImage({
-            src: foto.src,
-            format: "jpg",
-            quality: 100
-        });
-        return {
-            ...foto,
-            descargaUrl: altaCalidad.src
-        };
-    })
-);
 ---
 
-<LayoutCompetencias titulo={`${album.titulo} | Galería`} footerDecoration={false} image={album.cover.src}>
+<LayoutCompetencias titulo={`${album.titulo} | Galería`} footerDecoration={false} image={album.cover}>
   
   <div class="bg-slate-50 min-h-screen relative">
 
@@ -77,18 +63,20 @@ const fotosOptimizadas = await Promise.all(
         
         <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
             
-            {fotosOptimizadas.map((foto, index) => (
+            {/* 2. CORRECCIÓN: Volvemos a usar album.fotos normal */}
+            {album.fotos.map((foto, index) => (
                 <div 
                     class="break-inside-avoid relative group rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-white hover:shadow-xl transition-all duration-300 animate-fade-in-up flex flex-col"
                     style={`animation-delay: ${index * 50}ms`}
                 >
                     <div 
                         class="relative cursor-zoom-in overflow-hidden"
-                        onclick={`openLightbox('${foto.src.src}', '${foto.alt || ''}')`}
+                        onclick={`openLightbox('${foto.src}', '${foto.alt || ''}')`}
                     >
                         <Image 
                             src={foto.src} 
                             alt={foto.alt || album.titulo}
+                            inferSize={true}
                             class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
                             loading="lazy"
                         />
@@ -101,9 +89,7 @@ const fotosOptimizadas = await Promise.all(
                         </p>
                         
                         <a 
-                            href={foto.descargaUrl} 
-                            // Generamos un nombre bonito para el archivo descargado 
-                            download={`ADADET-${album.titulo.replace(/\s+/g, '-')}-${index + 1}.jpg`}
+                            href={`${foto.src}?download=ADADET-${album.titulo.replace(/\s+/g, '-')}-${index + 1}.jpg`}
                             class="shrink-0 flex items-center gap-1.5 px-4 py-2 bg-slate-100 hover:bg-cyan-50 text-slate-700 hover:text-cyan-700 text-xs font-bold uppercase tracking-wide rounded-lg transition-colors border border-slate-200 hover:border-cyan-200"
                             title="Descargar en formato JPG"
                         >
@@ -126,7 +112,6 @@ const fotosOptimizadas = await Promise.all(
         )}
 
     </div>
-
     {/* 🌟 Ajustamos el z-index a 9999 para que pase por encima del Navbar */}
     <div id="lightbox" class="fixed inset-0 z-[9999] hidden">
     

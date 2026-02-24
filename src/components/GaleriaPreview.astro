@@ -2,9 +2,7 @@
 import { ROUTES } from "../data/routes";
 import SectionTag from "./UI/SectionTag.astro";
 import { Image } from "astro:assets";
-import galeriaPreview1 from "../assets/galeriaPreview1.png";
-import galeriaPreview2 from "../assets/galeriaPreview2.jpg";
-import galeriaPreview3 from "../assets/galeriaPreview3.jpeg";
+
 
 // ✨ INTERRUPTOR DE GALERÍA ✨
 // Cambia esto a 'false' cuando ya tengas fotos y quieras habilitar el botón
@@ -12,17 +10,17 @@ const galeriaPendiente = true;
 
 const previewImages = [
   {
-    src: galeriaPreview1, 
+    src: "https://vkkeubhpapquorwauomt.supabase.co/storage/v1/object/public/galeria-adadet/galeria/galeriaPreview/galeriaPreview1.png", 
     alt: "Santiago Carreño representando a Venezuela en los juegos Suramericanos Río 2025",
     category: "Natación"
   },
   {
-    src: galeriaPreview2,
+    src: "https://vkkeubhpapquorwauomt.supabase.co/storage/v1/object/public/galeria-adadet/galeria/galeriaPreview/galeriaPreview2.jpg",
     alt: "Tachirense Diego Vera listo para el mundial de aguas abiertas en Singapur",
     category: "Aguas Abiertas"
   },
   {
-    src: galeriaPreview3,
+    src: "https://vkkeubhpapquorwauomt.supabase.co/storage/v1/object/public/galeria-adadet/galeria/galeriaPreview/galeriaPreview3.jpeg",
     alt: "Competencias de natación en el Táchira",
     category: "Competencias"
   },
@@ -75,6 +73,7 @@ const previewImages = [
             <Image
               src={image.src}
               alt={image.alt}
+              inferSize={true}
               loading="lazy"
               class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
             />

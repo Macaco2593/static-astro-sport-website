@@ -1,10 +1,10 @@
 import { DOCUMENTOS_SLUG } from "./documentos.ts";
-import natacion from 'src/assets/natacion.jpg';
-import aguasAbiertas from 'src/assets/aguas-abiertas.jpeg';
-import natacionArtistica from 'src/assets/natacion-artistica.jpg';
-import poloAcuatico from 'src/assets/polo-acuatico.jpg';
-import clavado from 'src/assets/clavado.jpg';
-import master from 'src/assets/master.jpg';
+import natacion from 'src/assets/disciplinas/natacion.jpg';
+import aguasAbiertas from 'src/assets/disciplinas/aguas-abiertas.jpeg';
+import natacionArtistica from 'src/assets/disciplinas/natacion-artistica.jpg';
+import poloAcuatico from 'src/assets/disciplinas/polo-acuatico.jpg';
+import clavado from 'src/assets/disciplinas/clavado.jpg';
+import master from 'src/assets/disciplinas/master.jpg';
 
 export interface DisciplinaDocumentoLink {
   slugDocumento: string; // slug en DOCUMENTOS usado en /documentos/[slug]

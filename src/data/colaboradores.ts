@@ -1,6 +1,4 @@
-import IDT from "../assets/idt-logo.png";
-
-
+import IDT from "../assets/colaboradores/idt-logo.png";
 
 export interface colaborador {
   nombre: string; // used in /documentos/[slug]
@@ -15,7 +13,7 @@ export const COLABORADORES: colaborador[] = [
   {
     nombre: "Instituto del Deporte Tachirense (IDT)",
     rol: "Aliado institucional",
-    logo: IDT, // TODO: reemplazar por el logo real
+    logo: IDT, 
     ubicacion: "Estado Táchira",
     descripcion:
       "Apoyo institucional para el desarrollo de los programas y competencias deportivas en el estado Táchira.",

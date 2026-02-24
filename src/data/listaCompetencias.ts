@@ -1,6 +1,3 @@
-import primerEstadal2026 from "../assets/1er-estadal-adadet-2026.jpeg";
-import primerRegional2026 from "../assets/1er-regional-adaefalcon-2026.jpeg"
-
 export interface ICompetencia {
     id: number
     titulo: string
@@ -14,7 +11,7 @@ export interface ICompetencia {
     fechaInicio: string
     fechaFinalizacion: string
     resultados: Resultado[]
-    img: ImageMetadata
+    img: string
     linkEnVivo?: string
     enVivoPendiente?: boolean
 
@@ -33,7 +30,7 @@ export const ListaCompetencias: ICompetencia[] = [
         fechaDeSubida: '15-02-2026',
         fechaInicio: '05/03/2026',
         fechaFinalizacion: '08/03/2026',
-        img: primerEstadal2026,
+        img: "https://vkkeubhpapquorwauomt.supabase.co/storage/v1/object/public/galeria-adadet/competencias-folletos/2026/03-estadal-sancristobal-folleto.jpeg",
         resultados: [
             {
                 titulo: 'Condiciones Generales',
@@ -67,7 +64,7 @@ export const ListaCompetencias: ICompetencia[] = [
         fechaDeSubida: '16-02-2026',
         fechaInicio: '14/04/2026',
         fechaFinalizacion: '18/04/2026',
-        img: primerRegional2026,
+        img: "https://vkkeubhpapquorwauomt.supabase.co/storage/v1/object/public/galeria-adadet/competencias-folletos/2026/04-regional-adaefalcon-folleto.jpeg",
         resultados: [
             {
                 titulo: 'Condiciones Generales',

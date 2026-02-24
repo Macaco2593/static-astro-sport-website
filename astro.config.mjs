@@ -23,6 +23,9 @@ export default defineConfig({
     prefetchAll: false, // APAGADO: No descarga los links solo por aparecer en pantalla
     defaultStrategy: 'hover' // ENCENDIDO: Solo descarga cuando el usuario pone el mouse encima
   },
+  image: {
+    domains: ['vkkeubhpapquorwauomt.supabase.co'], 
+  },
 
   site: "https://adadet.org/"
 });

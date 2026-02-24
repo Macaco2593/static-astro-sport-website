@@ -20,7 +20,7 @@ const fecha = new Date(noticia.fecha).toLocaleDateString("es-VE", {
 const currentUrl = Astro.url.href;
 ---
 
-<LayoutCompetencias titulo={`${noticia.titulo} | Noticias ADADET`} descripcion={noticia.resumen} image={noticia.imagen?.src}>
+<LayoutCompetencias titulo={`${noticia.titulo} | Noticias ADADET`} descripcion={noticia.resumen} image={noticia.imagen}>
     
     <div class="bg-slate-50 min-h-screen pb-20 relative overflow-hidden">
         
@@ -50,6 +50,7 @@ const currentUrl = Astro.url.href;
                             <Image 
                                 src={noticia.imagen} 
                                 alt={noticia.titulo} 
+                                inferSize={true}
                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                             />
                             
@@ -142,6 +143,7 @@ const currentUrl = Astro.url.href;
                 <Image 
                     src={noticia.imagen} 
                     alt={noticia.titulo} 
+                    inferSize={true}
                     class="max-w-full max-h-full object-contain rounded-lg shadow-2xl scale-95 transition-transform duration-300"
                     id="modalImage"
                 />

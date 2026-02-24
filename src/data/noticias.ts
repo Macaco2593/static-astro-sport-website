@@ -1,5 +1,3 @@
-import evaluacionTecnicaNacionalNatacionArtistica from "src/assets/noticias/evaluacion_tecnica_natacion_artistica.jpeg";
-import primerEstadal2025 from "src/assets/noticias/primerEstadal2026.png";
 
 export interface Noticia {
   slug?: string;       // Para la URL: /noticias/ganadores-estatales-2026
@@ -7,7 +5,7 @@ export interface Noticia {
   resumen: string;    // Texto corto para la tarjeta
   contenido?: string;  // Texto largo (HTML o párrafos)
   fecha: string;      // Formato YYYY-MM-DD
-  imagen?: ImageMetadata;    // Ruta de la imagen (ej: /img/noticias/foto1.jpg)
+  imagen?: string;    // Ruta de la imagen (ej: /img/noticias/foto1.jpg)
   linkExterno?: string;
   categoria: "Natación" | "Aguas Abiertas" | "Institucional" | "Torneos" | "Natación Artística" | "Polo Acuático" | "Clavado" | "Máster"; // Para filtrar por categoría
 }
@@ -19,16 +17,15 @@ export const NOTICIAS: Noticia[] = [
     resumen: "Este año entrante inicia con la Evaluación Técnica Nacional de las categorias infantil, juvenil, junior y senior.",
     contenido: "<p>Saludos, espero se encuentren bien. Con gran entusiasmo, aprovecho para informar sobre el inicio de la temporada 2026 con la Evaluación Técnica Nacional de las categorías infantil, juvenil, junior y senior. Este actividad se llevará a cabo en las instalaciones del Círculo Militar de San Cristóbal del 27 de febrero al 01 de marzo. El objetivo de esta evaluación es la conformación de equipos nacionales en cada categoría, en el marco de nuestro proyecto nacional 'Un sueño Olímpico'. Este refuerzo busca desarorllar y potenciar el talento de nuestros atletas, llevándolos a representar a Venezuela en competencias internacionales Dios mediante.</p><p>Participarán 43 atletas confirmadas de diferentes clubes del país, quienes se unirán en esta jornada de talento y dedicación junto a entrenadoras y jueces nacionales.</p> <p> Trabajemos juntos por un mismo sueño: el de llevar a la Natación Artística a unos Juegos Olímpicos. </p> <p>Con aprecio.</p> <p><strong>José Antonio Satana.</strong></p>",
     fecha: "2026-02-16",
-    imagen: evaluacionTecnicaNacionalNatacionArtistica, 
+    imagen: "https://vkkeubhpapquorwauomt.supabase.co/storage/v1/object/public/galeria-adadet/noticias/2026/febrero-evaluacion-tecnica-natacion-artistica.jpeg", 
     categoria: "Natación Artística"
   },
   {
-    slug: "primera-competencia-estadal-adadet-2026",
     titulo: "Primera Competencia Estadal ADADET 2026",
     resumen: "¡El momento de la verdad se acerca! ⚡️ Oficialmente comienza la cuenta regresiva para nuestro primer Estadal ADADET 2026. 🏊‍♂️💨",
     fecha: "2026-02-23",
     linkExterno: "https://www.instagram.com/p/DVGyRNhDTA1/",
-    imagen: primerEstadal2025,
+    imagen: "https://vkkeubhpapquorwauomt.supabase.co/storage/v1/object/public/galeria-adadet/noticias/2026/febrero-primer-estadal.png",
     categoria: "Natación"
   },
 
