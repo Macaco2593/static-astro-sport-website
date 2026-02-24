@@ -10,6 +10,7 @@ const __dirname = path.dirname(__filename);
 // Ajusta esto si tu CSV está en otro lado
 const INPUT_FOLDER = path.join(__dirname, '../raw-data');
 const OUTPUT_FILE = path.join(__dirname, '../src/data/generated-ranking.json');
+
 // --- TIPOS DE DATOS ---
 interface Marca {
   tiempoTexto: string; // "25,40" o "1:05,30"
@@ -224,11 +225,9 @@ async function procesar() {
 
     // 2. Función que calcula el "peso" de la prueba
     const getPesoPrueba = (nombre: string) => {
-        // Extraer la distancia (ej: "50" de "50M LIBRE")
         const match = nombre.match(/(\d+)/);
         const distancia = match ? parseInt(match[0]) : 0;
         
-        // Detectar el estilo
         let estilo = 99; // Si no encuentra estilo, lo manda al final
         for (const [key, val] of Object.entries(ordenEstilos)) {
             if (nombre.includes(key)) { 
@@ -237,13 +236,6 @@ async function procesar() {
             }
         }
         
-        // FÓRMULA MAESTRA: 
-        // Multiplicamos estilo * 10,000 para que sea el factor principal
-        // Sumamos distancia para que sea el factor secundario
-        // Ej: 50 Libre (1 * 10000 + 50) = 10050
-        // Ej: 100 Libre (1 * 10000 + 100) = 10100
-        // Ej: 50 Espalda (2 * 10000 + 50) = 20050
-        // Resultado: 10050 < 10100 < 20050 (Orden Perfecto)
         return (estilo * 10000) + distancia;
     };
 
@@ -263,7 +255,12 @@ async function procesar() {
   const orden = ["pre-infantil", "infantil-a", "infantil-b", "juvenil-a", "juvenil-b", "maxima"];
   resultadoFinal.sort((a, b) => orden.indexOf(a.id) - orden.indexOf(b.id));
 
-  fs.writeFileSync(OUTPUT_FILE, JSON.stringify(resultadoFinal, null, 2));
+  const dataParaGuardar = {
+    ultimaActualizacion: new Date().toISOString(),
+    categorias: resultadoFinal
+  };
+
+  fs.writeFileSync(OUTPUT_FILE, JSON.stringify(dataParaGuardar, null, 2));
   console.log(`✅ ¡Éxito! Ranking de Tiempos generado en: ${OUTPUT_FILE}`);
 }
 

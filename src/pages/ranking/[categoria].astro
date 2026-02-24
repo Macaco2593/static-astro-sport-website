@@ -3,7 +3,7 @@ import LayoutCompetencias from "src/layouts/LayoutCompetencias.astro";
 import RANKING_DATA from "../../data/generated-ranking.json"; 
 
 export function getStaticPaths() {
-  return RANKING_DATA.map((cat) => ({
+  return RANKING_DATA.categorias.map((cat) => ({
     params: { categoria: cat.id }, 
     props: { categoriaData: cat },
   }));
