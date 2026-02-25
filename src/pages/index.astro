@@ -6,33 +6,69 @@ import CentroRecursos from '../components/CentroRecursos.astro';
 import GaleriaPreview from '../components/GaleriaPreview.astro';
 import NoticiasPreview from 'src/components/NoticiasPreview.astro';
 import LayoutCompetencias from 'src/layouts/LayoutCompetencias.astro';
+import CarouselColaboradores from 'src/components/UI/CarouselColaboradores.astro';
 
 const pageTitle = "Adadet | Asociación de Deportes Acuáticos del estado Táchira";
 const pageDescription = 'Sitio oficial de la Asociación de Deportes Acuáticos del Estado Táchira. Noticias, rankings, resultados y calendario de eventos de natación en la región.';
 ---
 
-
 <LayoutCompetencias titulo={pageTitle} descripcion={pageDescription}>
-	<HeroCarousel />
-		<main>
-			
-				<!-- Disciplinas -->
-				<section id="disciplinas" class="disciplinas-section">
-					<Disciplinas/>
-				</section>
+    
+    <HeroCarousel />
+    
+    <main class="bg-slate-50">
+        
+        {/* 1. DISCIPLINAS (Recibe la ola del Hero) */}
+        <section id="disciplinas" class="disciplinas-section pb-16">
+            <Disciplinas/>
+        </section>
+		
 
-				<!-- Centro de Recursos -->
-				<!-- <section id="centro-recursos">
-					<CentroRecursos/>
-				</section> -->
+        <CarouselColaboradores/>
 
-				<section>
-					<NoticiasPreview/>
-				</section>
+        {/* 2. NOTICIAS PREVIEW */}
+        <section class="mb-20">
+            <NoticiasPreview/>
+        </section>
 
-				<!-- Galería pequeña -->
-				<section id="galeria" class="galeria-preview-section">
-					<GaleriaPreview/>
-				</section>
+        {/* 📐 PUENTE 2: El Divisor Deportivo Oscuro 
+            Un bloque oscuro inclinado que funciona como "limpiador de paladar" 
+            visual antes de entrar a la galería de fotos. */}
+        <section class="relative bg-slate-900 py-24 my-24 transform -skew-y-2 overflow-hidden shadow-2xl">
+            <div class="absolute inset-0 opacity-10 bg-[url('/grid-pattern.svg')]"></div>
+            
+            <div class="transform skew-y-2 max-w-4xl mx-auto px-4 text-center relative z-10">
+                <h2 class="text-3xl md:text-4xl font-black font-display text-white mb-4 uppercase tracking-tight">
+                    Impulsando el talento <span class="text-cyan-400">Tachirense</span>
+                </h2>
+                <p class="text-slate-400 text-lg md:text-xl">
+                    Avalados por la FEVEDA y el Instituto del Deporte Tachirense.
+                </p>
+            </div>
+        </section>
 
-</Layout>
+        {/* 3. GALERÍA PREVIEW */}
+        <section id="galeria" class="galeria-preview-section">
+            <GaleriaPreview/>
+        </section>
+
+
+    </main>
+</LayoutCompetencias>
+
+<style>
+    @keyframes marquee {
+        0% { transform: translateX(0%); }
+        100% { transform: translateX(-100%); }
+    }
+    @keyframes marquee2 {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(0%); }
+    }
+    .animate-marquee {
+        animation: marquee 30s linear infinite;
+    }
+    .animate-marquee2 {
+        animation: marquee2 30s linear infinite;
+    }
+</style>
