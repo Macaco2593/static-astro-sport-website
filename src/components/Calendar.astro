@@ -76,6 +76,8 @@ const { events = [] } = Astro.props;
 </div>
 
 <script is:inline define:vars={{ events }}>
+
+  document.addEventListener('astro:page-load', () => {
   // Variables globales
   let currDate = new Date();
   let currYear = currDate.getFullYear();
@@ -223,4 +225,5 @@ const { events = [] } = Astro.props;
   modalBackdrop.addEventListener('click', closeModal);
 
   renderCalendar();
+});
 </script>

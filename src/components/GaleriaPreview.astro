@@ -150,6 +150,7 @@ const previewImages = [
 </div>
 
 <script>
+  document.addEventListener('astro:page-load', () => {
     const lightbox = document.getElementById('preview-lightbox');
     const lightboxImg = document.getElementById('preview-lightbox-img') as HTMLImageElement;
     const closeBtn = document.getElementById('preview-close-btn');
@@ -215,4 +216,5 @@ const previewImages = [
             closeLightbox();
         }
     });
+  })
 </script>

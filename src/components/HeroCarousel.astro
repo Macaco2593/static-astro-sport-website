@@ -117,18 +117,19 @@ const slides = [
 </section>
 
 <script>
-    // ... (MANTÉN TU SCRPIT DE JAVASCRIPT EXACTAMENTE IGUAL) ...
-    // Solo estoy limpiando el HTML/CSS, la lógica de JS está perfecta.
-    function initCarousel() {
+  function initCarousel() {
     const slides = document.querySelectorAll('.slide');
     const dots = document.querySelectorAll('.dot');
     const imgs = document.querySelectorAll('.ken-burns-target');
     const prevBtn = document.getElementById('prevSlide');
     const nextBtn = document.getElementById('nextSlide');
     
+    // SEGURIDAD: Si no hay slides, no ejecutamos nada (evita errores en otras páginas)
+    if (slides.length === 0) return;
+
     let currentSlide = 0;
     let totalSlides = slides.length;
-    let autoPlayInterval: number;
+    let autoPlayInterval: ReturnType<typeof setInterval>;
 
     function resetAnimations(slideIndex: number) {
         const contentElements = slides[slideIndex].querySelectorAll('.animate-slide-up, .animate-fade-in-down');
@@ -140,13 +141,14 @@ const slides = [
         });
 
         const img = imgs[slideIndex] as HTMLElement;
-        img.classList.remove('scale-110');
-        img.classList.add('scale-100');
-        
-        setTimeout(() => {
-            img.classList.remove('scale-100');
-            img.classList.add('scale-110');
-        }, 50);
+        if (img) {
+            img.classList.remove('scale-110');
+            img.classList.add('scale-100');
+            setTimeout(() => {
+                img.classList.remove('scale-100');
+                img.classList.add('scale-110');
+            }, 50);
+        }
     }
 
     function showSlide(index: number) {
@@ -180,42 +182,36 @@ const slides = [
     const next = () => showSlide(currentSlide + 1);
     const prev = () => showSlide(currentSlide - 1);
 
-    nextBtn?.addEventListener('click', () => {
-        next();
-        resetTimer();
-    });
-    
-    prevBtn?.addEventListener('click', () => {
-        prev();
-        resetTimer();
-    });
+    nextBtn?.addEventListener('click', () => { next(); resetTimer(); });
+    prevBtn?.addEventListener('click', () => { prev(); resetTimer(); });
 
     dots.forEach((dot, i) => {
-      dot.addEventListener('click', () => {
-        showSlide(i);
-        resetTimer();
-      });
+      dot.addEventListener('click', () => { showSlide(i); resetTimer(); });
     });
 
     function startTimer() {
+        // Limpiamos cualquier intervalo previo por seguridad antes de empezar uno nuevo
+        clearInterval(autoPlayInterval);
         autoPlayInterval = setInterval(next, 6000);
     }
     
     function resetTimer() {
-        clearInterval(autoPlayInterval);
         startTimer();
     }
 
+    // Inicializar estado visual
     showSlide(0);
     startTimer();
+
+    // LIMPIEZA: Cuando el usuario se va de la página, matamos el intervalo
+    // para que no siga corriendo "en el limbo" durante la navegación
+    document.addEventListener('astro:before-preparation', () => {
+      clearInterval(autoPlayInterval);
+    }, { once: true });
   }
 
+  // EL ÚNICO DISPARADOR NECESARIO
   document.addEventListener('astro:page-load', initCarousel);
-  if (document.readyState === 'complete') {
-    initCarousel();
-  } else {
-    document.addEventListener('DOMContentLoaded', initCarousel);
-  }
 </script>
 
 <style>

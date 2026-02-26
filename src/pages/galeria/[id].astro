@@ -142,6 +142,7 @@ const { album } = Astro.props;
 </LayoutCompetencias>
 
 <script is:inline>
+document.addEventListener('astro:page-load', () => {    
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxCaption = document.getElementById('lightbox-caption');
@@ -173,6 +174,8 @@ const { album } = Astro.props;
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closeLightbox();
     });
+
+})
 </script>
 
 <style>

@@ -188,7 +188,7 @@ const navLinks = [
 </header>
 
 <script>
-  // El script se mantiene igual, funciona perfecto.
+document.addEventListener('astro:page-load', () => {
   const btn = document.getElementById('mobile-menu-button');
   const menu = document.getElementById('mobile-menu');
   const icons = btn?.querySelectorAll('svg');
@@ -214,4 +214,5 @@ const navLinks = [
         }
       });
   });
+});
 </script>

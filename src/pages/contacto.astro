@@ -252,6 +252,8 @@ const pageDescription = "¿Tienes dudas o quieres inscribirte? Contáctanos. Aqu
   </section>
 
 <script>
+
+document.addEventListener('astro:page-load', () => {
   const form = document.getElementById("contactForm") as HTMLFormElement;
   const statusDiv = document.getElementById("formStatus"); 
 
@@ -296,6 +298,7 @@ const pageDescription = "¿Tienes dudas o quieres inscribirte? Contáctanos. Aqu
       }
     });
   }
+})
 </script>
 
 </LayoutCompetencias>

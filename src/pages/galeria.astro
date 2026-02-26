@@ -136,6 +136,7 @@ const pageDescription = "Revive los mejores momentos de nuestras competencias. F
     </div>
 
 <script is:inline>
+document.addEventListener('astro:page-load', () => {
     const btnCopy = document.getElementById('btn-copy-email');
     const textEmail = document.getElementById('text-email');
     const iconMail = document.getElementById('icon-mail');
@@ -167,6 +168,7 @@ const pageDescription = "Revive los mejores momentos de nuestras competencias. F
             }, 2000);
         });
     });
+});
 </script>
 
     <div class="relative pt-10">

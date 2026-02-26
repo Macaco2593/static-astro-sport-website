@@ -282,6 +282,7 @@ console.log("Resultados de esta competencia:", competencia.resultados);
 </LayoutCompetencias>
 
 <script>
+document.addEventListener('astro:page-load', () => {
     const lightbox = document.getElementById('poster-lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const btnAbrir = document.getElementById('btn-abrir-poster');
@@ -318,6 +319,7 @@ console.log("Resultados de esta competencia:", competencia.resultados);
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closeLightbox();
     });
+});
 </script>
 
 <style>
