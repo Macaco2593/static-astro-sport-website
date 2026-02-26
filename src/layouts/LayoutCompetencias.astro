@@ -1,6 +1,7 @@
 ---
 import Header from "src/components/Header.astro";
 import Footer from "src/components/Footer.astro";
+import { ClientRouter } from "astro:transitions";
 import Analytics from '@vercel/analytics/astro'
 import  SpeedInsights  from "@vercel/speed-insights/astro"
 import "../styles/global.css";
@@ -42,6 +43,7 @@ const socialImage = new URL(image || "/adadet-logo.jpg", Astro.site)
     <title>{titulo}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+    <ClientRouter />
     <script src="https://documentcloud.adobe.com/view-sdk/main.js" defer></script>
 </head>
 <body class="bg-[#f2f2f5] text-slate-900 pt-20">
