@@ -1,13 +1,17 @@
 ---
-import { NOTICIAS } from "src/data/noticias";
 import { Image } from 'astro:assets';
 import SectionTag from "./UI/SectionTag.astro";
 import { ROUTES } from "src/data/routes";
+import { getCollection } from "astro:content";
 
-// Obtener las 3 más recientes y ordenarlas por fecha (de la más nueva a la más vieja)
-const ultimasNoticias = NOTICIAS
-    .sort((a, b) => new Date(b.fecha).getTime() - new Date(a.fecha).getTime())
-    .slice(0, 3);
+const todasLasNoticias = await getCollection("noticias");
+const noticiasOrdenadas = todasLasNoticias.sort(
+  (a, b) => b.data.fecha.valueOf() - a.data.fecha.valueOf()
+);
+
+
+// Obtener las 3 más recientes
+const ultimasNoticias = noticiasOrdenadas.slice(0, 3);
 ---
 
 <section class="py-24 bg-slate-50 relative overflow-hidden">
@@ -36,16 +40,20 @@ const ultimasNoticias = NOTICIAS
         </div>
 
         <div class="grid md:grid-cols-3 gap-8 mb-16">
-            {ultimasNoticias.map((news, index) => (
+            {ultimasNoticias.map((news, index) => {
+                const { slug } = news;
+                const { titulo, resumen, fecha, categoria, imagen, linkExterno } = news.data;
+
+                return (
                 <article 
                     class="group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-lg shadow-slate-200/50 hover:shadow-2xl hover:shadow-cyan-900/10 transition-all duration-500 hover:-translate-y-2 flex flex-col h-full"
                 >
                     
                     <div class="h-56 overflow-hidden relative">
-                        {news.imagen ? (
+                        {news.data.imagen ? (
                             <Image 
-                                src={news.imagen} 
-                                alt={news.titulo} 
+                                src={imagen!} 
+                                alt={titulo} 
                                 inferSize={true}
                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
                                 loading="lazy"
@@ -63,7 +71,7 @@ const ultimasNoticias = NOTICIAS
 
                         <div class="absolute top-4 left-4">
                              <span class="bg-white/90 backdrop-blur-md text-[10px] font-black px-3 py-1.5 rounded-lg text-slate-800 uppercase tracking-wide shadow-sm border border-white/50">
-                                {news.categoria}
+                                {news.data.categoria}
                              </span>
                         </div>
                     </div>
@@ -74,7 +82,7 @@ const ultimasNoticias = NOTICIAS
                             <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                             </svg>
-                            {new Date(news.fecha).toLocaleDateString("es-VE", { 
+                            {new Date(fecha).toLocaleDateString("es-VE", { 
                                 day: "numeric", 
                                 month: "short", 
                                 year: "numeric", 
@@ -84,29 +92,29 @@ const ultimasNoticias = NOTICIAS
 
                         <h3 class="text-xl font-bold text-slate-900 mb-3 leading-tight group-hover:text-cyan-600 transition-colors line-clamp-2">
                             <a 
-                                href={news.linkExterno ? news.linkExterno : ROUTES.noticia(news.slug!)}
-                                target={news.linkExterno ? "_blank" : "_self"}
-                                rel={news.linkExterno ? "noopener noreferrer" : ""}
+                                href={linkExterno ? linkExterno : ROUTES.noticia(slug!)}
+                                target={linkExterno ? "_blank" : "_self"}
+                                rel={linkExterno ? "noopener noreferrer" : ""}
                             >
                                 <span class="absolute inset-0"></span>
-                                {news.titulo}
+                                {titulo}
                             </a>
                         </h3>
 
                         <p class="text-slate-500 text-sm leading-relaxed line-clamp-3 mb-6 flex-1">
-                            {news.resumen}
+                            {resumen}
                         </p>
 
                         <div class="mt-auto flex items-center text-sm font-bold text-slate-900 group-hover:text-cyan-600 transition-colors">
-                            {news.linkExterno ? 'Ver publicación original' : 'Leer artículo completo'}
+                            {linkExterno ? 'Ver publicación original' : 'Leer artículo completo'}
                             
                             <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                             </svg>
                         </div>
                     </div>
-                </article>
-            ))}
+                </article>)
+            })}
         </div>
 
         <div class="text-center">
