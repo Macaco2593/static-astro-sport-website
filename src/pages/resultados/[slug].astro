@@ -28,7 +28,6 @@ const getDateParts = (fecha: string) => {
 const fechaInicio = getDateParts(competencia.fechaInicio);
 const fechaFin = getDateParts(competencia.fechaFinalizacion);
 const { slug } = Astro.params;
-console.log("Resultados de esta competencia:", competencia.resultados);
 ---
 
 <LayoutCompetencias titulo={`${competencia.titulo} | Resultados Oficiales`} footerDecoration={false}>

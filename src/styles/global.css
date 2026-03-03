@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin '@tailwindcss/typography';
 @theme {
   /* Definimos tus colores ADADET */
   --color-adadet-main: #0ea5e9;
