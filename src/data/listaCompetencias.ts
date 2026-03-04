@@ -62,12 +62,12 @@ export const ListaCompetencias: ICompetencia[] = [
             {
                 titulo: 'Resultados Escuelas en Tiempo Real',
                 link: 'https://resultados.adadet.org/1er-estadal-2026/escuelas',
-                pendiente: true
+                pendiente: false
             },
             {
                 titulo: 'Resultados Federados en Tiempo Real',
                 link: 'https://resultados.adadet.org/1er-estadal-2026/federados',
-                pendiente: true
+                pendiente: false
             }
         ],
     },
