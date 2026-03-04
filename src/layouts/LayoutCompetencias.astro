@@ -21,7 +21,7 @@ const {
     noIndex = false, 
     footerDecoration = true,
     showFooter = true } = Astro.props;
-const socialImage = new URL(image || "/adadet-logo.jpg", Astro.site)
+const socialImage = new URL(image || "/adadet-logo.svg", Astro.site)
 ---
 <!DOCTYPE html>
 <html lang="en-US">
@@ -42,7 +42,7 @@ const socialImage = new URL(image || "/adadet-logo.jpg", Astro.site)
     <meta property="og:image:alt" content="Imagen representativa de ADADET" />
     <title>{titulo}</title>
     <link rel="icon" type="image/svg+xml" href="/adadet-logo.svg" media="(prefers-color-scheme: light">
-    <link rel="icon" type="image/png" href="/adadet-logo2.PNG" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" href="/adadet-logo2.png?v=3" media="(prefers-color-scheme: dark)">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
     <ClientRouter />
     <script src="https://documentcloud.adobe.com/view-sdk/main.js" defer></script>
