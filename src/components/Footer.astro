@@ -1,5 +1,5 @@
 ---
-import logoAdadet from "../assets/adadet-logo.jpg";
+import logoAdadet from "../assets/adadet-logo2.png";
 import { ROUTES } from "../data/routes";
 import { Image } from "astro:assets";
 import { ADADET_INFO } from "src/data/adadet";
@@ -59,12 +59,12 @@ const currentYear = new Date().getFullYear();
       
       <div class="space-y-6">
         <a href={ROUTES.HOME} class="group inline-flex items-center gap-4">
-          <div class="relative h-16 w-16 overflow-hidden rounded-2xl bg-white p-1 ring-2 ring-white/10 transition-transform duration-300 group-hover:scale-105 group-hover:ring-adadet-main">
-            <Image
-              src={logoAdadet}
-              alt="Logo ADADET"
-              class="h-full w-full object-cover rounded-xl"
-            />
+          <div class="relative h-24 w-auto flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+              <Image
+                  src={logoAdadet} 
+                  alt="Logo ADADET"
+                  class="h-full w-auto object-contain opacity-80 hover:opacity-100 transition-opacity drop-shadow-md"
+              />
           </div>
           <div>
             <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-cyan-400 mb-0.5">

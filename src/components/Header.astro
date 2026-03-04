@@ -2,7 +2,7 @@
 import { ROUTES } from '../data/routes';
 import { DOCUMENTOS_SLUG } from '../data/documentos';
 import { Image } from 'astro:assets';
-import adadetLogo from '../assets/adadet-logo.jpg';
+import adadetLogo from '../../public/adadet-logo.svg';
 
 // Datos de navegación (Sin cambios aquí)
 const navLinks = [
@@ -20,14 +20,14 @@ const navLinks = [
       
       <div class="flex-shrink-0">
         <a href="/" class="group flex items-center gap-3 focus:outline-none" aria-label="Ir al inicio">
-          <div class="relative h-12 w-12 overflow-hidden rounded-xl bg-white p-0.5 shadow-sm ring-1 ring-slate-900/10 transition-transform duration-300 group-hover:scale-105 group-hover:shadow-md group-hover:ring-adadet-main/30">
-            <Image 
-                src={adadetLogo} 
-                alt="Logo ADADET" 
-                class="h-full w-full object-cover rounded-[10px]" 
-                loading="eager"
-            />
-          </div>
+          <div class="relative h-12 w-auto flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+          <Image 
+              src={adadetLogo} 
+              alt="Logo ADADET" 
+              class="h-full w-auto object-contain drop-shadow-sm transition-all duration-300 group-hover:drop-shadow-md" 
+              loading="eager"
+          />
+      </div>
           <div class="hidden sm:block">
             <p class="text-lg font-black font-display text-slate-900 leading-none group-hover:text-adadet-main transition-colors">ADADET</p>
             <p class="text-[10px] font-bold uppercase tracking-widest text-slate-500">Táchira</p>
