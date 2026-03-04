@@ -12,13 +12,19 @@ export interface ICompetencia {
     fechaFinalizacion: string
     resultados: Resultado[]
     img: string
-    linkEnVivo?: string
+    linksEnVivo?: LinkEnVivo[]
     enVivoPendiente?: boolean
 
 }
 interface Resultado {
     titulo: string,
     nombreArchivo: string
+    pendiente?: boolean
+}
+
+interface LinkEnVivo {
+    titulo: string
+    link: string
     pendiente?: boolean
 }
 export const ListaCompetencias: ICompetencia[] = [
@@ -52,8 +58,18 @@ export const ListaCompetencias: ICompetencia[] = [
                 pendiente: true
             },
         ],
-        linkEnVivo: 'https://resultados.adadet.org/1er-estadal-2026',
-        enVivoPendiente: true,
+        linksEnVivo: [
+            {
+                titulo: 'Resultados Escuelas en Tiempo Real',
+                link: 'https://resultados.adadet.org/1er-estadal-2026/escuelas',
+                pendiente: true
+            },
+            {
+                titulo: 'Resultados Federados en Tiempo Real',
+                link: 'https://resultados.adadet.org/1er-estadal-2026/federados',
+                pendiente: true
+            }
+        ],
     },
     
     {
