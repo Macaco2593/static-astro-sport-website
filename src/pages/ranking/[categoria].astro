@@ -50,8 +50,8 @@ const getRankIcon = (index: number) => {
     <nav class="sticky top-0 z-40 bg-slate-50/90 backdrop-blur-md border-b border-slate-200 py-3 mb-8 shadow-sm">
         <div class="relative max-w-7xl mx-auto px-4">
             
-            {/* Indicador Izquierdo (Aparece al scrollear a la derecha) */}
-            <div id="scroll-left-hint" class="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-slate-50 via-slate-50/90 to-transparent flex items-center justify-start pl-2 z-10 opacity-0 transition-opacity duration-300 pointer-events-none md:hidden">
+            {/* Indicador Izquierdo (Aparece al scrollear a la derecha - Ahora visible en PC también) */}
+            <div id="scroll-left-hint" class="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-slate-50 via-slate-50/90 to-transparent flex items-center justify-start pl-2 z-10 opacity-0 transition-opacity duration-300 pointer-events-none">
                 <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
             </div>
 
@@ -68,8 +68,8 @@ const getRankIcon = (index: number) => {
                 ))}
             </div>
 
-            {/* Indicador Derecho (Visible por defecto en móviles si hay contenido) */}
-            <div id="scroll-right-hint" class="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-slate-50 via-slate-50/90 to-transparent flex items-center justify-end pr-2 z-10 transition-opacity duration-300 pointer-events-none md:hidden">
+            {/* Indicador Derecho (Aparece si hay contenido a la derecha - Ahora visible en PC también) */}
+            <div id="scroll-right-hint" class="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-slate-50 via-slate-50/90 to-transparent flex items-center justify-end pr-2 z-10 transition-opacity duration-300 pointer-events-none">
                 <svg class="w-5 h-5 text-slate-400 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
             </div>
 
@@ -236,8 +236,8 @@ const getRankIcon = (index: number) => {
 
 {/* SCRIPT CLIENT-SIDE PARA INTERACCIONES */}
 <script>
+  // Envolvemos todo directamente en astro:page-load sin usar DOMContentLoaded
   document.addEventListener('astro:page-load', () => {
-    document.addEventListener('DOMContentLoaded', () => {
         
         // 1. SCROLL EXACTO CALCULADO
         document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
@@ -247,9 +247,6 @@ const getRankIcon = (index: number) => {
                 if (targetId) {
                     const targetElement = document.querySelector(targetId);
                     if (targetElement) {
-                        // AQUÍ ESTÁ LA MAGIA DEL DESPLAZAMIENTO: 
-                        // Cambia este "160" si necesitas que el espacio sea mayor o menor. 
-                        // Representa los píxeles desde el borde superior de la pantalla hasta el título.
                         const topOffset = 90; 
                         
                         const elementPosition = targetElement.getBoundingClientRect().top;
@@ -271,15 +268,12 @@ const getRankIcon = (index: number) => {
 
         if (scrollContainer && leftHint && rightHint) {
             const handleScroll = () => {
-                // Mostrar/ocultar la flecha izquierda
                 if (scrollContainer.scrollLeft > 15) {
                     leftHint.classList.remove('opacity-0');
                 } else {
                     leftHint.classList.add('opacity-0');
                 }
 
-                // Mostrar/ocultar la flecha derecha 
-                // Calculamos el scroll máximo posible menos un margen pequeño de error (5px)
                 const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
                 if (scrollContainer.scrollLeft >= maxScroll - 5) {
                     rightHint.classList.add('opacity-0');
@@ -288,23 +282,28 @@ const getRankIcon = (index: number) => {
                 }
             };
 
-            // Escuchamos el evento de scroll en la barra
+            // Removemos el listener si ya existía para evitar duplicados en Astro ViewTransitions
+            scrollContainer.removeEventListener('scroll', handleScroll);
             scrollContainer.addEventListener('scroll', handleScroll);
             
-            // Evaluamos una primera vez al cargar la página y si cambiamos de orientación el móvil
             handleScroll();
+            window.removeEventListener('resize', handleScroll);
             window.addEventListener('resize', handleScroll);
         }
 
         // 3. BOTÓN "BACK TO TOP"
         const backToTopBtn = document.getElementById('btn-back-to-top');
-        window.addEventListener('scroll', () => {
+        
+        const handleBackToTopScroll = () => {
             if (window.scrollY > 400) {
                 backToTopBtn?.classList.remove('translate-y-16', 'opacity-0');
             } else {
                 backToTopBtn?.classList.add('translate-y-16', 'opacity-0');
             }
-        });
+        };
+
+        window.removeEventListener('scroll', handleBackToTopScroll);
+        window.addEventListener('scroll', handleBackToTopScroll);
 
         backToTopBtn?.addEventListener('click', () => {
             window.scrollTo({
@@ -312,6 +311,6 @@ const getRankIcon = (index: number) => {
                 behavior: 'smooth'
             });
         });
-    });
+
   });
 </script>
