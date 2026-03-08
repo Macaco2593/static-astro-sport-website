@@ -43,19 +43,20 @@ export const ListaCompetencias: ICompetencia[] = [
                 nombreArchivo: 'condicion_general.pdf'
             },
             {
-                titulo: 'Resultados Individuales Completos',
-                nombreArchivo: 'resultados_individuales.pdf',
-                pendiente: true
+                titulo: 'Resultados Individuales Completos FEDERADOS',
+                nombreArchivo: 'resultados_individuales_completos_federados.pdf',
             },
             {
-                titulo: 'Resultados por Equipos',
-                nombreArchivo: 'resultados_por_equipo.pdf',
-                pendiente: true
+                titulo: 'Resultados Individuales Completos ESCUELAS',
+                nombreArchivo: 'resultados_individuales_completos_escuelas.pdf',
             },
             {
-                titulo: 'Mejores Atletas por Categorías',
-                nombreArchivo: 'mejores_atletas.pdf',
-                pendiente: true
+                titulo: 'Puntuación por Equipos FEDERADOS',
+                nombreArchivo: 'puntuacion_por_equipos_federados.pdf',
+            },
+            {
+                titulo: 'Puntuación por Equipos ESCUELAS',
+                nombreArchivo: 'puntuacion_por_equipos_escuelas.pdf',
             },
         ],
         linksEnVivo: [
