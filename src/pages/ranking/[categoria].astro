@@ -23,9 +23,9 @@ const getRankIcon = (index: number) => {
 
 <LayoutCompetencias titulo={`Ranking ${categoriaData.titulo} | ADADET`} descripcion={pageDescription}>
   
-  <div class="bg-slate-50 min-h-screen">
+  <div class="bg-slate-50 min-h-screen relative">
     
-    <header class="relative bg-slate-900 py-16 px-4 overflow-hidden mb-12 shadow-xl">
+    <header class="relative bg-slate-900 py-16 px-4 overflow-hidden shadow-xl">
         <div class="absolute inset-0 opacity-20 pointer-events-none">
             <div class="absolute -top-24 -right-24 w-96 h-96 bg-cyan-500 rounded-full blur-3xl opacity-30"></div>
             <div class="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
@@ -46,11 +46,42 @@ const getRankIcon = (index: number) => {
         </div>
     </header>
 
+    {/* NAVEGACIÓN STICKY DE EVENTOS (Selector mejorado) */}
+    <nav class="sticky top-0 z-40 bg-slate-50/90 backdrop-blur-md border-b border-slate-200 py-3 mb-8 shadow-sm">
+        <div class="relative max-w-7xl mx-auto px-4">
+            
+            {/* Indicador Izquierdo (Aparece al scrollear a la derecha) */}
+            <div id="scroll-left-hint" class="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-slate-50 via-slate-50/90 to-transparent flex items-center justify-start pl-2 z-10 opacity-0 transition-opacity duration-300 pointer-events-none md:hidden">
+                <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
+            </div>
+
+            {/* Contenedor scrolleable */}
+            <div id="pruebas-scroll-container" class="flex gap-2 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden items-center snap-x relative z-0 px-2">
+                <span class="text-xs font-bold text-slate-400 uppercase tracking-widest mr-2 flex-shrink-0">Pruebas:</span>
+                {categoriaData.pruebas.map((prueba, index) => (
+                    <a 
+                        href={`#prueba-${index}`} 
+                        class="snap-start flex-shrink-0 px-4 py-2 bg-white border border-slate-200 hover:border-cyan-400 hover:bg-cyan-50 text-slate-600 hover:text-cyan-700 text-sm font-bold rounded-full whitespace-nowrap transition-all focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2"
+                    >
+                        {prueba.nombre}
+                    </a>
+                ))}
+            </div>
+
+            {/* Indicador Derecho (Visible por defecto en móviles si hay contenido) */}
+            <div id="scroll-right-hint" class="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-slate-50 via-slate-50/90 to-transparent flex items-center justify-end pr-2 z-10 transition-opacity duration-300 pointer-events-none md:hidden">
+                <svg class="w-5 h-5 text-slate-400 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+
+        </div>
+    </nav>
+
     <div class="max-w-7xl mx-auto px-4 pb-20 space-y-12">
 
       {/* RECORREMOS CADA PRUEBA */}
       {categoriaData.pruebas.map((prueba, index) => (
-        <article class="bg-white rounded-2xl shadow-lg shadow-slate-200/50 border border-slate-100 overflow-hidden">
+
+        <article id={`prueba-${index}`} class="bg-white rounded-2xl shadow-lg shadow-slate-200/50 border border-slate-100 overflow-hidden">
           
           {/* Título de la Prueba */}
           <div class="bg-slate-50 px-6 py-5 border-b border-slate-200">
@@ -95,7 +126,6 @@ const getRankIcon = (index: number) => {
                                  </div>
                                  <div class="text-xs font-semibold text-slate-500 bg-slate-100 inline-block px-1.5 rounded mt-0.5">{atleta.club}</div>
                                  
-                                 {/* SOLUCIÓN MÓVIL: Esto solo se ve en pantallas pequeñas (sm:hidden) */}
                                  <div class="sm:hidden mt-2 pt-1.5 border-t border-slate-100/60">
                                      <div class="leading-tight font-medium text-slate-600 text-xs mb-0.5">{atleta.marca.competencia}</div>
                                      <div class="font-mono text-[10px] text-slate-400">{atleta.marca.fecha}</div>
@@ -155,7 +185,6 @@ const getRankIcon = (index: number) => {
                                  </div>
                                  <div class="text-xs font-semibold text-slate-500 bg-slate-100 inline-block px-1.5 rounded mt-0.5">{atleta.club}</div>
 
-                                 {/* SOLUCIÓN MÓVIL: Esto solo se ve en pantallas pequeñas (sm:hidden) */}
                                  <div class="sm:hidden mt-2 pt-1.5 border-t border-slate-100/60">
                                      <div class="leading-tight font-medium text-slate-600 text-xs mb-0.5">{atleta.marca.competencia}</div>
                                      <div class="font-mono text-[10px] text-slate-400">{atleta.marca.fecha}</div>
@@ -190,5 +219,99 @@ const getRankIcon = (index: number) => {
         </article>
       ))}
     </div>
+    
+    {/* BOTÓN FLOTANTE: BACK TO TOP */}
+    <button 
+        id="btn-back-to-top" 
+        class="fixed bottom-6 right-6 p-3 bg-slate-800 text-white rounded-full shadow-xl hover:bg-cyan-500 hover:shadow-cyan-500/30 transition-all duration-300 transform translate-y-16 opacity-0 z-50 focus:outline-none"
+        aria-label="Volver arriba"
+    >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
   </div>
 </LayoutCompetencias>
+
+{/* SCRIPT CLIENT-SIDE PARA INTERACCIONES */}
+<script>
+  document.addEventListener('astro:page-load', () => {
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        // 1. SCROLL EXACTO CALCULADO
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId) {
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        // AQUÍ ESTÁ LA MAGIA DEL DESPLAZAMIENTO: 
+                        // Cambia este "160" si necesitas que el espacio sea mayor o menor. 
+                        // Representa los píxeles desde el borde superior de la pantalla hasta el título.
+                        const topOffset = 90; 
+                        
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.scrollY - topOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                        });
+                    }
+                }
+            });
+        });
+
+        // 2. INDICADORES DE DESLIZAMIENTO EN EL MENÚ (Flechas laterales)
+        const scrollContainer = document.getElementById('pruebas-scroll-container');
+        const leftHint = document.getElementById('scroll-left-hint');
+        const rightHint = document.getElementById('scroll-right-hint');
+
+        if (scrollContainer && leftHint && rightHint) {
+            const handleScroll = () => {
+                // Mostrar/ocultar la flecha izquierda
+                if (scrollContainer.scrollLeft > 15) {
+                    leftHint.classList.remove('opacity-0');
+                } else {
+                    leftHint.classList.add('opacity-0');
+                }
+
+                // Mostrar/ocultar la flecha derecha 
+                // Calculamos el scroll máximo posible menos un margen pequeño de error (5px)
+                const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+                if (scrollContainer.scrollLeft >= maxScroll - 5) {
+                    rightHint.classList.add('opacity-0');
+                } else {
+                    rightHint.classList.remove('opacity-0');
+                }
+            };
+
+            // Escuchamos el evento de scroll en la barra
+            scrollContainer.addEventListener('scroll', handleScroll);
+            
+            // Evaluamos una primera vez al cargar la página y si cambiamos de orientación el móvil
+            handleScroll();
+            window.addEventListener('resize', handleScroll);
+        }
+
+        // 3. BOTÓN "BACK TO TOP"
+        const backToTopBtn = document.getElementById('btn-back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                backToTopBtn?.classList.remove('translate-y-16', 'opacity-0');
+            } else {
+                backToTopBtn?.classList.add('translate-y-16', 'opacity-0');
+            }
+        });
+
+        backToTopBtn?.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    });
+  });
+</script>
