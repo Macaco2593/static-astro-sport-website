@@ -26,6 +26,7 @@ export const DOCUMENTOS_SLUG = {
   POLO_ACUATICO_CONDICIONES_TECNICAS_2026: "polo-acuatico-condiciones-tecnicas-2026",
   CLAVADO_CONDICIONES_TECNICAS_2026: "clavado-condiciones-tecnicas-2026",
   MASTER_CONDICIONES_TECNICAS_2026: "master-marcas-minimas-2026",
+  CALENDARIO_NATACION_FEVEDA_2026: "calendario-natacion-feveda-2026",
 };
 
 export const DOCUMENTOS: Documento[] = [
@@ -155,4 +156,11 @@ export const DOCUMENTOS: Documento[] = [
     fechaPublicacion: "2026-02-16",
     archivo: "/contenido/documentos/condiciones_tecnicas_generales_de_natacion_master_2026.pdf",
   },
+  {
+    slug: DOCUMENTOS_SLUG.CALENDARIO_NATACION_FEVEDA_2026,
+    titulo: "Calendario de Natación FEVEDA 2026",
+    descripcion: "Calendario oficial de competencias de natación organizadas por FEVEDA para la temporada 2026.",
+    fechaPublicacion: "2026-03-08",
+    archivo: "/contenido/documentos/calendario_natacion_feveda_2026.pdf",
+  }
 ];
