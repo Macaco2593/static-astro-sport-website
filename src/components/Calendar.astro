@@ -78,13 +78,16 @@ const { events = [] } = Astro.props;
 <script is:inline define:vars={{ events }}>
 
   document.addEventListener('astro:page-load', () => {
+
+  const grid = document.getElementById('calendarGrid');
+  if (!grid) return;
   // Variables globales
   let currDate = new Date();
   let currYear = currDate.getFullYear();
   let currMonth = currDate.getMonth();
   
   const monthNames = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-  const grid = document.getElementById('calendarGrid');
+
   const monthTitle = document.getElementById('currentMonthYear');
   
   // Elementos del Modal
