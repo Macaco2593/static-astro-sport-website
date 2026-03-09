@@ -56,13 +56,14 @@ function parseTime(tiempoStr: string): number {
   return parseFloat(limpio) * 1000;
 }
 
-function getCategoria(edad: number): string {
+function getCategoria(edad: number): string | null {
   if (edad <= 9) return "pre-infantil";
   if (edad >= 10 && edad <= 11) return "infantil-a";
   if (edad >= 12 && edad <= 13) return "infantil-b";
   if (edad >= 14 && edad <= 15) return "juvenil-a";
   if (edad >= 16 && edad <= 18) return "juvenil-b";
-  return "maxima"; 
+  if (edad >= 19 && edad <= 24) return "maxima";
+  return null; 
 }
 
 function limpiarNombre(nombreRaw: string): string {
@@ -137,6 +138,12 @@ async function procesar() {
 
       // 1. Datos Básicos
       const catId = getCategoria(edad);
+      
+      // EL ESCUDO: Si catId es nulo (25 años o más), abortamos y pasamos a la siguiente línea del CSV
+      if (catId === null) {
+          continue; 
+      }
+      
       const nombreAtleta = limpiarNombre(rawNombre);
       const nombrePrueba = limpiarPrueba(rawEvento);
       

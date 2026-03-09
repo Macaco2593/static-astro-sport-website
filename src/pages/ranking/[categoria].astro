@@ -50,17 +50,18 @@ const getRankIcon = (index: number) => {
     <nav class="sticky top-0 z-40 bg-slate-50/90 backdrop-blur-md border-b border-slate-200 py-3 mb-8 shadow-sm">
         <div class="relative max-w-7xl mx-auto px-4">
             
-            {/* Indicador Izquierdo (Aparece al scrollear a la derecha - Ahora visible en PC también) */}
+            {/* Indicador Izquierdo */}
             <div id="scroll-left-hint" class="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-slate-50 via-slate-50/90 to-transparent flex items-center justify-start pl-2 z-10 opacity-0 transition-opacity duration-300 pointer-events-none">
                 <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
             </div>
 
-            {/* Contenedor scrolleable */}
-            <div id="pruebas-scroll-container" class="flex gap-2 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden items-center snap-x relative z-0 px-2">
+            {/* Contenedor scrolleable (Agregamos cursor-grab y select-none) */}
+            <div id="pruebas-scroll-container" class="flex gap-2 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden items-center snap-x relative z-0 px-2 cursor-grab active:cursor-grabbing select-none">
                 <span class="text-xs font-bold text-slate-400 uppercase tracking-widest mr-2 flex-shrink-0">Pruebas:</span>
                 {categoriaData.pruebas.map((prueba, index) => (
                     <a 
                         href={`#prueba-${index}`} 
+                        draggable="false" 
                         class="snap-start flex-shrink-0 px-4 py-2 bg-white border border-slate-200 hover:border-cyan-400 hover:bg-cyan-50 text-slate-600 hover:text-cyan-700 text-sm font-bold rounded-full whitespace-nowrap transition-all focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2"
                     >
                         {prueba.nombre}
@@ -68,7 +69,7 @@ const getRankIcon = (index: number) => {
                 ))}
             </div>
 
-            {/* Indicador Derecho (Aparece si hay contenido a la derecha - Ahora visible en PC también) */}
+            {/* Indicador Derecho */}
             <div id="scroll-right-hint" class="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-slate-50 via-slate-50/90 to-transparent flex items-center justify-end pr-2 z-10 transition-opacity duration-300 pointer-events-none">
                 <svg class="w-5 h-5 text-slate-400 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
             </div>
@@ -265,6 +266,56 @@ const getRankIcon = (index: number) => {
         const scrollContainer = document.getElementById('pruebas-scroll-container');
         const leftHint = document.getElementById('scroll-left-hint');
         const rightHint = document.getElementById('scroll-right-hint');
+
+        if (scrollContainer) {
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+            let isDragging = false; 
+
+            scrollContainer.addEventListener('mousedown', (e) => {
+                isDown = true;
+                isDragging = false; 
+                startX = e.pageX - scrollContainer.offsetLeft;
+                scrollLeft = scrollContainer.scrollLeft;
+                
+                scrollContainer.classList.remove('snap-x');
+            });
+
+            scrollContainer.addEventListener('mouseleave', () => {
+                isDown = false;
+                // Devolvemos el imán si el mouse sale del área
+                scrollContainer.classList.add('snap-x');
+            });
+
+            scrollContainer.addEventListener('mouseup', () => {
+                isDown = false;
+                // Devolvemos el imán cuando suelta el clic
+                scrollContainer.classList.add('snap-x');
+            });
+
+            scrollContainer.addEventListener('mousemove', (e) => {
+                if (!isDown) return; 
+                e.preventDefault();
+                isDragging = true; 
+                const x = e.pageX - scrollContainer.offsetLeft;
+                
+                // Puedes ajustar este multiplicador (1.5). 
+                // Si lo subes a 2, se deslizará más rápido. Si lo bajas a 1, más lento.
+                const walk = (x - startX) * 1.5; 
+                scrollContainer.scrollLeft = scrollLeft - walk;
+            });
+
+            // Prevenir que el clic navegue si el usuario solo estaba arrastrando
+            scrollContainer.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    if (isDragging) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                    }
+                });
+            });
+        }
 
         if (scrollContainer && leftHint && rightHint) {
             const handleScroll = () => {

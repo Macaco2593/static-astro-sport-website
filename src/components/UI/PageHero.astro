@@ -37,8 +37,8 @@ const { title, subtitle, badge, gradientText } = Astro.props;
         </h1>
         
         {subtitle && (
-            <p class="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed animate-fade-in-up" style="animation-delay: 100ms;">
-              {subtitle}
+            <p class="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed animate-fade-in-up" style="animation-delay: 100ms;"
+              set:html={subtitle}>
             </p>
         )}
 
