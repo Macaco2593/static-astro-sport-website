@@ -9,6 +9,7 @@ const noticiasCollection = defineCollection({
         imagen: z.string().optional(),
         linkExterno: z.string().optional(),
         categoria: z.enum(["Natación", "Aguas Abiertas", "Institucional", "Torneos", "Natación Artística", "Polo Acuático", "Clavado", "Máster"]),
+        fotografo: z.string().optional(),
     }),
 });
 

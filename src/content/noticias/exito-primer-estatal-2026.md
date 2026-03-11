@@ -4,6 +4,7 @@ resumen: "Tras cinco jornadas de competencia, la piscina del Colegio de Contador
 fecha: "2026-03-5"
 imagen: "https://vkkeubhpapquorwauomt.supabase.co/storage/v1/object/public/galeria-adadet/noticias/2026/marzo-estadal-exitoso.jpeg"
 categoria: "Natación"
+fotografo: "Paul Gonzalez"
 ---
 
 Del 5 al 8 de marzo, se llevó a cabo el I **Campeonato Estatal ADADET 2026**, un evento que marcó el inicio del calendario competitivo del año. La cita cerró con broche de oro tras disputar jornadas con pruebas en todas las categorías, poniendo a prueba la velocidad y técnica de los nadadores del Táchira.
@@ -26,4 +27,4 @@ El presidente de la asociación, **Jackson Osorio**, manifestó su satisfacción
 
 Asimismo, hizo una invitación abierta a más personas a sumarse a la práctica de la natación, recordando que es considerado uno de los deportes más completos que existen para el desarrollo integral del ser humano. Con este éxito, la natación del Táchira se proyecta con fuerza hacia los próximos compromisos del calendario nacional.
 
-Por: Nicoll Acevedo - Prensa ADADET
+**Redacción:** Nicoll Acevedo - Prensa ADADET  
