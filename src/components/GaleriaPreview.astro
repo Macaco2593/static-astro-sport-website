@@ -1,30 +1,11 @@
 ---
 import { ROUTES } from "../data/routes";
 import SectionTag from "./UI/SectionTag.astro";
-import { Image } from "astro:assets";
+import AlbumCard from "./AlbumCard.astro"; 
+import { ALBUMES } from "src/data/albums.ts";
 
-
-// ✨ INTERRUPTOR DE GALERÍA ✨
-// Cambia esto a 'false' cuando ya tengas fotos y quieras habilitar el botón
-const galeriaPendiente = true; 
-
-const previewImages = [
-  {
-    src: "https://vkkeubhpapquorwauomt.supabase.co/storage/v1/object/public/galeria-adadet/galeria/galeriaPreview/galeriaPreview1.png", 
-    alt: "Santiago Carreño representando a Venezuela en los juegos Suramericanos Río 2025",
-    category: "Natación"
-  },
-  {
-    src: "https://vkkeubhpapquorwauomt.supabase.co/storage/v1/object/public/galeria-adadet/galeria/galeriaPreview/galeriaPreview2.jpg",
-    alt: "Tachirense Diego Vera listo para el mundial de aguas abiertas en Singapur",
-    category: "Aguas Abiertas"
-  },
-  {
-    src: "https://vkkeubhpapquorwauomt.supabase.co/storage/v1/object/public/galeria-adadet/galeria/galeriaPreview/galeriaPreview3.jpeg",
-    alt: "Competencias de natación en el Táchira",
-    category: "Competencias"
-  },
-];
+// Obtenemos los 3 álbumes más recientes
+const ultimosAlbumes = ALBUMES.slice(0, 3);
 ---
 
 <section class="relative px-4 py-16 md:py-24 bg-slate-50 overflow-hidden">
@@ -56,61 +37,14 @@ const previewImages = [
 
     </header>
 
-    <div class="grid gap-6 md:gap-8 md:grid-cols-3">
-      {previewImages.map((image, index) => (
-        <article 
-          class="group relative overflow-hidden rounded-3xl bg-white shadow-lg shadow-slate-200/50 ring-1 ring-slate-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-adadet-main/20"
-          style={`transition-delay: ${index * 100}ms`}
-        >
-          
-          {/* CONVERTIMOS EL CONTENEDOR DE LA IMAGEN EN UN BOTÓN PARA ABRIR EL LIGHTBOX */}
-          <button 
-            class="gallery-trigger w-full relative h-64 md:h-72 overflow-hidden cursor-zoom-in block outline-none text-left"
-            data-image-src={typeof image.src === 'string' ? image.src : image.src.src}
-            data-image-alt={image.alt}
-            aria-label="Ver imagen ampliada"
-          >
-            <Image
-              src={image.src}
-              alt={image.alt}
-              inferSize={true}
-              loading="lazy"
-              class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-            />
-            
-            <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-adadet-dark/90 via-adadet-dark/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
-            
-            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform scale-50 group-hover:scale-100">
-              <div class="bg-white/20 backdrop-blur-md border border-white/50 p-4 rounded-full text-white shadow-lg pointer-events-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
-                </svg>
-              </div>
-            </div>
-
-            <div class="absolute bottom-0 left-0 p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-500 pointer-events-none">
-              <span class="inline-block px-3 py-1 mb-2 text-xs font-bold uppercase tracking-wider text-white bg-adadet-main/80 backdrop-blur-sm rounded-full">
-                {image.category}
-              </span>
-              <h3 class="text-white font-bold text-lg leading-tight opacity-90 group-hover:opacity-100">
-                {image.alt}
-              </h3>
-            </div>
-          </button>
-        </article>
-      ))}
+    {/* GRID INTELIGENTE: Se adapta según la cantidad de álbumes para no verse vacío */}
+    <div class={`mx-auto ${ultimosAlbumes.length === 1 ? 'max-w-md' : 'grid gap-6 md:gap-8 md:grid-cols-2 lg:grid-cols-3'}`}>
+        {ultimosAlbumes.map((album, index) => (
+            <AlbumCard album={album} index={index} />
+        ))}
     </div>
 
-    <div class="mt-12 flex justify-center">
-      {galeriaPendiente ? (
-        <div class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-slate-100 text-slate-400 font-bold rounded-xl border border-slate-200 cursor-not-allowed opacity-80 shadow-sm">
-          <span class="relative flex h-3 w-3">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-3 w-3 bg-orange-500"></span>
-          </span>
-          Próximamente
-        </div>
-      ) : (
+    <div class="mt-16 flex justify-center">
         <a 
           href={ROUTES.GALERIA} 
           class="group relative inline-flex items-center justify-center gap-2 px-8 py-4 bg-slate-900 text-white font-bold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/30 hover:-translate-y-1"
@@ -124,97 +58,7 @@ const previewImages = [
             </svg>
           </span>
         </a>
-      )}
     </div>
+
   </div>
 </section>
-
-{/* 👇 EL MODAL LIBRE EN LA RAÍZ 👇 */}
-<div id="preview-lightbox" class="fixed inset-0 z-[9999] hidden opacity-0 transition-opacity duration-300">
-    <div id="preview-backdrop" class="absolute inset-0 bg-black/95 backdrop-blur-sm cursor-pointer"></div>
-    
-    <div class="relative z-10 inset-0 fixed flex items-center justify-center p-4 pointer-events-none">
-        
-        {/* Imagen Dinámica */}
-        <img 
-            src="" 
-            alt="Imagen Ampliada"
-            class="w-auto h-auto max-h-[95vh] max-w-[95vw] object-contain rounded-lg shadow-2xl pointer-events-auto transform scale-95 transition-transform duration-300"
-            id="preview-lightbox-img"
-        />
-
-        <button id="preview-close-btn" class="absolute top-6 right-6 text-white pointer-events-auto p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors z-[10000]">
-            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
-        </button>
-    </div>
-</div>
-
-<script>
-  document.addEventListener('astro:page-load', () => {
-    const lightbox = document.getElementById('preview-lightbox');
-    const lightboxImg = document.getElementById('preview-lightbox-img') as HTMLImageElement;
-    const closeBtn = document.getElementById('preview-close-btn');
-    const backdrop = document.getElementById('preview-backdrop');
-    // Seleccionamos todos los botones de las imágenes
-    const triggers = document.querySelectorAll('.gallery-trigger');
-
-    const openLightbox = (src: string, alt: string) => {
-        if (!lightbox || !lightboxImg) return;
-        
-        // Asignamos la ruta y el alt a la imagen del modal
-        lightboxImg.src = src;
-        lightboxImg.alt = alt || "Imagen de galería";
-        
-        lightbox.classList.remove('hidden');
-        
-        // Pequeño delay para la animación
-        setTimeout(() => {
-            lightbox.classList.remove('opacity-0');
-            lightboxImg.classList.remove('scale-95');
-            lightboxImg.classList.add('scale-100');
-        }, 10);
-        
-        // Bloqueamos el scroll del fondo
-        document.body.style.overflow = 'hidden';
-    };
-
-    const closeLightbox = () => {
-        if (!lightbox || !lightboxImg) return;
-        
-        lightbox.classList.add('opacity-0');
-        lightboxImg.classList.remove('scale-100');
-        lightboxImg.classList.add('scale-95');
-        
-        setTimeout(() => {
-            lightbox.classList.add('hidden');
-            lightboxImg.src = ""; // Limpiamos la imagen
-        }, 300);
-        
-        // Devolvemos el scroll
-        document.body.style.overflow = '';
-    };
-
-    // Event Listener para abrir
-    triggers.forEach(trigger => {
-        trigger.addEventListener('click', (e) => {
-            e.preventDefault();
-            // Leemos la data que dejamos guardada en el HTML
-            const src = trigger.getAttribute('data-image-src');
-            const alt = trigger.getAttribute('data-image-alt');
-            if (src) {
-                openLightbox(src, alt || '');
-            }
-        });
-    });
-
-    // Event Listeners para cerrar
-    if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
-    if (backdrop) backdrop.addEventListener('click', closeLightbox);
-
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && !lightbox?.classList.contains('hidden')) {
-            closeLightbox();
-        }
-    });
-  })
-</script>
