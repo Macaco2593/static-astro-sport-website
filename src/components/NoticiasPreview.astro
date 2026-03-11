@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import SectionTag from "./UI/SectionTag.astro";
 import { ROUTES } from "src/data/routes";
+import NoticiaCard from "./NoticiaCard.astro";
 import { getCollection } from "astro:content";
 
 const todasLasNoticias = await getCollection("noticias");
@@ -41,79 +42,7 @@ const ultimasNoticias = noticiasOrdenadas.slice(0, 3);
 
         <div class="grid md:grid-cols-3 gap-8 mb-16">
             {ultimasNoticias.map((news, index) => {
-                const { slug } = news;
-                const { titulo, resumen, fecha, categoria, imagen, linkExterno } = news.data;
-
-                return (
-                <article 
-                    class="group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-lg shadow-slate-200/50 hover:shadow-2xl hover:shadow-cyan-900/10 transition-all duration-500 hover:-translate-y-2 flex flex-col h-full"
-                >
-                    
-                    <div class="h-56 overflow-hidden relative">
-                        {news.data.imagen ? (
-                            <Image 
-                                src={imagen!} 
-                                alt={titulo} 
-                                inferSize={true}
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-                                loading="lazy"
-                            />
-                        ) : (
-                            // Placeholder elegante si no hay imagen
-                            <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200 group-hover:from-cyan-50 group-hover:to-blue-50 transition-colors duration-500">
-                                <svg class="w-12 h-12 text-slate-300 group-hover:text-cyan-300 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                </svg>
-                            </div>
-                        )}
-                        
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-                        <div class="absolute top-4 left-4">
-                             <span class="bg-white/90 backdrop-blur-md text-[10px] font-black px-3 py-1.5 rounded-lg text-slate-800 uppercase tracking-wide shadow-sm border border-white/50">
-                                {news.data.categoria}
-                             </span>
-                        </div>
-                    </div>
-
-                    <div class="p-8 flex-1 flex flex-col relative">
-                        
-                        <div class="flex items-center gap-2 text-xs font-bold text-cyan-600 mb-3 uppercase tracking-wider">
-                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                            </svg>
-                            {new Date(fecha).toLocaleDateString("es-VE", { 
-                                day: "numeric", 
-                                month: "short", 
-                                year: "numeric", 
-                                timeZone: "UTC" 
-                            })}
-                        </div>
-
-                        <h3 class="text-xl font-bold text-slate-900 mb-3 leading-tight group-hover:text-cyan-600 transition-colors line-clamp-2">
-                            <a 
-                                href={linkExterno ? linkExterno : ROUTES.noticia(slug!)}
-                                target={linkExterno ? "_blank" : "_self"}
-                                rel={linkExterno ? "noopener noreferrer" : ""}
-                            >
-                                <span class="absolute inset-0"></span>
-                                {titulo}
-                            </a>
-                        </h3>
-
-                        <p class="text-slate-500 text-sm leading-relaxed line-clamp-3 mb-6 flex-1">
-                            {resumen}
-                        </p>
-
-                        <div class="mt-auto flex items-center text-sm font-bold text-slate-900 group-hover:text-cyan-600 transition-colors">
-                            {linkExterno ? 'Ver publicación original' : 'Leer artículo completo'}
-                            
-                            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
-                        </div>
-                    </div>
-                </article>)
+                return (<NoticiaCard news={news} key={index} />)
             })}
         </div>
 
