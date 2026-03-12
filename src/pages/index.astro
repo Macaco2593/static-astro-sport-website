@@ -2,7 +2,6 @@
 import '../styles/global.css';
 import HeroCarousel from '../components/HeroCarousel.astro';
 import Disciplinas from '../components/Disciplinas.astro';
-import CentroRecursos from '../components/CentroRecursos.astro';
 import GaleriaPreview from '../components/GaleriaPreview.astro';
 import NoticiasPreview from 'src/components/NoticiasPreview.astro';
 import LayoutCompetencias from 'src/layouts/LayoutCompetencias.astro';
@@ -18,24 +17,22 @@ const pageDescription = 'Sitio oficial de la Asociación de Deportes Acuáticos 
     
     <main class="bg-slate-50">
         
-        {/* 1. DISCIPLINAS (Recibe la ola del Hero) */}
         <section id="disciplinas" class="disciplinas-section pb-16">
             <Disciplinas/>
         </section>
-		
 
         <CarouselColaboradores/>
 
-        {/* 2. NOTICIAS PREVIEW */}
         <section class="mb-20">
             <NoticiasPreview/>
         </section>
 
-        {/* 📐 PUENTE 2: El Divisor Deportivo Oscuro 
-            Un bloque oscuro inclinado que funciona como "limpiador de paladar" 
-            visual antes de entrar a la galería de fotos. */}
-        <section class="relative bg-slate-900 py-24 my-24 transform -skew-y-2 overflow-hidden shadow-2xl">
-            <div class="absolute inset-0 opacity-10 bg-[url('/grid-pattern.svg')]"></div>
+        <section class="relative py-24 my-24 transform -skew-y-2 overflow-hidden shadow-2xl">
+    {/* Imagen de fondo con efecto parallax */}
+    <div class="absolute inset-0 bg-cover bg-center bg-fixed bg-[url('/src/assets/heroCarousel/pool.jpg')]"></div>
+    
+    {/* Overlay oscuro para que el texto sea legible */}
+    <div class="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-adadet-dark/80"></div>
             
             <div class="transform skew-y-2 max-w-4xl mx-auto px-4 text-center relative z-10">
                 <h2 class="text-3xl md:text-4xl font-black font-display text-white mb-4 uppercase tracking-tight">
@@ -47,7 +44,6 @@ const pageDescription = 'Sitio oficial de la Asociación de Deportes Acuáticos 
             </div>
         </section>
 
-        {/* 3. GALERÍA PREVIEW */}
         <section id="galeria" class="galeria-preview-section">
             <GaleriaPreview/>
         </section>
