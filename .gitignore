@@ -28,3 +28,14 @@ HERO_CAROUSEL_README.md
 .vercel
 
 .vercel
+
+# =========================
+# Herramientas de IA Local (OpenCode)
+# =========================
+.opencode/
+opencode.json
+AGENTS.md
+
+# Engram AI agent memory
+.engram/
+
