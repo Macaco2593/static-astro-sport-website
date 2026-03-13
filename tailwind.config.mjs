@@ -13,9 +13,9 @@ export default {
 				}
 			},
 			fontFamily: {
-				// Una fuente moderna y deportiva
+				// Fuentes del sitio
 				sans: ['Inter', 'system-ui', 'sans-serif'],
-				display: ['Montserrat', 'system-ui', 'sans-serif'], // Para títulos grandes
+				display: ['Montserrat', 'system-ui', 'sans-serif'],
 			},
             backgroundImage: {
                 'gradient-water': 'linear-gradient(to right bottom, #0ea5e9, #2563eb)',
