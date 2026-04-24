@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-03-09T22:21:18.537Z",
+  "ultimaActualizacion": "2026-04-24T18:40:42.859Z",
   "categorias": [
     {
       "id": "infantil-a",
@@ -13,11 +13,11 @@
               "club": "HC",
               "edad": 11,
               "marca": {
-                "tiempoTexto": "   30,48",
-                "tiempoMilisegundos": 30480,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   30,14",
+                "tiempoMilisegundos": 30140,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -25,11 +25,11 @@
               "club": "CASAP",
               "edad": 11,
               "marca": {
-                "tiempoTexto": "   34,08",
-                "tiempoMilisegundos": 34080,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   34,00",
+                "tiempoMilisegundos": 34000,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -49,11 +49,11 @@
               "club": "CASAP",
               "edad": 11,
               "marca": {
-                "tiempoTexto": "   35,93",
-                "tiempoMilisegundos": 35930,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   36,18",
+                "tiempoMilisegundos": 36180,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -61,11 +61,23 @@
               "club": "CCPE",
               "edad": 10,
               "marca": {
-                "tiempoTexto": "   36,04",
-                "tiempoMilisegundos": 36040,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   36,20",
+                "tiempoMilisegundos": 36200,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
+              "nombre": "Antonio Jaimes",
+              "club": "HC",
+              "edad": 10,
+              "marca": {
+                "tiempoTexto": "   36,81",
+                "tiempoMilisegundos": 36810,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -79,18 +91,6 @@
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
               }
-            },
-            {
-              "nombre": "Antonio Jaimes",
-              "club": "HC",
-              "edad": 10,
-              "marca": {
-                "tiempoTexto": "   39,19",
-                "tiempoMilisegundos": 39190,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
             }
           ],
           "femenino": [
@@ -99,11 +99,11 @@
               "club": "FENIX",
               "edad": 11,
               "marca": {
-                "tiempoTexto": "   33,37",
-                "tiempoMilisegundos": 33370,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   33,15",
+                "tiempoMilisegundos": 33150,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -111,11 +111,11 @@
               "club": "HC",
               "edad": 11,
               "marca": {
-                "tiempoTexto": "   34,05",
-                "tiempoMilisegundos": 34050,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   34,60",
+                "tiempoMilisegundos": 34600,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -135,23 +135,11 @@
               "club": "SIDNE",
               "edad": 11,
               "marca": {
-                "tiempoTexto": "   35,43",
-                "tiempoMilisegundos": 35430,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
-              "nombre": "Miranda Mora",
-              "club": "CCPE",
-              "edad": 10,
-              "marca": {
-                "tiempoTexto": "   38,31",
-                "tiempoMilisegundos": 38310,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   35,35",
+                "tiempoMilisegundos": 35350,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -159,11 +147,23 @@
               "club": "CASAP",
               "edad": 11,
               "marca": {
-                "tiempoTexto": "   38,74",
-                "tiempoMilisegundos": 38740,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   38,90",
+                "tiempoMilisegundos": 38900,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
+              "nombre": "Miranda Mora",
+              "club": "CCPE",
+              "edad": 10,
+              "marca": {
+                "tiempoTexto": "   38,99",
+                "tiempoMilisegundos": 38990,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -171,11 +171,11 @@
               "club": "CASAP",
               "edad": 10,
               "marca": {
-                "tiempoTexto": "   45,46",
-                "tiempoMilisegundos": 45460,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   43,95",
+                "tiempoMilisegundos": 43950,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             }
           ]
@@ -188,11 +188,11 @@
               "club": "HC",
               "edad": 11,
               "marca": {
-                "tiempoTexto": " 1:07,06",
-                "tiempoMilisegundos": 67060,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:06,50",
+                "tiempoMilisegundos": 66500,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -260,25 +260,37 @@
               "club": "HC",
               "edad": 10,
               "marca": {
-                "tiempoTexto": " 1:26,10",
-                "tiempoMilisegundos": 86100,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:26,69",
+                "tiempoMilisegundos": 86690,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             }
           ],
           "femenino": [
             {
+              "nombre": "Dulce Mora",
+              "club": "FENIX",
+              "edad": 11,
+              "marca": {
+                "tiempoTexto": " 1:15,21",
+                "tiempoMilisegundos": 75210,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
               "nombre": "Sophia Neira",
               "club": "HC",
               "edad": 11,
               "marca": {
-                "tiempoTexto": " 1:13,93",
-                "tiempoMilisegundos": 73930,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:15,46",
+                "tiempoMilisegundos": 75460,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -288,18 +300,6 @@
               "marca": {
                 "tiempoTexto": " 1:16,87",
                 "tiempoMilisegundos": 76870,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
-              "nombre": "Dulce Mora",
-              "club": "FENIX",
-              "edad": 11,
-              "marca": {
-                "tiempoTexto": " 1:17,44",
-                "tiempoMilisegundos": 77440,
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
@@ -334,11 +334,11 @@
               "club": "CASAP",
               "edad": 11,
               "marca": {
-                "tiempoTexto": " 1:28,13",
-                "tiempoMilisegundos": 88130,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:27,47",
+                "tiempoMilisegundos": 87470,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -346,11 +346,11 @@
               "club": "CASAP",
               "edad": 10,
               "marca": {
-                "tiempoTexto": " 1:44,70",
-                "tiempoMilisegundos": 104700,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:39,28",
+                "tiempoMilisegundos": 99280,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             }
           ]
@@ -363,11 +363,11 @@
               "club": "HC",
               "edad": 11,
               "marca": {
-                "tiempoTexto": " 2:27,16",
-                "tiempoMilisegundos": 147160,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:27,65",
+                "tiempoMilisegundos": 147650,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -375,23 +375,11 @@
               "club": "CASAP",
               "edad": 11,
               "marca": {
-                "tiempoTexto": " 2:40,27",
-                "tiempoMilisegundos": 160270,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
-              "nombre": "Juan Labrador",
-              "club": "CCPE",
-              "edad": 11,
-              "marca": {
-                "tiempoTexto": " 2:48,46",
-                "tiempoMilisegundos": 168460,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:32,84",
+                "tiempoMilisegundos": 152840,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -404,6 +392,18 @@
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
+              }
+            },
+            {
+              "nombre": "Juan Labrador",
+              "club": "CCPE",
+              "edad": 11,
+              "marca": {
+                "tiempoTexto": " 2:49,79",
+                "tiempoMilisegundos": 169790,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -449,11 +449,11 @@
               "club": "HC",
               "edad": 11,
               "marca": {
-                "tiempoTexto": " 2:40,12",
-                "tiempoMilisegundos": 160120,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:41,11",
+                "tiempoMilisegundos": 161110,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -461,11 +461,11 @@
               "club": "SIDNE",
               "edad": 11,
               "marca": {
-                "tiempoTexto": " 2:45,97",
-                "tiempoMilisegundos": 165970,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:45,93",
+                "tiempoMilisegundos": 165930,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -473,11 +473,11 @@
               "club": "FENIX",
               "edad": 11,
               "marca": {
-                "tiempoTexto": " 2:52,14",
-                "tiempoMilisegundos": 172140,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:49,08",
+                "tiempoMilisegundos": 169080,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -521,11 +521,11 @@
               "club": "CASAP",
               "edad": 10,
               "marca": {
-                "tiempoTexto": " 3:42,02",
-                "tiempoMilisegundos": 222020,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 3:43,12",
+                "tiempoMilisegundos": 223120,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             }
           ]
@@ -672,11 +672,11 @@
               "club": "CCPE",
               "edad": 10,
               "marca": {
-                "tiempoTexto": " 6:23,16",
-                "tiempoMilisegundos": 383160,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 6:15,20",
+                "tiempoMilisegundos": 375200,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -737,11 +737,11 @@
               "club": "CASAP",
               "edad": 11,
               "marca": {
-                "tiempoTexto": "   45,38",
-                "tiempoMilisegundos": 45380,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   45,26",
+                "tiempoMilisegundos": 45260,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -769,24 +769,24 @@
               }
             },
             {
+              "nombre": "Antonio Jaimes",
+              "club": "HC",
+              "edad": 10,
+              "marca": {
+                "tiempoTexto": "   47,35",
+                "tiempoMilisegundos": 47350,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
               "nombre": "Renier Ramirez",
               "club": "CJUAN",
               "edad": 10,
               "marca": {
                 "tiempoTexto": "   47,43",
                 "tiempoMilisegundos": 47430,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
-              "nombre": "Antonio Jaimes",
-              "club": "HC",
-              "edad": 10,
-              "marca": {
-                "tiempoTexto": "   47,88",
-                "tiempoMilisegundos": 47880,
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
@@ -799,11 +799,11 @@
               "club": "FENIX",
               "edad": 11,
               "marca": {
-                "tiempoTexto": "   39,59",
-                "tiempoMilisegundos": 39590,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   39,26",
+                "tiempoMilisegundos": 39260,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -847,11 +847,11 @@
               "club": "CASAP",
               "edad": 11,
               "marca": {
-                "tiempoTexto": "   47,26",
-                "tiempoMilisegundos": 47260,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   46,88",
+                "tiempoMilisegundos": 46880,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -888,11 +888,11 @@
               "club": "CASAP",
               "edad": 11,
               "marca": {
-                "tiempoTexto": "   42,50",
-                "tiempoMilisegundos": 42500,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   41,20",
+                "tiempoMilisegundos": 41200,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -900,11 +900,23 @@
               "club": "HC",
               "edad": 11,
               "marca": {
-                "tiempoTexto": "   43,67",
-                "tiempoMilisegundos": 43670,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   44,39",
+                "tiempoMilisegundos": 44390,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
+              "nombre": "Antonio Jaimes",
+              "club": "HC",
+              "edad": 10,
+              "marca": {
+                "tiempoTexto": "   49,34",
+                "tiempoMilisegundos": 49340,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -912,11 +924,11 @@
               "club": "CASAP",
               "edad": 11,
               "marca": {
-                "tiempoTexto": "   49,19",
-                "tiempoMilisegundos": 49190,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   49,46",
+                "tiempoMilisegundos": 49460,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -938,18 +950,6 @@
               "marca": {
                 "tiempoTexto": "   51,91",
                 "tiempoMilisegundos": 51910,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
-              "nombre": "Antonio Jaimes",
-              "club": "HC",
-              "edad": 10,
-              "marca": {
-                "tiempoTexto": "   52,27",
-                "tiempoMilisegundos": 52270,
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
@@ -1046,11 +1046,11 @@
               "club": "CASAP",
               "edad": 10,
               "marca": {
-                "tiempoTexto": "   55,58",
-                "tiempoMilisegundos": 55580,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   55,79",
+                "tiempoMilisegundos": 55790,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             }
           ]
@@ -1063,11 +1063,11 @@
               "club": "HC",
               "edad": 11,
               "marca": {
-                "tiempoTexto": "   34,23",
-                "tiempoMilisegundos": 34230,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   33,01",
+                "tiempoMilisegundos": 33010,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -1075,11 +1075,11 @@
               "club": "CASAP",
               "edad": 11,
               "marca": {
-                "tiempoTexto": "   36,55",
-                "tiempoMilisegundos": 36550,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   34,93",
+                "tiempoMilisegundos": 34930,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -1087,11 +1087,23 @@
               "club": "CASAP",
               "edad": 11,
               "marca": {
-                "tiempoTexto": "   38,12",
-                "tiempoMilisegundos": 38120,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   35,84",
+                "tiempoMilisegundos": 35840,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
+              "nombre": "Antonio Jaimes",
+              "club": "HC",
+              "edad": 10,
+              "marca": {
+                "tiempoTexto": "   40,98",
+                "tiempoMilisegundos": 40980,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -1107,27 +1119,15 @@
               }
             },
             {
-              "nombre": "Antonio Jaimes",
-              "club": "HC",
-              "edad": 10,
-              "marca": {
-                "tiempoTexto": "   45,28",
-                "tiempoMilisegundos": 45280,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
               "nombre": "Juan Labrador",
               "club": "CCPE",
               "edad": 11,
               "marca": {
-                "tiempoTexto": "   46,89",
-                "tiempoMilisegundos": 46890,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   45,02",
+                "tiempoMilisegundos": 45020,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -1149,11 +1149,11 @@
               "club": "FENIX",
               "edad": 11,
               "marca": {
-                "tiempoTexto": "   36,54",
-                "tiempoMilisegundos": 36540,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   35,79",
+                "tiempoMilisegundos": 35790,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -1221,11 +1221,11 @@
               "club": "CCPE",
               "edad": 10,
               "marca": {
-                "tiempoTexto": "   57,01",
-                "tiempoMilisegundos": 57010,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   53,94",
+                "tiempoMilisegundos": 53940,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             }
           ]
@@ -1233,6 +1233,18 @@
         {
           "nombre": "200M COMBINADO",
           "masculino": [
+            {
+              "nombre": "Adrian Carreño",
+              "club": "CASAP",
+              "edad": 11,
+              "marca": {
+                "tiempoTexto": " 2:53,29",
+                "tiempoMilisegundos": 173290,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
             {
               "nombre": "Mathias Ochoa",
               "club": "HC",
@@ -1246,24 +1258,24 @@
               }
             },
             {
+              "nombre": "Leandro Cáceres",
+              "club": "CASAP",
+              "edad": 11,
+              "marca": {
+                "tiempoTexto": " 3:09,21",
+                "tiempoMilisegundos": 189210,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
               "nombre": "Renier Ramirez",
               "club": "CJUAN",
               "edad": 10,
               "marca": {
                 "tiempoTexto": " 3:19,30",
                 "tiempoMilisegundos": 199300,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
-              "nombre": "Leandro Cáceres",
-              "club": "CASAP",
-              "edad": 11,
-              "marca": {
-                "tiempoTexto": " 3:20,11",
-                "tiempoMilisegundos": 200110,
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
@@ -1348,11 +1360,11 @@
               "club": "CASAP",
               "edad": 11,
               "marca": {
-                "tiempoTexto": " 3:35,06",
-                "tiempoMilisegundos": 215060,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 3:35,65",
+                "tiempoMilisegundos": 215650,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -1383,11 +1395,11 @@
               "club": "DSCTA",
               "edad": 13,
               "marca": {
-                "tiempoTexto": "   27,49",
-                "tiempoMilisegundos": 27490,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   27,45",
+                "tiempoMilisegundos": 27450,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -1407,11 +1419,11 @@
               "club": "TSC",
               "edad": 12,
               "marca": {
-                "tiempoTexto": "   29,10",
-                "tiempoMilisegundos": 29100,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   29,62",
+                "tiempoMilisegundos": 29620,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -1443,11 +1455,11 @@
               "club": "CCPE",
               "edad": 13,
               "marca": {
-                "tiempoTexto": "   30,90",
-                "tiempoMilisegundos": 30900,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   31,40",
+                "tiempoMilisegundos": 31400,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -1455,11 +1467,11 @@
               "club": "DSCTA",
               "edad": 12,
               "marca": {
-                "tiempoTexto": "   31,05",
-                "tiempoMilisegundos": 31050,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   31,44",
+                "tiempoMilisegundos": 31440,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -1505,11 +1517,11 @@
               "club": "SIDNE",
               "edad": 13,
               "marca": {
-                "tiempoTexto": "   29,03",
-                "tiempoMilisegundos": 29030,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   29,35",
+                "tiempoMilisegundos": 29350,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -1517,11 +1529,11 @@
               "club": "TSC",
               "edad": 13,
               "marca": {
-                "tiempoTexto": "   29,76",
-                "tiempoMilisegundos": 29760,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   30,36",
+                "tiempoMilisegundos": 30360,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -1561,18 +1573,6 @@
               }
             },
             {
-              "nombre": "Gloria Novoa",
-              "club": "CCPE",
-              "edad": 13,
-              "marca": {
-                "tiempoTexto": "   32,39",
-                "tiempoMilisegundos": 32390,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
               "nombre": "Adriana Moreno",
               "club": "HC",
               "edad": 12,
@@ -1582,6 +1582,18 @@
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
+              }
+            },
+            {
+              "nombre": "Gloria Novoa",
+              "club": "CCPE",
+              "edad": 13,
+              "marca": {
+                "tiempoTexto": "   32,81",
+                "tiempoMilisegundos": 32810,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -1645,6 +1657,18 @@
               }
             },
             {
+              "nombre": "Camila Ramirez",
+              "club": "HC",
+              "edad": 12,
+              "marca": {
+                "tiempoTexto": "   36,23",
+                "tiempoMilisegundos": 36230,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
               "nombre": "Samantha Luna",
               "club": "DSCTA",
               "edad": 13,
@@ -1662,18 +1686,6 @@
           "nombre": "100M LIBRE",
           "masculino": [
             {
-              "nombre": "Arturo Zambrano",
-              "club": "DSCTA",
-              "edad": 13,
-              "marca": {
-                "tiempoTexto": " 1:02,32",
-                "tiempoMilisegundos": 62320,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
               "nombre": "Mathias Hernandez",
               "club": "TSC",
               "edad": 12,
@@ -1686,27 +1698,15 @@
               }
             },
             {
-              "nombre": "Aaron Chacon",
-              "club": "CJUAN",
+              "nombre": "Arturo Zambrano",
+              "club": "DSCTA",
               "edad": 13,
               "marca": {
-                "tiempoTexto": " 1:06,76",
-                "tiempoMilisegundos": 66760,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
-              "nombre": "Daniel Zambrano",
-              "club": "TSC",
-              "edad": 13,
-              "marca": {
-                "tiempoTexto": " 1:07,92",
-                "tiempoMilisegundos": 67920,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:03,75",
+                "tiempoMilisegundos": 63750,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -1722,6 +1722,18 @@
               }
             },
             {
+              "nombre": "Aaron Chacon",
+              "club": "CJUAN",
+              "edad": 13,
+              "marca": {
+                "tiempoTexto": " 1:08,01",
+                "tiempoMilisegundos": 68010,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
               "nombre": "Maximiliano Gil",
               "club": "CCPE",
               "edad": 13,
@@ -1734,15 +1746,27 @@
               }
             },
             {
+              "nombre": "Daniel Zambrano",
+              "club": "TSC",
+              "edad": 13,
+              "marca": {
+                "tiempoTexto": " 1:09,13",
+                "tiempoMilisegundos": 69130,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
               "nombre": "Juan Bonillo",
               "club": "CASAP",
               "edad": 12,
               "marca": {
-                "tiempoTexto": " 1:16,14",
-                "tiempoMilisegundos": 76140,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:14,83",
+                "tiempoMilisegundos": 74830,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -1800,11 +1824,11 @@
               "club": "TSC",
               "edad": 13,
               "marca": {
-                "tiempoTexto": " 1:05,98",
-                "tiempoMilisegundos": 65980,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:06,04",
+                "tiempoMilisegundos": 66040,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -1856,24 +1880,24 @@
               }
             },
             {
+              "nombre": "Isabella Chaparro",
+              "club": "CCPE",
+              "edad": 13,
+              "marca": {
+                "tiempoTexto": " 1:15,72",
+                "tiempoMilisegundos": 75720,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
               "nombre": "Sofia Aparicio",
               "club": "DSCTA",
               "edad": 13,
               "marca": {
                 "tiempoTexto": " 1:16,30",
                 "tiempoMilisegundos": 76300,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
-              "nombre": "Isabella Chaparro",
-              "club": "CCPE",
-              "edad": 13,
-              "marca": {
-                "tiempoTexto": " 1:17,50",
-                "tiempoMilisegundos": 77500,
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
@@ -1902,6 +1926,18 @@
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
               }
+            },
+            {
+              "nombre": "Camila Ramirez",
+              "club": "HC",
+              "edad": 12,
+              "marca": {
+                "tiempoTexto": " 1:21,89",
+                "tiempoMilisegundos": 81890,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
             }
           ]
         },
@@ -1913,11 +1949,11 @@
               "club": "DSCTA",
               "edad": 13,
               "marca": {
-                "tiempoTexto": " 2:19,84",
-                "tiempoMilisegundos": 139840,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:22,08",
+                "tiempoMilisegundos": 142080,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -1937,11 +1973,11 @@
               "club": "CJUAN",
               "edad": 13,
               "marca": {
-                "tiempoTexto": " 2:27,64",
-                "tiempoMilisegundos": 147640,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:27,42",
+                "tiempoMilisegundos": 147420,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -1999,11 +2035,11 @@
               "club": "CCPE",
               "edad": 13,
               "marca": {
-                "tiempoTexto": " 2:19,48",
-                "tiempoMilisegundos": 139480,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:21,82",
+                "tiempoMilisegundos": 141820,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -2011,11 +2047,11 @@
               "club": "TSC",
               "edad": 13,
               "marca": {
-                "tiempoTexto": " 2:27,82",
-                "tiempoMilisegundos": 147820,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:27,92",
+                "tiempoMilisegundos": 147920,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -2035,11 +2071,23 @@
               "club": "CCPE",
               "edad": 13,
               "marca": {
-                "tiempoTexto": " 2:35,85",
-                "tiempoMilisegundos": 155850,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:33,56",
+                "tiempoMilisegundos": 153560,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
+              "nombre": "Samara Vega",
+              "club": "DSCTA",
+              "edad": 12,
+              "marca": {
+                "tiempoTexto": " 2:33,63",
+                "tiempoMilisegundos": 153630,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -2049,18 +2097,6 @@
               "marca": {
                 "tiempoTexto": " 2:35,88",
                 "tiempoMilisegundos": 155880,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
-              "nombre": "Samara Vega",
-              "club": "DSCTA",
-              "edad": 12,
-              "marca": {
-                "tiempoTexto": " 2:38,63",
-                "tiempoMilisegundos": 158630,
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
@@ -2083,11 +2119,11 @@
               "club": "CCPE",
               "edad": 13,
               "marca": {
-                "tiempoTexto": " 2:49,15",
-                "tiempoMilisegundos": 169150,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:47,17",
+                "tiempoMilisegundos": 167170,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -2172,11 +2208,11 @@
               "club": "TSC",
               "edad": 13,
               "marca": {
-                "tiempoTexto": " 5:15,77",
-                "tiempoMilisegundos": 315770,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 5:21,46",
+                "tiempoMilisegundos": 321460,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             }
           ],
@@ -2186,11 +2222,23 @@
               "club": "TSC",
               "edad": 13,
               "marca": {
-                "tiempoTexto": " 5:08,62",
-                "tiempoMilisegundos": 308620,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 5:13,99",
+                "tiempoMilisegundos": 313990,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
+              "nombre": "Isabella Rojas",
+              "club": "CASAP",
+              "edad": 13,
+              "marca": {
+                "tiempoTexto": " 5:17,49",
+                "tiempoMilisegundos": 317490,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -2206,27 +2254,15 @@
               }
             },
             {
-              "nombre": "Isabella Rojas",
-              "club": "CASAP",
-              "edad": 13,
-              "marca": {
-                "tiempoTexto": " 5:23,02",
-                "tiempoMilisegundos": 323020,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
               "nombre": "Samara Vega",
               "club": "DSCTA",
               "edad": 12,
               "marca": {
-                "tiempoTexto": " 5:24,82",
-                "tiempoMilisegundos": 324820,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 5:25,52",
+                "tiempoMilisegundos": 325520,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -2309,24 +2345,24 @@
               }
             },
             {
+              "nombre": "Isabella Rojas",
+              "club": "CASAP",
+              "edad": 13,
+              "marca": {
+                "tiempoTexto": "10:47,40",
+                "tiempoMilisegundos": 647400,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
               "nombre": "Samara Vega",
               "club": "DSCTA",
               "edad": 12,
               "marca": {
                 "tiempoTexto": "10:54,80",
                 "tiempoMilisegundos": 654800,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
-              "nombre": "Isabella Rojas",
-              "club": "CASAP",
-              "edad": 13,
-              "marca": {
-                "tiempoTexto": "10:57,94",
-                "tiempoMilisegundos": 657940,
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
@@ -2386,27 +2422,27 @@
               }
             },
             {
-              "nombre": "Mathias Hernandez",
-              "club": "TSC",
-              "edad": 12,
-              "marca": {
-                "tiempoTexto": "   34,69",
-                "tiempoMilisegundos": 34690,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
               "nombre": "Arturo Zambrano",
               "club": "DSCTA",
               "edad": 13,
               "marca": {
-                "tiempoTexto": "   35,59",
-                "tiempoMilisegundos": 35590,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   35,12",
+                "tiempoMilisegundos": 35120,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
+              "nombre": "Mathias Hernandez",
+              "club": "TSC",
+              "edad": 12,
+              "marca": {
+                "tiempoTexto": "   35,17",
+                "tiempoMilisegundos": 35170,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -2414,11 +2450,11 @@
               "club": "CJUAN",
               "edad": 13,
               "marca": {
-                "tiempoTexto": "   36,22",
-                "tiempoMilisegundos": 36220,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   36,70",
+                "tiempoMilisegundos": 36700,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -2443,6 +2479,18 @@
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
+              }
+            },
+            {
+              "nombre": "Maximiliano Gil",
+              "club": "CCPE",
+              "edad": 13,
+              "marca": {
+                "tiempoTexto": "   41,56",
+                "tiempoMilisegundos": 41560,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -2505,6 +2553,18 @@
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
+              }
+            },
+            {
+              "nombre": "Rebecca Perez",
+              "club": "TSC",
+              "edad": 13,
+              "marca": {
+                "tiempoTexto": "   38,85",
+                "tiempoMilisegundos": 38850,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -2625,11 +2685,11 @@
               "club": "DSCTA",
               "edad": 13,
               "marca": {
-                "tiempoTexto": " 1:15,30",
-                "tiempoMilisegundos": 75300,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:15,74",
+                "tiempoMilisegundos": 75740,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -2736,15 +2796,27 @@
               }
             },
             {
+              "nombre": "Arturo Zambrano",
+              "club": "DSCTA",
+              "edad": 13,
+              "marca": {
+                "tiempoTexto": " 2:43,67",
+                "tiempoMilisegundos": 163670,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
               "nombre": "Juan Bonillo",
               "club": "CASAP",
               "edad": 12,
               "marca": {
-                "tiempoTexto": " 3:10,04",
-                "tiempoMilisegundos": 190040,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 3:08,90",
+                "tiempoMilisegundos": 188900,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             }
           ],
@@ -2772,6 +2844,18 @@
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
               }
+            },
+            {
+              "nombre": "Isabella Chaparro",
+              "club": "CCPE",
+              "edad": 13,
+              "marca": {
+                "tiempoTexto": " 3:25,72",
+                "tiempoMilisegundos": 205720,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
             }
           ]
         },
@@ -2783,11 +2867,11 @@
               "club": "DSCTA",
               "edad": 13,
               "marca": {
-                "tiempoTexto": "   34,86",
-                "tiempoMilisegundos": 34860,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   35,00",
+                "tiempoMilisegundos": 35000,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -2857,11 +2941,11 @@
               "club": "SIDNE",
               "edad": 13,
               "marca": {
-                "tiempoTexto": "   37,28",
-                "tiempoMilisegundos": 37280,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   37,98",
+                "tiempoMilisegundos": 37980,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -2869,11 +2953,11 @@
               "club": "SIDNE",
               "edad": 13,
               "marca": {
-                "tiempoTexto": "   40,92",
-                "tiempoMilisegundos": 40920,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   41,01",
+                "tiempoMilisegundos": 41010,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -2994,23 +3078,11 @@
               "club": "DSCTA",
               "edad": 13,
               "marca": {
-                "tiempoTexto": " 1:15,37",
-                "tiempoMilisegundos": 75370,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
-              "nombre": "Daniel Zambrano",
-              "club": "TSC",
-              "edad": 13,
-              "marca": {
-                "tiempoTexto": " 1:24,31",
-                "tiempoMilisegundos": 84310,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:15,84",
+                "tiempoMilisegundos": 75840,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -3023,6 +3095,18 @@
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
+              }
+            },
+            {
+              "nombre": "Daniel Zambrano",
+              "club": "TSC",
+              "edad": 13,
+              "marca": {
+                "tiempoTexto": " 1:26,14",
+                "tiempoMilisegundos": 86140,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -3145,11 +3229,11 @@
               "club": "DSCTA",
               "edad": 13,
               "marca": {
-                "tiempoTexto": " 2:47,47",
-                "tiempoMilisegundos": 167470,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:46,59",
+                "tiempoMilisegundos": 166590,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -3157,11 +3241,11 @@
               "club": "TSC",
               "edad": 13,
               "marca": {
-                "tiempoTexto": " 3:02,24",
-                "tiempoMilisegundos": 182240,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:58,40",
+                "tiempoMilisegundos": 178400,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -3231,11 +3315,11 @@
               "club": "HC",
               "edad": 12,
               "marca": {
-                "tiempoTexto": " 3:12,42",
-                "tiempoMilisegundos": 192420,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 3:15,26",
+                "tiempoMilisegundos": 195260,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -3243,11 +3327,11 @@
               "club": "CCPE",
               "edad": 13,
               "marca": {
-                "tiempoTexto": " 3:18,50",
-                "tiempoMilisegundos": 198500,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 3:20,14",
+                "tiempoMilisegundos": 200140,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -3272,23 +3356,11 @@
               "club": "DSCTA",
               "edad": 13,
               "marca": {
-                "tiempoTexto": "   30,06",
-                "tiempoMilisegundos": 30060,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
-              "nombre": "Mathias Hernandez",
-              "club": "TSC",
-              "edad": 12,
-              "marca": {
-                "tiempoTexto": "   31,81",
-                "tiempoMilisegundos": 31810,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   29,70",
+                "tiempoMilisegundos": 29700,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -3308,11 +3380,23 @@
               "club": "CJUAN",
               "edad": 13,
               "marca": {
-                "tiempoTexto": "   33,12",
-                "tiempoMilisegundos": 33120,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   32,44",
+                "tiempoMilisegundos": 32439.999999999996,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
+              "nombre": "Mathias Hernandez",
+              "club": "TSC",
+              "edad": 12,
+              "marca": {
+                "tiempoTexto": "   32,45",
+                "tiempoMilisegundos": 32450.000000000004,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -3346,11 +3430,11 @@
               "club": "TSC",
               "edad": 13,
               "marca": {
-                "tiempoTexto": "   32,71",
-                "tiempoMilisegundos": 32710,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   32,60",
+                "tiempoMilisegundos": 32600,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -3358,11 +3442,11 @@
               "club": "CCPE",
               "edad": 13,
               "marca": {
-                "tiempoTexto": "   33,11",
-                "tiempoMilisegundos": 33110,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   33,32",
+                "tiempoMilisegundos": 33320,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -3390,6 +3474,18 @@
               }
             },
             {
+              "nombre": "Samara Vega",
+              "club": "DSCTA",
+              "edad": 12,
+              "marca": {
+                "tiempoTexto": "   35,92",
+                "tiempoMilisegundos": 35920,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
               "nombre": "Camila Soto",
               "club": "DSCTA",
               "edad": 12,
@@ -3402,15 +3498,15 @@
               }
             },
             {
-              "nombre": "Samara Vega",
-              "club": "DSCTA",
-              "edad": 12,
+              "nombre": "Isabella Rojas",
+              "club": "CASAP",
+              "edad": 13,
               "marca": {
-                "tiempoTexto": "   36,23",
-                "tiempoMilisegundos": 36230,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   39,03",
+                "tiempoMilisegundos": 39030,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -3483,11 +3579,11 @@
               "club": "TSC",
               "edad": 12,
               "marca": {
-                "tiempoTexto": " 1:12,73",
-                "tiempoMilisegundos": 72730,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:10,52",
+                "tiempoMilisegundos": 70520,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -3495,27 +3591,15 @@
               "club": "CCPE",
               "edad": 13,
               "marca": {
-                "tiempoTexto": " 1:27,80",
-                "tiempoMilisegundos": 87800,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:25,13",
+                "tiempoMilisegundos": 85130,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             }
           ],
           "femenino": [
-            {
-              "nombre": "Veronica Ruiz",
-              "club": "CCPE",
-              "edad": 13,
-              "marca": {
-                "tiempoTexto": " 1:15,66",
-                "tiempoMilisegundos": 75660,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
             {
               "nombre": "Ashlie Vivas",
               "club": "TSC",
@@ -3526,6 +3610,18 @@
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
+              }
+            },
+            {
+              "nombre": "Veronica Ruiz",
+              "club": "CCPE",
+              "edad": 13,
+              "marca": {
+                "tiempoTexto": " 1:16,56",
+                "tiempoMilisegundos": 76560,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -3598,11 +3694,11 @@
               "club": "CASAP",
               "edad": 12,
               "marca": {
-                "tiempoTexto": " 3:20,95",
-                "tiempoMilisegundos": 200950,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 3:23,75",
+                "tiempoMilisegundos": 203750,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             }
           ],
@@ -3618,6 +3714,18 @@
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
               }
+            },
+            {
+              "nombre": "Alejandra Osorio",
+              "club": "CASAP",
+              "edad": 13,
+              "marca": {
+                "tiempoTexto": " 3:36,89",
+                "tiempoMilisegundos": 216890,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
             }
           ]
         },
@@ -3629,11 +3737,11 @@
               "club": "DSCTA",
               "edad": 13,
               "marca": {
-                "tiempoTexto": " 2:32,31",
-                "tiempoMilisegundos": 152310,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:27,87",
+                "tiempoMilisegundos": 147870,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -3641,11 +3749,11 @@
               "club": "TSC",
               "edad": 13,
               "marca": {
-                "tiempoTexto": " 2:44,52",
-                "tiempoMilisegundos": 164520,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:47,50",
+                "tiempoMilisegundos": 167500,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -3665,11 +3773,11 @@
               "club": "CASAP",
               "edad": 12,
               "marca": {
-                "tiempoTexto": " 3:13,06",
-                "tiempoMilisegundos": 193060,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 3:14,08",
+                "tiempoMilisegundos": 194080,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             }
           ],
@@ -3679,11 +3787,11 @@
               "club": "SIDNE",
               "edad": 13,
               "marca": {
-                "tiempoTexto": " 2:38,96",
-                "tiempoMilisegundos": 158960,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:42,00",
+                "tiempoMilisegundos": 162000,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -3763,11 +3871,11 @@
               "club": "CASAP",
               "edad": 13,
               "marca": {
-                "tiempoTexto": " 3:13,34",
-                "tiempoMilisegundos": 193340,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 3:15,03",
+                "tiempoMilisegundos": 195030,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -3818,18 +3926,6 @@
           "nombre": "50M LIBRE",
           "masculino": [
             {
-              "nombre": "Luis Medina",
-              "club": "DSCTA",
-              "edad": 15,
-              "marca": {
-                "tiempoTexto": "   26,75",
-                "tiempoMilisegundos": 26750,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
               "nombre": "Jorge Moran",
               "club": "DSCTA",
               "edad": 14,
@@ -3842,27 +3938,27 @@
               }
             },
             {
-              "nombre": "Nelson Contreras",
+              "nombre": "Luis Medina",
               "club": "DSCTA",
-              "edad": 14,
+              "edad": 15,
               "marca": {
-                "tiempoTexto": "   27,63",
-                "tiempoMilisegundos": 27630,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   27,48",
+                "tiempoMilisegundos": 27480,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
-              "nombre": "Nicolás Acevedo",
-              "club": "CASAP",
-              "edad": 14,
+              "nombre": "Santiago Contreras",
+              "club": "DSCTA",
+              "edad": 15,
               "marca": {
-                "tiempoTexto": "   27,69",
-                "tiempoMilisegundos": 27690,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   27,57",
+                "tiempoMilisegundos": 27570,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -3878,6 +3974,18 @@
               }
             },
             {
+              "nombre": "Nicolás Acevedo",
+              "club": "CASAP",
+              "edad": 14,
+              "marca": {
+                "tiempoTexto": "   28,10",
+                "tiempoMilisegundos": 28100,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
               "nombre": "Juan Chacon",
               "club": "DSCTA",
               "edad": 15,
@@ -3887,6 +3995,18 @@
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
+              }
+            },
+            {
+              "nombre": "Nelson Contreras",
+              "club": "DSCTA",
+              "edad": 14,
+              "marca": {
+                "tiempoTexto": "   28,30",
+                "tiempoMilisegundos": 28300,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -3926,15 +4046,15 @@
               }
             },
             {
-              "nombre": "Santiago Contreras",
-              "club": "DSCTA",
-              "edad": 15,
+              "nombre": "Juan Saavedra",
+              "club": "CASAP",
+              "edad": 14,
               "marca": {
-                "tiempoTexto": "   29,95",
-                "tiempoMilisegundos": 29950,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   30,20",
+                "tiempoMilisegundos": 30200,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -4016,11 +4136,11 @@
               "club": "TSC",
               "edad": 14,
               "marca": {
-                "tiempoTexto": "   29,34",
-                "tiempoMilisegundos": 29340,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   29,77",
+                "tiempoMilisegundos": 29770,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -4028,23 +4148,11 @@
               "club": "TSC",
               "edad": 15,
               "marca": {
-                "tiempoTexto": "   30,52",
-                "tiempoMilisegundos": 30520,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
-              "nombre": "Paula Laguado",
-              "club": "CASAP",
-              "edad": 14,
-              "marca": {
-                "tiempoTexto": "   30,92",
-                "tiempoMilisegundos": 30920,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   31,12",
+                "tiempoMilisegundos": 31120,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -4069,6 +4177,18 @@
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
+              }
+            },
+            {
+              "nombre": "Paula Laguado",
+              "club": "CASAP",
+              "edad": 14,
+              "marca": {
+                "tiempoTexto": "   31,54",
+                "tiempoMilisegundos": 31540,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -4100,11 +4220,11 @@
               "club": "SIDNE",
               "edad": 14,
               "marca": {
-                "tiempoTexto": "   33,79",
-                "tiempoMilisegundos": 33790,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   33,99",
+                "tiempoMilisegundos": 33990,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -4148,11 +4268,11 @@
               "club": "CCPE",
               "edad": 14,
               "marca": {
-                "tiempoTexto": "   35,26",
-                "tiempoMilisegundos": 35260,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   35,91",
+                "tiempoMilisegundos": 35910,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -4197,18 +4317,6 @@
           "nombre": "100M LIBRE",
           "masculino": [
             {
-              "nombre": "Luis Medina",
-              "club": "DSCTA",
-              "edad": 15,
-              "marca": {
-                "tiempoTexto": "   58,76",
-                "tiempoMilisegundos": 58760,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
               "nombre": "Jorge Moran",
               "club": "DSCTA",
               "edad": 14,
@@ -4218,6 +4326,18 @@
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
+              }
+            },
+            {
+              "nombre": "Luis Medina",
+              "club": "DSCTA",
+              "edad": 15,
+              "marca": {
+                "tiempoTexto": "   58,91",
+                "tiempoMilisegundos": 58910,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -4245,6 +4365,18 @@
               }
             },
             {
+              "nombre": "Sebastian Contreras",
+              "club": "DSCTA",
+              "edad": 14,
+              "marca": {
+                "tiempoTexto": " 1:02,41",
+                "tiempoMilisegundos": 62410,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
               "nombre": "Juan Chacon",
               "club": "DSCTA",
               "edad": 15,
@@ -4266,6 +4398,18 @@
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
+              }
+            },
+            {
+              "nombre": "Rodolfo Silva",
+              "club": "CASAP",
+              "edad": 15,
+              "marca": {
+                "tiempoTexto": " 1:03,71",
+                "tiempoMilisegundos": 63710,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -4309,11 +4453,11 @@
               "club": "SIDNE",
               "edad": 15,
               "marca": {
-                "tiempoTexto": " 1:05,91",
-                "tiempoMilisegundos": 65910,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:06,78",
+                "tiempoMilisegundos": 66780,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -4359,11 +4503,11 @@
               "club": "CASAP",
               "edad": 14,
               "marca": {
-                "tiempoTexto": " 1:01,05",
-                "tiempoMilisegundos": 61050,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:02,32",
+                "tiempoMilisegundos": 62320,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -4371,35 +4515,11 @@
               "club": "TSC",
               "edad": 14,
               "marca": {
-                "tiempoTexto": " 1:05,10",
-                "tiempoMilisegundos": 65100,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
-              "nombre": "Soliand Perdomo",
-              "club": "DSCTA",
-              "edad": 14,
-              "marca": {
-                "tiempoTexto": " 1:06,85",
-                "tiempoMilisegundos": 66850,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
-              "nombre": "Susan Duque",
-              "club": "TSC",
-              "edad": 15,
-              "marca": {
-                "tiempoTexto": " 1:06,91",
-                "tiempoMilisegundos": 66910,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:05,91",
+                "tiempoMilisegundos": 65910,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -4415,24 +4535,48 @@
               }
             },
             {
+              "nombre": "Susan Duque",
+              "club": "TSC",
+              "edad": 15,
+              "marca": {
+                "tiempoTexto": " 1:07,62",
+                "tiempoMilisegundos": 67620,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
+              "nombre": "Soliand Perdomo",
+              "club": "DSCTA",
+              "edad": 14,
+              "marca": {
+                "tiempoTexto": " 1:08,24",
+                "tiempoMilisegundos": 68240,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
+              "nombre": "Valeria Correa",
+              "club": "HC",
+              "edad": 14,
+              "marca": {
+                "tiempoTexto": " 1:08,86",
+                "tiempoMilisegundos": 68860,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
               "nombre": "Angie Garcia",
               "club": "SIDNE",
               "edad": 14,
               "marca": {
                 "tiempoTexto": " 1:11,24",
                 "tiempoMilisegundos": 71240,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
-              "nombre": "Maria Mora",
-              "club": "DSCTA",
-              "edad": 15,
-              "marca": {
-                "tiempoTexto": " 1:13,12",
-                "tiempoMilisegundos": 73120,
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
@@ -4451,6 +4595,30 @@
               }
             },
             {
+              "nombre": "Maria Mora",
+              "club": "DSCTA",
+              "edad": 15,
+              "marca": {
+                "tiempoTexto": " 1:14,52",
+                "tiempoMilisegundos": 74520,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
+              "nombre": "Sarihany Vivas",
+              "club": "SIDNE",
+              "edad": 14,
+              "marca": {
+                "tiempoTexto": " 1:15,94",
+                "tiempoMilisegundos": 75940,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
               "nombre": "Vanessa Vanegas",
               "club": "CCPE",
               "edad": 14,
@@ -4463,15 +4631,15 @@
               }
             },
             {
-              "nombre": "Sarihany Vivas",
-              "club": "SIDNE",
+              "nombre": "Maria Duran",
+              "club": "CCPE",
               "edad": 14,
               "marca": {
-                "tiempoTexto": " 1:17,02",
-                "tiempoMilisegundos": 77020,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:18,93",
+                "tiempoMilisegundos": 78930,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -4515,6 +4683,18 @@
         {
           "nombre": "200M LIBRE",
           "masculino": [
+            {
+              "nombre": "Jorge Moran",
+              "club": "DSCTA",
+              "edad": 14,
+              "marca": {
+                "tiempoTexto": " 2:11,77",
+                "tiempoMilisegundos": 131770,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
             {
               "nombre": "Nicolás Acevedo",
               "club": "CASAP",
@@ -4576,18 +4756,6 @@
               }
             },
             {
-              "nombre": "Ricardo Gamez",
-              "club": "CJUAN",
-              "edad": 15,
-              "marca": {
-                "tiempoTexto": " 2:20,88",
-                "tiempoMilisegundos": 140880,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
               "nombre": "Gabriel Sanchez",
               "club": "CJUAN",
               "edad": 14,
@@ -4597,6 +4765,18 @@
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
+              }
+            },
+            {
+              "nombre": "Ricardo Gamez",
+              "club": "CJUAN",
+              "edad": 15,
+              "marca": {
+                "tiempoTexto": " 2:23,70",
+                "tiempoMilisegundos": 143700,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -4710,24 +4890,24 @@
           ],
           "femenino": [
             {
+              "nombre": "Maria Guerrero",
+              "club": "TSC",
+              "edad": 14,
+              "marca": {
+                "tiempoTexto": " 2:25,12",
+                "tiempoMilisegundos": 145120,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
               "nombre": "Susan Duque",
               "club": "TSC",
               "edad": 15,
               "marca": {
                 "tiempoTexto": " 2:25,39",
                 "tiempoMilisegundos": 145390,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
-              "nombre": "Maria Guerrero",
-              "club": "TSC",
-              "edad": 14,
-              "marca": {
-                "tiempoTexto": " 2:25,97",
-                "tiempoMilisegundos": 145970,
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
@@ -4750,11 +4930,11 @@
               "club": "DSCTA",
               "edad": 15,
               "marca": {
-                "tiempoTexto": " 2:37,29",
-                "tiempoMilisegundos": 157290,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:39,49",
+                "tiempoMilisegundos": 159490,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -4762,11 +4942,23 @@
               "club": "SIDNE",
               "edad": 14,
               "marca": {
-                "tiempoTexto": " 2:47,15",
-                "tiempoMilisegundos": 167150,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:47,59",
+                "tiempoMilisegundos": 167590,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
+              "nombre": "Vanessa Vanegas",
+              "club": "CCPE",
+              "edad": 14,
+              "marca": {
+                "tiempoTexto": " 2:49,57",
+                "tiempoMilisegundos": 169570,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -4955,24 +5147,24 @@
               }
             },
             {
+              "nombre": "Emmanuel Latorre",
+              "club": "TSC",
+              "edad": 14,
+              "marca": {
+                "tiempoTexto": " 5:30,11",
+                "tiempoMilisegundos": 330110,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
               "nombre": "Santiago Zipamoncha",
               "club": "CJUAN",
               "edad": 14,
               "marca": {
                 "tiempoTexto": " 5:33,16",
                 "tiempoMilisegundos": 333160,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
-              "nombre": "Emmanuel Latorre",
-              "club": "TSC",
-              "edad": 14,
-              "marca": {
-                "tiempoTexto": " 5:35,44",
-                "tiempoMilisegundos": 335440,
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
@@ -4997,11 +5189,11 @@
               "club": "DSCTA",
               "edad": 14,
               "marca": {
-                "tiempoTexto": " 5:14,58",
-                "tiempoMilisegundos": 314580,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 5:14,93",
+                "tiempoMilisegundos": 314930,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -5062,6 +5254,18 @@
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
+              }
+            },
+            {
+              "nombre": "Maria Duran",
+              "club": "CCPE",
+              "edad": 14,
+              "marca": {
+                "tiempoTexto": " 6:10,96",
+                "tiempoMilisegundos": 370960,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             }
           ]
@@ -5154,6 +5358,18 @@
               }
             },
             {
+              "nombre": "Emmanuel Latorre",
+              "club": "TSC",
+              "edad": 14,
+              "marca": {
+                "tiempoTexto": "11:13,46",
+                "tiempoMilisegundos": 673460,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
               "nombre": "Santiago Zipamoncha",
               "club": "CJUAN",
               "edad": 14,
@@ -5184,11 +5400,11 @@
               "club": "CJUAN",
               "edad": 14,
               "marca": {
-                "tiempoTexto": "11:05,66",
-                "tiempoMilisegundos": 665660,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "11:06,32",
+                "tiempoMilisegundos": 666320,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -5204,18 +5420,6 @@
               }
             },
             {
-              "nombre": "Maria Mora",
-              "club": "DSCTA",
-              "edad": 15,
-              "marca": {
-                "tiempoTexto": "11:34,91",
-                "tiempoMilisegundos": 694910,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
               "nombre": "Nicole Paredes",
               "club": "MARLI",
               "edad": 15,
@@ -5225,6 +5429,18 @@
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
+              }
+            },
+            {
+              "nombre": "Maria Mora",
+              "club": "DSCTA",
+              "edad": 15,
+              "marca": {
+                "tiempoTexto": "11:45,35",
+                "tiempoMilisegundos": 705350,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             }
           ]
@@ -5285,11 +5501,11 @@
               "club": "DSCTA",
               "edad": 14,
               "marca": {
-                "tiempoTexto": "19:50,38",
-                "tiempoMilisegundos": 1190380,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "19:46,88",
+                "tiempoMilisegundos": 1186880,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -5419,11 +5635,11 @@
               "club": "DSCTA",
               "edad": 15,
               "marca": {
-                "tiempoTexto": "22:38,64",
-                "tiempoMilisegundos": 1358640,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "22:29,34",
+                "tiempoMilisegundos": 1349340,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -5472,11 +5688,11 @@
               "club": "DSCTA",
               "edad": 15,
               "marca": {
-                "tiempoTexto": "   31,78",
-                "tiempoMilisegundos": 31780,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   31,40",
+                "tiempoMilisegundos": 31400,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -5582,11 +5798,11 @@
               "club": "CASAP",
               "edad": 14,
               "marca": {
-                "tiempoTexto": "   32,42",
-                "tiempoMilisegundos": 32420,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   32,82",
+                "tiempoMilisegundos": 32820,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -5602,20 +5818,20 @@
               }
             },
             {
-              "nombre": "Letizia Galvis",
-              "club": "SIDNE",
+              "nombre": "Soliand Perdomo",
+              "club": "DSCTA",
               "edad": 14,
               "marca": {
-                "tiempoTexto": "   35,48",
-                "tiempoMilisegundos": 35480,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   35,41",
+                "tiempoMilisegundos": 35410,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
-              "nombre": "Soliand Perdomo",
-              "club": "DSCTA",
+              "nombre": "Letizia Galvis",
+              "club": "SIDNE",
               "edad": 14,
               "marca": {
                 "tiempoTexto": "   35,48",
@@ -5755,11 +5971,11 @@
               "club": "DSCTA",
               "edad": 14,
               "marca": {
-                "tiempoTexto": " 1:06,88",
-                "tiempoMilisegundos": 66880,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:07,23",
+                "tiempoMilisegundos": 67230,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -5767,11 +5983,11 @@
               "club": "DSCTA",
               "edad": 15,
               "marca": {
-                "tiempoTexto": " 1:10,35",
-                "tiempoMilisegundos": 70350,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:09,61",
+                "tiempoMilisegundos": 69610,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -5803,11 +6019,11 @@
               "club": "DSCTA",
               "edad": 15,
               "marca": {
-                "tiempoTexto": " 1:17,75",
-                "tiempoMilisegundos": 77750,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:16,64",
+                "tiempoMilisegundos": 76640,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -5885,18 +6101,6 @@
               }
             },
             {
-              "nombre": "Soliand Perdomo",
-              "club": "DSCTA",
-              "edad": 14,
-              "marca": {
-                "tiempoTexto": " 1:16,33",
-                "tiempoMilisegundos": 76330,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
               "nombre": "Letizia Galvis",
               "club": "SIDNE",
               "edad": 14,
@@ -5906,6 +6110,18 @@
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
+              }
+            },
+            {
+              "nombre": "Soliand Perdomo",
+              "club": "DSCTA",
+              "edad": 14,
+              "marca": {
+                "tiempoTexto": " 1:17,46",
+                "tiempoMilisegundos": 77460,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -6038,11 +6254,11 @@
               "club": "DSCTA",
               "edad": 15,
               "marca": {
-                "tiempoTexto": " 2:32,87",
-                "tiempoMilisegundos": 152870,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:34,72",
+                "tiempoMilisegundos": 154720,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -6088,11 +6304,11 @@
               "club": "CASAP",
               "edad": 14,
               "marca": {
-                "tiempoTexto": " 2:33,82",
-                "tiempoMilisegundos": 153820,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:35,36",
+                "tiempoMilisegundos": 155360,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -6100,11 +6316,11 @@
               "club": "DSCTA",
               "edad": 14,
               "marca": {
-                "tiempoTexto": " 2:45,35",
-                "tiempoMilisegundos": 165350,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:42,87",
+                "tiempoMilisegundos": 162870,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -6177,23 +6393,11 @@
               "club": "DSCTA",
               "edad": 15,
               "marca": {
-                "tiempoTexto": "   33,59",
-                "tiempoMilisegundos": 33590,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
-              "nombre": "Rodolfo Silva",
-              "club": "CASAP",
-              "edad": 15,
-              "marca": {
-                "tiempoTexto": "   34,66",
-                "tiempoMilisegundos": 34660,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   33,77",
+                "tiempoMilisegundos": 33770,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -6209,15 +6413,15 @@
               }
             },
             {
-              "nombre": "Juan Saavedra",
+              "nombre": "Rodolfo Silva",
               "club": "CASAP",
-              "edad": 14,
+              "edad": 15,
               "marca": {
-                "tiempoTexto": "   36,44",
-                "tiempoMilisegundos": 36440,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   35,07",
+                "tiempoMilisegundos": 35070,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -6225,8 +6429,20 @@
               "club": "DSCTA",
               "edad": 14,
               "marca": {
-                "tiempoTexto": "   36,77",
-                "tiempoMilisegundos": 36770,
+                "tiempoTexto": "   35,30",
+                "tiempoMilisegundos": 35300,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
+              "nombre": "Juan Saavedra",
+              "club": "CASAP",
+              "edad": 14,
+              "marca": {
+                "tiempoTexto": "   36,44",
+                "tiempoMilisegundos": 36440,
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
@@ -6275,11 +6491,11 @@
               "club": "CASAP",
               "edad": 14,
               "marca": {
-                "tiempoTexto": "   38,62",
-                "tiempoMilisegundos": 38620,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   39,53",
+                "tiempoMilisegundos": 39530,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -6424,11 +6640,11 @@
               "club": "DSCTA",
               "edad": 14,
               "marca": {
-                "tiempoTexto": " 1:22,18",
-                "tiempoMilisegundos": 82180,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:23,71",
+                "tiempoMilisegundos": 83710,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -6436,11 +6652,11 @@
               "club": "TSC",
               "edad": 14,
               "marca": {
-                "tiempoTexto": " 1:28,98",
-                "tiempoMilisegundos": 88980,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:29,83",
+                "tiempoMilisegundos": 89830,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -6650,27 +6866,15 @@
           "nombre": "50M MARIPOSA",
           "masculino": [
             {
-              "nombre": "Sebastian Contreras",
-              "club": "DSCTA",
-              "edad": 14,
-              "marca": {
-                "tiempoTexto": "   28,95",
-                "tiempoMilisegundos": 28950,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
               "nombre": "Santiago Contreras",
               "club": "DSCTA",
               "edad": 15,
               "marca": {
-                "tiempoTexto": "   29,29",
-                "tiempoMilisegundos": 29290,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   29,44",
+                "tiempoMilisegundos": 29440,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -6678,11 +6882,23 @@
               "club": "CASAP",
               "edad": 14,
               "marca": {
-                "tiempoTexto": "   29,55",
-                "tiempoMilisegundos": 29550,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   29,45",
+                "tiempoMilisegundos": 29450,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
+              "nombre": "Sebastian Contreras",
+              "club": "DSCTA",
+              "edad": 14,
+              "marca": {
+                "tiempoTexto": "   29,51",
+                "tiempoMilisegundos": 29510,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -6714,11 +6930,11 @@
               "club": "DSCTA",
               "edad": 14,
               "marca": {
-                "tiempoTexto": "   32,07",
-                "tiempoMilisegundos": 32070,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   32,10",
+                "tiempoMilisegundos": 32100,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -6738,11 +6954,11 @@
               "club": "SIDNE",
               "edad": 15,
               "marca": {
-                "tiempoTexto": "   32,48",
-                "tiempoMilisegundos": 32479.999999999996,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   32,26",
+                "tiempoMilisegundos": 32259.999999999996,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -6752,18 +6968,6 @@
               "marca": {
                 "tiempoTexto": "   32,74",
                 "tiempoMilisegundos": 32740.000000000004,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
-              "nombre": "Jesus Gomez",
-              "club": "DSCTA",
-              "edad": 14,
-              "marca": {
-                "tiempoTexto": "   33,09",
-                "tiempoMilisegundos": 33090,
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
@@ -6782,15 +6986,27 @@
               }
             },
             {
+              "nombre": "Jesus Gomez",
+              "club": "DSCTA",
+              "edad": 14,
+              "marca": {
+                "tiempoTexto": "   33,09",
+                "tiempoMilisegundos": 33090,
+                "fecha": "5/3/2026",
+                "competencia": "1 Estadal 2026 Federados",
+                "piscina": "S"
+              }
+            },
+            {
               "nombre": "Nelson Contreras",
               "club": "DSCTA",
               "edad": 14,
               "marca": {
-                "tiempoTexto": "   33,76",
-                "tiempoMilisegundos": 33760,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   33,78",
+                "tiempoMilisegundos": 33780,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -6798,11 +7014,11 @@
               "club": "TSC",
               "edad": 14,
               "marca": {
-                "tiempoTexto": "   35,20",
-                "tiempoMilisegundos": 35200,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   34,79",
+                "tiempoMilisegundos": 34790,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -6840,6 +7056,18 @@
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
               }
+            },
+            {
+              "nombre": "Orlando Mora",
+              "club": "DSCTA",
+              "edad": 14,
+              "marca": {
+                "tiempoTexto": "   38,78",
+                "tiempoMilisegundos": 38780,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
             }
           ],
           "femenino": [
@@ -6848,11 +7076,23 @@
               "club": "CASAP",
               "edad": 14,
               "marca": {
-                "tiempoTexto": "   29,89",
-                "tiempoMilisegundos": 29890,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   30,42",
+                "tiempoMilisegundos": 30420,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
+              "nombre": "Paula Laguado",
+              "club": "CASAP",
+              "edad": 14,
+              "marca": {
+                "tiempoTexto": "   31,90",
+                "tiempoMilisegundos": 31900,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -6868,27 +7108,15 @@
               }
             },
             {
-              "nombre": "Paula Laguado",
-              "club": "CASAP",
-              "edad": 14,
-              "marca": {
-                "tiempoTexto": "   32,53",
-                "tiempoMilisegundos": 32530,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
               "nombre": "Susan Duque",
               "club": "TSC",
               "edad": 15,
               "marca": {
-                "tiempoTexto": "   33,74",
-                "tiempoMilisegundos": 33740,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   33,71",
+                "tiempoMilisegundos": 33710,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -6908,11 +7136,11 @@
               "club": "SIDNE",
               "edad": 14,
               "marca": {
-                "tiempoTexto": "   34,76",
-                "tiempoMilisegundos": 34760,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   35,17",
+                "tiempoMilisegundos": 35170,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -7009,11 +7237,11 @@
               "club": "CASAP",
               "edad": 14,
               "marca": {
-                "tiempoTexto": " 1:08,32",
-                "tiempoMilisegundos": 68320,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:08,96",
+                "tiempoMilisegundos": 68960,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -7021,11 +7249,11 @@
               "club": "DSCTA",
               "edad": 14,
               "marca": {
-                "tiempoTexto": " 1:11,03",
-                "tiempoMilisegundos": 71030,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:10,31",
+                "tiempoMilisegundos": 70310,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -7077,24 +7305,24 @@
               }
             },
             {
+              "nombre": "Emmanuel Latorre",
+              "club": "TSC",
+              "edad": 14,
+              "marca": {
+                "tiempoTexto": " 1:17,53",
+                "tiempoMilisegundos": 77530,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
               "nombre": "Jesus Gomez",
               "club": "DSCTA",
               "edad": 14,
               "marca": {
                 "tiempoTexto": " 1:20,36",
                 "tiempoMilisegundos": 80360,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
-              "nombre": "Emmanuel Latorre",
-              "club": "TSC",
-              "edad": 14,
-              "marca": {
-                "tiempoTexto": " 1:20,78",
-                "tiempoMilisegundos": 80780,
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
@@ -7143,11 +7371,11 @@
               "club": "TSC",
               "edad": 14,
               "marca": {
-                "tiempoTexto": " 1:18,14",
-                "tiempoMilisegundos": 78140,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:18,31",
+                "tiempoMilisegundos": 78310,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -7155,11 +7383,11 @@
               "club": "SIDNE",
               "edad": 14,
               "marca": {
-                "tiempoTexto": " 1:20,56",
-                "tiempoMilisegundos": 80560,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:20,45",
+                "tiempoMilisegundos": 80450,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -7191,11 +7419,11 @@
               "club": "CCPE",
               "edad": 14,
               "marca": {
-                "tiempoTexto": " 1:46,25",
-                "tiempoMilisegundos": 106250,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:40,96",
+                "tiempoMilisegundos": 100960,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             }
           ]
@@ -7220,11 +7448,11 @@
               "club": "DSCTA",
               "edad": 14,
               "marca": {
-                "tiempoTexto": " 2:35,00",
-                "tiempoMilisegundos": 155000,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:37,05",
+                "tiempoMilisegundos": 157050,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -7596,11 +7824,11 @@
               "club": "SIDNE",
               "edad": 14,
               "marca": {
-                "tiempoTexto": " 6:17,13",
-                "tiempoMilisegundos": 377130,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 6:22,33",
+                "tiempoMilisegundos": 382330,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -7643,11 +7871,11 @@
               "club": "CASAP",
               "edad": 18,
               "marca": {
-                "tiempoTexto": "   24,75",
-                "tiempoMilisegundos": 24750,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   24,49",
+                "tiempoMilisegundos": 24490,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -7687,18 +7915,6 @@
               }
             },
             {
-              "nombre": "Fabian Canelón",
-              "club": "CASAP",
-              "edad": 16,
-              "marca": {
-                "tiempoTexto": "   26,25",
-                "tiempoMilisegundos": 26250,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
               "nombre": "Sebastian Cardozo",
               "club": "CJUAN",
               "edad": 17,
@@ -7732,6 +7948,30 @@
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
+              }
+            },
+            {
+              "nombre": "Fabian Canelón",
+              "club": "CASAP",
+              "edad": 16,
+              "marca": {
+                "tiempoTexto": "   26,83",
+                "tiempoMilisegundos": 26830,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
+              "nombre": "Editzon Medina",
+              "club": "HC",
+              "edad": 16,
+              "marca": {
+                "tiempoTexto": "   27,06",
+                "tiempoMilisegundos": 27060,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -7807,15 +8047,15 @@
               }
             },
             {
-              "nombre": "Ronald Jurado",
+              "nombre": "Edgardo Zambrano",
               "club": "CASAP",
-              "edad": 16,
+              "edad": 17,
               "marca": {
-                "tiempoTexto": "   28,96",
-                "tiempoMilisegundos": 28960,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   29,01",
+                "tiempoMilisegundos": 29010,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -7843,15 +8083,15 @@
               }
             },
             {
-              "nombre": "Edgardo Zambrano",
+              "nombre": "Ronald Jurado",
               "club": "CASAP",
-              "edad": 17,
+              "edad": 16,
               "marca": {
-                "tiempoTexto": "   29,50",
-                "tiempoMilisegundos": 29500,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   29,55",
+                "tiempoMilisegundos": 29550,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -7859,11 +8099,11 @@
               "club": "SIDNE",
               "edad": 16,
               "marca": {
-                "tiempoTexto": "   30,94",
-                "tiempoMilisegundos": 30940,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   30,64",
+                "tiempoMilisegundos": 30640,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             }
           ],
@@ -7875,9 +8115,9 @@
               "marca": {
                 "tiempoTexto": "   29,21",
                 "tiempoMilisegundos": 29210,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -7909,11 +8149,11 @@
               "club": "CASAP",
               "edad": 16,
               "marca": {
-                "tiempoTexto": "   31,49",
-                "tiempoMilisegundos": 31490,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   31,96",
+                "tiempoMilisegundos": 31960,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -7921,11 +8161,23 @@
               "club": "SIDNE",
               "edad": 16,
               "marca": {
-                "tiempoTexto": "   31,85",
-                "tiempoMilisegundos": 31850,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   32,10",
+                "tiempoMilisegundos": 32100,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
+              "nombre": "Chiara Castro",
+              "club": "HC",
+              "edad": 16,
+              "marca": {
+                "tiempoTexto": "   32,27",
+                "tiempoMilisegundos": 32270.000000000004,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -7941,15 +8193,27 @@
               }
             },
             {
+              "nombre": "Anabella Morales",
+              "club": "CASAP",
+              "edad": 17,
+              "marca": {
+                "tiempoTexto": "   33,25",
+                "tiempoMilisegundos": 33250,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
               "nombre": "Noriana Guerrero",
               "club": "DSCTA",
               "edad": 16,
               "marca": {
-                "tiempoTexto": "   33,79",
-                "tiempoMilisegundos": 33790,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   34,27",
+                "tiempoMilisegundos": 34270,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             }
           ]
@@ -7962,11 +8226,11 @@
               "club": "CASAP",
               "edad": 18,
               "marca": {
-                "tiempoTexto": "   52,89",
-                "tiempoMilisegundos": 52890,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   53,25",
+                "tiempoMilisegundos": 53250,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -7974,11 +8238,11 @@
               "club": "CASAP",
               "edad": 18,
               "marca": {
-                "tiempoTexto": "   52,96",
-                "tiempoMilisegundos": 52960,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   54,53",
+                "tiempoMilisegundos": 54530,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -7988,18 +8252,6 @@
               "marca": {
                 "tiempoTexto": "   56,23",
                 "tiempoMilisegundos": 56230,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
-              "nombre": "Nelson Torres",
-              "club": "CASAP",
-              "edad": 17,
-              "marca": {
-                "tiempoTexto": "   57,65",
-                "tiempoMilisegundos": 57650,
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
@@ -8018,15 +8270,27 @@
               }
             },
             {
+              "nombre": "Nelson Torres",
+              "club": "CASAP",
+              "edad": 17,
+              "marca": {
+                "tiempoTexto": "   58,92",
+                "tiempoMilisegundos": 58920,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
               "nombre": "Sebastian Cardozo",
               "club": "CJUAN",
               "edad": 17,
               "marca": {
-                "tiempoTexto": "   58,19",
-                "tiempoMilisegundos": 58190,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   58,98",
+                "tiempoMilisegundos": 58980,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -8034,11 +8298,23 @@
               "club": "DSCTA",
               "edad": 18,
               "marca": {
-                "tiempoTexto": "   58,45",
-                "tiempoMilisegundos": 58450,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   59,23",
+                "tiempoMilisegundos": 59230,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
+              "nombre": "Editzon Medina",
+              "club": "HC",
+              "edad": 16,
+              "marca": {
+                "tiempoTexto": "   59,40",
+                "tiempoMilisegundos": 59400,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -8090,6 +8366,18 @@
               }
             },
             {
+              "nombre": "Edgardo Zambrano",
+              "club": "CASAP",
+              "edad": 17,
+              "marca": {
+                "tiempoTexto": " 1:03,46",
+                "tiempoMilisegundos": 63460,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
               "nombre": "Juan Ortega",
               "club": "CJUAN",
               "edad": 16,
@@ -8118,11 +8406,11 @@
               "club": "CASAP",
               "edad": 16,
               "marca": {
-                "tiempoTexto": " 1:04,28",
-                "tiempoMilisegundos": 64280,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:04,81",
+                "tiempoMilisegundos": 64810,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -8192,23 +8480,11 @@
               "club": "DSCTA",
               "edad": 17,
               "marca": {
-                "tiempoTexto": " 1:03,21",
-                "tiempoMilisegundos": 63210,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
-              "nombre": "Mariangel Casique",
-              "club": "CASAP",
-              "edad": 16,
-              "marca": {
-                "tiempoTexto": " 1:06,53",
-                "tiempoMilisegundos": 66530,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:04,13",
+                "tiempoMilisegundos": 64130,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -8221,6 +8497,18 @@
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
+              }
+            },
+            {
+              "nombre": "Mariangel Casique",
+              "club": "CASAP",
+              "edad": 16,
+              "marca": {
+                "tiempoTexto": " 1:07,90",
+                "tiempoMilisegundos": 67900,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -8240,11 +8528,11 @@
               "club": "CASAP",
               "edad": 16,
               "marca": {
-                "tiempoTexto": " 1:11,80",
-                "tiempoMilisegundos": 71800,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:10,68",
+                "tiempoMilisegundos": 70680,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -8252,11 +8540,35 @@
               "club": "SIDNE",
               "edad": 16,
               "marca": {
-                "tiempoTexto": " 1:12,45",
-                "tiempoMilisegundos": 72450,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:12,14",
+                "tiempoMilisegundos": 72140,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
+              "nombre": "Anabella Morales",
+              "club": "CASAP",
+              "edad": 17,
+              "marca": {
+                "tiempoTexto": " 1:13,72",
+                "tiempoMilisegundos": 73720,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
+              "nombre": "Noriana Guerrero",
+              "club": "DSCTA",
+              "edad": 16,
+              "marca": {
+                "tiempoTexto": " 1:14,28",
+                "tiempoMilisegundos": 74280,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             }
           ]
@@ -8265,15 +8577,27 @@
           "nombre": "200M LIBRE",
           "masculino": [
             {
+              "nombre": "Dhariel Márquez",
+              "club": "CASAP",
+              "edad": 18,
+              "marca": {
+                "tiempoTexto": " 1:57,41",
+                "tiempoMilisegundos": 117410,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
               "nombre": "Gabriel Blanco",
               "club": "CASAP",
               "edad": 18,
               "marca": {
-                "tiempoTexto": " 1:56,55",
-                "tiempoMilisegundos": 116550,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:57,56",
+                "tiempoMilisegundos": 117560,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -8349,6 +8673,18 @@
               }
             },
             {
+              "nombre": "Editzon Medina",
+              "club": "HC",
+              "edad": 16,
+              "marca": {
+                "tiempoTexto": " 2:13,55",
+                "tiempoMilisegundos": 133550,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
               "nombre": "Heissen Tarazona",
               "club": "HC",
               "edad": 16,
@@ -8389,11 +8725,11 @@
               "club": "CASAP",
               "edad": 16,
               "marca": {
-                "tiempoTexto": " 2:24,18",
-                "tiempoMilisegundos": 144180,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:25,50",
+                "tiempoMilisegundos": 145500,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -8415,11 +8751,11 @@
               "club": "DSCTA",
               "edad": 17,
               "marca": {
-                "tiempoTexto": " 2:15,85",
-                "tiempoMilisegundos": 135850,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:18,33",
+                "tiempoMilisegundos": 138330,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -8427,11 +8763,11 @@
               "club": "CASAP",
               "edad": 16,
               "marca": {
-                "tiempoTexto": " 2:28,29",
-                "tiempoMilisegundos": 148290,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:29,77",
+                "tiempoMilisegundos": 149770,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -8439,11 +8775,11 @@
               "club": "CASAP",
               "edad": 16,
               "marca": {
-                "tiempoTexto": " 2:35,29",
-                "tiempoMilisegundos": 155290,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:33,02",
+                "tiempoMilisegundos": 153020,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -8475,11 +8811,11 @@
               "club": "SIDNE",
               "edad": 16,
               "marca": {
-                "tiempoTexto": " 2:41,28",
-                "tiempoMilisegundos": 161280,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:41,05",
+                "tiempoMilisegundos": 161050,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -8487,11 +8823,11 @@
               "club": "DSCTA",
               "edad": 16,
               "marca": {
-                "tiempoTexto": " 2:44,53",
-                "tiempoMilisegundos": 164530,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:41,39",
+                "tiempoMilisegundos": 161390,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             }
           ]
@@ -8509,6 +8845,18 @@
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
+              }
+            },
+            {
+              "nombre": "Dhariel Márquez",
+              "club": "CASAP",
+              "edad": 18,
+              "marca": {
+                "tiempoTexto": " 4:15,39",
+                "tiempoMilisegundos": 255390,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -8545,6 +8893,18 @@
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
+              }
+            },
+            {
+              "nombre": "Editzon Medina",
+              "club": "HC",
+              "edad": 16,
+              "marca": {
+                "tiempoTexto": " 4:52,34",
+                "tiempoMilisegundos": 292340,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -8638,11 +8998,11 @@
               "club": "CCPE",
               "edad": 17,
               "marca": {
-                "tiempoTexto": " 5:41,78",
-                "tiempoMilisegundos": 341780,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 5:48,03",
+                "tiempoMilisegundos": 348030,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             }
           ]
@@ -8717,6 +9077,18 @@
               }
             },
             {
+              "nombre": "Gabriel Blanco",
+              "club": "CASAP",
+              "edad": 18,
+              "marca": {
+                "tiempoTexto": "17:14,20",
+                "tiempoMilisegundos": 1034200,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
               "nombre": "Kleyner Morales",
               "club": "CASAP",
               "edad": 17,
@@ -8747,11 +9119,11 @@
               "club": "DSCTA",
               "edad": 17,
               "marca": {
-                "tiempoTexto": "19:16,99",
-                "tiempoMilisegundos": 1156990,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "19:34,94",
+                "tiempoMilisegundos": 1174940,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -8824,11 +9196,11 @@
               "club": "DSCTA",
               "edad": 18,
               "marca": {
-                "tiempoTexto": "   29,65",
-                "tiempoMilisegundos": 29650,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   30,12",
+                "tiempoMilisegundos": 30120,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -8964,18 +9336,6 @@
               }
             },
             {
-              "nombre": "Jesus Rivero",
-              "club": "SIDNE",
-              "edad": 16,
-              "marca": {
-                "tiempoTexto": "   36,65",
-                "tiempoMilisegundos": 36650,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
               "nombre": "Edgardo Zambrano",
               "club": "CASAP",
               "edad": 17,
@@ -8985,6 +9345,18 @@
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
+              }
+            },
+            {
+              "nombre": "Jesus Rivero",
+              "club": "SIDNE",
+              "edad": 16,
+              "marca": {
+                "tiempoTexto": "   37,10",
+                "tiempoMilisegundos": 37100,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -9054,11 +9426,11 @@
               "club": "CASAP",
               "edad": 16,
               "marca": {
-                "tiempoTexto": "   37,10",
-                "tiempoMilisegundos": 37100,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   37,15",
+                "tiempoMilisegundos": 37150,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -9127,18 +9499,6 @@
               }
             },
             {
-              "nombre": "Miguel Vesga",
-              "club": "DSCTA",
-              "edad": 18,
-              "marca": {
-                "tiempoTexto": " 1:03,36",
-                "tiempoMilisegundos": 63360,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
               "nombre": "Dhariel Márquez",
               "club": "CASAP",
               "edad": 18,
@@ -9148,6 +9508,18 @@
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
+              }
+            },
+            {
+              "nombre": "Miguel Vesga",
+              "club": "DSCTA",
+              "edad": 18,
+              "marca": {
+                "tiempoTexto": " 1:04,40",
+                "tiempoMilisegundos": 64400,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -9227,11 +9599,11 @@
               "club": "SIDNE",
               "edad": 16,
               "marca": {
-                "tiempoTexto": " 1:23,58",
-                "tiempoMilisegundos": 83580,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:23,89",
+                "tiempoMilisegundos": 83890,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             }
           ],
@@ -9265,11 +9637,11 @@
               "club": "HC",
               "edad": 16,
               "marca": {
-                "tiempoTexto": " 1:21,20",
-                "tiempoMilisegundos": 81200,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:22,25",
+                "tiempoMilisegundos": 82250,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -9318,11 +9690,11 @@
               "club": "SIDNE",
               "edad": 16,
               "marca": {
-                "tiempoTexto": " 2:37,00",
-                "tiempoMilisegundos": 157000,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:37,96",
+                "tiempoMilisegundos": 157960,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -9397,11 +9769,11 @@
               "club": "CASAP",
               "edad": 16,
               "marca": {
-                "tiempoTexto": "   32,60",
-                "tiempoMilisegundos": 32600,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   32,62",
+                "tiempoMilisegundos": 32619.999999999996,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -9409,11 +9781,11 @@
               "club": "CASAP",
               "edad": 17,
               "marca": {
-                "tiempoTexto": "   36,75",
-                "tiempoMilisegundos": 36750,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   36,59",
+                "tiempoMilisegundos": 36590,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -9477,15 +9849,27 @@
               }
             },
             {
+              "nombre": "Jesus Rivero",
+              "club": "SIDNE",
+              "edad": 16,
+              "marca": {
+                "tiempoTexto": "   40,36",
+                "tiempoMilisegundos": 40360,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
               "nombre": "Engelbert Medina",
               "club": "SIDNE",
               "edad": 16,
               "marca": {
-                "tiempoTexto": "   40,70",
-                "tiempoMilisegundos": 40700,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   41,46",
+                "tiempoMilisegundos": 41460,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             }
           ],
@@ -9515,27 +9899,27 @@
               }
             },
             {
-              "nombre": "Nickol Anaya",
-              "club": "SIDNE",
-              "edad": 16,
-              "marca": {
-                "tiempoTexto": "   42,69",
-                "tiempoMilisegundos": 42690,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
               "nombre": "Noriana Guerrero",
               "club": "DSCTA",
               "edad": 16,
               "marca": {
-                "tiempoTexto": "   42,84",
-                "tiempoMilisegundos": 42840,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   43,43",
+                "tiempoMilisegundos": 43430,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
+              "nombre": "Nickol Anaya",
+              "club": "SIDNE",
+              "edad": 16,
+              "marca": {
+                "tiempoTexto": "   43,46",
+                "tiempoMilisegundos": 43460,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             }
           ]
@@ -9584,11 +9968,11 @@
               "club": "CASAP",
               "edad": 17,
               "marca": {
-                "tiempoTexto": " 1:18,99",
-                "tiempoMilisegundos": 78990,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:19,86",
+                "tiempoMilisegundos": 79860,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -9682,11 +10066,11 @@
               "club": "CASAP",
               "edad": 17,
               "marca": {
-                "tiempoTexto": " 1:23,44",
-                "tiempoMilisegundos": 83440,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:25,10",
+                "tiempoMilisegundos": 85100,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -9694,11 +10078,11 @@
               "club": "DSCTA",
               "edad": 16,
               "marca": {
-                "tiempoTexto": " 1:32,51",
-                "tiempoMilisegundos": 92510,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:33,13",
+                "tiempoMilisegundos": 93130,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -9731,15 +10115,27 @@
               }
             },
             {
+              "nombre": "Dhariel Márquez",
+              "club": "CASAP",
+              "edad": 18,
+              "marca": {
+                "tiempoTexto": " 2:34,00",
+                "tiempoMilisegundos": 154000,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
               "nombre": "Kleyner Morales",
               "club": "CASAP",
               "edad": 17,
               "marca": {
-                "tiempoTexto": " 2:35,47",
-                "tiempoMilisegundos": 155470,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:38,34",
+                "tiempoMilisegundos": 158340,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -9747,11 +10143,11 @@
               "club": "CASAP",
               "edad": 17,
               "marca": {
-                "tiempoTexto": " 2:56,11",
-                "tiempoMilisegundos": 176110,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:57,78",
+                "tiempoMilisegundos": 177780,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -9809,11 +10205,23 @@
               "club": "DSCTA",
               "edad": 16,
               "marca": {
-                "tiempoTexto": " 3:17,64",
-                "tiempoMilisegundos": 197640,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 3:17,46",
+                "tiempoMilisegundos": 197460,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
+              "nombre": "Maria Pacheco",
+              "club": "SIDNE",
+              "edad": 17,
+              "marca": {
+                "tiempoTexto": " 3:28,00",
+                "tiempoMilisegundos": 208000,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             }
           ]
@@ -9834,18 +10242,6 @@
               }
             },
             {
-              "nombre": "Joel Evertz",
-              "club": "DSCTA",
-              "edad": 16,
-              "marca": {
-                "tiempoTexto": "   27,51",
-                "tiempoMilisegundos": 27510,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
               "nombre": "Santiago Carreño",
               "club": "CASAP",
               "edad": 16,
@@ -9855,6 +10251,18 @@
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
+              }
+            },
+            {
+              "nombre": "Joel Evertz",
+              "club": "DSCTA",
+              "edad": 16,
+              "marca": {
+                "tiempoTexto": "   28,06",
+                "tiempoMilisegundos": 28060,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -9886,11 +10294,11 @@
               "club": "DSCTA",
               "edad": 18,
               "marca": {
-                "tiempoTexto": "   28,51",
-                "tiempoMilisegundos": 28510,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   28,53",
+                "tiempoMilisegundos": 28530,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -9918,24 +10326,24 @@
               }
             },
             {
-              "nombre": "Heissen Tarazona",
+              "nombre": "Editzon Medina",
               "club": "HC",
               "edad": 16,
               "marca": {
-                "tiempoTexto": "   29,60",
-                "tiempoMilisegundos": 29600,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   29,11",
+                "tiempoMilisegundos": 29110,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
-              "nombre": "Jesus Zambrano",
-              "club": "SIDNE",
-              "edad": 16,
+              "nombre": "Sebasthian Rangel",
+              "club": "FENIX",
+              "edad": 17,
               "marca": {
-                "tiempoTexto": "   30,02",
-                "tiempoMilisegundos": 30020,
+                "tiempoTexto": "   30,07",
+                "tiempoMilisegundos": 30070,
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
@@ -9954,15 +10362,27 @@
               }
             },
             {
-              "nombre": "Sebasthian Rangel",
-              "club": "FENIX",
-              "edad": 17,
+              "nombre": "Heissen Tarazona",
+              "club": "HC",
+              "edad": 16,
               "marca": {
-                "tiempoTexto": "   30,07",
-                "tiempoMilisegundos": 30070,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   30,24",
+                "tiempoMilisegundos": 30240,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
+              "nombre": "Jesus Zambrano",
+              "club": "SIDNE",
+              "edad": 16,
+              "marca": {
+                "tiempoTexto": "   30,31",
+                "tiempoMilisegundos": 30310,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -9990,6 +10410,18 @@
               }
             },
             {
+              "nombre": "Ronald Jurado",
+              "club": "CASAP",
+              "edad": 16,
+              "marca": {
+                "tiempoTexto": "   32,02",
+                "tiempoMilisegundos": 32020.000000000004,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
               "nombre": "Santiago Araque",
               "club": "DSCTA",
               "edad": 18,
@@ -10008,18 +10440,6 @@
               "marca": {
                 "tiempoTexto": "   32,75",
                 "tiempoMilisegundos": 32750,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
-              "nombre": "Ronald Jurado",
-              "club": "CASAP",
-              "edad": 16,
-              "marca": {
-                "tiempoTexto": "   32,96",
-                "tiempoMilisegundos": 32960,
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
@@ -10092,11 +10512,11 @@
               "club": "SIDNE",
               "edad": 16,
               "marca": {
-                "tiempoTexto": "   35,99",
-                "tiempoMilisegundos": 35990,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   35,00",
+                "tiempoMilisegundos": 35000,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -10145,11 +10565,11 @@
               "club": "CASAP",
               "edad": 18,
               "marca": {
-                "tiempoTexto": " 1:00,70",
-                "tiempoMilisegundos": 60700,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:01,22",
+                "tiempoMilisegundos": 61220,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -10169,11 +10589,11 @@
               "club": "CJUAN",
               "edad": 17,
               "marca": {
-                "tiempoTexto": " 1:05,20",
-                "tiempoMilisegundos": 65200,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:06,27",
+                "tiempoMilisegundos": 66270,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -10186,6 +10606,18 @@
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
+              }
+            },
+            {
+              "nombre": "Editzon Medina",
+              "club": "HC",
+              "edad": 16,
+              "marca": {
+                "tiempoTexto": " 1:09,80",
+                "tiempoMilisegundos": 69800,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -10205,11 +10637,11 @@
               "club": "HC",
               "edad": 16,
               "marca": {
-                "tiempoTexto": " 1:11,68",
-                "tiempoMilisegundos": 71680,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:11,69",
+                "tiempoMilisegundos": 71690,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -10217,11 +10649,11 @@
               "club": "CASAP",
               "edad": 16,
               "marca": {
-                "tiempoTexto": " 1:18,41",
-                "tiempoMilisegundos": 78410,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:19,19",
+                "tiempoMilisegundos": 79190,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             }
           ],
@@ -10231,11 +10663,11 @@
               "club": "CASAP",
               "edad": 17,
               "marca": {
-                "tiempoTexto": " 1:06,11",
-                "tiempoMilisegundos": 66110,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:07,42",
+                "tiempoMilisegundos": 67420,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -10248,6 +10680,18 @@
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
+              }
+            },
+            {
+              "nombre": "Nickol Anaya",
+              "club": "SIDNE",
+              "edad": 16,
+              "marca": {
+                "tiempoTexto": " 1:23,52",
+                "tiempoMilisegundos": 83520,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -10280,18 +10724,6 @@
               }
             },
             {
-              "nombre": "Kleyner Morales",
-              "club": "CASAP",
-              "edad": 17,
-              "marca": {
-                "tiempoTexto": " 2:22,89",
-                "tiempoMilisegundos": 142890,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
               "nombre": "Joel Evertz",
               "club": "DSCTA",
               "edad": 16,
@@ -10301,6 +10733,18 @@
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
+              }
+            },
+            {
+              "nombre": "Kleyner Morales",
+              "club": "CASAP",
+              "edad": 17,
+              "marca": {
+                "tiempoTexto": " 2:25,08",
+                "tiempoMilisegundos": 145080,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -10339,11 +10783,11 @@
               "club": "CASAP",
               "edad": 18,
               "marca": {
-                "tiempoTexto": " 2:14,90",
-                "tiempoMilisegundos": 134900,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:15,68",
+                "tiempoMilisegundos": 135680,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -10473,11 +10917,11 @@
               "club": "CASAP",
               "edad": 16,
               "marca": {
-                "tiempoTexto": " 2:48,96",
-                "tiempoMilisegundos": 168960,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:51,64",
+                "tiempoMilisegundos": 171640,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -10538,11 +10982,11 @@
               "club": "CASAP",
               "edad": 18,
               "marca": {
-                "tiempoTexto": " 4:54,26",
-                "tiempoMilisegundos": 294260,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 4:53,40",
+                "tiempoMilisegundos": 293400,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -10550,11 +10994,11 @@
               "club": "CASAP",
               "edad": 16,
               "marca": {
-                "tiempoTexto": " 5:08,65",
-                "tiempoMilisegundos": 308650,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 5:10,76",
+                "tiempoMilisegundos": 310760,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -10562,11 +11006,11 @@
               "club": "CASAP",
               "edad": 17,
               "marca": {
-                "tiempoTexto": " 5:08,88",
-                "tiempoMilisegundos": 308880,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 5:13,99",
+                "tiempoMilisegundos": 313990,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             }
           ],
@@ -10611,11 +11055,11 @@
               "club": "DSCTA",
               "edad": 20,
               "marca": {
-                "tiempoTexto": "   27,42",
-                "tiempoMilisegundos": 27420,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   27,94",
+                "tiempoMilisegundos": 27940,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -10640,6 +11084,18 @@
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
+              }
+            },
+            {
+              "nombre": "Hugo Mendoza",
+              "club": "CCPE",
+              "edad": 21,
+              "marca": {
+                "tiempoTexto": "   31,22",
+                "tiempoMilisegundos": 31220,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             }
           ],
@@ -10666,6 +11122,18 @@
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
+              }
+            },
+            {
+              "nombre": "Emily Ruiz",
+              "club": "CCPE",
+              "edad": 19,
+              "marca": {
+                "tiempoTexto": "   35,79",
+                "tiempoMilisegundos": 35790,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             }
           ]
@@ -10695,6 +11163,18 @@
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
+              }
+            },
+            {
+              "nombre": "Enderson Roa",
+              "club": "CASAP",
+              "edad": 20,
+              "marca": {
+                "tiempoTexto": " 1:04,99",
+                "tiempoMilisegundos": 64990,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -10740,11 +11220,11 @@
               "club": "DSCTA",
               "edad": 22,
               "marca": {
-                "tiempoTexto": " 1:10,20",
-                "tiempoMilisegundos": 70200,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:11,67",
+                "tiempoMilisegundos": 71670,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             }
           ]
@@ -10769,11 +11249,11 @@
               "club": "CCPE",
               "edad": 21,
               "marca": {
-                "tiempoTexto": " 2:24,49",
-                "tiempoMilisegundos": 144490,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:26,21",
+                "tiempoMilisegundos": 146210,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -10819,11 +11299,11 @@
               "club": "DSCTA",
               "edad": 22,
               "marca": {
-                "tiempoTexto": " 2:42,51",
-                "tiempoMilisegundos": 162510,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:41,09",
+                "tiempoMilisegundos": 161090,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -10860,11 +11340,11 @@
               "club": "CCPE",
               "edad": 21,
               "marca": {
-                "tiempoTexto": " 5:31,84",
-                "tiempoMilisegundos": 331840,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 5:18,53",
+                "tiempoMilisegundos": 318530,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             }
           ],
@@ -10964,11 +11444,11 @@
               "club": "DSCTA",
               "edad": 20,
               "marca": {
-                "tiempoTexto": "   31,09",
-                "tiempoMilisegundos": 31090,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   31,54",
+                "tiempoMilisegundos": 31540,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -11005,6 +11485,18 @@
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
+              }
+            },
+            {
+              "nombre": "Enderson Roa",
+              "club": "CASAP",
+              "edad": 20,
+              "marca": {
+                "tiempoTexto": "   36,22",
+                "tiempoMilisegundos": 36220,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -11063,6 +11555,30 @@
               }
             },
             {
+              "nombre": "Enderson Roa",
+              "club": "CASAP",
+              "edad": 20,
+              "marca": {
+                "tiempoTexto": " 1:16,70",
+                "tiempoMilisegundos": 76700,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
+              "nombre": "Santiago Guerrero",
+              "club": "DSCTA",
+              "edad": 19,
+              "marca": {
+                "tiempoTexto": " 1:17,32",
+                "tiempoMilisegundos": 77320,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
               "nombre": "Cristian Carrero",
               "club": "DSCTA",
               "edad": 19,
@@ -11079,11 +11595,11 @@
               "club": "CCPE",
               "edad": 21,
               "marca": {
-                "tiempoTexto": " 1:37,24",
-                "tiempoMilisegundos": 97240,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:35,64",
+                "tiempoMilisegundos": 95640,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             }
           ],
@@ -11153,11 +11669,11 @@
               "club": "DSCTA",
               "edad": 22,
               "marca": {
-                "tiempoTexto": "   40,47",
-                "tiempoMilisegundos": 40470,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   41,20",
+                "tiempoMilisegundos": 41200,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -11187,6 +11703,18 @@
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
+              }
+            },
+            {
+              "nombre": "Francisco Vincenzi",
+              "club": "CCPE",
+              "edad": 21,
+              "marca": {
+                "tiempoTexto": " 1:21,03",
+                "tiempoMilisegundos": 81030,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -11244,11 +11772,11 @@
               "club": "CCPE",
               "edad": 19,
               "marca": {
-                "tiempoTexto": " 1:48,69",
-                "tiempoMilisegundos": 108690,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:49,15",
+                "tiempoMilisegundos": 109150,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             }
           ]
@@ -11287,11 +11815,11 @@
               "club": "DSCTA",
               "edad": 22,
               "marca": {
-                "tiempoTexto": " 3:39,02",
-                "tiempoMilisegundos": 219020,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 3:35,28",
+                "tiempoMilisegundos": 215280,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             }
           ]
@@ -11316,11 +11844,11 @@
               "club": "DSCTA",
               "edad": 20,
               "marca": {
-                "tiempoTexto": "   29,36",
-                "tiempoMilisegundos": 29360,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   29,44",
+                "tiempoMilisegundos": 29440,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -11330,9 +11858,21 @@
               "marca": {
                 "tiempoTexto": "   30,64",
                 "tiempoMilisegundos": 30640,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
+              }
+            },
+            {
+              "nombre": "Francisco Vincenzi",
+              "club": "CCPE",
+              "edad": 21,
+              "marca": {
+                "tiempoTexto": "   31,58",
+                "tiempoMilisegundos": 31580,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -11342,18 +11882,6 @@
               "marca": {
                 "tiempoTexto": "   32,17",
                 "tiempoMilisegundos": 32170,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
-              }
-            },
-            {
-              "nombre": "Francisco Vincenzi",
-              "club": "CCPE",
-              "edad": 21,
-              "marca": {
-                "tiempoTexto": "   32,46",
-                "tiempoMilisegundos": 32460,
                 "fecha": "5/3/2026",
                 "competencia": "1 Estadal 2026 Federados",
                 "piscina": "S"
@@ -11378,11 +11906,11 @@
               "club": "CASAP",
               "edad": 20,
               "marca": {
-                "tiempoTexto": "   30,00",
-                "tiempoMilisegundos": 30000,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   30,39",
+                "tiempoMilisegundos": 30390,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -11390,11 +11918,11 @@
               "club": "CCPE",
               "edad": 19,
               "marca": {
-                "tiempoTexto": "   46,68",
-                "tiempoMilisegundos": 46680,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": "   45,19",
+                "tiempoMilisegundos": 45190,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             }
           ]
@@ -11407,11 +11935,11 @@
               "club": "DSCTA",
               "edad": 20,
               "marca": {
-                "tiempoTexto": " 1:07,31",
-                "tiempoMilisegundos": 67310,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:06,72",
+                "tiempoMilisegundos": 66720,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -11419,11 +11947,11 @@
               "club": "DSCTA",
               "edad": 19,
               "marca": {
-                "tiempoTexto": " 1:08,43",
-                "tiempoMilisegundos": 68430,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:09,27",
+                "tiempoMilisegundos": 69270,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -11431,11 +11959,11 @@
               "club": "CASAP",
               "edad": 20,
               "marca": {
-                "tiempoTexto": " 1:13,69",
-                "tiempoMilisegundos": 73690,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:12,95",
+                "tiempoMilisegundos": 72950,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
@@ -11443,11 +11971,11 @@
               "club": "CCPE",
               "edad": 21,
               "marca": {
-                "tiempoTexto": " 1:23,19",
-                "tiempoMilisegundos": 83190,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:19,76",
+                "tiempoMilisegundos": 79760,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             }
           ],
@@ -11457,11 +11985,11 @@
               "club": "CASAP",
               "edad": 20,
               "marca": {
-                "tiempoTexto": " 1:09,80",
-                "tiempoMilisegundos": 69800,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 1:09,00",
+                "tiempoMilisegundos": 69000,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             }
           ]
@@ -11504,11 +12032,11 @@
               "club": "DSCTA",
               "edad": 20,
               "marca": {
-                "tiempoTexto": " 2:32,41",
-                "tiempoMilisegundos": 152410,
-                "fecha": "5/3/2026",
-                "competencia": "1 Estadal 2026 Federados",
-                "piscina": "S"
+                "tiempoTexto": " 2:32,94",
+                "tiempoMilisegundos": 152940,
+                "fecha": "14/4/2026",
+                "competencia": "Campeonato Regional ADAEF 2026",
+                "piscina": "L"
               }
             },
             {
