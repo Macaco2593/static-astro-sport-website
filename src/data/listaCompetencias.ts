@@ -89,18 +89,15 @@ export const ListaCompetencias: ICompetencia[] = [
             },
             {
                 titulo: 'Resultados Individuales Completos',
-                nombreArchivo: 'resultados_individuales.pdf',
-                pendiente: true
+                nombreArchivo: 'Resultados_Todas_Las_Jornadas.pdf',
             },
             {
-                titulo: 'Resultados por Equipos',
-                nombreArchivo: 'resultados_por_equipo.pdf',
-                pendiente: true
+                titulo: 'Puntuación por Asociaciones',
+                nombreArchivo: 'Puntuacion_por_Asociaciones.pdf',
             },
             {
-                titulo: 'Mejores Atletas por Categorías',
-                nombreArchivo: 'mejores_atletas.pdf',
-                pendiente: true
+                titulo: 'Mejores Nadadores Coro 2026',
+                nombreArchivo: 'Mejores_Nadadores_Coro_2026.pdf',
             }
         ]
     },
