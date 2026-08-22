@@ -79,7 +79,7 @@ export const ALBUMES: Album[] = [
       "https://vkkeubhpapquorwauomt.supabase.co/storage/v1/object/public/galeria-adadet/galeria/2026/08-estadal-sancristobal/_DSC0500.jpg",
     descripcion:
       "Jornada inaugural con la participación de más de 200 atletas infantiles.",
-    etiquetas: ["Natación", "Infantil", "Competencia", "Federados"],
+    etiquetas: ["Natación", "Competencia", "Federados"],
     fotos: construirFotos(
       "https://vkkeubhpapquorwauomt.supabase.co/storage/v1/object/public/galeria-adadet/galeria/2026/08-estadal-sancristobal/",
       [
