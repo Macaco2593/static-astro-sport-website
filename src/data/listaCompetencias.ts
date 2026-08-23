@@ -119,22 +119,18 @@ export const ListaCompetencias: ICompetencia[] = [
       {
         titulo: "Resultados Individuales Completos FEDERADOS",
         nombreArchivo: "resultados_individuales_completos_federados.pdf",
-        pendiente: true,
       },
       {
         titulo: "Resultados Individuales Completos ESCUELAS",
         nombreArchivo: "resultados_individuales_completos_escuelas.pdf",
-        pendiente: true,
       },
       {
         titulo: "Puntuación por Equipos FEDERADOS",
         nombreArchivo: "puntuacion_por_equipos_federados.pdf",
-        pendiente: true,
       },
       {
         titulo: "Puntuación por Equipos ESCUELAS",
         nombreArchivo: "puntuacion_por_equipos_escuelas.pdf",
-        pendiente: true,
       },
     ],
     linksEnVivo: [
