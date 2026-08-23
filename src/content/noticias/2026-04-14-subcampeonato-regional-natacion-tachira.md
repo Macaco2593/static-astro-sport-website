@@ -2,9 +2,8 @@
 titulo: "Táchira brilla en el Regional de Natación Coro 2026: Subcampeonato por asociaciones y dominio de sus clubes"
 resumen: "La natación tachirense reafirmó su potencia en el occidente del país. La delegación aurinegra logró consolidarse en los puestos de honor, alcanzando el subcampeonato general por asociaciones."
 fecha: "2026-04-18"
-imagen: "https://vkkeubhpapquorwauomt.supabase.co/storage/v1/object/public/galeria-adadet/noticias/2026/abril-regional-exitoso.jpeg"
+imagen: "https://pub-15b0928184294a4692cb0b949397344a.r2.dev/noticias/2026/abril-regional-exitoso.jpeg"
 categoria: "Natación"
-
 ---
 
 El evento, que reunió a 530 de los mejores nadadores de nueve estados (Táchira, Trujillo, Yaracuy, Zulia, Barinas, Portuguesa, Mérida, Lara y Falcón), fue el escenario propicio para demostrar el alto nivel competitivo de la región. En la clasificación final por asociaciones, el estado Mérida obtuvo el primer lugar, mientras que Táchira se adjudicó la segunda posición con un total de 1.325,50 puntos, superando a la delegación de Lara que completó el podio.
@@ -13,7 +12,7 @@ A nivel de clubes, la competencia fue igualmente intensa. En este apartado, la r
 
 CASAP finalizó su actuación como la organización más laureada de la entidad, acumulando un total de 45 medallas, desglosadas en 22 preseas de oro, 13 de plata y 10 de bronce. Este resultado no solo los posicionó en la cima del medallero interno de la delegación, sino que les permitió ocupar la tercera casilla en la clasificación general de clubes de todo el torneo con **525 puntos**, solo por detrás de Hogar Canario Larense y la Fundación María Elena del Zulia.
 
-El éxito de la delegación, conformada por 72 atletas, fue el resultado del esfuerzo conjunto de diversas instituciones, donde el **Demócrata Sport Club (DSCTA)** se consolidó como la segunda fuerza del estado en el medallero. Con un impresionante registro de 32 medallas totales, el club logró 10 preseas de oro, 12 de plata y 10 de bronce.  
+El éxito de la delegación, conformada por 72 atletas, fue el resultado del esfuerzo conjunto de diversas instituciones, donde el **Demócrata Sport Club (DSCTA)** se consolidó como la segunda fuerza del estado en el medallero. Con un impresionante registro de 32 medallas totales, el club logró 10 preseas de oro, 12 de plata y 10 de bronce. 
 
 Su desempeño fue particularmente notable en las pruebas individuales, donde sus atletas sumaron 29 de los 32 metales del club, evidenciando un alto nivel de preparación técnica y competitiva que los mantuvo en la pelea directa por los primeros puestos del medallero regional.
 

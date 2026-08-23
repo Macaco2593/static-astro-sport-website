@@ -66,7 +66,7 @@ const { album } = Astro.props;
         <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
             
             {/* 2. CORRECCIÓN: Volvemos a usar album.fotos normal */}
-            {album.fotos.map((foto, index) => (
+            {[...album.fotos].reverse().map((foto, index) => (
                 <div 
                     class="break-inside-avoid relative group rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-white hover:shadow-xl transition-all duration-300 animate-fade-in-up flex flex-col"
                     style={`animation-delay: ${index * 50}ms`}

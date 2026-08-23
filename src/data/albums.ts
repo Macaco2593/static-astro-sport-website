@@ -1,3 +1,14 @@
+import { S3Client, ListObjectsV2Command } from "@aws-sdk/client-s3";
+
+const s3 = new S3Client({
+  region: "auto",
+  endpoint: `https://${import.meta.env.R2_ACCOUNT_ID}.r2.cloudflarestorage.com`,
+  credentials: {
+    accessKeyId: import.meta.env.R2_ACCESS_KEY,
+    secretAccessKey: import.meta.env.R2_SECRET_KEY,
+  },
+});
+
 export interface Foto {
   src: string;
   alt?: string;
@@ -22,130 +33,56 @@ export interface FotoInput {
   ancho?: string;
 }
 
-function construirFotos(baseUrl: string, fotosInput: FotoInput[]): Foto[] {
-  return fotosInput.map((foto) => {
-    // 1. Reemplazamos los saltos de línea por espacios (asumiendo que fue un error de tipeo/copiado)
-    // 2. Eliminamos espacios extra al inicio o final (.trim)
-    const nombreLimpio = foto.archivo.replace(/\n/g, " ").trim();
-
-    // 3. encodeURIComponent se encarga de convertir espacios en %20 y escapar caracteres problemáticos (ñ, tildes)
-    const urlSegura = `${baseUrl.replace(/\/$/, "")}/${encodeURIComponent(nombreLimpio)}`;
-
-    return {
-      src: urlSegura,
-      alt: foto.alt,
-      ancho: foto.ancho,
-    };
+async function obtenerFotosDeR2(prefijoCarpeta: string): Promise<Foto[]> {
+  const command = new ListObjectsV2Command({
+    Bucket: "galeria-adadet",
+    Prefix: prefijoCarpeta,
   });
-}
 
-function cantidadFotos(fotos: Foto[]): number {
-  return fotos.length;
+  const response = await s3.send(command);
+  const URL_PUBLICA = "https://pub-15b0928184294a4692cb0b949397344a.r2.dev";
+
+  if (!response.Contents) return [];
+
+  const fotosValidas = response.Contents.filter(
+    (archivo) => archivo.Key && !archivo.Key.endsWith("/"),
+  );
+
+  // 3. EL SCRIPT ESPÍA: Imprimimos la cantidad exacta en la consola con colores básicos
+  console.log(
+    `\n[📸 LOG R2] ✅ Éxito: Se descargó la lista de ${fotosValidas.length} fotos para el estadal.`,
+  );
+  console.log(`[📸 LOG R2] 📂 Ruta escaneada: ${prefijoCarpeta}\n`);
+
+  return (
+    response.Contents
+      // Filtramos para ignorar la carpeta en sí misma si viene en la lista
+      .filter((archivo) => archivo.Key && !archivo.Key.endsWith("/"))
+      .map((archivo) => {
+        // Separamos la ruta por las barras, codificamos el nombre del archivo para que soporte espacios y lo volvemos a unir
+        const partes = archivo.Key!.split("/");
+        const nombreArchivo = encodeURIComponent(partes.pop()!);
+        const rutaSegura = [...partes, nombreArchivo].join("/");
+
+        return {
+          src: `${URL_PUBLICA}/${rutaSegura}`,
+        };
+      })
+  );
 }
 
 export const ALBUMES: Album[] = [
-  // {
-  //   id: "I-competencia-estadal-2026",
-  //   titulo: "I Competencia Estadal 2026",
-  //   fecha: "Marzo 2026",
-  //   ubicación: "San Cristóbal",
-  //   cover: "https://vkkeubhpapquorwauomt.supabase.co/storage/v1/object/public/galeria-adadet/galeria/2026/03-estadal-sancristobal/1.jpg",
-  //   descripcion: "Jornada inaugural con la participación de más de 200 atletas infantiles.",
-  //   etiquetas: ["Natación", "Infantil"],
-  //   cantidadFotos: 25,
-  //   fotos: [
-  //     { src: "https://vkkeubhpapquorwauomt.supabase.co/storage/v1/object/public/galeria-adadet/galeria/2026/03-estadal-sancristobal/1.jpg", alt: "Salida", ancho: "wide" },
-  //   ]
-  // },
-  {
-    id: "I-estadal-2026",
-    titulo: "I Competencia Estadal 2026",
-    fecha: "Marzo 2026",
-    ubicación: "San Cristóbal",
-    cover:
-      "https://vkkeubhpapquorwauomt.supabase.co/storage/v1/object/public/galeria-adadet/galeria/2026/03-estadal-sancristobal/VIERNES1erESTADAL-1.jpg",
-    descripcion:
-      "Jornada inaugural con la participación de más de 200 atletas infantiles.",
-    etiquetas: ["Natación", "Infantil", "Competencia", "Federados"],
-    linkExterno:
-      "https://luiscobariarfotografia77.pixieset.com/1erestadaldenataciontachira2026/",
-  },
   {
     id: "II-estadal-2026",
     titulo: "II Competencia Estadal 2026",
     fecha: "Agosto 2026",
     ubicación: "San Cristóbal",
     cover:
-      "https://vkkeubhpapquorwauomt.supabase.co/storage/v1/object/public/galeria-adadet/galeria/2026/08-estadal-sancristobal/_DSC0500.jpg",
+      "https://pub-15b0928184294a4692cb0b949397344a.r2.dev/galeria/2026/08-estadal-sancristobal/_DSC0500.jpg",
     descripcion:
       "Jornada inaugural con la participación de más de 200 atletas infantiles.",
     etiquetas: ["Natación", "Competencia", "Federados"],
-    fotos: construirFotos(
-      "https://vkkeubhpapquorwauomt.supabase.co/storage/v1/object/public/galeria-adadet/galeria/2026/08-estadal-sancristobal/",
-      [
-        { archivo: "_DSC0275.jpg" },
-        { archivo: "_DSC0277 (1).jpg" },
-        { archivo: "_DSC0293.jpg" },
-        { archivo: "_DSC0325 (1).jpg" },
-        { archivo: "_DSC0349.jpg" },
-        { archivo: "_DSC0353 (1).jpg" },
-        { archivo: "_DSC0373 (1).jpg" },
-        { archivo: "_DSC0375 (1).jpg" },
-        { archivo: "_DSC0378 (1).jpg" },
-        { archivo: "_DSC0379 (1).jpg" },
-        { archivo: "_DSC0390.jpg" },
-        { archivo: "_DSC0392.jpg" },
-        { archivo: "_DSC0406.jpg" },
-        { archivo: "_DSC0407 (1).jpg" },
-        { archivo: "_DSC0410 (1).jpg" },
-        { archivo: "_DSC0414 (1).jpg" },
-        { archivo: "_DSC0415.jpg" },
-        { archivo: "_DSC0434.jpg" },
-        { archivo: "_DSC0454.jpg" },
-        { archivo: "_DSC0458.jpg" },
-        { archivo: "_DSC0463 (1).jpg" },
-        { archivo: "_DSC0470.jpg" },
-        { archivo: "_DSC0474 (1).jpg" },
-        { archivo: "_DSC0480.jpg" },
-        { archivo: "_DSC0485.jpg" },
-        { archivo: "_DSC0487.jpg" },
-        { archivo: "_DSC0491.jpg" },
-        { archivo: "_DSC0492.jpg" },
-        { archivo: "_DSC0500.jpg" },
-        { archivo: "_DSC0501 (1) (1).jpg" },
-        { archivo: "_DSC0509.jpg" },
-        { archivo: "_DSC0510.jpg" },
-        { archivo: "_DSC0511.jpg" },
-        { archivo: "_DSC0512 (1).jpg" },
-        { archivo: "_DSC0520.jpg" },
-        { archivo: "_DSC0545.jpg" },
-        { archivo: "_DSC0546.jpg" },
-        { archivo: "_DSC0548 (1).jpg" },
-        { archivo: "_DSC0563.jpg" },
-        { archivo: "_DSC0566 (1).jpg" },
-        { archivo: "_DSC0575.jpg" },
-        { archivo: "_DSC0577 (1).jpg" },
-        { archivo: "_DSC0581.jpg" },
-        { archivo: "_DSC0589 (1).jpg" },
-        { archivo: "_DSC0595 (1) (1).jpg" },
-        { archivo: "_DSC0598.jpg" },
-        { archivo: "_DSC0600.jpg" },
-        { archivo: "_DSC0604.jpg" },
-        { archivo: "_DSC0605 (1).jpg" },
-        { archivo: "_DSC0606.jpg" },
-        { archivo: "_DSC0612.jpg" },
-        { archivo: "_DSC0613 (1).jpg" },
-        { archivo: "_DSC0616 (1).jpg" },
-        { archivo: "_DSC0617 (1) (2).jpg" },
-        { archivo: "_DSC0618 (1).jpg" },
-        { archivo: "_DSC0625 (1).jpg" },
-        { archivo: "_DSC0629.jpg" },
-        { archivo: "_DSC0632 (2).jpg" },
-        { archivo: "_DSC0643 (1).jpg" },
-        { archivo: "_DSC0645 (1).jpg" },
-        { archivo: "_DSC0645.jpg" },
-      ],
-    ),
+    // ¡Magia! Solo le pasas la ruta de la carpeta
+    fotos: await obtenerFotosDeR2("galeria/2026/08-estadal-sancristobal/"),
   },
-  // ...
 ];
