@@ -21,9 +21,12 @@ export const DOCUMENTOS_SLUG = {
   NATACION_CONDICIONES_GENERALES_2026: "condiciones_generales_de_natacion_2026",
   NATACION_RANKING_2026: "natacion-ranking-2026",
   AGUAS_ABIERTAS_MARCAS_MINIMAS_2026: "aguas-abiertas-marcas-minimas-2026",
-  AGUAS_ABIERTAS_CONDICIONES_TECNICAS_2026: "aguas-abiertas-condiciones-tecnicas-2026",
-  NATACION_ARTISTICA_CONDICIONES_TECNICAS_2026: "natacion-artistica-condiciones-tecnicas-2026",
-  POLO_ACUATICO_CONDICIONES_TECNICAS_2026: "polo-acuatico-condiciones-tecnicas-2026",
+  AGUAS_ABIERTAS_CONDICIONES_TECNICAS_2026:
+    "aguas-abiertas-condiciones-tecnicas-2026",
+  NATACION_ARTISTICA_CONDICIONES_TECNICAS_2026:
+    "natacion-artistica-condiciones-tecnicas-2026",
+  POLO_ACUATICO_CONDICIONES_TECNICAS_2026:
+    "polo-acuatico-condiciones-tecnicas-2026",
   CLAVADO_CONDICIONES_TECNICAS_2026: "clavado-condiciones-tecnicas-2026",
   MASTER_CONDICIONES_TECNICAS_2026: "master-marcas-minimas-2026",
   CALENDARIO_NATACION_FEVEDA_2026: "calendario-natacion-feveda-2026",
@@ -49,8 +52,7 @@ export const DOCUMENTOS: Documento[] = [
   {
     slug: DOCUMENTOS_SLUG.PROVIDENCIA_ADMINISTRATIVA,
     titulo: "Providencia Administrativa",
-    descripcion:
-      "Providencia administrativa emitida para la temporada 2024.",
+    descripcion: "Providencia administrativa emitida para la temporada 2024.",
     fechaPublicacion: "2024-02-01",
     archivo: "/documentos/providencia-administrativa-2024.pdf",
   },
@@ -82,7 +84,7 @@ export const DOCUMENTOS: Documento[] = [
     descripcion:
       "Documento con la normativa de fichaje de atletas para la temporada 2026.",
     fechaPublicacion: "2026-02-16",
-    archivo: "/contenido/documentos/normativa_de_fichaje_feveda_2026.pdf",
+    archivo: "/documentos/normativa_de_fichaje_feveda_2026.pdf",
   },
   {
     slug: DOCUMENTOS_SLUG.RECONOCIMIENTO_IDT,
@@ -103,16 +105,18 @@ export const DOCUMENTOS: Documento[] = [
   {
     slug: DOCUMENTOS_SLUG.NATACION_MARCAS_MINIMAS_2026,
     titulo: "Natación – Marcas mínimas 2026",
-    descripcion: "Tabla de marcas mínimas para la disciplina de natación, temporada 2026.",
+    descripcion:
+      "Tabla de marcas mínimas para la disciplina de natación, temporada 2026.",
     fechaPublicacion: "2026-02-16",
-    archivo: "/contenido/documentos/marcas-minimas-natacion-2026.pdf",
+    archivo: "/documentos/marcas-minimas-natacion-2026.pdf",
   },
   {
     slug: DOCUMENTOS_SLUG.NATACION_CONDICIONES_GENERALES_2026,
     titulo: "Natación – Condiciones Generales 2026",
-    descripcion: "Condiciones Generales oficiales para competencias de natación 2026.",
+    descripcion:
+      "Condiciones Generales oficiales para competencias de natación 2026.",
     fechaPublicacion: "2026-02-16",
-    archivo: "/contenido/documentos/condiciones_generales_de_natacion_2026.pdf",
+    archivo: "/documentos/condiciones_generales_de_natacion_2026.pdf",
   },
   {
     slug: DOCUMENTOS_SLUG.NATACION_RANKING_2026,
@@ -126,41 +130,48 @@ export const DOCUMENTOS: Documento[] = [
     titulo: "Aguas Abiertas – Condiciones técnicas 2026",
     descripcion: "Condiciones técnicas de pruebas en aguas abiertas para 2026.",
     fechaPublicacion: "2025-11-12",
-    archivo: "/contenido/documentos/condiciones_tecnicas_generales_de_aguas_abiertas_2026.pdf",
+    archivo:
+      "/documentos/condiciones_tecnicas_generales_de_aguas_abiertas_2026.pdf",
   },
   {
     slug: DOCUMENTOS_SLUG.NATACION_ARTISTICA_CONDICIONES_TECNICAS_2026,
     titulo: "Natación Artística – Condiciones técnicas 2026",
-    descripcion: "Lineamientos técnicos para rutinas de natación artística 2026.",
+    descripcion:
+      "Lineamientos técnicos para rutinas de natación artística 2026.",
     fechaPublicacion: "2026-02-16",
-    archivo: "/contenido/documentos/condiciones_tecnicas_generales_de_natacion_artistica.pdf",
+    archivo:
+      "/documentos/condiciones_tecnicas_generales_de_natacion_artistica.pdf",
   },
   {
     slug: DOCUMENTOS_SLUG.POLO_ACUATICO_CONDICIONES_TECNICAS_2026,
     titulo: "Polo Acuático – Condiciones técnicas 2026",
     descripcion: "Reglamento técnico para competencias de polo acuático 2026.",
     fechaPublicacion: "2026-02-16",
-    archivo: "/contenido/documentos/condiciones_tecnicas_generales_de_polo_acuatico_2026.pdf",
+    archivo:
+      "/documentos/condiciones_tecnicas_generales_de_polo_acuatico_2026.pdf",
   },
   {
     slug: DOCUMENTOS_SLUG.CLAVADO_CONDICIONES_TECNICAS_2026,
     titulo: "Salto Ornamental – Condiciones técnicas 2026",
     descripcion: "Normas y especificaciones técnicas para clavado 2026.",
     fechaPublicacion: "2026-02-16",
-    archivo: "/contenido/documentos/condiciones_tecnicas_generales_de_clavados_2026.pdf",
+    archivo: "/documentos/condiciones_tecnicas_generales_de_clavados_2026.pdf",
   },
   {
     slug: DOCUMENTOS_SLUG.MASTER_CONDICIONES_TECNICAS_2026,
     titulo: "Máster – Condiciones Técnicas 2026",
-    descripcion: "Condiciones técnicas para las categorías máster en natación 2026.",
+    descripcion:
+      "Condiciones técnicas para las categorías máster en natación 2026.",
     fechaPublicacion: "2026-02-16",
-    archivo: "/contenido/documentos/condiciones_tecnicas_generales_de_natacion_master_2026.pdf",
+    archivo:
+      "/documentos/condiciones_tecnicas_generales_de_natacion_master_2026.pdf",
   },
   {
     slug: DOCUMENTOS_SLUG.CALENDARIO_NATACION_FEVEDA_2026,
     titulo: "Calendario de Natación FEVEDA 2026",
-    descripcion: "Calendario oficial de competencias de natación organizadas por FEVEDA para la temporada 2026.",
+    descripcion:
+      "Calendario oficial de competencias de natación organizadas por FEVEDA para la temporada 2026.",
     fechaPublicacion: "2026-03-08",
-    archivo: "/contenido/documentos/calendario_natacion_feveda_2026.pdf",
-  }
+    archivo: "/documentos/calendario_natacion_feveda_2026.pdf",
+  },
 ];

@@ -16,7 +16,7 @@ interface Props {
 
 const { doc } = Astro.props;
 
-const urlCompleta = `https://adadet.org${doc.archivo}`; 
+const urlCompleta = `https://pub-15b0928184294a4692cb0b949397344a.r2.dev${doc.archivo}`; 
 const urlVisorGoogle = `https://docs.google.com/viewer?url=${encodeURIComponent(urlCompleta)}&embedded=true`;
 
 const fecha = new Date(doc.fechaPublicacion);
@@ -70,7 +70,7 @@ const fechaFormateada = fecha.toLocaleDateString("es-VE", {
                 </div>
 
                 <a
-                  href={doc.archivo}
+                  href={urlCompleta}
                   download
                   class="hidden md:inline-flex items-center gap-2 rounded-xl bg-slate-900 px-6 py-3 text-sm font-bold text-white transition-all hover:bg-adadet-main hover:shadow-lg hover:-translate-y-1"
                 >
@@ -99,7 +99,7 @@ const fechaFormateada = fecha.toLocaleDateString("es-VE", {
             {/* En celulares (hidden), en PC se muestra (md:block) */}
             <div class="hidden md:block bg-slate-300 h-[70vh] min-h-[600px]">
                 <iframe
-                  src={`${doc.archivo}#toolbar=1&navpanes=0&scrollbar=1`}
+                  src={`${urlCompleta}#toolbar=1&navpanes=0&scrollbar=1`}
                   title={doc.titulo}
                   class="w-full h-full border-none"
                 >
@@ -118,7 +118,7 @@ const fechaFormateada = fecha.toLocaleDateString("es-VE", {
                 <p class="text-slate-500 text-sm mb-6">Abre el archivo para una lectura optimizada en tu pantalla.</p>
                 
                 <a 
-                    href={doc.archivo} 
+                    href={urlCompleta} 
                     target="_blank"
                     rel="noopener noreferrer"
                     class="px-6 py-3 bg-slate-900 text-white text-sm font-bold rounded-xl shadow-lg active:scale-95 transition-transform"
@@ -154,7 +154,7 @@ const fechaFormateada = fecha.toLocaleDateString("es-VE", {
           </div>
 
           <a
-            href={doc.archivo}
+            href={urlCompleta}
             download
             class="md:hidden flex w-full items-center justify-center gap-2 rounded-xl bg-slate-900 px-4 py-3 text-sm font-bold text-white shadow-lg"
           >
