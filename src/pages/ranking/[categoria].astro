@@ -221,16 +221,6 @@ const getRankIcon = (index: number) => {
       ))}
     </div>
     
-    {/* BOTÓN FLOTANTE: BACK TO TOP */}
-    <button 
-        id="btn-back-to-top" 
-        class="fixed bottom-6 right-6 p-3 bg-slate-800 text-white rounded-full shadow-xl hover:bg-cyan-500 hover:shadow-cyan-500/30 transition-all duration-300 transform translate-y-16 opacity-0 z-50 focus:outline-none"
-        aria-label="Volver arriba"
-    >
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18" />
-        </svg>
-    </button>
 
   </div>
 </LayoutCompetencias>
@@ -342,26 +332,6 @@ const getRankIcon = (index: number) => {
             window.addEventListener('resize', handleScroll);
         }
 
-        // 3. BOTÓN "BACK TO TOP"
-        const backToTopBtn = document.getElementById('btn-back-to-top');
-        
-        const handleBackToTopScroll = () => {
-            if (window.scrollY > 400) {
-                backToTopBtn?.classList.remove('translate-y-16', 'opacity-0');
-            } else {
-                backToTopBtn?.classList.add('translate-y-16', 'opacity-0');
-            }
-        };
-
-        window.removeEventListener('scroll', handleBackToTopScroll);
-        window.addEventListener('scroll', handleBackToTopScroll);
-
-        backToTopBtn?.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
 
   });
 </script>

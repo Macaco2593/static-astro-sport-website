@@ -5,22 +5,22 @@ import { ROUTES } from '../data/routes';
 import PageHero from "src/components/UI/PageHero.astro";
 import { Image } from 'astro:assets';
 
-// Función para extraer el slug
-const getSlug = (linkCompleto: string) => {
-  return linkCompleto.replace('/competencias_pdf/', '');
-};
+const getSlug = (linkCompleto: string) => linkCompleto.replace('/competencias_pdf/', '');
 
-// Función para formatear fecha (Ej: "12 Feb")
 const formatDate = (fecha: string) => {
-  const [day, month, year] = fecha.split('/');
+  const [year, month, day] = fecha.split('-');
   const months = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
   return `${day} ${months[parseInt(month) - 1]}`;
 };
 
-// Agrupar competencias
-const competenciasEstadales = ListaCompetencias.filter((c) => c.tipo === 'estadal');
-const competenciasRegionales = ListaCompetencias.filter((c) => c.tipo === 'regional');
-const competenciasNacionales = ListaCompetencias.filter((c) => c.tipo === 'nacional');
+// 1. Ordenamos por fecha
+const competenciasOrdenadas = [...ListaCompetencias].sort((a, b) => {
+    return new Date(b.fechaInicio).getTime() - new Date(a.fechaInicio).getTime();
+});
+
+// 2. Extraemos los años únicos (Ej: ["2026", "2025"])
+const añosDisponibles = [...new Set(competenciasOrdenadas.map(c => c.fechaInicio.split('-')[0]))].sort((a, b) => b.localeCompare(a));
+
 const pageTitle = "Resultados | ADADET";
 const pageDescription = "Accede a los resultados oficiales de todas las competencias de natación en Táchira. Consulta los tiempos, marcas y puntajes de los últimos torneos."
 ---
@@ -28,324 +28,411 @@ const pageDescription = "Accede a los resultados oficiales de todas las competen
 <LayoutCompetencias titulo={pageTitle} descripcion={pageDescription}>
   <div class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50">
     
-    
-<section class="relative pt-12 pb-24 md:pt-16 md:pb-32 bg-slate-50 overflow-hidden" id="competencias">
+    <section class="relative pt-12 pb-24 md:pt-16 md:pb-32 bg-slate-50 overflow-hidden" id="competencias">
       <div class="mb-10">
-    <PageHero
+        <PageHero
             title="Resultados y" 
             gradientText="Competencias"
-            subtitle="Consulta las convocatorias..."
-            badge="Competencias"
+            subtitle="Consulta las convocatorias oficiales"
+            badge="Historial"
         />
-    
-  </div>
-  <div class="absolute inset-0 overflow-hidden pointer-events-none">
-    <div class="absolute top-20 -left-20 w-96 h-96 bg-adadet-main/5 rounded-full blur-3xl animate-blob"></div>
-    <div class="absolute top-1/3 -right-20 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
-    <div class="absolute bottom-0 left-1/2 w-full h-96 bg-gradient-to-t from-slate-100 to-transparent"></div>
-  </div>
+      </div>
 
-  
-  <div class="container mx-auto px-4 relative z-10 max-w-7xl">
-    
-    
-
-    <div class="space-y-20">
-      
-      {/* --- SECCIÓN: ESTADALES --- */}
-      {competenciasEstadales.length > 0 && (
-        <section>
-          <div class="flex items-center gap-4 mb-8">
-            <div class="h-10 w-1 bg-adadet-main rounded-full"></div>
-            <h3 class="text-2xl md:text-3xl font-black font-display text-slate-800">
-                Competencias <span class="text-adadet-main">Estadales</span>
-            </h3>
-            <div class="h-px flex-1 bg-slate-200"></div>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {competenciasEstadales.map((competencia, index) => (
-              
-              /* TARJETA DE COMPETENCIA ESTADAL */
-              <a 
-                href={ROUTES.RESULTADOS_SLUG(getSlug(competencia.linkDeLaCompetencia))}
-                class="group relative flex flex-col bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-adadet-main/10 hover:-translate-y-2 hover:border-adadet-main/30 animate-fade-in-up"
-                style={`animation-delay: ${index * 100}ms`}
-              >
-                {/* Header Imagen/Folleto */}
-                <div class="relative h-48 bg-slate-200 overflow-hidden">
-                    <Image 
-                        src={competencia.img} 
-                        alt={competencia.titulo}
-                        inferSize={true}
-                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-0"
-                        loading="lazy"
-                    />
-
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-60 z-0"></div>
-
-                    <div class="absolute top-4 left-4 z-10">
-                        <div class="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-lg text-xs font-bold text-slate-700 shadow-sm">
-                            <svg class="w-3.5 h-3.5 text-adadet-main" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 011.414.586l4 4a1 1 0 01.586 1.414V19a2 2 0 01-2 2z" />
-                            </svg>
-                            {competencia.resultados.length} Docs
-                        </div>
-                    </div>
-
-                    <div class="absolute -bottom-6 right-6 z-10">
-                        <div class="w-12 h-12 bg-adadet-main text-white rounded-xl shadow-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300 border-4 border-white">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M2 17s1.5-2 3.5-2 3.5 2 5.5 2 3.5-2 5.5-2 3.5 2 3.5 2m-17 2s1.5-2 3.5-2 3.5 2 5.5 2 3.5-2 5.5-2 3.5 2 3.5 2M7 7a2 2 0 100-4 2 2 0 000 4zm13 3l-4-1 1-3-2.5.5L13 9l-1.5-2L9 7.5 10 10l-4 1 1 3h12l1-4z"/>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Contenido */}
-                <div class="p-6 pt-8 flex-1 flex flex-col">
-                    <h3 class="text-xl font-bold text-slate-900 mb-2 leading-tight group-hover:text-adadet-main transition-colors line-clamp-2">
-                    {competencia.titulo}
-                    </h3>
-                    
-                    <div class="h-px w-12 bg-slate-200 my-4 group-hover:w-full group-hover:bg-adadet-main/30 transition-all duration-500"></div>
-
-                    <div class="grid grid-cols-2 gap-4 mb-6">
-                        <div>
-                            <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">Inicio</p>
-                            <p class="text-sm font-bold text-slate-700 flex items-center gap-1.5">
-                                <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
-                                {formatDate(competencia.fechaInicio)}
-                            </p>
-                        </div>
-                        <div>
-                            <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">Fin</p>
-                            <p class="text-sm font-bold text-slate-700 flex items-center gap-1.5">
-                                <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
-                                {formatDate(competencia.fechaFinalizacion)}
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="mt-auto flex items-center justify-between text-sm font-bold text-adadet-main group-hover:text-cyan-600 transition-colors">
-                        <span>Ver Resultados</span>
-                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                    </div>
-                </div>
-              </a>
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* --- SECCIÓN: REGIONALES --- */}
-      {competenciasRegionales.length > 0 && (
-        <section>
-            <div class="flex items-center gap-4 mb-8">
-                <div class="h-10 w-1 bg-cyan-500 rounded-full"></div>
-                <h3 class="text-2xl md:text-3xl font-black font-display text-slate-800">
-                    Competencias <span class="text-cyan-600">Regionales</span>
-                </h3>
-                <div class="h-px flex-1 bg-slate-200"></div>
+      <div class="container mx-auto px-4 relative z-10 max-w-7xl">
+        
+        {/* --- BARRA DE FILTROS --- */}
+        <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-200 mb-12 flex flex-col sm:flex-row gap-4 items-center justify-between max-w-3xl mx-auto">
+            <div class="flex items-center gap-2 text-slate-500 font-bold text-sm uppercase tracking-wide w-full sm:w-auto">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" /></svg>
+                Filtrar Resultados
             </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {competenciasRegionales.map((competencia, index) => (
-              
-              /* TARJETA DE COMPETENCIA REGIONAL (Mismo diseño, diferente icono/color si quisieras) */
-              <a 
-                href={ROUTES.RESULTADOS_SLUG(getSlug(competencia.linkDeLaCompetencia))}
-                class="group relative flex flex-col bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/10 hover:-translate-y-2 hover:border-cyan-400/30 animate-fade-in-up"
-                style={`animation-delay: ${index * 100}ms`}
-              >
-                {/* ... (REPETICIÓN DEL CÓDIGO DE TARJETA PARA REGIONALES) ... */}
-                {/* Para ahorrar espacio aquí, es el mismo bloque HTML de arriba. 
-                    En tu código final, COPIA Y PEGA el bloque <a> completo de 'Estadales' aquí abajo.
-                    Lo pondré completo para que no tengas dudas al copiar.
-                */}
-                 <div class="relative h-48 bg-slate-200 overflow-hidden">
-                    <Image 
-                        src={competencia.img} 
-                        alt={competencia.titulo}
-                        inferSize={true}
-                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-0"
-                        loading="lazy"
-                    />
-
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-60 z-0"></div>
-
-                    <div class="absolute top-4 left-4 z-10">
-                        <div class="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-lg text-xs font-bold text-slate-700 shadow-sm">
-                            <svg class="w-3.5 h-3.5 text-cyan-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 011.414.586l4 4a1 1 0 01.586 1.414V19a2 2 0 01-2 2z" />
-                            </svg>
-                            {competencia.resultados.length} Docs
-                        </div>
-                    </div>
-
-                    <div class="absolute -bottom-6 right-6 z-10">
-                        <div class="w-12 h-12 bg-cyan-500 text-white rounded-xl shadow-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300 border-4 border-white">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M2 17s1.5-2 3.5-2 3.5 2 5.5 2 3.5-2 5.5-2 3.5 2 3.5 2m-17 2s1.5-2 3.5-2 3.5 2 5.5 2 3.5-2 5.5-2 3.5 2 3.5 2M7 7a2 2 0 100-4 2 2 0 000 4zm13 3l-4-1 1-3-2.5.5L13 9l-1.5-2L9 7.5 10 10l-4 1 1 3h12l1-4z"/>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="p-6 pt-8 flex-1 flex flex-col">
-                    <h3 class="text-xl font-bold text-slate-900 mb-2 leading-tight group-hover:text-cyan-600 transition-colors line-clamp-2">
-                    {competencia.titulo}
-                    </h3>
-                    <div class="h-px w-12 bg-slate-200 my-4 group-hover:w-full group-hover:bg-cyan-400/30 transition-all duration-500"></div>
-                    <div class="grid grid-cols-2 gap-4 mb-6">
-                        <div>
-                            <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">Inicio</p>
-                            <p class="text-sm font-bold text-slate-700 flex items-center gap-1.5">
-                                <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
-                                {formatDate(competencia.fechaInicio)}
-                            </p>
-                        </div>
-                        <div>
-                            <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">Fin</p>
-                            <p class="text-sm font-bold text-slate-700 flex items-center gap-1.5">
-                                <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
-                                {formatDate(competencia.fechaFinalizacion)}
-                            </p>
-                        </div>
-                    </div>
-                    <div class="mt-auto flex items-center justify-between text-sm font-bold text-cyan-600 group-hover:text-cyan-500 transition-colors">
-                        <span>Ver Resultados</span>
-                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                    </div>
-                </div>
-              </a>
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* --- SECCIÓN: NACIONALES --- */}
-      {competenciasNacionales.length > 0 && (
-        <section>
-            <div class="flex items-center gap-4 mb-8">
-                <div class="h-10 w-1 bg-indigo-500 rounded-full"></div>
-                <h3 class="text-2xl md:text-3xl font-black font-display text-slate-800">
-                    Competencias <span class="text-indigo-600">Nacionales</span>
-                </h3>
-                <div class="h-px flex-1 bg-slate-200"></div>
-            </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {competenciasNacionales.map((competencia, index) => (
-              
-              /* TARJETA DE COMPETENCIA NACIONAL */
-              <a 
-                href={ROUTES.RESULTADOS_SLUG(getSlug(competencia.linkDeLaCompetencia))}
-                class="group relative flex flex-col bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/10 hover:-translate-y-2 hover:border-indigo-400/30 animate-fade-in-up"
-                style={`animation-delay: ${index * 100}ms`}
-              >
-                 <div class="relative h-48 bg-slate-200 overflow-hidden">
-                    <Image 
-                        src={competencia.img} 
-                        alt={competencia.titulo}
-                        inferSize={true}
-                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-0"
-                        loading="lazy"
-                    />
-
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-60 z-0"></div>
-
-                    <div class="absolute top-4 left-4 z-10">
-                        <div class="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-lg text-xs font-bold text-slate-700 shadow-sm">
-                            <svg class="w-3.5 h-3.5 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 011.414.586l4 4a1 1 0 01.586 1.414V19a2 2 0 01-2 2z" />
-                            </svg>
-                            {competencia.resultados.length} Docs
-                        </div>
-                    </div>
-
-                    <div class="absolute -bottom-6 right-6 z-10">
-                        <div class="w-12 h-12 bg-indigo-500 text-white rounded-xl shadow-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300 border-4 border-white">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M2 17s1.5-2 3.5-2 3.5 2 5.5 2 3.5-2 5.5-2 3.5 2 3.5 2m-17 2s1.5-2 3.5-2 3.5 2 5.5 2 3.5-2 5.5-2 3.5 2 3.5 2M7 7a2 2 0 100-4 2 2 0 000 4zm13 3l-4-1 1-3-2.5.5L13 9l-1.5-2L9 7.5 10 10l-4 1 1 3h12l1-4z"/>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-6 pt-8 flex-1 flex flex-col">
-                    <h3 class="text-xl font-bold text-slate-900 mb-2 leading-tight group-hover:text-indigo-600 transition-colors line-clamp-2">
-                    {competencia.titulo}
-                    </h3>
-                    <div class="h-px w-12 bg-slate-200 my-4 group-hover:w-full group-hover:bg-indigo-400/30 transition-all duration-500"></div>
-                    <div class="grid grid-cols-2 gap-4 mb-6">
-                        <div>
-                            <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">Inicio</p>
-                            <p class="text-sm font-bold text-slate-700 flex items-center gap-1.5">
-                                <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
-                                {formatDate(competencia.fechaInicio)}
-                            </p>
-                        </div>
-                        <div>
-                            <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">Fin</p>
-                            <p class="text-sm font-bold text-slate-700 flex items-center gap-1.5">
-                                <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
-                                {formatDate(competencia.fechaFinalizacion)}
-                            </p>
-                        </div>
-                    </div>
-                    <div class="mt-auto flex items-center justify-between text-sm font-bold text-indigo-600 group-hover:text-indigo-500 transition-colors">
-                        <span>Ver Resultados</span>
-                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                    </div>
-                </div>
-              </a>
-            ))}
-          </div>
-        </section>
-      )}
+            
+            <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto relative z-30">
+    
+    {/* --- CUSTOM SELECT: AÑOS --- */}
+    <div class="custom-dropdown relative z-50 w-full sm:w-48" data-id="filter-year">
+        <button type="button" class="w-full bg-slate-50 border border-slate-200 text-slate-700 text-sm rounded-xl hover:bg-white focus:ring-4 focus:ring-cyan-500/10 focus:border-cyan-400 flex justify-between items-center p-3 font-bold outline-none transition-all duration-300 cursor-pointer shadow-sm">
+            <span class="selected-text truncate">Todos los Años</span>
+            <svg class="w-4 h-4 text-slate-400 transition-transform duration-300 dropdown-arrow flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+        </button>
+        
+        <div class="dropdown-menu absolute top-full left-0 w-full mt-2 bg-white/95 backdrop-blur-md border border-slate-100 rounded-xl shadow-xl shadow-slate-200/50 opacity-0 -translate-y-2 pointer-events-none transition-all duration-300 overflow-hidden">
+            <ul class="py-1.5 flex flex-col max-h-60 overflow-y-auto custom-scrollbar">
+                <li><button type="button" class="dropdown-option w-full text-left px-4 py-2.5 text-sm text-slate-600 hover:bg-cyan-50 hover:text-cyan-700 font-bold transition-colors" data-value="all">Todos los Años</button></li>
+                {añosDisponibles.map(año => (
+                    <li><button type="button" class="dropdown-option w-full text-left px-4 py-2.5 text-sm text-slate-600 hover:bg-cyan-50 hover:text-cyan-700 font-bold transition-colors" data-value={año}>{año}</button></li>
+                ))}
+            </ul>
+        </div>
+        {/* El input oculto que conecta con tu filtro actual */}
+        <input type="hidden" id="filter-year" value="all">
     </div>
 
-    {/* BOTÓN "VER TODOS" (Si hay muchos) */}
-    {ListaCompetencias.length > 9 && (
-      <div class="text-center mt-20">
-        <a 
-          href={ROUTES.RESULTADOS} 
-          class="group relative inline-flex items-center justify-center gap-2 px-8 py-4 bg-slate-900 text-white font-bold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/30 hover:-translate-y-1"
-        >
-          <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-adadet-main to-cyan-500 transform translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></span>
-          <span class="relative flex items-center gap-2">
-            Ver Calendario Completo
-            <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </span>
-        </a>
-      </div>
-    )}
-  </div>
-</section>
+    {/* --- CUSTOM SELECT: TIPO DE COMPETENCIA --- */}
+    <div class="custom-dropdown relative w-full sm:w-56" data-id="filter-type">
+        <button type="button" class="w-full bg-slate-50 border border-slate-200 text-slate-700 text-sm rounded-xl hover:bg-white focus:ring-4 focus:ring-cyan-500/10 focus:border-cyan-400 flex justify-between items-center p-3 font-bold outline-none transition-all duration-300 cursor-pointer shadow-sm">
+            <span class="selected-text truncate">Todas las Categorías</span>
+            <svg class="w-4 h-4 text-slate-400 transition-transform duration-300 dropdown-arrow flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+        </button>
+        
+        <div class="dropdown-menu absolute top-full left-0 w-full mt-2 bg-white/95 backdrop-blur-md border border-slate-100 rounded-xl shadow-xl shadow-slate-200/50 opacity-0 -translate-y-2 pointer-events-none transition-all duration-300 overflow-hidden">
+            <ul class="py-1.5 flex flex-col">
+                <li><button type="button" class="dropdown-option w-full text-left px-4 py-2.5 text-sm text-slate-600 hover:bg-cyan-50 hover:text-cyan-700 font-bold transition-colors" data-value="all">Todas las Categorías</button></li>
+                <li><button type="button" class="dropdown-option w-full text-left px-4 py-2.5 text-sm text-slate-600 hover:bg-cyan-50 hover:text-cyan-700 font-bold transition-colors flex items-center gap-2" data-value="estadal"><span class="w-1.5 h-1.5 rounded-full bg-adadet-main"></span>Estadales</button></li>
+                <li><button type="button" class="dropdown-option w-full text-left px-4 py-2.5 text-sm text-slate-600 hover:bg-cyan-50 hover:text-cyan-700 font-bold transition-colors flex items-center gap-2" data-value="regional"><span class="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>Regionales</button></li>
+                <li><button type="button" class="dropdown-option w-full text-left px-4 py-2.5 text-sm text-slate-600 hover:bg-cyan-50 hover:text-cyan-700 font-bold transition-colors flex items-center gap-2" data-value="nacional"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>Nacionales</button></li>
+            </ul>
+        </div>
+        {/* El input oculto que conecta con tu filtro actual */}
+        <input type="hidden" id="filter-type" value="all">
+    </div>
 
-<style>
-  /* Animaciones */
-  @keyframes fade-in-down {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes fade-in-up {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes blob {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    33% { transform: translate(30px, -50px) scale(1.1); }
-    66% { transform: translate(-20px, 20px) scale(0.9); }
-  }
-  
-  .animate-fade-in-down { animation: fade-in-down 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
-  .animate-fade-in-up { animation: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both; }
-  .animate-blob { animation: blob 10s infinite alternate; }
-  .animation-delay-2000 { animation-delay: 2s; }
-</style>
+</div>
+        </div>
+
+        {/* --- CONTENEDOR DE RESULTADOS --- */}
+        <div class="space-y-24" id="competencias-container">
+          
+          {añosDisponibles.map(añoActual => {
+            // Filtramos las competencias que pertenecen a este año en el bucle
+            const compDeEsteAño = competenciasOrdenadas.filter(c => c.fechaInicio.startsWith(añoActual));
+            const estadales = compDeEsteAño.filter(c => c.tipo === 'estadal');
+            const regionales = compDeEsteAño.filter(c => c.tipo === 'regional');
+            const nacionales = compDeEsteAño.filter(c => c.tipo === 'nacional');
+
+            return (
+              <div class="year-section" data-year={añoActual}>
+                
+                {/* Título del Año */}
+                <div class="inline-flex items-center justify-center gap-3 bg-slate-900 text-white px-8 py-3 rounded-2xl shadow-xl shadow-slate-900/20 mb-12 transform -rotate-1 mx-auto border border-slate-700">
+                    <svg class="w-6 h-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                    <h2 class="text-3xl font-black tracking-widest">{añoActual}</h2>
+                </div>
+
+                <div class="space-y-16">
+                    {/* --- ESTADALES --- */}
+                    {estadales.length > 0 && (
+                        <section class="category-section" data-type="estadal">
+                            <div class="flex items-center gap-4 mb-8">
+                                <div class="h-10 w-1 bg-adadet-main rounded-full"></div>
+                                <h3 class="text-2xl md:text-3xl font-black font-display text-slate-800">
+                                    Competencias <span class="text-adadet-main">Estadales</span>
+                                </h3>
+                                <div class="h-px flex-1 bg-slate-200"></div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                {estadales.map((competencia, index) => (
+                                    <a 
+                                        href={ROUTES.RESULTADOS_SLUG(getSlug(competencia.linkDeLaCompetencia))}
+                                        class="comp-card active-card group relative flex flex-col bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-adadet-main/10 hover:-translate-y-2 hover:border-adadet-main/30 animate-fade-in-up"
+                                        style={`animation-delay: ${index * 50}ms`}
+                                        data-year={añoActual}
+                                        data-type="estadal"
+                                    >
+                                        <div class="relative h-48 bg-slate-200 overflow-hidden">
+                                            <Image src={competencia.img} alt={competencia.titulo} inferSize={true} class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-0" loading="lazy" />
+                                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-60 z-0"></div>
+                                            <div class="absolute top-4 left-4 z-10">
+                                                <div class="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-lg text-xs font-bold text-slate-700 shadow-sm">
+                                                    <svg class="w-3.5 h-3.5 text-adadet-main" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 011.414.586l4 4a1 1 0 01.586 1.414V19a2 2 0 01-2 2z" /></svg>
+                                                    {competencia.resultados.length} Docs
+                                                </div>
+                                            </div>
+                                            <div class="absolute -bottom-6 right-6 z-10">
+                                                <div class="w-12 h-12 bg-adadet-main text-white rounded-xl shadow-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300 border-4 border-white">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M2 17s1.5-2 3.5-2 3.5 2 5.5 2 3.5-2 5.5-2 3.5 2 3.5 2m-17 2s1.5-2 3.5-2 3.5 2 5.5 2 3.5-2 5.5-2 3.5 2 3.5 2M7 7a2 2 0 100-4 2 2 0 000 4zm13 3l-4-1 1-3-2.5.5L13 9l-1.5-2L9 7.5 10 10l-4 1 1 3h12l1-4z"/></svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="p-6 pt-8 flex-1 flex flex-col">
+                                            <h3 class="text-xl font-bold text-slate-900 mb-2 leading-tight group-hover:text-adadet-main transition-colors line-clamp-2">{competencia.titulo}</h3>
+                                            <div class="h-px w-12 bg-slate-200 my-4 group-hover:w-full group-hover:bg-adadet-main/30 transition-all duration-500"></div>
+                                            <div class="grid grid-cols-2 gap-4 mb-6">
+                                                <div>
+                                                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">Inicio</p>
+                                                    <p class="text-sm font-bold text-slate-700 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>{formatDate(competencia.fechaInicio)}</p>
+                                                </div>
+                                                <div>
+                                                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">Fin</p>
+                                                    <p class="text-sm font-bold text-slate-700 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>{formatDate(competencia.fechaFinalizacion)}</p>
+                                                </div>
+                                            </div>
+                                            <div class="mt-auto flex items-center justify-between text-sm font-bold text-adadet-main group-hover:text-cyan-600 transition-colors">
+                                                <span>Ver Resultados</span>
+                                                <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                                            </div>
+                                        </div>
+                                    </a>
+                                ))}
+                            </div>
+                        </section>
+                    )}
+
+                    {/* --- REGIONALES --- */}
+                    {regionales.length > 0 && (
+                        <section class="category-section" data-type="regional">
+                            <div class="flex items-center gap-4 mb-8">
+                                <div class="h-10 w-1 bg-cyan-500 rounded-full"></div>
+                                <h3 class="text-2xl md:text-3xl font-black font-display text-slate-800">
+                                    Competencias <span class="text-cyan-600">Regionales</span>
+                                </h3>
+                                <div class="h-px flex-1 bg-slate-200"></div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                {regionales.map((competencia, index) => (
+                                    <a 
+                                        href={ROUTES.RESULTADOS_SLUG(getSlug(competencia.linkDeLaCompetencia))}
+                                        class="comp-card active-card group relative flex flex-col bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/10 hover:-translate-y-2 hover:border-cyan-400/30 animate-fade-in-up"
+                                        style={`animation-delay: ${index * 50}ms`}
+                                        data-year={añoActual}
+                                        data-type="regional"
+                                    >
+                                        <div class="relative h-48 bg-slate-200 overflow-hidden">
+                                            <Image src={competencia.img} alt={competencia.titulo} inferSize={true} class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-0" loading="lazy" />
+                                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-60 z-0"></div>
+                                            <div class="absolute top-4 left-4 z-10">
+                                                <div class="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-lg text-xs font-bold text-slate-700 shadow-sm">
+                                                    <svg class="w-3.5 h-3.5 text-cyan-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 011.414.586l4 4a1 1 0 01.586 1.414V19a2 2 0 01-2 2z" /></svg>
+                                                    {competencia.resultados.length} Docs
+                                                </div>
+                                            </div>
+                                            <div class="absolute -bottom-6 right-6 z-10">
+                                                <div class="w-12 h-12 bg-cyan-500 text-white rounded-xl shadow-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300 border-4 border-white">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M2 17s1.5-2 3.5-2 3.5 2 5.5 2 3.5-2 5.5-2 3.5 2 3.5 2m-17 2s1.5-2 3.5-2 3.5 2 5.5 2 3.5-2 5.5-2 3.5 2 3.5 2M7 7a2 2 0 100-4 2 2 0 000 4zm13 3l-4-1 1-3-2.5.5L13 9l-1.5-2L9 7.5 10 10l-4 1 1 3h12l1-4z"/></svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="p-6 pt-8 flex-1 flex flex-col">
+                                            <h3 class="text-xl font-bold text-slate-900 mb-2 leading-tight group-hover:text-cyan-600 transition-colors line-clamp-2">{competencia.titulo}</h3>
+                                            <div class="h-px w-12 bg-slate-200 my-4 group-hover:w-full group-hover:bg-cyan-400/30 transition-all duration-500"></div>
+                                            <div class="grid grid-cols-2 gap-4 mb-6">
+                                                <div>
+                                                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">Inicio</p>
+                                                    <p class="text-sm font-bold text-slate-700 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>{formatDate(competencia.fechaInicio)}</p>
+                                                </div>
+                                                <div>
+                                                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">Fin</p>
+                                                    <p class="text-sm font-bold text-slate-700 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>{formatDate(competencia.fechaFinalizacion)}</p>
+                                                </div>
+                                            </div>
+                                            <div class="mt-auto flex items-center justify-between text-sm font-bold text-cyan-600 group-hover:text-cyan-500 transition-colors">
+                                                <span>Ver Resultados</span>
+                                                <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                                            </div>
+                                        </div>
+                                    </a>
+                                ))}
+                            </div>
+                        </section>
+                    )}
+
+                    {/* --- NACIONALES --- */}
+                    {nacionales.length > 0 && (
+                        <section class="category-section" data-type="nacional">
+                            <div class="flex items-center gap-4 mb-8">
+                                <div class="h-10 w-1 bg-indigo-500 rounded-full"></div>
+                                <h3 class="text-2xl md:text-3xl font-black font-display text-slate-800">
+                                    Competencias <span class="text-indigo-600">Nacionales</span>
+                                </h3>
+                                <div class="h-px flex-1 bg-slate-200"></div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                {nacionales.map((competencia, index) => (
+                                    <a 
+                                        href={ROUTES.RESULTADOS_SLUG(getSlug(competencia.linkDeLaCompetencia))}
+                                        class="comp-card active-card group relative flex flex-col bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/10 hover:-translate-y-2 hover:border-indigo-400/30 animate-fade-in-up"
+                                        style={`animation-delay: ${index * 50}ms`}
+                                        data-year={añoActual}
+                                        data-type="nacional"
+                                    >
+                                        <div class="relative h-48 bg-slate-200 overflow-hidden">
+                                            <Image src={competencia.img} alt={competencia.titulo} inferSize={true} class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-0" loading="lazy" />
+                                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-60 z-0"></div>
+                                            <div class="absolute top-4 left-4 z-10">
+                                                <div class="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-lg text-xs font-bold text-slate-700 shadow-sm">
+                                                    <svg class="w-3.5 h-3.5 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 011.414.586l4 4a1 1 0 01.586 1.414V19a2 2 0 01-2 2z" /></svg>
+                                                    {competencia.resultados.length} Docs
+                                                </div>
+                                            </div>
+                                            <div class="absolute -bottom-6 right-6 z-10">
+                                                <div class="w-12 h-12 bg-indigo-500 text-white rounded-xl shadow-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300 border-4 border-white">
+                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M2 17s1.5-2 3.5-2 3.5 2 5.5 2 3.5-2 5.5-2 3.5 2 3.5 2m-17 2s1.5-2 3.5-2 3.5 2 5.5 2 3.5-2 5.5-2 3.5 2 3.5 2M7 7a2 2 0 100-4 2 2 0 000 4zm13 3l-4-1 1-3-2.5.5L13 9l-1.5-2L9 7.5 10 10l-4 1 1 3h12l1-4z"/></svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="p-6 pt-8 flex-1 flex flex-col">
+                                            <h3 class="text-xl font-bold text-slate-900 mb-2 leading-tight group-hover:text-indigo-600 transition-colors line-clamp-2">{competencia.titulo}</h3>
+                                            <div class="h-px w-12 bg-slate-200 my-4 group-hover:w-full group-hover:bg-indigo-400/30 transition-all duration-500"></div>
+                                            <div class="grid grid-cols-2 gap-4 mb-6">
+                                                <div>
+                                                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">Inicio</p>
+                                                    <p class="text-sm font-bold text-slate-700 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>{formatDate(competencia.fechaInicio)}</p>
+                                                </div>
+                                                <div>
+                                                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">Fin</p>
+                                                    <p class="text-sm font-bold text-slate-700 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>{formatDate(competencia.fechaFinalizacion)}</p>
+                                                </div>
+                                            </div>
+                                            <div class="mt-auto flex items-center justify-between text-sm font-bold text-indigo-600 group-hover:text-indigo-500 transition-colors">
+                                                <span>Ver Resultados</span>
+                                                <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                                            </div>
+                                        </div>
+                                    </a>
+                                ))}
+                            </div>
+                        </section>
+                    )}
+                </div>
+              </div>
+            );
+          })}
+          
+          {/* Mensaje de estado vacío (Oculto por defecto) */}
+          <div id="no-results-msg" class="hidden text-center py-16">
+              <div class="inline-flex w-16 h-16 bg-slate-100 text-slate-400 rounded-full items-center justify-center mb-4">
+                  <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              </div>
+              <h3 class="text-xl font-bold text-slate-800 mb-2">No se encontraron resultados</h3>
+              <p class="text-slate-500">Prueba cambiando los filtros de búsqueda.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    {/* SCRIPT DE FILTRADO EN EL CLIENTE */}
+    <script>
+      document.addEventListener('astro:page-load', () => {
+          const filterYear = document.getElementById('filter-year') as HTMLSelectElement;
+          const filterType = document.getElementById('filter-type') as HTMLSelectElement;
+          const cards = document.querySelectorAll('.comp-card');
+          const categorySections = document.querySelectorAll('.category-section');
+          const yearSections = document.querySelectorAll('.year-section');
+          const noResultsMsg = document.getElementById('no-results-msg');
+
+          if (!filterYear || !filterType) return;
+
+          const executeFilter = () => {
+              const selectedYear = filterYear.value;
+              const selectedType = filterType.value;
+              let visibleCardsCount = 0;
+
+              // 1. Mostrar/Ocultar Tarjetas Individuales
+              cards.forEach((card) => {
+                  const el = card as HTMLElement;
+                  const matchYear = selectedYear === 'all' || el.dataset.year === selectedYear;
+                  const matchType = selectedType === 'all' || el.dataset.type === selectedType;
+
+                  if (matchYear && matchType) {
+                      el.style.display = '';
+                      el.classList.add('active-card');
+                      visibleCardsCount++;
+                  } else {
+                      el.style.display = 'none';
+                      el.classList.remove('active-card');
+                  }
+              });
+
+              // 2. Ocultar los títulos de "Estadales/Regionales" si no hay tarjetas visibles dentro
+              categorySections.forEach(section => {
+                  const el = section as HTMLElement;
+                  const hasActiveCards = el.querySelectorAll('.active-card').length > 0;
+                  el.style.display = hasActiveCards ? '' : 'none';
+              });
+
+              // 3. Ocultar el Título del Año si no tiene ninguna categoría visible
+              yearSections.forEach(section => {
+                  const el = section as HTMLElement;
+                  const hasActiveCards = el.querySelectorAll('.active-card').length > 0;
+                  el.style.display = hasActiveCards ? '' : 'none';
+              });
+
+              // 4. Mostrar mensaje "No se encontraron resultados" si todo está oculto
+              if (noResultsMsg) {
+                  noResultsMsg.style.display = visibleCardsCount === 0 ? 'block' : 'none';
+              }
+          };
+
+          // Escuchar los cambios en los dropdowns
+          filterYear.addEventListener('change', executeFilter);
+          filterType.addEventListener('change', executeFilter);
+      });
+
+      const dropdowns = document.querySelectorAll('.custom-dropdown');
+
+const closeAllDropdowns = () => {
+    dropdowns.forEach(d => {
+        const menu = d.querySelector('.dropdown-menu');
+        const arrow = d.querySelector('.dropdown-arrow');
+        menu?.classList.replace('opacity-100', 'opacity-0');
+        menu?.classList.replace('translate-y-0', '-translate-y-2');
+        menu?.classList.replace('pointer-events-auto', 'pointer-events-none');
+        arrow?.classList.remove('-rotate-180');
+    });
+};
+
+dropdowns.forEach(dropdown => {
+    const button = dropdown.querySelector('button');
+    const menu = dropdown.querySelector('.dropdown-menu');
+    const arrow = dropdown.querySelector('.dropdown-arrow');
+    const selectedText = dropdown.querySelector('.selected-text');
+    const hiddenInput = dropdown.querySelector('input') as HTMLInputElement;
+    const options = dropdown.querySelectorAll('.dropdown-option');
+
+    // Abrir/Cerrar menú
+    button?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = menu?.classList.contains('opacity-100');
+        
+        closeAllDropdowns(); // Cierra otros menús abiertos
+        
+        if (!isOpen) {
+            menu?.classList.replace('opacity-0', 'opacity-100');
+            menu?.classList.replace('-translate-y-2', 'translate-y-0');
+            menu?.classList.replace('pointer-events-none', 'pointer-events-auto');
+            arrow?.classList.add('-rotate-180');
+        }
+    });
+
+    // Seleccionar opción
+    options.forEach(opt => {
+        opt.addEventListener('click', () => {
+            const htmlOpt = opt as HTMLElement;
+            // Actualizar texto y valor
+            if(selectedText) selectedText.innerHTML = htmlOpt.innerHTML;
+            if(hiddenInput) {
+                hiddenInput.value = htmlOpt.dataset.value || 'all';
+                // ¡AQUÍ ESTÁ LA MAGIA! Disparamos el evento para que tu script original haga el filtrado
+                hiddenInput.dispatchEvent(new Event('change'));
+            }
+            closeAllDropdowns();
+        });
+    });
+});
+
+// Cerrar si hace clic fuera
+document.addEventListener('click', closeAllDropdowns);
+    </script>
+
+    <style>
+      @keyframes fade-in-up {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes blob {
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        33% { transform: translate(30px, -50px) scale(1.1); }
+        66% { transform: translate(-20px, 20px) scale(0.9); }
+      }
+      .animate-fade-in-up { animation: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both; }
+      .animate-blob { animation: blob 10s infinite alternate; }
+      .animation-delay-2000 { animation-delay: 2s; }
+
+      .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+  .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+  .custom-scrollbar::-webkit-scrollbar-thumb { background-color: #cbd5e1; border-radius: 20px; }
+    </style>
      
   </div>
 </LayoutCompetencias>

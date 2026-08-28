@@ -1,0 +1,56 @@
+<button
+  id="scroll-to-top"
+  aria-label="Volver arriba"
+  class="fixed bottom-6 right-6 z-[9000] p-3 rounded-full bg-slate-900 text-white shadow-xl shadow-slate-900/20 border border-slate-700 opacity-0 translate-y-10 pointer-events-none transition-all duration-500 hover:bg-cyan-600 hover:shadow-cyan-500/30 hover:-translate-y-1 focus:outline-none"
+>
+  <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7" />
+  </svg>
+</button>
+
+<script>
+  // Usamos astro:page-load para que funcione con las ViewTransitions de Astro
+  document.addEventListener('astro:page-load', () => {
+    const scrollBtn = document.getElementById('scroll-to-top');
+    
+    if (!scrollBtn) return;
+
+    // Guardamos la posición del scroll para saber en qué dirección va
+    let ultimaPosicionScroll = window.scrollY;
+
+    // Función para mostrar/ocultar basado en el scroll y la dirección
+    const handleScroll = () => {
+      const posicionActual = window.scrollY;
+      // Evaluamos si el usuario está subiendo
+      const estaSubiendo = posicionActual < ultimaPosicionScroll;
+
+      // Condición: Mostrar SOLO si bajó más de 400px Y está haciendo scroll hacia ARRIBA
+      if (posicionActual > 400 && estaSubiendo) {
+        scrollBtn.classList.remove('opacity-0', 'translate-y-10', 'pointer-events-none');
+        scrollBtn.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
+      } else {
+        // Ocultar si está bajando O si está en los primeros 400px
+        scrollBtn.classList.add('opacity-0', 'translate-y-10', 'pointer-events-none');
+        scrollBtn.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
+      }
+
+      // Actualizamos la posición para el siguiente movimiento
+      ultimaPosicionScroll = posicionActual;
+    };
+
+    // Función para subir suavemente
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    };
+
+    // Escuchadores de eventos (passive: true mejora el rendimiento del scroll)
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    scrollBtn.addEventListener('click', scrollToTop);
+
+    // Estado inicial
+    handleScroll();
+  });
+</script>

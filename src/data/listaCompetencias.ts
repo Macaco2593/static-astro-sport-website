@@ -32,9 +32,9 @@ export const ListaCompetencias: ICompetencia[] = [
     titulo: "I Competencia Estadal 2026",
     tipo: "estadal",
     linkDeLaCompetencia: "/competencias_pdf/I-competencia-estadal-2026",
-    fechaDeSubida: "15-02-2026",
-    fechaInicio: "05/03/2026",
-    fechaFinalizacion: "08/03/2026",
+    fechaDeSubida: "2026-02-15",
+    fechaInicio: "2026-03-05",
+    fechaFinalizacion: "2026-03-08",
     img: `${import.meta.env.BUCKET_CLOUDR2}/competencias-folletos/2026/03-estadal-sancristobal-folleto.jpeg`,
     resultados: [
       {
@@ -78,9 +78,9 @@ export const ListaCompetencias: ICompetencia[] = [
     tipo: "regional",
     linkDeLaCompetencia:
       "/competencias_pdf/I-competencia-regional-adaefalcon-2026",
-    fechaDeSubida: "16-02-2026",
-    fechaInicio: "14/04/2026",
-    fechaFinalizacion: "18/04/2026",
+    fechaDeSubida: "2026-02-16",
+    fechaInicio: "2026-04-14",
+    fechaFinalizacion: "2026-04-18",
     img: `${import.meta.env.BUCKET_CLOUDR2}/competencias-folletos/2026/04-regional-adaefalcon-folleto.jpeg`,
     resultados: [
       {
@@ -107,9 +107,9 @@ export const ListaCompetencias: ICompetencia[] = [
     titulo: "II Competencia Estadal 2026",
     tipo: "estadal",
     linkDeLaCompetencia: "/competencias_pdf/II-competencia-estadal-2026",
-    fechaDeSubida: "21-07-2026",
-    fechaInicio: "20/08/2026",
-    fechaFinalizacion: "22/08/2026",
+    fechaDeSubida: "2026-07-21",
+    fechaInicio: "2026-08-20",
+    fechaFinalizacion: "2026-08-22",
     img: `${import.meta.env.BUCKET_CLOUDR2}/competencias-folletos/2026/08-estadal-sancristobal-folleto.jpeg`,
     resultados: [
       {
