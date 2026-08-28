@@ -22,6 +22,9 @@ const { titulo, fecha: fechaCruda, imagen, categoria, resumen, fotografo } = not
 
 const { Content } = await noticia.render();
 
+const R2_BASE_URL = import.meta.env.BUCKET_CLOUDR2;
+const imagenUrl = imagen ? `${R2_BASE_URL}${imagen}` : undefined;
+
 // Transformamos la fecha directamente a la variable que usas en el HTML
 const fecha = fechaCruda.toLocaleDateString("es-VE", {
     year: "numeric", 
@@ -33,7 +36,7 @@ const fecha = fechaCruda.toLocaleDateString("es-VE", {
 const currentUrl = Astro.url.href;
 ---
 
-<LayoutCompetencias titulo={`${titulo} | Noticias ADADET`} descripcion={resumen} image={imagen}>
+<LayoutCompetencias titulo={`${titulo} | Noticias ADADET`} descripcion={resumen} image={imagenUrl}>
     
     <div class="bg-slate-50 min-h-screen pb-20 relative">
         
@@ -53,7 +56,7 @@ const currentUrl = Astro.url.href;
             
             <div class="bg-white rounded-[2.5rem] shadow-xl shadow-slate-200/60 overflow-hidden border border-slate-100">
                 
-                {imagen && (
+                {imagenUrl && (
                     <>
                         <button 
                             id="openModalBtn"
@@ -61,7 +64,7 @@ const currentUrl = Astro.url.href;
                             aria-label="Ver imagen completa"
                         >
                             <Image 
-                                src={imagen} 
+                                src={imagenUrl} 
                                 alt={titulo} 
                                 width={800} 
                                 height={600}
@@ -153,7 +156,7 @@ const currentUrl = Astro.url.href;
 
             </div>
         </article>
-        {imagen && (
+        {imagenUrl && (
         <div id="imageModal" class="hidden fixed inset-0 z-100000 bg-slate-900/95 backdrop-blur-sm transition-opacity duration-300 opacity-0">
             <button 
                 id="closeModalBtn"
@@ -167,7 +170,7 @@ const currentUrl = Astro.url.href;
 
             <div class="flex items-center justify-center w-full h-full p-4 md:p-10" id="modalContent">
                 <Image 
-                    src={imagen} 
+                    src={imagenUrl} 
                     alt={titulo} 
                     inferSize={true}
                     class="max-w-full max-h-full object-contain rounded-lg shadow-2xl scale-95 transition-transform duration-300"

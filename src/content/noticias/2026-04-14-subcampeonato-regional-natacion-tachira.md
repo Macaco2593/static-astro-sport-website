@@ -2,7 +2,7 @@
 titulo: "Táchira brilla en el Regional de Natación Coro 2026: Subcampeonato por asociaciones y dominio de sus clubes"
 resumen: "La natación tachirense reafirmó su potencia en el occidente del país. La delegación aurinegra logró consolidarse en los puestos de honor, alcanzando el subcampeonato general por asociaciones."
 fecha: "2026-04-18"
-imagen: "https://pub-15b0928184294a4692cb0b949397344a.r2.dev/noticias/2026/abril-regional-exitoso.jpeg"
+imagen: "/noticias/2026/abril-regional-exitoso.jpeg"
 categoria: "Natación"
 ---
 

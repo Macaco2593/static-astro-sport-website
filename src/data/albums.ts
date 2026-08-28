@@ -40,7 +40,7 @@ async function obtenerFotosDeR2(prefijoCarpeta: string): Promise<Foto[]> {
   });
 
   const response = await s3.send(command);
-  const URL_PUBLICA = "https://pub-15b0928184294a4692cb0b949397344a.r2.dev";
+  const URL_PUBLICA = import.meta.env.BUCKET_CLOUDR2;
 
   if (!response.Contents) return [];
 
@@ -77,12 +77,10 @@ export const ALBUMES: Album[] = [
     titulo: "II Competencia Estadal 2026",
     fecha: "Agosto 2026",
     ubicación: "San Cristóbal",
-    cover:
-      "https://pub-15b0928184294a4692cb0b949397344a.r2.dev/galeria/2026/08-estadal-sancristobal/_DSC0500.jpg",
+    cover: `${import.meta.env.BUCKET_CLOUDR2}/galeria/2026/08-estadal-sancristobal/_DSC0500.jpg`,
     descripcion:
       "Jornada inaugural con la participación de más de 200 atletas infantiles.",
     etiquetas: ["Natación", "Competencia", "Federados"],
-    // ¡Magia! Solo le pasas la ruta de la carpeta
     fotos: await obtenerFotosDeR2("galeria/2026/08-estadal-sancristobal/"),
   },
 ];

@@ -5,14 +5,17 @@ import { ROUTES } from "src/data/routes";
 const { news } = Astro.props;
 const { slug } = news;
 const { titulo, resumen, fecha, categoria, imagen, linkExterno } = news.data;
+
+const R2_BASE_URL = import.meta.env.BUCKET_CLOUDR2;
+const imagenUrl = imagen ? `${R2_BASE_URL}${imagen}` : undefined;
 ---
                 <article 
                     class="group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-xl shadow-slate-900/10 hover:shadow-2xl hover:shadow-cyan-900/20 transition-all duration-500 hover:-translate-y-2 flex flex-col h-full animate-fade-in-up">
                     
                     <div class="h-56 overflow-hidden relative">
-                        {imagen ? (
+                        {imagenUrl ? (
                             <Image 
-                                src={imagen!} 
+                                src={imagenUrl} 
                                 alt={titulo} 
                                 inferSize={true}
                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 

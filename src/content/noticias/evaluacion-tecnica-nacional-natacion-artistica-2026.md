@@ -2,7 +2,7 @@
 titulo: "Evaluación Técnica Nacional - Natación Artística 2026"
 resumen: "Este año entrante inicia con la Evaluación Técnica Nacional de las categorias infantil, juvenil, junior y senior."
 fecha: "2026-02-16"
-imagen: "https://pub-15b0928184294a4692cb0b949397344a.r2.dev/noticias/2026/febrero-evaluacion-tecnica-natacion-artistica.jpeg"
+imagen: "/noticias/2026/febrero-evaluacion-tecnica-natacion-artistica.jpeg"
 categoria: "Natación Artística"
 ---
 

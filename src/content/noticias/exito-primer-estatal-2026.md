@@ -2,7 +2,7 @@
 titulo: "El Deporte Acuático del Táchira Brilla: Concluye con Éxito el I Estatal ADADET 2026"
 resumen: "Tras cinco jornadas de competencia, la piscina del Colegio de Contadores fue el epicentro de la natación Táchirense, reuniendo a los mejores talentos en un evento de alto nivel."
 fecha: "2026-03-5"
-imagen: "https://pub-15b0928184294a4692cb0b949397344a.r2.dev/noticias/2026/marzo-estadal-exitoso.jpeg"
+imagen: "/noticias/2026/marzo-estadal-exitoso.jpeg"
 categoria: "Natación"
 fotografo: "Paul Gonzalez"
 ---

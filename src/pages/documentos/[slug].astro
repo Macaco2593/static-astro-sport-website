@@ -16,7 +16,7 @@ interface Props {
 
 const { doc } = Astro.props;
 
-const urlCompleta = `https://pub-15b0928184294a4692cb0b949397344a.r2.dev${doc.archivo}`; 
+const urlCompleta = `${import.meta.env.BUCKET_CLOUDR2}${doc.archivo}`; 
 const urlVisorGoogle = `https://docs.google.com/viewer?url=${encodeURIComponent(urlCompleta)}&embedded=true`;
 
 const fecha = new Date(doc.fechaPublicacion);
